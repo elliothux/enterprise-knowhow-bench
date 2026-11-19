@@ -1,0 +1,1218 @@
+{
+  "id": "AP-907",
+  "interface": "Native Chrome",
+  "variants": [
+    {
+      "protocol": "finance-ap-907",
+      "metric": "财务首次正式交付",
+      "environment": {
+        "execution_model": "gpt-6.1-terra",
+        "cli": "codex-cli 0.169.0",
+        "cli_sha256": "739cda86e15d30a6e2b40cf8dcbbfb988aaf48b305b27065573bb8e9fd41d002",
+        "os": "ProductName:\t\tmacOS\nProductVersion:\t\t26.4\nBuildVersion:\t\t25E246",
+        "arch": "arm64",
+        "chrome": "158.0.8127.37",
+        "python": "Python 3.12.16",
+        "reasoning": "high"
+      },
+      "sessions": [
+        "enterprise-confirmation/20261118/payable/ap-907/A",
+        "enterprise-confirmation/20261118/payable/ap-907/B",
+        "enterprise-confirmation/20261118/payable/ap-907/C"
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "run": "enterprise-confirmation/20261118/payable/ap-907/A",
+      "arm": "A",
+      "condition": "no Skill",
+      "score": 0,
+      "seconds": 158.29006004333496,
+      "protocol": "completed_ungraded",
+      "first_delivery": {
+        "id": "4Qo9ax2prFwbTvnmd",
+        "timestamp": "2026-11-18T18:31:44.930Z",
+        "text": "INV-14594,REFER,UNKNOWN"
+      },
+      "actions": [
+        {
+          "line": 5,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "getApp"
+          ]
+        },
+        {
+          "line": 7,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "click",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 9,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "pressKey",
+            "click",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 11,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "click",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 13,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "click",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 15,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "performSecondaryAction",
+            "pressKey",
+            "typeText",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 17,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "pressKey",
+            "paste",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 20,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "performSecondaryAction",
+            "pressKey",
+            "paste",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 22,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "performSecondaryAction",
+            "click",
+            "paste",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 24,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "getAXState"
+          ]
+        },
+        {
+          "line": 26,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "performSecondaryAction",
+            "pressKey",
+            "paste",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 28,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "getAXState"
+          ]
+        },
+        {
+          "line": 30,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "performSecondaryAction",
+            "click",
+            "paste",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 32,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "getAXState"
+          ]
+        },
+        {
+          "line": 34,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "performSecondaryAction",
+            "click",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 36,
+          "tool": "js",
+          "status": "failed",
+          "methods": [
+            "click",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 38,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "getAXState"
+          ]
+        },
+        {
+          "line": 40,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "click",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 42,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "pressKey",
+            "paste",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 44,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "performSecondaryAction",
+            "pressKey",
+            "paste",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 46,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "getAXState"
+          ]
+        },
+        {
+          "line": 48,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "click",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 50,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "pressKey",
+            "paste",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 52,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "click"
+          ]
+        },
+        {
+          "line": 54,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "performSecondaryAction",
+            "click",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 56,
+          "tool": "js",
+          "status": "completed",
+          "methods": []
+        },
+        {
+          "line": 59,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "click"
+          ]
+        },
+        {
+          "line": 61,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "click",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 63,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "getAXState"
+          ]
+        },
+        {
+          "line": 65,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "click",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 67,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "click",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 69,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "click",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 71,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "click",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 73,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "click",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 76,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "performSecondaryAction",
+            "click",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 78,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "performSecondaryAction",
+            "click",
+            "paste",
+            "pressKey",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 80,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "getAXState"
+          ]
+        },
+        {
+          "line": 82,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "performSecondaryAction",
+            "pressKey",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 84,
+          "tool": "js",
+          "status": "completed",
+          "methods": []
+        }
+      ],
+      "sha256": {
+        "events": "f37b1e3f1bcf13ce983865d54029e5c16fa9c3eec5120f0bc9496805fd99da6b",
+        "result": "5d661678cf9829a6145cda7e1d49344ae4ba93cf64a2d60c9714664de6fb246e",
+        "delivery": "2da0d64a483854937e5fccebab367d4c70586058085da159424cf998321d38cd"
+      }
+    },
+    {
+      "run": "enterprise-confirmation/20261118/payable/ap-907/B",
+      "arm": "B",
+      "condition": "GLM Skill",
+      "score": 100,
+      "seconds": 128.61151695251465,
+      "protocol": "completed_ungraded",
+      "first_delivery": {
+        "id": "JTjSS5skLTHdTEXXq",
+        "timestamp": "2026-11-18T18:29:02.572Z",
+        "text": "INV-14594,HOLD,PO_MISMATCH;RECEIPT_SHORT"
+      },
+      "actions": [
+        {
+          "line": 5,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "getApp"
+          ]
+        },
+        {
+          "line": 7,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "click",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 9,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "pressKey",
+            "click",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 11,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "click",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 13,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "click",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 15,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "performSecondaryAction",
+            "pressKey",
+            "typeText",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 17,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "pressKey",
+            "paste",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 19,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "performSecondaryAction",
+            "pressKey",
+            "paste",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 21,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "getAXState"
+          ]
+        },
+        {
+          "line": 23,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "click",
+            "paste",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 25,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "getAXState"
+          ]
+        },
+        {
+          "line": 28,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "performSecondaryAction",
+            "pressKey",
+            "paste",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 30,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "getAXState"
+          ]
+        },
+        {
+          "line": 32,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "click",
+            "paste",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 34,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "getAXState"
+          ]
+        },
+        {
+          "line": 36,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "click",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 38,
+          "tool": "js",
+          "status": "failed",
+          "methods": [
+            "click",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 40,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "getAXState"
+          ]
+        },
+        {
+          "line": 42,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "click",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 44,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "pressKey",
+            "paste",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 46,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "getAXState"
+          ]
+        },
+        {
+          "line": 48,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "getScreenshot"
+          ]
+        },
+        {
+          "line": 50,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "click",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 52,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "getAXState"
+          ]
+        },
+        {
+          "line": 54,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "click",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 56,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "click",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 58,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "click",
+            "pressKey",
+            "paste",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 61,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "performSecondaryAction",
+            "pressKey",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 63,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "click",
+            "paste",
+            "pressKey",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 65,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "getAXState"
+          ]
+        },
+        {
+          "line": 67,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "performSecondaryAction",
+            "pressKey",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 69,
+          "tool": "js",
+          "status": "completed",
+          "methods": []
+        }
+      ],
+      "sha256": {
+        "events": "78ffd35332d2ac7a111221171cb3f31f4116b59690fbc4684238e55140739983",
+        "result": "31af09847f10e7ce6b6ed9a0c28f4d23026b91243ba7ddb9d01fdf5947e92604",
+        "delivery": "ecc344c2e2d21a332d5a1871bfb9ff9033eb6b4ecd92182aebc4fa1ff9236b9c"
+      }
+    },
+    {
+      "run": "enterprise-confirmation/20261118/payable/ap-907/C",
+      "arm": "C",
+      "condition": "full desk procedure",
+      "score": 100,
+      "seconds": 225.72874116897583,
+      "protocol": "completed_ungraded",
+      "first_delivery": {
+        "id": "rE2zad76fcqo2TZSu",
+        "timestamp": "2026-11-18T19:48:04.746Z",
+        "text": "INV-14594,HOLD,PO_MISMATCH;RECEIPT_SHORT"
+      },
+      "actions": [
+        {
+          "line": 5,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "getApp"
+          ]
+        },
+        {
+          "line": 7,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "click",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 9,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "pressKey",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 11,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "pressKey",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 13,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "click",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 15,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "pressKey",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 17,
+          "tool": "js",
+          "status": "failed",
+          "methods": [
+            "getScreenshot"
+          ]
+        },
+        {
+          "line": 19,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "performSecondaryAction",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 21,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "click",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 23,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "click",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 25,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "performSecondaryAction",
+            "pressKey",
+            "typeText",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 27,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "performSecondaryAction",
+            "pressKey",
+            "paste",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 29,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "getAXState"
+          ]
+        },
+        {
+          "line": 32,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "performSecondaryAction",
+            "pressKey",
+            "paste",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 34,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "getAXState"
+          ]
+        },
+        {
+          "line": 36,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "getAXState"
+          ]
+        },
+        {
+          "line": 38,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "performSecondaryAction",
+            "click",
+            "paste",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 40,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "getAXState"
+          ]
+        },
+        {
+          "line": 42,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "performSecondaryAction",
+            "pressKey",
+            "paste",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 44,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "getAXState"
+          ]
+        },
+        {
+          "line": 46,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "performSecondaryAction",
+            "click",
+            "paste",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 48,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "getAXState"
+          ]
+        },
+        {
+          "line": 50,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "performSecondaryAction",
+            "click",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 52,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "pressKey",
+            "paste",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 54,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "getAXState"
+          ]
+        },
+        {
+          "line": 56,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "performSecondaryAction",
+            "click",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 58,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "pressKey",
+            "paste",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 60,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "click",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 62,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "performSecondaryAction",
+            "click",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 64,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "pressKey",
+            "paste",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 66,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "getAXState"
+          ]
+        },
+        {
+          "line": 68,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "performSecondaryAction",
+            "pressKey",
+            "paste",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 70,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "getAXState"
+          ]
+        },
+        {
+          "line": 72,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "click",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 74,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "performSecondaryAction",
+            "pressKey",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 76,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "click",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 78,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "getAXState"
+          ]
+        },
+        {
+          "line": 80,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "performSecondaryAction",
+            "scroll",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 82,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "pressKey",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 84,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "pressKey",
+            "click",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 87,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "pressKey",
+            "paste",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 89,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "click",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 91,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "performSecondaryAction",
+            "pressKey",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 93,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "click",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 95,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "getAXState"
+          ]
+        },
+        {
+          "line": 97,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "performSecondaryAction",
+            "pressKey",
+            "paste",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 99,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "pressKey",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 101,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "performSecondaryAction",
+            "click",
+            "paste",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 103,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "pressKey",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 106,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "getAXState"
+          ]
+        },
+        {
+          "line": 108,
+          "tool": "js",
+          "status": "completed",
+          "methods": [
+            "performSecondaryAction",
+            "pressKey",
+            "getAXState"
+          ]
+        },
+        {
+          "line": 110,
+          "tool": "js",
+          "status": "completed",
+          "methods": []
+        }
+      ],
+      "sha256": {
+        "events": "c6b1150a870f08ed54086747a6f86e34575db8edb3d179de0c945006dc635228",
+        "result": "6e58ebd40642a0b1113b17a7aca44f30aabddb98c733eaf82f318ec9f52ddfff",
+        "delivery": "75d0c31c03fb817faba64b34c29899780dd2c3d950c47f61a6f3e8b8c05bace8"
+      }
+    }
+  ]
+}

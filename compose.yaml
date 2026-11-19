@@ -1,0 +1,131 @@
+name: lynx-benchmark
+
+x-task: &task
+  image: ghcr.io/theagentcompany/admin-get-best-vendor-quote-image@sha256:2a8a82b475275342c4854d11fd0504aa7d5bcd5762bc0232a16b3efc086a6dec
+  platform: linux/amd64
+
+services:
+  owncloud:
+    image: ghcr.io/theagentcompany/servers-owncloud@sha256:326406d88345899db22fc1081aa8fa15415c542a71b80486c0a2cebf59f56f63
+    platform: linux/amd64
+    restart: unless-stopped
+    ports: ["127.0.0.1:8092:80"]
+    command:
+      - bash
+      - -ec
+      - |
+        su -s /bin/sh www-data -c 'php occ config:system:set trusted_domains 2 --value=localhost'
+        su -s /bin/sh www-data -c 'php occ config:system:set trusted_domains 3 --value=127.0.0.1'
+        exec apache2-foreground
+    volumes: ["owncloud_data:/var/www/html"]
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://localhost/status.php | grep -q '\"installed\":true'"]
+      interval: 10s
+      timeout: 5s
+      retries: 60
+
+  mongodb:
+    image: bitnamilegacy/mongodb@sha256:e56a75744316419cd150400ccd8d985c6b0762f03c7a3b015f233524d043731f
+    platform: linux/amd64
+    restart: unless-stopped
+    environment:
+      MONGODB_REPLICA_SET_MODE: primary
+      MONGODB_REPLICA_SET_NAME: rs0
+      MONGODB_INITIAL_PRIMARY_HOST: mongodb
+      MONGODB_ADVERTISED_HOSTNAME: mongodb
+      ALLOW_EMPTY_PASSWORD: "yes"
+    volumes: ["mongodb_data:/bitnami/mongodb"]
+    healthcheck:
+      test: ["CMD-SHELL", "mongo --quiet --eval 'quit(db.hello().isWritablePrimary ? 0 : 1)'"]
+      interval: 5s
+      timeout: 10s
+      retries: 120
+
+  seed-backup:
+    image: ghcr.io/theagentcompany/servers-api-server@sha256:fc162044d7062323c1fc5699569b1483e134accdc9c12af6816f991a040c9b5c
+    platform: linux/amd64
+    entrypoint: ["python", "-c", "import shutil; shutil.copyfile('/rocketchat/db.dump', '/seed/rocketchat.dump')"]
+    volumes: ["seed_data:/seed"]
+
+  restore:
+    image: bitnamilegacy/mongodb@sha256:e56a75744316419cd150400ccd8d985c6b0762f03c7a3b015f233524d043731f
+    platform: linux/amd64
+    depends_on:
+      mongodb: {condition: service_healthy}
+      seed-backup: {condition: service_completed_successfully}
+    entrypoint: ["bash", "-ec"]
+    command:
+      - |
+        mongo --quiet mongodb:27017/rocketchat --eval 'quit(db.users.findOne({username:"emma_lewis"}) ? 0 : 1)' || mongorestore --host mongodb:27017 --drop --archive=/seed/rocketchat.dump
+    volumes: ["seed_data:/seed:ro"]
+
+  rocketchat:
+    image: registry.rocket.chat/rocketchat/rocket.chat@sha256:55e17e7ee850c0757c66b53bd0adf49bcea349fb985f4bec2cdcf8c7a7276ec4
+    platform: linux/amd64
+    restart: unless-stopped
+    depends_on:
+      restore: {condition: service_completed_successfully}
+    ports: ["127.0.0.1:13000:3000"]
+    environment:
+      MONGO_URL: mongodb://mongodb:27017/rocketchat?replicaSet=rs0
+      MONGO_OPLOG_URL: mongodb://mongodb:27017/local?replicaSet=rs0
+      ROOT_URL: http://localhost:13000
+      OVERWRITE_SETTING_Site_Url: http://localhost:13000
+      PORT: "3000"
+      DEPLOY_METHOD: docker
+      OVERWRITE_SETTING_Show_Setup_Wizard: completed
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:3000/api/info',r=>process.exit(r.statusCode===200?0:1)).on('error',()=>process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      retries: 90
+
+  redis-stack:
+    profiles: ["vendor-quote"]
+    image: redis/redis-stack-server@sha256:887cf87cc744e4588ccade336d0dbb943e4e46330f738653ccb3a7a55df2f186
+    platform: linux/amd64
+    restart: unless-stopped
+    environment:
+      REDIS_ARGS: --requirepass theagentcompany
+    volumes: ["redis_data:/data"]
+    healthcheck:
+      test: ["CMD-SHELL", "redis-cli -a theagentcompany ping | grep -q PONG"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+
+  npc-seed:
+    profiles: ["vendor-quote"]
+    image: ghcr.io/theagentcompany/servers-rocketchat-npc-data-population@sha256:f1ff3b34f19e79872ed514f56f9d42c14e72427c67229961ae52744aff8c6a97
+    platform: linux/amd64
+    depends_on:
+      redis-stack: {condition: service_healthy}
+
+  npc:
+    profiles: ["vendor-quote"]
+    <<: *task
+    restart: unless-stopped
+    depends_on:
+      rocketchat: {condition: service_healthy}
+      npc-seed: {condition: service_completed_successfully}
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      BOT_URL: http://rocketchat:3000
+      REDIS_OM_URL: redis://default:theagentcompany@redis-stack:6379
+      SCENARIOS_FILE_PATH: /bench-evaluation/vendor-quote-scenarios.json
+    entrypoint: ["python", "/bench/npc.py"]
+    volumes: ["./environment:/bench:ro", "./mock:/bench-evaluation:ro"]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import json,os; [os.kill(pid,0) for pid in json.load(open('/tmp/npc-pids.json'))]"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+
+
+volumes:
+  owncloud_data:
+  mongodb_data:
+  redis_data:
+  seed_data:

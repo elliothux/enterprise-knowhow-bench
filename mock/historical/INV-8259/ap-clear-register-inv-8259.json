@@ -1,0 +1,123 @@
+{
+  "invoices": [
+    {
+      "ref": "J22-INV-1",
+      "event_on": "2026-12-14T10:30:00",
+      "recorded_on": "2026-12-14T12:00:00",
+      "vendor_id": "VEND-172",
+      "invoice_id": "INV-8259",
+      "revision": 2,
+      "status": "POSTED",
+      "gross_sgd": "832",
+      "po_id": "PO-033"
+    }
+  ],
+  "purchase_orders": [
+    {
+      "ref": "J22-PUR-1",
+      "event_on": "2026-12-14T10:30:00",
+      "recorded_on": "2026-12-14T12:00:00",
+      "vendor_id": "VEND-172",
+      "invoice_id": "INV-8259",
+      "revision": 1,
+      "status": "APPROVED",
+      "po_id": "PO-033",
+      "amount_sgd": "832"
+    }
+  ],
+  "receipts": [
+    {
+      "ref": "J22-REC-1",
+      "event_on": "2026-12-14T10:30:00",
+      "recorded_on": "2026-12-14T12:00:00",
+      "vendor_id": "VEND-172",
+      "invoice_id": "INV-8259",
+      "revision": 1,
+      "status": "ACCEPTED",
+      "po_id": "PO-033",
+      "receipt_id": "GR-007",
+      "amount_sgd": "832"
+    }
+  ],
+  "bank_events": [
+    {
+      "ref": "J22-BAN-1",
+      "event_on": "2026-12-14T10:30:00",
+      "recorded_on": "2026-12-14T12:00:00",
+      "vendor_id": "VEND-172",
+      "invoice_id": "INV-8259",
+      "kind": "CHANGE",
+      "sequence": 1,
+      "account_ref": "AC-003",
+      "change_ref": "",
+      "actor_id": "edgar",
+      "role": "AP_ANALYST",
+      "status": "ACTIVE"
+    },
+    {
+      "ref": "J22-BAN-2",
+      "event_on": "2026-12-14T10:30:00",
+      "recorded_on": "2026-12-14T12:00:00",
+      "vendor_id": "VEND-172",
+      "invoice_id": "INV-8259",
+      "kind": "VERIFY",
+      "sequence": 2,
+      "account_ref": "AC-003",
+      "change_ref": "J22-BAN-1",
+      "actor_id": "anita",
+      "role": "TREASURY_MANAGER",
+      "status": "VERIFIED"
+    }
+  ],
+  "hold_events": [],
+  "settlements": [
+    {
+      "ref": "J22-SET-1",
+      "event_on": "2026-12-14T10:30:00",
+      "recorded_on": "2026-12-14T12:00:00",
+      "vendor_id": "VEND-172",
+      "invoice_id": "INV-8259",
+      "entry_id": "DA-EXPLICIT",
+      "revision": 1,
+      "kind": "DUPLICATE_AUDIT",
+      "status": "CLEAR",
+      "amount_sgd": "0"
+    }
+  ],
+  "exceptions": [],
+  "family": "payment-release",
+  "rules": {
+    "as_of": "2026-12-15",
+    "event_cutoff": "2026-12-15T17:00:00",
+    "recorded_cutoff": "2026-12-16T09:00:00",
+    "policy_id": "POL-EV-CURRENT",
+    "bulletin_id": "BUL-EV-01",
+    "policy_effective_from": "2026-12-13T00:00:00",
+    "old_policy_id": "POL-EV-ARCHIVE",
+    "reason_order": [
+      "NOT_POSTED",
+      "DUPLICATE",
+      "NO_BALANCE",
+      "PO_MISMATCH",
+      "RECEIPT_SHORT",
+      "BANK_UNVERIFIED",
+      "ACTIVE_HOLD"
+    ],
+    "waivable_reasons": [
+      "PO_MISMATCH",
+      "RECEIPT_SHORT"
+    ],
+    "waiver_role": "CFO",
+    "bank_verifier_role": "TREASURY_REVIEWER",
+    "hold_close_roles": [
+      "AP_CONTROLLER",
+      "RISK_MANAGER"
+    ]
+  },
+  "roster": [
+    {
+      "vendor_id": "VEND-172",
+      "invoice_id": "INV-8259"
+    }
+  ]
+}

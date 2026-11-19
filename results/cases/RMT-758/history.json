@@ -1,0 +1,82 @@
+{
+  "id": "RMT-758",
+  "interface": "Simulated ERP CLI",
+  "variants": [
+    {
+      "protocol": "remittance-rmt-758",
+      "metric": "两张发票首交核销分的均值",
+      "environment": {
+        "model": "gpt-6.1-terra",
+        "cli": "codex-cli 0.169.0",
+        "cli_sha256": "739cda86e15d30a6e2b40cf8dcbbfb988aaf48b305b27065573bb8e9fd41d002",
+        "os": "ProductName:\t\tmacOS\nProductVersion:\t\t26.4\nBuildVersion:\t\t25E246",
+        "arch": "arm64",
+        "python": "Python 3.12.16",
+        "reasoning": "high",
+        "tool_sha256": "2300f1da9af278d185084c417d5564d768a7cc64a04198daf3f188da7a3a1f51"
+      },
+      "sessions": [
+        "paired-remittance-screen/20261118/RMT-758/A",
+        "paired-remittance-screen/20261118/RMT-758/B"
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "run": "paired-remittance-screen/20261118/RMT-758/A",
+      "arm": "A",
+      "condition": "no Skill",
+      "score": 0.0,
+      "seconds": 26.910858583003574,
+      "protocol": null,
+      "first_delivery": {
+        "text": "I-47144,REFER\nI-42701,REFER"
+      },
+      "actions": [
+        {
+          "line": 5,
+          "operation": "read",
+          "exit": 0
+        },
+        {
+          "line": 7,
+          "operation": "submit",
+          "exit": 0
+        }
+      ],
+      "sha256": {
+        "events": "97192e6639e6417aab0aefd06ccd1ea8e1991fd309da3c300466a7c1140ee57c",
+        "result": "5b3018940616fb83b1ee8a86ddbad089a9040906509049cde062d3ecbc8e8091",
+        "delivery": "97e4cefa497f59ae4b666b3482d132fe18cfc1be5af09236fa982a7cb3a0c1eb"
+      }
+    },
+    {
+      "run": "paired-remittance-screen/20261118/RMT-758/B",
+      "arm": "B",
+      "condition": "GLM Skill",
+      "score": 100.0,
+      "seconds": 22.580378332997498,
+      "protocol": null,
+      "first_delivery": {
+        "text": "I-47144,0.00,0.00,0.00,8.40,COLLECTIONS\nI-42701,0.00,0.00,6.15,0.00,CLOSED"
+      },
+      "actions": [
+        {
+          "line": 5,
+          "operation": "read",
+          "exit": 0
+        },
+        {
+          "line": 7,
+          "operation": "submit",
+          "exit": 0
+        }
+      ],
+      "sha256": {
+        "events": "4f390d80419aebaf022a383b72c759e123049a84424d4e68b7ae999559b12d13",
+        "result": "3a2b2d09db9e80367d82878b2858fdf3835072e569bacca4ee8ab0e9bdd850c5",
+        "delivery": "701cd67591b08c12f2058a540d3dfbe938d426d44472b83c03f6f39ce19111a6"
+      }
+    }
+  ]
+}

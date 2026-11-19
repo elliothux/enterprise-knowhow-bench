@@ -1,0 +1,82 @@
+{
+  "id": "RMT-814",
+  "interface": "Simulated ERP CLI",
+  "variants": [
+    {
+      "protocol": "remittance-rmt-814",
+      "metric": "两张发票首交核销分的均值",
+      "environment": {
+        "model": "gpt-6.1-terra",
+        "cli": "codex-cli 0.169.0",
+        "cli_sha256": "739cda86e15d30a6e2b40cf8dcbbfb988aaf48b305b27065573bb8e9fd41d002",
+        "os": "ProductName:\t\tmacOS\nProductVersion:\t\t26.4\nBuildVersion:\t\t25E246",
+        "arch": "arm64",
+        "python": "Python 3.12.16",
+        "reasoning": "high",
+        "tool_sha256": "2300f1da9af278d185084c417d5564d768a7cc64a04198daf3f188da7a3a1f51"
+      },
+      "sessions": [
+        "paired-remittance-screen/20261118/RMT-814/A",
+        "paired-remittance-screen/20261118/RMT-814/B"
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "run": "paired-remittance-screen/20261118/RMT-814/A",
+      "arm": "A",
+      "condition": "no Skill",
+      "score": 0.0,
+      "seconds": 24.380480166997586,
+      "protocol": null,
+      "first_delivery": {
+        "text": "I-42800,REFER\nI-45699,REFER"
+      },
+      "actions": [
+        {
+          "line": 5,
+          "operation": "read",
+          "exit": 0
+        },
+        {
+          "line": 7,
+          "operation": "submit",
+          "exit": 0
+        }
+      ],
+      "sha256": {
+        "events": "64c7a063635693045be12048dd1dc7332616b872f9a2caca609325065fae4392",
+        "result": "fb8f3b22b6486f18e2e67a7d090f63bd66d8ba5cbe0abd51af3e20fca222adaa",
+        "delivery": "303258d3447b995c117d83e7f2bcf8505f2eac191ffb5f8c72dfe137c2346749"
+      }
+    },
+    {
+      "run": "paired-remittance-screen/20261118/RMT-814/B",
+      "arm": "B",
+      "condition": "GLM Skill",
+      "score": 100.0,
+      "seconds": 24.798393999997643,
+      "protocol": null,
+      "first_delivery": {
+        "text": "I-42800,13.25,0.00,0.00,0.00,CLOSED\nI-45699,0.00,0.00,0.00,6.00,COLLECTIONS"
+      },
+      "actions": [
+        {
+          "line": 5,
+          "operation": "read",
+          "exit": 0
+        },
+        {
+          "line": 7,
+          "operation": "submit",
+          "exit": 0
+        }
+      ],
+      "sha256": {
+        "events": "884d63c6322f0e411f3eb2d101177bd6ab65138c0191587f9bae9f68644bfa6a",
+        "result": "f47ff6dda48a8d3031dae87233a1ab45ec2b742df82e1a4d6377519fc52716d6",
+        "delivery": "239bf3b3ee6812fc5d1ffe744263aab3d9d27b7568f7cd7d25fa6dc1188400dd"
+      }
+    }
+  ]
+}

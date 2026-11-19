@@ -1,0 +1,99 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [4 0 R 6 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 5 0 R >>
+endobj
+5 0 obj
+<< /Length 988 >>
+stream
+BT /F1 10 Tf 13 TL 40 800 Td
+(ERP and bank reconciliation | receipt 3091 | SGD) Tj
+T*
+(Invoice I-3091, shipment S-3091. Merchandise 1200.00, freight 130.00, tax 90.00.) Tj
+T*
+(Ledger credit on this invoice: 100.00, GOODS, POSTED.) Tj
+T*
+(Bank receipt 1290.50. Payment instruction 2026-11-13; bank value 2026-11-16; ERP imported) Tj
+T*
+(2026-11-18.) Tj
+T*
+(Contract prompt-payment rate 2%; prompt-payment deadline 2026-11-13.) Tj
+T*
+(Bank Operations confirmed a receiving-bank service interruption affecting this transfer on) Tj
+T*
+(its value date.) Tj
+T*
+(Carrier case: shipment S-3091, reserve 0.00, liability pending. Signed POD exception on) Tj
+T*
+(invoiced shipment: NO.) Tj
+T*
+(Please post the short payment on invoice I-3091. The customer's remittance label is TERMS,) Tj
+T*
+(with a separate damage deduction claim of SGD 0.00. The ledger extract is in the assigned) Tj
+T*
+(cash-desk folder.) Tj
+T*
+(Prior first posting to Finance: I-3091,22.00,0.00,0.00,7.50,COLLECTIONS) Tj
+T*
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 7 0 R >>
+endobj
+7 0 obj
+<< /Length 910 >>
+stream
+BT /F1 10 Tf 13 TL 40 800 Td
+(ERP and bank reconciliation | receipt 3475 | SGD) Tj
+T*
+(Invoice I-3475, shipment S-3475. Merchandise 990.00, freight 160.00, tax 70.00.) Tj
+T*
+(Ledger credit on this invoice: 0.00, GOODS, POSTED.) Tj
+T*
+(Bank receipt 1157.00. Payment instruction 2026-11-13; bank value 2026-11-13; ERP imported) Tj
+T*
+(2026-11-18.) Tj
+T*
+(Contract prompt-payment rate 2%; prompt-payment deadline 2026-11-13.) Tj
+T*
+(Incident record for this transfer: NONE.) Tj
+T*
+(Carrier case: shipment S-3475, reserve 60.00, liability pending. Signed POD exception on) Tj
+T*
+(invoiced shipment: YES.) Tj
+T*
+(Please post the short payment on invoice I-3475. The customer's remittance label is DAMAGE,) Tj
+T*
+(with a separate damage deduction claim of SGD 63.00. The ledger extract is in the assigned) Tj
+T*
+(cash-desk folder.) Tj
+T*
+(Prior first posting to Finance: I-3475,0.00,60.00,0.00,3.00,CLAIMS) Tj
+T*
+ET
+endstream
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000121 00000 n 
+0000000191 00000 n 
+0000000317 00000 n 
+0000001355 00000 n 
+0000001481 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+2441
+%%EOF

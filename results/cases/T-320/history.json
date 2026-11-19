@@ -1,0 +1,96 @@
+{
+  "id": "T-320",
+  "interface": "Simulated ERP CLI",
+  "variants": [
+    {
+      "protocol": "first-contact-t-320",
+      "metric": "无需查制度即首次答对",
+      "environment": {
+        "model": "gpt-6.1-terra/high",
+        "budget": 300,
+        "recorded_host": "历史冻结协议未逐次记录宿主 OS 补丁号。"
+      },
+      "sessions": [
+        "first-contact/20261118T054400Z/10A",
+        "first-contact/20261118T054400Z/10B",
+        "first-contact/20261118T054400Z/10C"
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "run": "first-contact/20261118T054400Z/10A",
+      "arm": "A",
+      "condition": "desk guide",
+      "score": 0,
+      "seconds": 8.869918084004894,
+      "protocol": null,
+      "first_delivery": {
+        "text": "ticket,decision,reasons\nT-320,RELEASE,NONE"
+      },
+      "actions": [
+        {
+          "line": 5,
+          "operation": "submit",
+          "exit": 0
+        }
+      ],
+      "sha256": {
+        "events": "94bcc25a45c3c07d997707592308c5f44979775feb92ceeb5d2d3f70837d6200",
+        "result": "d5038f5552513239d56c6b1f138e8f49f661a9a37e5a2cba748a38cc0c5ab319",
+        "delivery": "d07c1cabff6d6f6b3a08f9417de112f57cc6bf59e6d0a937dd21c2b762a45081"
+      }
+    },
+    {
+      "run": "first-contact/20261118T054400Z/10B",
+      "arm": "B",
+      "condition": "guide + Lynx",
+      "score": 100,
+      "seconds": 10.650832750019617,
+      "protocol": null,
+      "first_delivery": {
+        "text": "ticket,decision,reasons\nT-320,HOLD,DUPLICATE"
+      },
+      "actions": [
+        {
+          "line": 5,
+          "operation": "submit",
+          "exit": 0
+        }
+      ],
+      "sha256": {
+        "events": "4b78506c2086808aebf7835084dc1ec3a2191d3a49bb456f7534352feefe3741",
+        "result": "76a396d1f7a913b6024ccf3e754e3ed7f2f510af7af8091506fe7f78d5157d87",
+        "delivery": "01207cc72804568a510b82746265370b83950c7eea270d9172fd948ac5435201"
+      }
+    },
+    {
+      "run": "first-contact/20261118T054400Z/10C",
+      "arm": "C",
+      "condition": "guide + ordinary handoff",
+      "score": 100,
+      "seconds": 11.905465750023723,
+      "protocol": null,
+      "first_delivery": {
+        "text": "ticket,decision,reasons\nT-320,HOLD,DUPLICATE"
+      },
+      "actions": [
+        {
+          "line": 5,
+          "operation": "read",
+          "exit": 0
+        },
+        {
+          "line": 7,
+          "operation": "submit",
+          "exit": 0
+        }
+      ],
+      "sha256": {
+        "events": "e079b6049603b111191cb21e20444f8e463a14288542f04563e42928f840bcd4",
+        "result": "914e357f87684de32540a4ca4670d51658be3c45cae59543967ada4d9d97ecf1",
+        "delivery": "01207cc72804568a510b82746265370b83950c7eea270d9172fd948ac5435201"
+      }
+    }
+  ]
+}

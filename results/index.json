@@ -1,0 +1,278 @@
+[
+  {
+    "id": "AP-1026",
+    "interface": "Native Chrome",
+    "history": "cases/AP-1026/history.json",
+    "sessions": 3
+  },
+  {
+    "id": "AP-1059",
+    "interface": "Native Chrome",
+    "history": "cases/AP-1059/history.json",
+    "sessions": 2
+  },
+  {
+    "id": "AP-723",
+    "interface": "Native Chrome",
+    "history": "cases/AP-723/history.json",
+    "sessions": 3
+  },
+  {
+    "id": "AP-907",
+    "interface": "Native Chrome",
+    "history": "cases/AP-907/history.json",
+    "sessions": 3
+  },
+  {
+    "id": "AR-21731",
+    "interface": "Native Chrome",
+    "history": "cases/AR-21731/history.json",
+    "sessions": 3
+  },
+  {
+    "id": "AR-21943",
+    "interface": "Native Chrome",
+    "history": "cases/AR-21943/history.json",
+    "sessions": 2
+  },
+  {
+    "id": "AR-22153",
+    "interface": "Native Chrome",
+    "history": "cases/AR-22153/history.json",
+    "sessions": 3
+  },
+  {
+    "id": "AR-22711",
+    "interface": "Native Chrome",
+    "history": "cases/AR-22711/history.json",
+    "sessions": 2
+  },
+  {
+    "id": "AR-22803",
+    "interface": "Native Chrome",
+    "history": "cases/AR-22803/history.json",
+    "sessions": 3
+  },
+  {
+    "id": "AR-23217",
+    "interface": "Native Chrome",
+    "history": "cases/AR-23217/history.json",
+    "sessions": 3
+  },
+  {
+    "id": "AR-23641",
+    "interface": "Native Chrome",
+    "history": "cases/AR-23641/history.json",
+    "sessions": 3
+  },
+  {
+    "id": "AR-23951",
+    "interface": "Native Chrome",
+    "history": "cases/AR-23951/history.json",
+    "sessions": 3
+  },
+  {
+    "id": "AR-24139",
+    "interface": "Native Chrome",
+    "history": "cases/AR-24139/history.json",
+    "sessions": 3
+  },
+  {
+    "id": "AR-24513",
+    "interface": "Native Chrome",
+    "history": "cases/AR-24513/history.json",
+    "sessions": 2
+  },
+  {
+    "id": "AR-25407",
+    "interface": "Native Chrome",
+    "history": "cases/AR-25407/history.json",
+    "sessions": 3
+  },
+  {
+    "id": "AR-26437",
+    "interface": "Native Chrome",
+    "history": "cases/AR-26437/history.json",
+    "sessions": 3
+  },
+  {
+    "id": "I-7103",
+    "interface": "Native Chrome",
+    "history": "cases/I-7103/history.json",
+    "sessions": 2
+  },
+  {
+    "id": "I-7381",
+    "interface": "Native Chrome",
+    "history": "cases/I-7381/history.json",
+    "sessions": 4
+  },
+  {
+    "id": "I-7423",
+    "interface": "Native Chrome",
+    "history": "cases/I-7423/history.json",
+    "sessions": 3
+  },
+  {
+    "id": "I-7547",
+    "interface": "Native Chrome",
+    "history": "cases/I-7547/history.json",
+    "sessions": 4
+  },
+  {
+    "id": "INV-8259",
+    "interface": "Simulated ERP CLI",
+    "history": "cases/INV-8259/history.json",
+    "sessions": 16
+  },
+  {
+    "id": "INV-8266",
+    "interface": "Simulated ERP CLI",
+    "history": "cases/INV-8266/history.json",
+    "sessions": 14
+  },
+  {
+    "id": "INV-8273",
+    "interface": "Simulated ERP CLI",
+    "history": "cases/INV-8273/history.json",
+    "sessions": 16
+  },
+  {
+    "id": "INV-8287",
+    "interface": "Simulated ERP CLI",
+    "history": "cases/INV-8287/history.json",
+    "sessions": 14
+  },
+  {
+    "id": "INV-8294",
+    "interface": "Simulated ERP CLI",
+    "history": "cases/INV-8294/history.json",
+    "sessions": 14
+  },
+  {
+    "id": "INV-8322",
+    "interface": "Simulated ERP CLI",
+    "history": "cases/INV-8322/history.json",
+    "sessions": 14
+  },
+  {
+    "id": "INV-8329",
+    "interface": "Simulated ERP CLI",
+    "history": "cases/INV-8329/history.json",
+    "sessions": 14
+  },
+  {
+    "id": "INV-8336",
+    "interface": "Simulated ERP CLI",
+    "history": "cases/INV-8336/history.json",
+    "sessions": 14
+  },
+  {
+    "id": "INV-8350",
+    "interface": "Simulated ERP CLI",
+    "history": "cases/INV-8350/history.json",
+    "sessions": 14
+  },
+  {
+    "id": "INV-8385",
+    "interface": "Simulated ERP CLI",
+    "history": "cases/INV-8385/history.json",
+    "sessions": 4
+  },
+  {
+    "id": "RMT-716",
+    "interface": "Simulated ERP CLI",
+    "history": "cases/RMT-716/history.json",
+    "sessions": 2
+  },
+  {
+    "id": "RMT-723",
+    "interface": "Simulated ERP CLI",
+    "history": "cases/RMT-723/history.json",
+    "sessions": 2
+  },
+  {
+    "id": "RMT-730",
+    "interface": "Simulated ERP CLI",
+    "history": "cases/RMT-730/history.json",
+    "sessions": 2
+  },
+  {
+    "id": "RMT-737",
+    "interface": "Simulated ERP CLI",
+    "history": "cases/RMT-737/history.json",
+    "sessions": 2
+  },
+  {
+    "id": "RMT-744",
+    "interface": "Simulated ERP CLI",
+    "history": "cases/RMT-744/history.json",
+    "sessions": 2
+  },
+  {
+    "id": "RMT-751",
+    "interface": "Simulated ERP CLI",
+    "history": "cases/RMT-751/history.json",
+    "sessions": 2
+  },
+  {
+    "id": "RMT-758",
+    "interface": "Simulated ERP CLI",
+    "history": "cases/RMT-758/history.json",
+    "sessions": 2
+  },
+  {
+    "id": "RMT-772",
+    "interface": "Simulated ERP CLI",
+    "history": "cases/RMT-772/history.json",
+    "sessions": 2
+  },
+  {
+    "id": "RMT-779",
+    "interface": "Simulated ERP CLI",
+    "history": "cases/RMT-779/history.json",
+    "sessions": 2
+  },
+  {
+    "id": "RMT-786",
+    "interface": "Simulated ERP CLI",
+    "history": "cases/RMT-786/history.json",
+    "sessions": 2
+  },
+  {
+    "id": "RMT-793",
+    "interface": "Simulated ERP CLI",
+    "history": "cases/RMT-793/history.json",
+    "sessions": 2
+  },
+  {
+    "id": "RMT-800",
+    "interface": "Simulated ERP CLI",
+    "history": "cases/RMT-800/history.json",
+    "sessions": 2
+  },
+  {
+    "id": "RMT-807",
+    "interface": "Simulated ERP CLI",
+    "history": "cases/RMT-807/history.json",
+    "sessions": 2
+  },
+  {
+    "id": "RMT-814",
+    "interface": "Simulated ERP CLI",
+    "history": "cases/RMT-814/history.json",
+    "sessions": 2
+  },
+  {
+    "id": "RMT-821",
+    "interface": "Simulated ERP CLI",
+    "history": "cases/RMT-821/history.json",
+    "sessions": 2
+  },
+  {
+    "id": "T-320",
+    "interface": "Simulated ERP CLI",
+    "history": "cases/T-320/history.json",
+    "sessions": 3
+  }
+]

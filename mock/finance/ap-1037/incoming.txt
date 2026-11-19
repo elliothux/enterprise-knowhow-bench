@@ -1,0 +1,1 @@
+Please review invoice INV-15504 for vendor VEND-1207 and post the payment recommendation to this private queue. The ledger and prior closed reviews are in your assigned ownCloud folder.

@@ -1,0 +1,136 @@
+{
+  "id": "INV-8385",
+  "interface": "Simulated ERP CLI",
+  "variants": [
+    {
+      "protocol": "ap-audit-packet-inv-8385",
+      "metric": "首次决定和完整理由均正确",
+      "environment": {
+        "model": "gpt-6.1-terra/high",
+        "budget": 300,
+        "cli": "739cda86e15d30a6e2b40cf8dcbbfb988aaf48b305b27065573bb8e9fd41d002",
+        "recorded_host": "历史冻结协议未逐次记录宿主 OS 补丁号。"
+      },
+      "sessions": [
+        "ap-audit-packet/20261118T061352Z/00A",
+        "ap-audit-packet/20261118T061352Z/00B",
+        "ap-audit-packet/20261118T061352Z/00C",
+        "ap-audit-packet/20261118T061352Z/00D"
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "run": "ap-audit-packet/20261118T061352Z/00A",
+      "arm": "A",
+      "condition": "ERP and historical input/output examples",
+      "score": 0,
+      "seconds": 15.193760625028517,
+      "protocol": null,
+      "first_delivery": {
+        "text": "invoice_id,decision,reason_codes,evidence_refs\nINV-8385,REFER,UNKNOWN,POL-EV-CURRENT;BUL-EV-01;J40-INV-1;J40-PUR-1;J40-REC-1;J40-BAN-1;J40-BAN-2"
+      },
+      "actions": [
+        {
+          "line": 5,
+          "operation": "read",
+          "exit": 0
+        },
+        {
+          "line": 7,
+          "operation": "submit",
+          "exit": 0
+        }
+      ],
+      "sha256": {
+        "events": "0148de6fde930814aba2375222223afae98f1cb45319d896e701a82ee1c362fb",
+        "result": "50c4bf9148dbb6d66cf39906e822c04aabd0f6af6736f3710b0ef1b3b2c53fe6",
+        "delivery": "c4f59efd4fed2aa1065a6bec875bf6e3a9f7934fa3c004f607e5d4a0fc9c296a"
+      }
+    },
+    {
+      "run": "ap-audit-packet/20261118T061352Z/00B",
+      "arm": "B",
+      "condition": "A + frozen Lynx Skill",
+      "score": 100,
+      "seconds": 16.636833208962344,
+      "protocol": null,
+      "first_delivery": {
+        "text": "invoice_id,decision,reason_codes,evidence_refs\nINV-8385,RELEASE,NONE,POL-EV-CURRENT;BUL-EV-01;J40-INV-1;J40-PUR-1;J40-REC-1;J40-BAN-1;J40-BAN-2"
+      },
+      "actions": [
+        {
+          "line": 5,
+          "operation": "read",
+          "exit": 0
+        },
+        {
+          "line": 7,
+          "operation": "submit",
+          "exit": 0
+        }
+      ],
+      "sha256": {
+        "events": "43082f7a64acb3a8745e7f6b3cbd4e1199fbf86adc84ed9840b683ecd01177f1",
+        "result": "00fc7b463bb2f0b71f937ed6cc68aa96244d00105948be8dbf272ddd5c781e5e",
+        "delivery": "7cf9963e59da0c6494b062029291374bfa06c4daddb1558c74dda9606ad3cc02"
+      }
+    },
+    {
+      "run": "ap-audit-packet/20261118T061352Z/00C",
+      "arm": "C",
+      "condition": "A + complete current written policy",
+      "score": 100,
+      "seconds": 18.083643999998458,
+      "protocol": null,
+      "first_delivery": {
+        "text": "invoice_id,decision,reason_codes,evidence_refs\nINV-8385,RELEASE,NONE,POL-EV-CURRENT;BUL-EV-01;J40-INV-1;J40-PUR-1;J40-REC-1;J40-BAN-1;J40-BAN-2"
+      },
+      "actions": [
+        {
+          "line": 5,
+          "operation": "read",
+          "exit": 0
+        },
+        {
+          "line": 7,
+          "operation": "submit",
+          "exit": 0
+        }
+      ],
+      "sha256": {
+        "events": "d3a23da20f3884efce5420ecf2167632ab2b436e449b3f1274f6d02444e93769",
+        "result": "8dd63ea4f5226fe250e9f5ac0ddcfbd1092690525e4bbfd5f2a455461ba9e482",
+        "delivery": "7cf9963e59da0c6494b062029291374bfa06c4daddb1558c74dda9606ad3cc02"
+      }
+    },
+    {
+      "run": "ap-audit-packet/20261118T061352Z/00D",
+      "arm": "D",
+      "condition": "C + same Lynx Skill",
+      "score": 100,
+      "seconds": 18.4604037500103,
+      "protocol": null,
+      "first_delivery": {
+        "text": "invoice_id,decision,reason_codes,evidence_refs\nINV-8385,RELEASE,NONE,POL-EV-CURRENT;BUL-EV-01;J40-INV-1;J40-PUR-1;J40-REC-1;J40-BAN-1;J40-BAN-2"
+      },
+      "actions": [
+        {
+          "line": 5,
+          "operation": "read",
+          "exit": 0
+        },
+        {
+          "line": 7,
+          "operation": "submit",
+          "exit": 0
+        }
+      ],
+      "sha256": {
+        "events": "b46b4c1d8cb60bf5aee3509adecc0e61c6b1e6c86aa4fa84a789306d4a50cdab",
+        "result": "6b4a5e8cb163dddeb42b9605e8296d3e6ed28dad28050328bf714d18957bc3ad",
+        "delivery": "7cf9963e59da0c6494b062029291374bfa06c4daddb1558c74dda9606ad3cc02"
+      }
+    }
+  ]
+}

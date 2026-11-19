@@ -1,0 +1,376 @@
+{
+  "id": "INV-8329",
+  "interface": "Simulated ERP CLI",
+  "variants": [
+    {
+      "protocol": "ap-handoff-inv-8329",
+      "metric": "首次决定和完整理由均正确",
+      "environment": {
+        "model": "gpt-6.1-terra/high",
+        "budget": 300,
+        "cli": "739cda86e15d30a6e2b40cf8dcbbfb988aaf48b305b27065573bb8e9fd41d002",
+        "recorded_host": "历史冻结协议未逐次记录宿主 OS 补丁号。"
+      },
+      "sessions": [
+        "ap-handoff/20261118T061046Z/12A",
+        "ap-handoff/20261118T061046Z/12B",
+        "ap-handoff/20261118T061046Z/12C",
+        "ap-handoff/20261118T061046Z/12D",
+        "ap-handoff/20261118T061513Z/12A",
+        "ap-handoff/20261118T061513Z/12B",
+        "ap-handoff/20261118T061513Z/12C",
+        "ap-handoff/20261118T061513Z/12D",
+        "distillation/20261118-ap-handoff/round-1/12A",
+        "distillation/20261118-ap-handoff/round-1/12D",
+        "distillation/20261118-ap-handoff/round-1/12G",
+        "distillation/20261118-ap-handoff/round-2/12A",
+        "distillation/20261118-ap-handoff/round-2/12D",
+        "distillation/20261118-ap-handoff/round-2/12G"
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "run": "ap-handoff/20261118T061046Z/12A",
+      "arm": "A",
+      "condition": "ERP, historic outcomes and raw historic transactions",
+      "score": 100,
+      "seconds": 14.663762458018027,
+      "protocol": null,
+      "first_delivery": {
+        "text": "invoice_id,decision,reason_codes\nINV-8329,RELEASE,NONE"
+      },
+      "actions": [
+        {
+          "line": 5,
+          "operation": "read",
+          "exit": 0
+        },
+        {
+          "line": 7,
+          "operation": "submit",
+          "exit": 0
+        }
+      ],
+      "sha256": {
+        "events": "9b3490305bc9e398170893a543a407bf9f8d9aed4d8a4eba36d5a200e174f567",
+        "result": "eef408ffba92a803ed5d13cad57cb890fa1be5b85e07df4fc756494c55b4129b",
+        "delivery": "c38816b1472cd9027b25132982f269eb78fc4dad631bc56bc66df4c808ad8d14"
+      }
+    },
+    {
+      "run": "ap-handoff/20261118T061046Z/12B",
+      "arm": "B",
+      "condition": "A + product-reviewed Lynx Skill",
+      "score": 100,
+      "seconds": 10.942244458012283,
+      "protocol": null,
+      "first_delivery": {
+        "text": "invoice_id,decision,reason_codes\nINV-8329,RELEASE,NONE"
+      },
+      "actions": [
+        {
+          "line": 5,
+          "operation": "submit",
+          "exit": 0
+        }
+      ],
+      "sha256": {
+        "events": "4502ebe6b2c55e6883a93d6af25796648674ee2dce20879c4fc6de28fec77e4c",
+        "result": "e253920f6343a8272f3cc5f946b44078c04060ee73861f8a36cb9dea79b9c3b3",
+        "delivery": "c38816b1472cd9027b25132982f269eb78fc4dad631bc56bc66df4c808ad8d14"
+      }
+    },
+    {
+      "run": "ap-handoff/20261118T061046Z/12C",
+      "arm": "C",
+      "condition": "A + complete current written policy",
+      "score": 100,
+      "seconds": 14.005204332992435,
+      "protocol": null,
+      "first_delivery": {
+        "text": "invoice_id,decision,reason_codes\nINV-8329,RELEASE,NONE"
+      },
+      "actions": [
+        {
+          "line": 5,
+          "operation": "submit",
+          "exit": 0
+        }
+      ],
+      "sha256": {
+        "events": "50604d1bdf8ea729ed33751e88d9193fe16ff68bfc76cdf5d95dbf732aaf0a9b",
+        "result": "fa16f047ab1ea89332c8cade69d5e8300afcb0b23d7348e798c5e5fed01f777c",
+        "delivery": "c38816b1472cd9027b25132982f269eb78fc4dad631bc56bc66df4c808ad8d14"
+      }
+    },
+    {
+      "run": "ap-handoff/20261118T061046Z/12D",
+      "arm": "D",
+      "condition": "C + same Lynx Skill",
+      "score": 100,
+      "seconds": 10.350296667020302,
+      "protocol": null,
+      "first_delivery": {
+        "text": "invoice_id,decision,reason_codes\nINV-8329,RELEASE,NONE"
+      },
+      "actions": [
+        {
+          "line": 5,
+          "operation": "submit",
+          "exit": 0
+        }
+      ],
+      "sha256": {
+        "events": "ed49faa4de3fcc819c15cc91182ed65dffac777b591dc702ed8c5440ac557b35",
+        "result": "7109b7c13665f673e008c77bdfe8de7220964740828cca269ebb99e9ef8f1e67",
+        "delivery": "c38816b1472cd9027b25132982f269eb78fc4dad631bc56bc66df4c808ad8d14"
+      }
+    },
+    {
+      "run": "ap-handoff/20261118T061513Z/12A",
+      "arm": "A",
+      "condition": "ERP, historic outcomes and raw historic transactions",
+      "score": 100,
+      "seconds": 16.004025291011203,
+      "protocol": null,
+      "first_delivery": {
+        "text": "invoice_id,decision,reason_codes\nINV-8329,RELEASE,NONE"
+      },
+      "actions": [
+        {
+          "line": 5,
+          "operation": "read",
+          "exit": 0
+        },
+        {
+          "line": 7,
+          "operation": "submit",
+          "exit": 0
+        }
+      ],
+      "sha256": {
+        "events": "121225bb761c995597f8cc5006204f0fc9277491e3a667f165753838405c8453",
+        "result": "2dd46af91b8ec701a79ec38a0d8d0647b572c65652c12745c013337ada2ed30b",
+        "delivery": "c38816b1472cd9027b25132982f269eb78fc4dad631bc56bc66df4c808ad8d14"
+      }
+    },
+    {
+      "run": "ap-handoff/20261118T061513Z/12B",
+      "arm": "B",
+      "condition": "A + product-reviewed Lynx Skill",
+      "score": 100,
+      "seconds": 10.88021283299895,
+      "protocol": null,
+      "first_delivery": {
+        "text": "invoice_id,decision,reason_codes\nINV-8329,RELEASE,NONE"
+      },
+      "actions": [
+        {
+          "line": 5,
+          "operation": "submit",
+          "exit": 0
+        }
+      ],
+      "sha256": {
+        "events": "332b52de928f59eb88819d9f78c4e1e60ddfacc005c841ea59ff9a3c5c83e2cc",
+        "result": "e359eed5766f2cd0b449f0a00839219bf98390dd408ea2e2492da278aaf0365e",
+        "delivery": "c38816b1472cd9027b25132982f269eb78fc4dad631bc56bc66df4c808ad8d14"
+      }
+    },
+    {
+      "run": "ap-handoff/20261118T061513Z/12C",
+      "arm": "C",
+      "condition": "A + complete current written policy",
+      "score": 100,
+      "seconds": 10.668492290948052,
+      "protocol": null,
+      "first_delivery": {
+        "text": "invoice_id,decision,reason_codes\nINV-8329,RELEASE,NONE"
+      },
+      "actions": [
+        {
+          "line": 5,
+          "operation": "submit",
+          "exit": 0
+        }
+      ],
+      "sha256": {
+        "events": "9d78e5fba8a18b32d9ccc4ccbc1973d51f3b9a136b6ff6ca33bc9a84503f29cf",
+        "result": "53bb8bfccadbc10a813e5952ebf5bc6b72d35d84703349d5bf0c8eecfea2e72b",
+        "delivery": "c38816b1472cd9027b25132982f269eb78fc4dad631bc56bc66df4c808ad8d14"
+      }
+    },
+    {
+      "run": "ap-handoff/20261118T061513Z/12D",
+      "arm": "D",
+      "condition": "C + same Lynx Skill",
+      "score": 100,
+      "seconds": 10.559267874981742,
+      "protocol": null,
+      "first_delivery": {
+        "text": "invoice_id,decision,reason_codes\nINV-8329,RELEASE,NONE"
+      },
+      "actions": [
+        {
+          "line": 5,
+          "operation": "submit",
+          "exit": 0
+        }
+      ],
+      "sha256": {
+        "events": "514f8542261f3aac4258b1557770e1a76fc5e925f697116551d63e396bb1a3e3",
+        "result": "14ce2fb6a45229f6889817b4b7227aefe52ad07423e14ef581c141c9e938a92c",
+        "delivery": "c38816b1472cd9027b25132982f269eb78fc4dad631bc56bc66df4c808ad8d14"
+      }
+    },
+    {
+      "run": "distillation/20261118-ap-handoff/round-1/12A",
+      "arm": "A",
+      "condition": "no Skill",
+      "score": 100,
+      "seconds": 16.85051804199975,
+      "protocol": null,
+      "first_delivery": {
+        "text": "invoice_id,decision,reason_codes\nINV-8329,RELEASE,NONE"
+      },
+      "actions": [
+        {
+          "line": 5,
+          "operation": "read",
+          "exit": 0
+        },
+        {
+          "line": 7,
+          "operation": "submit",
+          "exit": 0
+        }
+      ],
+      "sha256": {
+        "events": "bbcf270b8166841a969159cff71399caee747e600eb78a010ebe89d1b4559999",
+        "result": "728b8c02801012ce33e73e7aaa10273ff975cc87b7211e1686b147729126e5cd",
+        "delivery": "c38816b1472cd9027b25132982f269eb78fc4dad631bc56bc66df4c808ad8d14"
+      }
+    },
+    {
+      "run": "distillation/20261118-ap-handoff/round-1/12D",
+      "arm": "D",
+      "condition": "DeepSeek Skill",
+      "score": 100,
+      "seconds": 15.391671333996783,
+      "protocol": null,
+      "first_delivery": {
+        "text": "invoice_id,decision,reason_codes\nINV-8329,RELEASE,NONE"
+      },
+      "actions": [
+        {
+          "line": 5,
+          "operation": "submit",
+          "exit": 0
+        }
+      ],
+      "sha256": {
+        "events": "f8723d614af200f6b5a2acdf7a9e455c3078a17bd164ef3d4b5be0344d0fee3a",
+        "result": "c4f0474de84b443a1eeffc6bee5b93853f87ff229010d0fbee7abc99ad4462c7",
+        "delivery": "c38816b1472cd9027b25132982f269eb78fc4dad631bc56bc66df4c808ad8d14"
+      }
+    },
+    {
+      "run": "distillation/20261118-ap-handoff/round-1/12G",
+      "arm": "G",
+      "condition": "GLM Skill",
+      "score": 100,
+      "seconds": 13.548944500002108,
+      "protocol": null,
+      "first_delivery": {
+        "text": "invoice_id,decision,reason_codes\nINV-8329,RELEASE,NONE"
+      },
+      "actions": [
+        {
+          "line": 5,
+          "operation": "submit",
+          "exit": 0
+        }
+      ],
+      "sha256": {
+        "events": "a0c73ec879aa8839ef65c48fff99ad0a8f1d675765a6b521896266464b590378",
+        "result": "82cb685d9d961105bee53a5b6395c147593e9972ebde9a52fe44181fa55ecf76",
+        "delivery": "c38816b1472cd9027b25132982f269eb78fc4dad631bc56bc66df4c808ad8d14"
+      }
+    },
+    {
+      "run": "distillation/20261118-ap-handoff/round-2/12A",
+      "arm": "A",
+      "condition": "no Skill",
+      "score": 0,
+      "seconds": 21.155668166997202,
+      "protocol": null,
+      "first_delivery": {
+        "text": "invoice_id,decision,reason_codes\nINV-8329,REFER,UNKNOWN"
+      },
+      "actions": [
+        {
+          "line": 5,
+          "operation": "read",
+          "exit": 0
+        },
+        {
+          "line": 7,
+          "operation": "submit",
+          "exit": 0
+        }
+      ],
+      "sha256": {
+        "events": "8c0914e997bb877d6b59c61ef9857d4c71076f4c5599153fe7586f8e78d3dca5",
+        "result": "658c8f0de46d0e0cd6c2ad78da6b6bffc32e63807bb914471e58da31561835eb",
+        "delivery": "ed39b3f3d0af951300858d46403130b0d409d3898bad93826ba23797a8d93fb1"
+      }
+    },
+    {
+      "run": "distillation/20261118-ap-handoff/round-2/12D",
+      "arm": "D",
+      "condition": "DeepSeek Skill",
+      "score": 100,
+      "seconds": 11.9994931250003,
+      "protocol": null,
+      "first_delivery": {
+        "text": "invoice_id,decision,reason_codes\nINV-8329,RELEASE,NONE"
+      },
+      "actions": [
+        {
+          "line": 5,
+          "operation": "submit",
+          "exit": 0
+        }
+      ],
+      "sha256": {
+        "events": "fdf1ef9a8edf211517280b95435065c673e7f95d8e4dd857d7c0b37b7ef62428",
+        "result": "386f2b1df852affc49dc4bc2ae5e8fd8b6b4da3dc071b93bae0495c958b69cb3",
+        "delivery": "c38816b1472cd9027b25132982f269eb78fc4dad631bc56bc66df4c808ad8d14"
+      }
+    },
+    {
+      "run": "distillation/20261118-ap-handoff/round-2/12G",
+      "arm": "G",
+      "condition": "GLM Skill",
+      "score": 100,
+      "seconds": 21.69672462499875,
+      "protocol": null,
+      "first_delivery": {
+        "text": "invoice_id,decision,reason_codes\nINV-8329,RELEASE,NONE"
+      },
+      "actions": [
+        {
+          "line": 5,
+          "operation": "submit",
+          "exit": 0
+        }
+      ],
+      "sha256": {
+        "events": "aae721ce25cf3961568fd7d263c0554dde77fa3dafc642f6abc94cc3dbc03bcf",
+        "result": "04f4096c200afac60588393597d661e4276346cb772b1eb1dd8908e0e4de3b8a",
+        "delivery": "c38816b1472cd9027b25132982f269eb78fc4dad631bc56bc66df4c808ad8d14"
+      }
+    }
+  ]
+}

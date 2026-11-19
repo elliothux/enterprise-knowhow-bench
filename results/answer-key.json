@@ -1,0 +1,722 @@
+{
+  "ar-26741": {
+    "invoice": "I-26741",
+    "target": [
+      0,
+      0,
+      0,
+      530,
+      "COLLECTIONS"
+    ]
+  },
+  "ar-22153": {
+    "invoice": "I-22153",
+    "target": [
+      0,
+      0,
+      475,
+      0,
+      "CLOSED"
+    ]
+  },
+  "ar-22279": {
+    "invoice": "I-22279",
+    "target": [
+      0,
+      0,
+      0,
+      590,
+      "COLLECTIONS"
+    ]
+  },
+  "ar-21367": {
+    "invoice": "I-21367",
+    "target": [
+      0,
+      0,
+      0,
+      801,
+      "COLLECTIONS"
+    ]
+  },
+  "ar-23387": {
+    "invoice": "I-23387",
+    "target": [
+      0,
+      0,
+      0,
+      2450,
+      "COLLECTIONS"
+    ]
+  },
+  "ar-23951": {
+    "invoice": "I-23951",
+    "target": [
+      0,
+      0,
+      550,
+      0,
+      "CLOSED"
+    ]
+  },
+  "ar-25407": {
+    "invoice": "I-25407",
+    "target": [
+      0,
+      0,
+      0,
+      450,
+      "COLLECTIONS"
+    ]
+  },
+  "ar-21943": {
+    "invoice": "I-21943",
+    "target": [
+      0,
+      0,
+      800,
+      0,
+      "CLOSED"
+    ]
+  },
+  "ar-21489": {
+    "invoice": "I-21489",
+    "target": [
+      0,
+      0,
+      0,
+      701,
+      "COLLECTIONS"
+    ]
+  },
+  "ar-25811": {
+    "invoice": "I-25811",
+    "target": [
+      0,
+      1525,
+      0,
+      330,
+      "CLAIMS"
+    ]
+  },
+  "ar-23641": {
+    "invoice": "I-23641",
+    "target": [
+      0,
+      0,
+      615,
+      0,
+      "CLOSED"
+    ]
+  },
+  "ar-25673": {
+    "invoice": "I-25673",
+    "target": [
+      0,
+      780,
+      0,
+      0,
+      "CLAIMS"
+    ]
+  },
+  "ar-24513": {
+    "invoice": "I-24513",
+    "target": [
+      2075,
+      0,
+      485,
+      0,
+      "CLOSED"
+    ]
+  },
+  "ar-24857": {
+    "invoice": "I-24857",
+    "target": [
+      2200,
+      0,
+      0,
+      610,
+      "COLLECTIONS"
+    ]
+  },
+  "ar-21731": {
+    "invoice": "I-21731",
+    "target": [
+      0,
+      0,
+      695,
+      0,
+      "CLOSED"
+    ]
+  },
+  "ar-26437": {
+    "invoice": "I-26437",
+    "target": [
+      0,
+      0,
+      0,
+      2750,
+      "COLLECTIONS"
+    ]
+  },
+  "ar-22711": {
+    "invoice": "I-22711",
+    "target": [
+      0,
+      0,
+      0,
+      476,
+      "COLLECTIONS"
+    ]
+  },
+  "ar-25249": {
+    "invoice": "I-25249",
+    "target": [
+      0,
+      2340,
+      0,
+      575,
+      "CLAIMS"
+    ]
+  },
+  "ar-22803": {
+    "invoice": "I-22803",
+    "target": [
+      0,
+      0,
+      590,
+      0,
+      "CLOSED"
+    ]
+  },
+  "ar-24397": {
+    "invoice": "I-24397",
+    "target": [
+      1441,
+      0,
+      0,
+      0,
+      "CLOSED"
+    ]
+  },
+  "ar-26193": {
+    "invoice": "I-26193",
+    "target": [
+      0,
+      0,
+      0,
+      735,
+      "COLLECTIONS"
+    ]
+  },
+  "ar-26905": {
+    "invoice": "I-26905",
+    "target": [
+      0,
+      1260,
+      0,
+      640,
+      "CLAIMS"
+    ]
+  },
+  "ar-24139": {
+    "invoice": "I-24139",
+    "target": [
+      1778,
+      0,
+      420,
+      0,
+      "CLOSED"
+    ]
+  },
+  "ar-23217": {
+    "invoice": "I-23217",
+    "target": [
+      2300,
+      0,
+      510,
+      0,
+      "CLOSED"
+    ]
+  },
+  "ap-1037": {
+    "invoice": "INV-15504",
+    "target": [
+      "INV-15504",
+      "HOLD",
+      "ACTIVE_HOLD"
+    ]
+  },
+  "ap-924": {
+    "invoice": "INV-14713",
+    "target": [
+      "INV-14713",
+      "HOLD",
+      "PO_MISMATCH;RECEIPT_SHORT"
+    ]
+  },
+  "ap-1026": {
+    "invoice": "INV-15427",
+    "target": [
+      "INV-15427",
+      "HOLD",
+      "BANK_UNVERIFIED"
+    ]
+  },
+  "ap-723": {
+    "invoice": "INV-13306",
+    "target": [
+      "INV-13306",
+      "HOLD",
+      "BANK_UNVERIFIED"
+    ]
+  },
+  "ap-839": {
+    "invoice": "INV-14118",
+    "target": [
+      "INV-14118",
+      "HOLD",
+      "ACTIVE_HOLD"
+    ]
+  },
+  "ap-815": {
+    "invoice": "INV-13950",
+    "target": [
+      "INV-13950",
+      "HOLD",
+      "ACTIVE_HOLD"
+    ]
+  },
+  "ap-779": {
+    "invoice": "INV-13698",
+    "target": [
+      "INV-13698",
+      "HOLD",
+      "BANK_UNVERIFIED"
+    ]
+  },
+  "ap-1059": {
+    "invoice": "INV-15658",
+    "target": [
+      "INV-15658",
+      "HOLD",
+      "PO_MISMATCH;ACTIVE_HOLD"
+    ]
+  },
+  "ap-741": {
+    "invoice": "INV-13432",
+    "target": [
+      "INV-13432",
+      "HOLD",
+      "BANK_UNVERIFIED"
+    ]
+  },
+  "ap-762": {
+    "invoice": "INV-13579",
+    "target": [
+      "INV-13579",
+      "RELEASE",
+      "NONE"
+    ]
+  },
+  "ap-806": {
+    "invoice": "INV-13887",
+    "target": [
+      "INV-13887",
+      "HOLD",
+      "ACTIVE_HOLD"
+    ]
+  },
+  "ap-953": {
+    "invoice": "INV-14916",
+    "target": [
+      "INV-14916",
+      "RELEASE",
+      "NONE"
+    ]
+  },
+  "ap-1018": {
+    "invoice": "INV-15371",
+    "target": [
+      "INV-15371",
+      "HOLD",
+      "DUPLICATE;BANK_UNVERIFIED"
+    ]
+  },
+  "ap-854": {
+    "invoice": "INV-14223",
+    "target": [
+      "INV-14223",
+      "RELEASE",
+      "NONE"
+    ]
+  },
+  "ap-911": {
+    "invoice": "INV-14622",
+    "target": [
+      "INV-14622",
+      "HOLD",
+      "RECEIPT_SHORT"
+    ]
+  },
+  "ap-907": {
+    "invoice": "INV-14594",
+    "target": [
+      "INV-14594",
+      "HOLD",
+      "PO_MISMATCH;RECEIPT_SHORT"
+    ]
+  },
+  "RMT-800": [
+    {
+      "invoice": "I-46316",
+      "target": [
+        0,
+        0,
+        0,
+        805,
+        "COLLECTIONS"
+      ]
+    },
+    {
+      "invoice": "I-44746",
+      "target": [
+        2500,
+        0,
+        410,
+        0,
+        "CLOSED"
+      ]
+    }
+  ],
+  "RMT-744": [
+    {
+      "invoice": "I-46544",
+      "target": [
+        0,
+        0,
+        800,
+        0,
+        "CLOSED"
+      ]
+    },
+    {
+      "invoice": "I-46528",
+      "target": [
+        0,
+        0,
+        0,
+        510,
+        "COLLECTIONS"
+      ]
+    }
+  ],
+  "RMT-730": [
+    {
+      "invoice": "I-44288",
+      "target": [
+        0,
+        0,
+        605,
+        0,
+        "CLOSED"
+      ]
+    },
+    {
+      "invoice": "I-42209",
+      "target": [
+        0,
+        0,
+        0,
+        600,
+        "COLLECTIONS"
+      ]
+    }
+  ],
+  "RMT-772": [
+    {
+      "invoice": "I-45707",
+      "target": [
+        2500,
+        0,
+        410,
+        0,
+        "CLOSED"
+      ]
+    },
+    {
+      "invoice": "I-42877",
+      "target": [
+        0,
+        1460,
+        0,
+        440,
+        "CLAIMS"
+      ]
+    }
+  ],
+  "RMT-716": [
+    {
+      "invoice": "I-47740",
+      "target": [
+        0,
+        0,
+        0,
+        510,
+        "COLLECTIONS"
+      ]
+    },
+    {
+      "invoice": "I-43890",
+      "target": [
+        0,
+        0,
+        500,
+        0,
+        "CLOSED"
+      ]
+    }
+  ],
+  "RMT-807": [
+    {
+      "invoice": "I-47971",
+      "target": [
+        2500,
+        0,
+        640,
+        0,
+        "CLOSED"
+      ]
+    },
+    {
+      "invoice": "I-48952",
+      "target": [
+        0,
+        1980,
+        0,
+        620,
+        "CLAIMS"
+      ]
+    }
+  ],
+  "RMT-723": [
+    {
+      "invoice": "I-47207",
+      "target": [
+        0,
+        0,
+        800,
+        0,
+        "CLOSED"
+      ]
+    },
+    {
+      "invoice": "I-48588",
+      "target": [
+        0,
+        0,
+        0,
+        805,
+        "COLLECTIONS"
+      ]
+    }
+  ],
+  "RMT-751": [
+    {
+      "invoice": "I-48346",
+      "target": [
+        0,
+        0,
+        605,
+        0,
+        "CLOSED"
+      ]
+    },
+    {
+      "invoice": "I-45573",
+      "target": [
+        0,
+        1980,
+        0,
+        620,
+        "CLAIMS"
+      ]
+    }
+  ],
+  "RMT-793": [
+    {
+      "invoice": "I-42437",
+      "target": [
+        0,
+        0,
+        590,
+        0,
+        "CLOSED"
+      ]
+    },
+    {
+      "invoice": "I-42625",
+      "target": [
+        0,
+        0,
+        0,
+        510,
+        "COLLECTIONS"
+      ]
+    }
+  ],
+  "RMT-779": [
+    {
+      "invoice": "I-45814",
+      "target": [
+        0,
+        0,
+        0,
+        805,
+        "COLLECTIONS"
+      ]
+    },
+    {
+      "invoice": "I-43665",
+      "target": [
+        2500,
+        0,
+        640,
+        0,
+        "CLOSED"
+      ]
+    }
+  ],
+  "RMT-814": [
+    {
+      "invoice": "I-42800",
+      "target": [
+        1325,
+        0,
+        0,
+        0,
+        "CLOSED"
+      ]
+    },
+    {
+      "invoice": "I-45699",
+      "target": [
+        0,
+        0,
+        0,
+        600,
+        "COLLECTIONS"
+      ]
+    }
+  ],
+  "RMT-821": [
+    {
+      "invoice": "I-46999",
+      "target": [
+        0,
+        1460,
+        0,
+        440,
+        "CLAIMS"
+      ]
+    },
+    {
+      "invoice": "I-43731",
+      "target": [
+        2340,
+        0,
+        590,
+        0,
+        "CLOSED"
+      ]
+    }
+  ],
+  "RMT-737": [
+    {
+      "invoice": "I-48932",
+      "target": [
+        0,
+        0,
+        0,
+        840,
+        "COLLECTIONS"
+      ]
+    },
+    {
+      "invoice": "I-47888",
+      "target": [
+        0,
+        0,
+        500,
+        0,
+        "CLOSED"
+      ]
+    }
+  ],
+  "RMT-758": [
+    {
+      "invoice": "I-47144",
+      "target": [
+        0,
+        0,
+        0,
+        840,
+        "COLLECTIONS"
+      ]
+    },
+    {
+      "invoice": "I-42701",
+      "target": [
+        0,
+        0,
+        615,
+        0,
+        "CLOSED"
+      ]
+    }
+  ],
+  "RMT-765": [
+    {
+      "invoice": "I-42900",
+      "target": [
+        0,
+        0,
+        590,
+        0,
+        "CLOSED"
+      ]
+    },
+    {
+      "invoice": "I-42320",
+      "target": [
+        0,
+        0,
+        0,
+        510,
+        "COLLECTIONS"
+      ]
+    }
+  ],
+  "RMT-786": [
+    {
+      "invoice": "I-43654",
+      "target": [
+        0,
+        0,
+        615,
+        0,
+        "CLOSED"
+      ]
+    },
+    {
+      "invoice": "I-42376",
+      "target": [
+        0,
+        0,
+        0,
+        600,
+        "COLLECTIONS"
+      ]
+    }
+  ]
+}

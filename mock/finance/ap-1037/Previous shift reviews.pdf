@@ -1,0 +1,497 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [4 0 R 6 0 R 8 0 R 10 0 R 12 0 R 14 0 R] /Count 6 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 5 0 R >>
+endobj
+5 0 obj
+<< /Length 2356 >>
+stream
+BT /F1 10 Tf 13 TL 40 800 Td
+(Actual closed reviews from training shift \(SGD\)) Tj
+T*
+(ASTER | PX-101 | RELEASE | NONE) Tj
+T*
+(ASTER | PX-102 | RELEASE | NONE) Tj
+T*
+(BAY | PX-201 | HOLD | NOT_POSTED) Tj
+T*
+(BAY | PX-202 | HOLD | DUPLICATE) Tj
+T*
+(COPPER | PX-301 | HOLD | BANK_UNVERIFIED) Tj
+T*
+(COPPER | PX-302 | HOLD | BANK_UNVERIFIED) Tj
+T*
+(DELTA | PX-101 | HOLD | ACTIVE_HOLD) Tj
+T*
+(DELTA | PX-402 | HOLD | NO_BALANCE) Tj
+T*
+(Underlying historical transactions) Tj
+T*
+(INVOICES) Tj
+T*
+(ref=INV-TR-1-R2 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=ASTER | invoice_id=PX-101 | revision=2 | status=POSTED | gross_sgd=1100.25 |) Tj
+T*
+(po_id=PO-TR-1) Tj
+T*
+(ref=INV-TR-1-R1 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=ASTER | invoice_id=PX-101 | revision=1 | status=POSTED | gross_sgd=1000.00 |) Tj
+T*
+(po_id=PO-TR-1) Tj
+T*
+(ref=INV-TR-2-R1 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=ASTER | invoice_id=PX-102 | revision=1 | status=POSTED | gross_sgd=750.00 |) Tj
+T*
+(po_id=PO-TR-2) Tj
+T*
+(ref=INV-TR-3-R2 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=BAY | invoice_id=PX-201 | revision=2 | status=VOID | gross_sgd=500.00 |) Tj
+T*
+(po_id=PO-TR-3) Tj
+T*
+(ref=INV-TR-3-R1 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=BAY | invoice_id=PX-201 | revision=1 | status=POSTED | gross_sgd=500.00 |) Tj
+T*
+(po_id=PO-TR-3) Tj
+T*
+(ref=INV-TR-4-R1 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=BAY | invoice_id=PX-202 | revision=1 | status=POSTED | gross_sgd=900.00 |) Tj
+T*
+(po_id=PO-TR-4) Tj
+T*
+(ref=INV-TR-5-R1 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=COPPER | invoice_id=PX-301 | revision=1 | status=POSTED | gross_sgd=1200.00 |) Tj
+T*
+(po_id=PO-TR-5) Tj
+T*
+(ref=INV-TR-6-R1 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=COPPER | invoice_id=PX-302 | revision=1 | status=POSTED | gross_sgd=640.00 |) Tj
+T*
+(po_id=PO-TR-6) Tj
+T*
+(ref=INV-TR-7-R1 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=DELTA | invoice_id=PX-101 | revision=1 | status=POSTED | gross_sgd=800.00 |) Tj
+T*
+(po_id=PO-TR-7) Tj
+T*
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 7 0 R >>
+endobj
+7 0 obj
+<< /Length 2626 >>
+stream
+BT /F1 10 Tf 13 TL 40 800 Td
+(ref=INV-TR-8-R1 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=DELTA | invoice_id=PX-402 | revision=1 | status=POSTED | gross_sgd=300.00 |) Tj
+T*
+(po_id=PO-TR-8) Tj
+T*
+(ref=INV-TR-LATE-R9 | event_on=2026-12-08T16:00:00 | recorded_on=2026-12-09T10:00:00 |) Tj
+T*
+(vendor_id=ASTER | invoice_id=PX-102 | revision=9 | status=VOID | gross_sgd=9999.00 |) Tj
+T*
+(po_id=PO-TR-2) Tj
+T*
+(PURCHASE ORDERS) Tj
+T*
+(ref=POREC-TR-1 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=ASTER | invoice_id=PX-101 | po_id=PO-TR-1 | revision=1 | status=APPROVED |) Tj
+T*
+(amount_sgd=1100.25) Tj
+T*
+(ref=POREC-TR-2 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=ASTER | invoice_id=PX-102 | po_id=PO-TR-2 | revision=1 | status=APPROVED |) Tj
+T*
+(amount_sgd=750.00) Tj
+T*
+(ref=POREC-TR-3 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=BAY | invoice_id=PX-201 | po_id=PO-TR-3 | revision=1 | status=APPROVED |) Tj
+T*
+(amount_sgd=500.00) Tj
+T*
+(ref=POREC-TR-4 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=BAY | invoice_id=PX-202 | po_id=PO-TR-4 | revision=1 | status=APPROVED |) Tj
+T*
+(amount_sgd=900.00) Tj
+T*
+(ref=POREC-TR-5 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=COPPER | invoice_id=PX-301 | po_id=PO-TR-5 | revision=1 | status=APPROVED |) Tj
+T*
+(amount_sgd=1200.00) Tj
+T*
+(ref=POREC-TR-6 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=COPPER | invoice_id=PX-302 | po_id=PO-TR-6 | revision=1 | status=APPROVED |) Tj
+T*
+(amount_sgd=600.00) Tj
+T*
+(ref=POREC-TR-7 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=DELTA | invoice_id=PX-101 | po_id=PO-TR-7 | revision=1 | status=APPROVED |) Tj
+T*
+(amount_sgd=800.00) Tj
+T*
+(ref=POREC-TR-8 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=DELTA | invoice_id=PX-402 | po_id=PO-TR-8 | revision=1 | status=APPROVED |) Tj
+T*
+(amount_sgd=300.00) Tj
+T*
+(RECEIPTS) Tj
+T*
+(ref=GR-TR-1 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=ASTER | invoice_id=PX-101 | po_id=PO-TR-1 | receipt_id=RECEIPT-TR-1 |) Tj
+T*
+(revision=1 | status=ACCEPTED | amount_sgd=1100.25) Tj
+T*
+(ref=GR-TR-2 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=ASTER | invoice_id=PX-102 | po_id=PO-TR-2 | receipt_id=RECEIPT-TR-2 |) Tj
+T*
+(revision=1 | status=ACCEPTED | amount_sgd=700.00) Tj
+T*
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 9 0 R >>
+endobj
+9 0 obj
+<< /Length 3089 >>
+stream
+BT /F1 10 Tf 13 TL 40 800 Td
+(ref=GR-TR-3 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=BAY | invoice_id=PX-201 | po_id=PO-TR-3 | receipt_id=RECEIPT-TR-3 | revision=1) Tj
+T*
+(| status=ACCEPTED | amount_sgd=500.00) Tj
+T*
+(ref=GR-TR-4 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=BAY | invoice_id=PX-202 | po_id=PO-TR-4 | receipt_id=RECEIPT-TR-4 | revision=1) Tj
+T*
+(| status=ACCEPTED | amount_sgd=900.00) Tj
+T*
+(ref=GR-TR-5 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=COPPER | invoice_id=PX-301 | po_id=PO-TR-5 | receipt_id=RECEIPT-TR-5 |) Tj
+T*
+(revision=1 | status=ACCEPTED | amount_sgd=1200.00) Tj
+T*
+(ref=GR-TR-6 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=COPPER | invoice_id=PX-302 | po_id=PO-TR-6 | receipt_id=RECEIPT-TR-6 |) Tj
+T*
+(revision=1 | status=ACCEPTED | amount_sgd=640.00) Tj
+T*
+(ref=GR-TR-7 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=DELTA | invoice_id=PX-101 | po_id=PO-TR-7 | receipt_id=RECEIPT-TR-7 |) Tj
+T*
+(revision=1 | status=ACCEPTED | amount_sgd=800.00) Tj
+T*
+(ref=GR-TR-8 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=DELTA | invoice_id=PX-402 | po_id=PO-TR-8 | receipt_id=RECEIPT-TR-8 |) Tj
+T*
+(revision=1 | status=ACCEPTED | amount_sgd=300.00) Tj
+T*
+(BANK EVENTS) Tj
+T*
+(ref=BC-TR-1-BASE | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=ASTER | kind=CHANGE | sequence=1 | account_ref=SIM-TR-ASTER-01 | change_ref= |) Tj
+T*
+(actor_id=maker-1 | role=AP_ANALYST | status=ACTIVE) Tj
+T*
+(ref=BV-TR-1-BASE | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=ASTER | kind=VERIFY | sequence=2 | account_ref=SIM-TR-ASTER-01 |) Tj
+T*
+(change_ref=BC-TR-1-BASE | actor_id=checker-1 | role=TREASURY_REVIEWER | status=VERIFIED) Tj
+T*
+(ref=BC-TR-2-BASE | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=BAY | kind=CHANGE | sequence=1 | account_ref=SIM-TR-BAY-01 | change_ref= |) Tj
+T*
+(actor_id=maker-2 | role=AP_ANALYST | status=ACTIVE) Tj
+T*
+(ref=BV-TR-2-BASE | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=BAY | kind=VERIFY | sequence=2 | account_ref=SIM-TR-BAY-01 | change_ref=BC-) Tj
+T*
+(TR-2-BASE | actor_id=checker-2 | role=TREASURY_REVIEWER | status=VERIFIED) Tj
+T*
+(ref=BC-TR-3-BASE | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=COPPER | kind=CHANGE | sequence=1 | account_ref=SIM-TR-COPPER-01 | change_ref=) Tj
+T*
+(| actor_id=maker-3 | role=AP_ANALYST | status=ACTIVE) Tj
+T*
+(ref=BV-TR-3-BASE | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=COPPER | kind=VERIFY | sequence=2 | account_ref=SIM-TR-COPPER-01 |) Tj
+T*
+(change_ref=BC-TR-3-BASE | actor_id=checker-3 | role=TREASURY_REVIEWER | status=VERIFIED) Tj
+T*
+(ref=BC-TR-4-BASE | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 11 0 R >>
+endobj
+11 0 obj
+<< /Length 2878 >>
+stream
+BT /F1 10 Tf 13 TL 40 800 Td
+(vendor_id=DELTA | kind=CHANGE | sequence=1 | account_ref=SIM-TR-DELTA-01 | change_ref= |) Tj
+T*
+(actor_id=maker-4 | role=AP_ANALYST | status=ACTIVE) Tj
+T*
+(ref=BV-TR-4-BASE | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=DELTA | kind=VERIFY | sequence=2 | account_ref=SIM-TR-DELTA-01 |) Tj
+T*
+(change_ref=BC-TR-4-BASE | actor_id=checker-4 | role=TREASURY_REVIEWER | status=VERIFIED) Tj
+T*
+(ref=BC-TR-3-NEW | event_on=2026-12-08T09:00:00 | recorded_on=2026-12-08T09:30:00 |) Tj
+T*
+(vendor_id=COPPER | kind=CHANGE | sequence=6 | account_ref=SIM-TR-COPPER-02 | change_ref=) Tj
+T*
+(| actor_id=bank-maker | role=AP_ANALYST | status=ACTIVE) Tj
+T*
+(ref=BV-TR-3-NEW | event_on=2026-12-08T09:00:00 | recorded_on=2026-12-08T09:30:00 |) Tj
+T*
+(vendor_id=COPPER | kind=VERIFY | sequence=5 | account_ref=SIM-TR-COPPER-02 |) Tj
+T*
+(change_ref=BC-TR-3-NEW | actor_id=independent-checker | role=TREASURY_REVIEWER |) Tj
+T*
+(status=VERIFIED) Tj
+T*
+(HOLD EVENTS) Tj
+T*
+(ref=HE-TR-1 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=ASTER | invoice_id=PX-101 | hold_id=H-TR-CLOSED | action=OPEN | sequence=1 |) Tj
+T*
+(role=AP_ANALYST | actor_id=operator-1) Tj
+T*
+(ref=HE-TR-2 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=ASTER | invoice_id=PX-101 | hold_id=H-TR-CLOSED | action=CLOSE | sequence=2 |) Tj
+T*
+(role=AP_CONTROLLER | actor_id=operator-2) Tj
+T*
+(ref=HE-TR-3 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=DELTA | invoice_id=PX-101 | hold_id=H-TR-ACTIVE | action=OPEN | sequence=3 |) Tj
+T*
+(role=AP_ANALYST | actor_id=operator-3) Tj
+T*
+(ref=HE-TR-4 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=DELTA | invoice_id=PX-101 | hold_id=H-TR-ACTIVE | action=CLOSE | sequence=4 |) Tj
+T*
+(role=AP_CLERK | actor_id=operator-4) Tj
+T*
+(ref=HE-TR-5 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=DELTA | invoice_id=PX-101 | hold_id=H-TR-OTHER | action=CLOSE | sequence=5 |) Tj
+T*
+(role=AP_CONTROLLER | actor_id=operator-5) Tj
+T*
+(ref=HE-TR-6 | event_on=2026-12-08T16:00:00 | recorded_on=2026-12-09T10:00:00 |) Tj
+T*
+(vendor_id=DELTA | invoice_id=PX-101 | hold_id=H-TR-ACTIVE | action=CLOSE | sequence=6 |) Tj
+T*
+(role=RISK_MANAGER | actor_id=operator-6) Tj
+T*
+(ref=HE-TR-7 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=DELTA | invoice_id=PX-402 | hold_id=H-TR-SETTLED | action=OPEN | sequence=7 |) Tj
+T*
+(role=AP_ANALYST | actor_id=operator-7) Tj
+T*
+(ref=HE-TR-8 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=DELTA | invoice_id=PX-402 | hold_id=H-TR-SETTLED | action=CLOSE | sequence=8 |) Tj
+T*
+(role=RISK_MANAGER | actor_id=operator-8) Tj
+T*
+(SETTLEMENTS) Tj
+T*
+ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 13 0 R >>
+endobj
+13 0 obj
+<< /Length 2971 >>
+stream
+BT /F1 10 Tf 13 TL 40 800 Td
+(ref=AUD-TR-1 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=ASTER | invoice_id=PX-101 | entry_id=AUDIT-TR-1 | revision=1 |) Tj
+T*
+(kind=DUPLICATE_AUDIT | status=CLEAR | amount_sgd=0.00) Tj
+T*
+(ref=AUD-TR-2 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=ASTER | invoice_id=PX-102 | entry_id=AUDIT-TR-2 | revision=1 |) Tj
+T*
+(kind=DUPLICATE_AUDIT | status=CLEAR | amount_sgd=0.00) Tj
+T*
+(ref=AUD-TR-3 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=BAY | invoice_id=PX-201 | entry_id=AUDIT-TR-3 | revision=1 |) Tj
+T*
+(kind=DUPLICATE_AUDIT | status=CLEAR | amount_sgd=0.00) Tj
+T*
+(ref=AUD-TR-4 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=BAY | invoice_id=PX-202 | entry_id=AUDIT-TR-4 | revision=1 |) Tj
+T*
+(kind=DUPLICATE_AUDIT | status=CONFIRMED | amount_sgd=0.00) Tj
+T*
+(ref=AUD-TR-5 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=COPPER | invoice_id=PX-301 | entry_id=AUDIT-TR-5 | revision=1 |) Tj
+T*
+(kind=DUPLICATE_AUDIT | status=CLEAR | amount_sgd=0.00) Tj
+T*
+(ref=AUD-TR-6 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=COPPER | invoice_id=PX-302 | entry_id=AUDIT-TR-6 | revision=1 |) Tj
+T*
+(kind=DUPLICATE_AUDIT | status=CLEAR | amount_sgd=0.00) Tj
+T*
+(ref=AUD-TR-7 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=DELTA | invoice_id=PX-101 | entry_id=AUDIT-TR-7 | revision=1 |) Tj
+T*
+(kind=DUPLICATE_AUDIT | status=CLEAR | amount_sgd=0.00) Tj
+T*
+(ref=AUD-TR-8 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=DELTA | invoice_id=PX-402 | entry_id=AUDIT-TR-8 | revision=1 |) Tj
+T*
+(kind=DUPLICATE_AUDIT | status=CLEAR | amount_sgd=0.00) Tj
+T*
+(ref=CR-TR-1 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=ASTER | invoice_id=PX-101 | entry_id=CR-TR-1 | revision=1 | kind=CREDIT |) Tj
+T*
+(status=POSTED | amount_sgd=100.10) Tj
+T*
+(ref=PAY-TR-1 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=ASTER | invoice_id=PX-101 | entry_id=PAY-TR-1 | revision=1 | kind=PAYMENT |) Tj
+T*
+(status=SETTLED | amount_sgd=200.05) Tj
+T*
+(ref=PAY-TR-PENDING | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=ASTER | invoice_id=PX-101 | entry_id=PAY-TR-PENDING | revision=1 |) Tj
+T*
+(kind=PAYMENT | status=PENDING | amount_sgd=50.00) Tj
+T*
+(ref=PAY-TR-8 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=DELTA | invoice_id=PX-402 | entry_id=PAY-TR-8 | revision=1 | kind=PAYMENT |) Tj
+T*
+(status=SETTLED | amount_sgd=300.00) Tj
+T*
+(ref=PAY-TR-8 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=DELTA | invoice_id=PX-402 | entry_id=PAY-TR-8 | revision=1 | kind=PAYMENT |) Tj
+T*
+ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 15 0 R >>
+endobj
+15 0 obj
+<< /Length 888 >>
+stream
+BT /F1 10 Tf 13 TL 40 800 Td
+(status=SETTLED | amount_sgd=300.00) Tj
+T*
+(EXCEPTIONS) Tj
+T*
+(ref=EX-TR-1 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=ASTER | invoice_id=PX-102 | invoice_revision=1 | waive_reasons=RECEIPT_SHORT |) Tj
+T*
+(amount_cap_sgd=750.00 | valid_until=2026-12-08T23:59:59 | role=CFO) Tj
+T*
+(ref=EX-TR-2 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=BAY | invoice_id=PX-202 | invoice_revision=1 | waive_reasons=DUPLICATE |) Tj
+T*
+(amount_cap_sgd=900.00 | valid_until=2026-12-08T23:59:59 | role=CFO) Tj
+T*
+(ref=EX-TR-3 | event_on=2026-12-06T10:00:00 | recorded_on=2026-12-06T11:00:00 |) Tj
+T*
+(vendor_id=COPPER | invoice_id=PX-302 | invoice_revision=1 |) Tj
+T*
+(waive_reasons=PO_MISMATCH,BANK_UNVERIFIED | amount_cap_sgd=640.00 |) Tj
+T*
+(valid_until=2026-12-08T23:59:59 | role=CFO) Tj
+T*
+ET
+endstream
+endobj
+xref
+0 16
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000148 00000 n 
+0000000218 00000 n 
+0000000344 00000 n 
+0000002751 00000 n 
+0000002877 00000 n 
+0000005554 00000 n 
+0000005680 00000 n 
+0000008820 00000 n 
+0000008948 00000 n 
+0000011878 00000 n 
+0000012006 00000 n 
+0000015029 00000 n 
+0000015157 00000 n 
+trailer
+<< /Size 16 /Root 1 0 R >>
+startxref
+16096
+%%EOF

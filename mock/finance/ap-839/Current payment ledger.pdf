@@ -1,0 +1,107 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [4 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 5 0 R >>
+endobj
+5 0 obj
+<< /Length 2278 >>
+stream
+BT /F1 10 Tf 13 TL 40 800 Td
+(Current payment ledger | INV-14118) Tj
+T*
+(Vendor VEND-1009) Tj
+T*
+(Event cutoff inclusive: 2026-12-15T17:00:00) Tj
+T*
+(Recorded cutoff inclusive: 2026-12-16T09:00:00) Tj
+T*
+(INVOICES) Tj
+T*
+(ref=J859-INV-1 | event_on=2026-12-14T10:30:00 | recorded_on=2026-12-14T12:00:00 |) Tj
+T*
+(vendor_id=VEND-1009 | invoice_id=INV-14118 | revision=2 | status=POSTED |) Tj
+T*
+(gross_sgd=10039 | po_id=PO-033) Tj
+T*
+(PURCHASE ORDERS) Tj
+T*
+(ref=J859-PUR-1 | event_on=2026-12-14T10:30:00 | recorded_on=2026-12-14T12:00:00 |) Tj
+T*
+(vendor_id=VEND-1009 | invoice_id=INV-14118 | revision=1 | status=APPROVED | po_id=PO-033) Tj
+T*
+(| amount_sgd=10039) Tj
+T*
+(RECEIPTS) Tj
+T*
+(ref=J859-REC-1 | event_on=2026-12-14T10:30:00 | recorded_on=2026-12-14T12:00:00 |) Tj
+T*
+(vendor_id=VEND-1009 | invoice_id=INV-14118 | revision=1 | status=ACCEPTED | po_id=PO-033) Tj
+T*
+(| receipt_id=GR-007 | amount_sgd=10039) Tj
+T*
+(BANK EVENTS) Tj
+T*
+(ref=J859-BAN-1 | event_on=2026-12-14T10:30:00 | recorded_on=2026-12-14T12:00:00 |) Tj
+T*
+(vendor_id=VEND-1009 | invoice_id=INV-14118 | kind=CHANGE | sequence=1 |) Tj
+T*
+(account_ref=AC-003 | change_ref= | actor_id=edgar | role=AP_ANALYST | status=ACTIVE) Tj
+T*
+(ref=J859-BAN-2 | event_on=2026-12-14T10:30:00 | recorded_on=2026-12-14T12:00:00 |) Tj
+T*
+(vendor_id=VEND-1009 | invoice_id=INV-14118 | kind=VERIFY | sequence=2 |) Tj
+T*
+(account_ref=AC-003 | change_ref=J859-BAN-1 | actor_id=anita | role=TREASURY_REVIEWER |) Tj
+T*
+(status=VERIFIED) Tj
+T*
+(HOLD EVENTS) Tj
+T*
+(vendor_id=VEND-1009 | invoice_id=INV-14118 | event_on=2026-12-14T10:30:00 |) Tj
+T*
+(recorded_on=2026-12-14T12:00:00 | hold_id=HZ-18 | action=OPEN | sequence=1 |) Tj
+T*
+(role=AP_ANALYST | actor_id=hana | ref=P839-hold_events-1) Tj
+T*
+(vendor_id=VEND-1009 | invoice_id=INV-14118 | event_on=2026-12-14T10:30:00 |) Tj
+T*
+(recorded_on=2026-12-14T12:00:00 | hold_id=HZ-18 | action=CLOSE | sequence=2 | role=CFO |) Tj
+T*
+(actor_id=martin | ref=P839-hold_events-2) Tj
+T*
+(SETTLEMENTS) Tj
+T*
+(vendor_id=VEND-1009 | invoice_id=INV-14118 | event_on=2026-12-14T10:30:00 |) Tj
+T*
+(recorded_on=2026-12-14T12:00:00 | entry_id=DA-18 | revision=1 | kind=DUPLICATE_AUDIT |) Tj
+T*
+(status=CLEAR | amount_sgd=0 | ref=P839-settlements-1) Tj
+T*
+(EXCEPTIONS) Tj
+T*
+(No entries.) Tj
+T*
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000185 00000 n 
+0000000311 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+2640
+%%EOF

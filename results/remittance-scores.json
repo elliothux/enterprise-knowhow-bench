@@ -1,0 +1,178 @@
+[
+  {
+    "id": "RMT-800",
+    "invoices": [
+      "I-46316",
+      "I-44746"
+    ],
+    "order": "AB",
+    "no_skill": 72.5,
+    "glm": 100.0,
+    "delta": 27.5
+  },
+  {
+    "id": "RMT-744",
+    "invoices": [
+      "I-46544",
+      "I-46528"
+    ],
+    "order": "AB",
+    "no_skill": 0.0,
+    "glm": 100.0,
+    "delta": 100.0
+  },
+  {
+    "id": "RMT-730",
+    "invoices": [
+      "I-44288",
+      "I-42209"
+    ],
+    "order": "AB",
+    "no_skill": 0.0,
+    "glm": 100.0,
+    "delta": 100.0
+  },
+  {
+    "id": "RMT-772",
+    "invoices": [
+      "I-45707",
+      "I-42877"
+    ],
+    "order": "AB",
+    "no_skill": 72.5,
+    "glm": 100.0,
+    "delta": 27.5
+  },
+  {
+    "id": "RMT-716",
+    "invoices": [
+      "I-47740",
+      "I-43890"
+    ],
+    "order": "AB",
+    "no_skill": 0.0,
+    "glm": 100.0,
+    "delta": 100.0
+  },
+  {
+    "id": "RMT-807",
+    "invoices": [
+      "I-47971",
+      "I-48952"
+    ],
+    "order": "BA",
+    "no_skill": 72.5,
+    "glm": 100.0,
+    "delta": 27.5
+  },
+  {
+    "id": "RMT-723",
+    "invoices": [
+      "I-47207",
+      "I-48588"
+    ],
+    "order": "BA",
+    "no_skill": 0.0,
+    "glm": 100.0,
+    "delta": 100.0
+  },
+  {
+    "id": "RMT-751",
+    "invoices": [
+      "I-48346",
+      "I-45573"
+    ],
+    "order": "BA",
+    "no_skill": 50.0,
+    "glm": 100.0,
+    "delta": 50.0
+  },
+  {
+    "id": "RMT-793",
+    "invoices": [
+      "I-42437",
+      "I-42625"
+    ],
+    "order": "BA",
+    "no_skill": 0.0,
+    "glm": 72.5,
+    "delta": 72.5
+  },
+  {
+    "id": "RMT-779",
+    "invoices": [
+      "I-45814",
+      "I-43665"
+    ],
+    "order": "BA",
+    "no_skill": 22.5,
+    "glm": 100.0,
+    "delta": 77.5
+  },
+  {
+    "id": "RMT-814",
+    "invoices": [
+      "I-42800",
+      "I-45699"
+    ],
+    "order": "AB",
+    "no_skill": 0.0,
+    "glm": 100.0,
+    "delta": 100.0
+  },
+  {
+    "id": "RMT-821",
+    "invoices": [
+      "I-46999",
+      "I-43731"
+    ],
+    "order": "BA",
+    "no_skill": 72.5,
+    "glm": 100.0,
+    "delta": 27.5
+  },
+  {
+    "id": "RMT-737",
+    "invoices": [
+      "I-48932",
+      "I-47888"
+    ],
+    "order": "BA",
+    "no_skill": 0.0,
+    "glm": 100.0,
+    "delta": 100.0
+  },
+  {
+    "id": "RMT-758",
+    "invoices": [
+      "I-47144",
+      "I-42701"
+    ],
+    "order": "AB",
+    "no_skill": 0.0,
+    "glm": 100.0,
+    "delta": 100.0
+  },
+  {
+    "id": "RMT-765",
+    "invoices": [
+      "I-42900",
+      "I-42320"
+    ],
+    "order": "BA",
+    "no_skill": 72.5,
+    "glm": 72.5,
+    "delta": 0.0
+  },
+  {
+    "id": "RMT-786",
+    "invoices": [
+      "I-43654",
+      "I-42376"
+    ],
+    "order": "AB",
+    "no_skill": 15.0,
+    "glm": 72.5,
+    "delta": 57.5
+  }
+]

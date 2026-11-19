@@ -1,0 +1,1 @@
+Please review invoice INV-14118 for vendor VEND-1009 and post the payment recommendation to this private queue. The ledger and prior closed reviews are in your assigned ownCloud folder.

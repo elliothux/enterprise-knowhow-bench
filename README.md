@@ -51,7 +51,7 @@ The optional vendor-quote NPC uses Redis and a model API. Copy `.env.example` to
 
 ## Maintainers
 
-A standard public clone includes the tasks, participant materials, runner and business scoring. Maintainers with private repository access can also fetch the pinned internal runner with `git submodule update --init runner`.
+A standard public clone includes the tasks, participant materials, runner and business scoring. The public repository is the source for all released cases and scoring fixtures. The private runner reads those files from this checkout and keeps raw trial evidence in its own `archives/` directory. Maintainers with private repository access can also fetch the pinned internal runner with `git submodule update --init runner`.
 
 The service images and base fixtures come from TheAgentCompany. The benchmark uses synthetic transactions and a test finance queue. [TheAgentCompany](https://github.com/TheAgentCompany/TheAgentCompany)
 

@@ -51,7 +51,7 @@ python3 mock/seed.py --case ar-22153
 
 ## 维护者
 
-有私库读取权限的维护者可运行 `git submodule update --init runner` 获取锁定版本的执行器。题库、参评附件、公开执行器和业务评分均位于主仓库。
+有私库读取权限的维护者可运行 `git submodule update --init runner` 获取锁定版本的执行器。题库、参评附件、公开执行器和业务评分均位于主仓库。已发布的题面和评分数据只在公库维护。私有执行器直接读取当前公库工作树，原始试次证据保存在私库的 `archives/`。
 
 环境镜像和基础模拟数据来自 [TheAgentCompany](https://github.com/TheAgentCompany/TheAgentCompany)。企业工单使用合成交易，提交终点为测试财务队列。
 

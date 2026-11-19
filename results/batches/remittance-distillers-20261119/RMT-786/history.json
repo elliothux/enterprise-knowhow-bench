@@ -1,0 +1,128 @@
+{
+  "id": "RMT-786",
+  "invoices": [
+    "I-43654",
+    "I-42376"
+  ],
+  "order": "AB",
+  "arms": {
+    "A": {
+      "valid": true,
+      "score": 15.0,
+      "exact": false,
+      "lines": [
+        30,
+        0
+      ],
+      "session": "01a1ef4a-ece3-7aa3-8274-38c7c262552f",
+      "input": "517527158289c858e19b522faa5dd2bf15ba85954f6e081ed632eb11696d5fde",
+      "history": "22cbf156b1f1831d5085455576e766c67ad442251e5ca25ac2287a2bdb99d2c2",
+      "files": {
+        "calls.jsonl": "3bbced6a37849f7c5ba1beaeb8d9b539b4697a127d6d70fcc9dbb07393354189",
+        "delivery-001.csv": "aed1ed23b4d8a2ccba0ddf5a28f5d462d38df8dbd57afb4da7d6a5cc8e69244c",
+        "events.jsonl": "232f0ea2ceb03cce530447d9c37a6185085d4995a7fe6f579290572d0667de58",
+        "events.stderr.log": "1c6294dd15c96e665f5a229f77435191d6533d452eed5f6662eede2159ec71a6",
+        "final.txt": "aed1ed23b4d8a2ccba0ddf5a28f5d462d38df8dbd57afb4da7d6a5cc8e69244c",
+        "invoices-history.txt": "22cbf156b1f1831d5085455576e766c67ad442251e5ca25ac2287a2bdb99d2c2",
+        "prompt.txt": "517527158289c858e19b522faa5dd2bf15ba85954f6e081ed632eb11696d5fde",
+        "result.json": "a4abd46447db3324d6ed8834e95eee18a428dd6e2dbe4f5a87a49ae35aac73bf"
+      },
+      "first_submission": "I-43654,6.15,0.00,0.00,0.00,CLOSED\nI-42376,REFER",
+      "business_actions": [
+        {
+          "tool": "read",
+          "args": [
+            "invoices-history"
+          ],
+          "failed": false
+        },
+        {
+          "tool": "submit",
+          "args": [
+            "I-43654,6.15,0.00,0.00,0.00,CLOSED\nI-42376,REFER"
+          ],
+          "failed": false
+        }
+      ]
+    },
+    "B": {
+      "valid": true,
+      "score": 72.5,
+      "exact": false,
+      "lines": [
+        45,
+        100
+      ],
+      "session": "01a1ef4b-46e4-7ad2-8ee6-70132ea4fdb3",
+      "input": "517527158289c858e19b522faa5dd2bf15ba85954f6e081ed632eb11696d5fde",
+      "history": "22cbf156b1f1831d5085455576e766c67ad442251e5ca25ac2287a2bdb99d2c2",
+      "files": {
+        "calls.jsonl": "4219cf48c4831028e08b7b20ca5bbb0b043d51dd8593fd72ddad6efdb9c6a03a",
+        "delivery-001.csv": "e5ff895869a19b41820b19900291de65cc61792aab244a2410a98d21be582d52",
+        "events.jsonl": "f34eac90fe351cf03346e2b6d37e14ae23a153f36086a8d6951a67a8dded0a62",
+        "events.stderr.log": "98b6bec85f5a16c4d2455ee71816de411acbe623eee040262809cd8df3c0dd2a",
+        "final.txt": "e5ff895869a19b41820b19900291de65cc61792aab244a2410a98d21be582d52",
+        "invoices-history.txt": "22cbf156b1f1831d5085455576e766c67ad442251e5ca25ac2287a2bdb99d2c2",
+        "prompt.txt": "b45f386a5279154597a50d916cca94f4284ef79e5b87fc6e883d049b251c99fb",
+        "result.json": "71ded6f7e7c485bf2e161b89b2f8380e7a2deb4a64774f63bc4a3c7895e68a3f"
+      },
+      "first_submission": "I-43654,0.00,0.00,0.00,6.15,COLLECTIONS\nI-42376,0.00,0.00,0.00,6.00,COLLECTIONS",
+      "business_actions": [
+        {
+          "tool": "read",
+          "args": [
+            "invoices-history"
+          ],
+          "failed": false
+        },
+        {
+          "tool": "submit",
+          "args": [
+            "I-43654,0.00,0.00,0.00,6.15,COLLECTIONS\nI-42376,0.00,0.00,0.00,6.00,COLLECTIONS"
+          ],
+          "failed": false
+        }
+      ]
+    },
+    "D": {
+      "valid": true,
+      "score": 100.0,
+      "exact": true,
+      "lines": [
+        100,
+        100
+      ],
+      "session": "01a1f27b-846d-7963-8cce-f727f75c49f6",
+      "input": "517527158289c858e19b522faa5dd2bf15ba85954f6e081ed632eb11696d5fde",
+      "history": "22cbf156b1f1831d5085455576e766c67ad442251e5ca25ac2287a2bdb99d2c2",
+      "files": {
+        "calls.jsonl": "222a7a254f364a40268e78708a6cdb935174087cb053614f91fd43be39405bbb",
+        "delivery-001.csv": "fcfd3db54fb87e43138efa6d15e0593d677c9007f9ccc2cb683d24e49af6fae8",
+        "events.jsonl": "69ce630f9f53369690ee01fea11e35c336ce738bb0dc38cdd70e006e5c4acf6b",
+        "events.stderr.log": "1dc82a94aaed378e48b6a4033d64da608e0d4290bdf7efffa9411a578b89a19f",
+        "final.txt": "fcfd3db54fb87e43138efa6d15e0593d677c9007f9ccc2cb683d24e49af6fae8",
+        "invoices-history.txt": "22cbf156b1f1831d5085455576e766c67ad442251e5ca25ac2287a2bdb99d2c2",
+        "prompt.txt": "51860f6965f6900e3e07b608c9cc93a5939914008e105f9fe06fdacd4accec94",
+        "result.json": "55acacbc93c324ffd8ae799e75893d86848f8bb27d1d75ef33af15392a26d445"
+      },
+      "first_submission": "I-43654,0.00,0.00,6.15,0.00,CLOSED\nI-42376,0.00,0.00,0.00,6.00,COLLECTIONS",
+      "business_actions": [
+        {
+          "tool": "read",
+          "args": [
+            "invoices-history"
+          ],
+          "failed": false
+        },
+        {
+          "tool": "submit",
+          "args": [
+            "I-43654,0.00,0.00,6.15,0.00,CLOSED\nI-42376,0.00,0.00,0.00,6.00,COLLECTIONS"
+          ],
+          "failed": false
+        }
+      ]
+    }
+  },
+  "delta": 57.5
+}

@@ -28,3 +28,5 @@ Scores improved on 15 remittances and tied on one. All 16 had a compliant first 
 Without a Skill, the model referred at least one invoice for manual review on 11 remittances, or 19 of the 32 invoice rows. With the GLM Skill, it referred none. Fully correct invoice rows rose from 6/32 to 29/32. Both arms could look up the same closed cases. The Skill also supplied the company's rules for handling short payments. The scores capture both the reduction in referrals and the accuracy of the amounts submitted.
 
 [All case scores](remittance-scores.json) · [Frozen answer key](../evaluation/answer-key.json) · [Synthetic ledgers](../mock/remittances)
+
+[Follow-up with the DeepSeek Skill on all 16 original packets](batches/remittance-distillers-20261119/README.md)

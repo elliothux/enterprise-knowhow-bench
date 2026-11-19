@@ -1,0 +1,194 @@
+{
+  "plan": {
+    "model": "deepseek-flash",
+    "slot": "B",
+    "reported_arm": "D",
+    "skill": "2bb3f42b879d1a07679660ee9bf779561eec58f93ca7090ae810106c9e656e82",
+    "original_freeze": "50ec4f937d9f764220f66dde953ca21806c1ff651d6e7fee81ca05aa6d4bc867",
+    "environment": {
+      "os": "ProductName:\t\tmacOS\nProductVersion:\t\t26.4\nBuildVersion:\t\t25E246",
+      "arch": "arm64",
+      "cli": "codex-cli 0.169.0",
+      "cli_sha256": "739cda86e15d30a6e2b40cf8dcbbfb988aaf48b305b27065573bb8e9fd41d002",
+      "python": "Python 3.12.16",
+      "model": "gpt-6.1-terra",
+      "reasoning": "high",
+      "permission": "danger-full-access, approval never, authenticated user config",
+      "evaluation_surface": "local simulated ERP CLI; one temporary directory and one Codex session per arm",
+      "training_surface": "native Chrome Computer Use with Lynx Cognition",
+      "tool_sha256": "2300f1da9af278d185084c417d5564d768a7cc64a04198daf3f188da7a3a1f51"
+    },
+    "cases": [
+      "RMT-800",
+      "RMT-744",
+      "RMT-730",
+      "RMT-772",
+      "RMT-716",
+      "RMT-807",
+      "RMT-723",
+      "RMT-751",
+      "RMT-793",
+      "RMT-779",
+      "RMT-814",
+      "RMT-821",
+      "RMT-737",
+      "RMT-758",
+      "RMT-765",
+      "RMT-786"
+    ],
+    "denominator": 16,
+    "order": "Same frozen case order, later DeepSeek-only block",
+    "original_audit": "36f44117fd1794d64b3708114a2e883b7d32fd96fc5ce20fb6dc3c277d17ef46"
+  },
+  "arms": {
+    "A": "No Skill",
+    "B": "GLM-5.3",
+    "D": "DeepSeek Flash"
+  },
+  "cases": [
+    {
+      "case": "RMT-800",
+      "history": "RMT-800/history.json",
+      "scores": {
+        "A": 72.5,
+        "B": 100.0,
+        "D": 100.0
+      }
+    },
+    {
+      "case": "RMT-744",
+      "history": "RMT-744/history.json",
+      "scores": {
+        "A": 0.0,
+        "B": 100.0,
+        "D": 100.0
+      }
+    },
+    {
+      "case": "RMT-730",
+      "history": "RMT-730/history.json",
+      "scores": {
+        "A": 0.0,
+        "B": 100.0,
+        "D": 100.0
+      }
+    },
+    {
+      "case": "RMT-772",
+      "history": "RMT-772/history.json",
+      "scores": {
+        "A": 72.5,
+        "B": 100.0,
+        "D": 100.0
+      }
+    },
+    {
+      "case": "RMT-716",
+      "history": "RMT-716/history.json",
+      "scores": {
+        "A": 0.0,
+        "B": 100.0,
+        "D": 100.0
+      }
+    },
+    {
+      "case": "RMT-807",
+      "history": "RMT-807/history.json",
+      "scores": {
+        "A": 72.5,
+        "B": 100.0,
+        "D": 100.0
+      }
+    },
+    {
+      "case": "RMT-723",
+      "history": "RMT-723/history.json",
+      "scores": {
+        "A": 0.0,
+        "B": 100.0,
+        "D": 100.0
+      }
+    },
+    {
+      "case": "RMT-751",
+      "history": "RMT-751/history.json",
+      "scores": {
+        "A": 50.0,
+        "B": 100.0,
+        "D": 100.0
+      }
+    },
+    {
+      "case": "RMT-793",
+      "history": "RMT-793/history.json",
+      "scores": {
+        "A": 0.0,
+        "B": 72.5,
+        "D": 100.0
+      }
+    },
+    {
+      "case": "RMT-779",
+      "history": "RMT-779/history.json",
+      "scores": {
+        "A": 22.5,
+        "B": 100.0,
+        "D": 100.0
+      }
+    },
+    {
+      "case": "RMT-814",
+      "history": "RMT-814/history.json",
+      "scores": {
+        "A": 0.0,
+        "B": 100.0,
+        "D": 100.0
+      }
+    },
+    {
+      "case": "RMT-821",
+      "history": "RMT-821/history.json",
+      "scores": {
+        "A": 72.5,
+        "B": 100.0,
+        "D": 100.0
+      }
+    },
+    {
+      "case": "RMT-737",
+      "history": "RMT-737/history.json",
+      "scores": {
+        "A": 0.0,
+        "B": 100.0,
+        "D": 100.0
+      }
+    },
+    {
+      "case": "RMT-758",
+      "history": "RMT-758/history.json",
+      "scores": {
+        "A": 0.0,
+        "B": 100.0,
+        "D": 100.0
+      }
+    },
+    {
+      "case": "RMT-765",
+      "history": "RMT-765/history.json",
+      "scores": {
+        "A": 72.5,
+        "B": 72.5,
+        "D": 100.0
+      }
+    },
+    {
+      "case": "RMT-786",
+      "history": "RMT-786/history.json",
+      "scores": {
+        "A": 15.0,
+        "B": 72.5,
+        "D": 100.0
+      }
+    }
+  ]
+}

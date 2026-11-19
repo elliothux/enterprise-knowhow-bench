@@ -48,7 +48,9 @@ Use `prepare` for a native case as well. Open the private room and ownCloud fold
 | C | Arm A materials plus the original policy |
 | D | Arm A materials plus the archived DeepSeek-distilled Skill |
 
-The two-invoice batch uses arms A and B. Historical approval tasks keep their original arm definitions, where D includes the policy and a Skill. For T-320, C provides an ordinary handoff. The workspace contains only the materials for its assigned arm. Archived Skills retain the language used in the experiments. Exported attachments represent absolute paths from the original machine as `<trial-workspace>`.
+The original two-invoice batch schedules A and B. Its follow-up adds the archived DeepSeek Skill as arm D on all 16 cases. To run one DeepSeek trial, use `python3 bench.py run RMT-765 --arm D --out "$runs/deepseek"`. To run the three-way comparison from scratch, use `python3 bench.py batch custom --schedule tasks/schedules/remittance-distillers.json --controls --out "$runs/three-way"`. [Matched scores and receipts](../results/distillers.md)
+
+Historical approval tasks keep their original arm definitions, where D includes the policy and a Skill. For T-320, C provides an ordinary handoff. The workspace contains only the materials for its assigned arm. Archived Skills retain the language used in the experiments. Exported attachments represent absolute paths from the original machine as `<trial-workspace>`.
 
 ## How scores are calculated
 

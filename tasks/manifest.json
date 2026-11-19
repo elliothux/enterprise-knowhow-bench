@@ -525,7 +525,8 @@
     "prompt": "tasks/RMT-800/TASK.md",
     "arms": {
       "A": null,
-      "B": "tasks/materials/attachment-132e238be20d.txt"
+      "B": "tasks/materials/attachment-132e238be20d.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
     },
     "resources": {
       "invoices-history": "mock/remittances/prior-postings.txt"
@@ -538,7 +539,8 @@
     "prompt": "tasks/RMT-744/TASK.md",
     "arms": {
       "A": null,
-      "B": "tasks/materials/attachment-132e238be20d.txt"
+      "B": "tasks/materials/attachment-132e238be20d.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
     },
     "resources": {
       "invoices-history": "mock/remittances/prior-postings.txt"
@@ -551,7 +553,8 @@
     "prompt": "tasks/RMT-730/TASK.md",
     "arms": {
       "A": null,
-      "B": "tasks/materials/attachment-132e238be20d.txt"
+      "B": "tasks/materials/attachment-132e238be20d.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
     },
     "resources": {
       "invoices-history": "mock/remittances/prior-postings.txt"
@@ -564,7 +567,8 @@
     "prompt": "tasks/RMT-772/TASK.md",
     "arms": {
       "A": null,
-      "B": "tasks/materials/attachment-132e238be20d.txt"
+      "B": "tasks/materials/attachment-132e238be20d.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
     },
     "resources": {
       "invoices-history": "mock/remittances/prior-postings.txt"
@@ -577,7 +581,8 @@
     "prompt": "tasks/RMT-716/TASK.md",
     "arms": {
       "A": null,
-      "B": "tasks/materials/attachment-132e238be20d.txt"
+      "B": "tasks/materials/attachment-132e238be20d.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
     },
     "resources": {
       "invoices-history": "mock/remittances/prior-postings.txt"
@@ -590,7 +595,8 @@
     "prompt": "tasks/RMT-807/TASK.md",
     "arms": {
       "A": null,
-      "B": "tasks/materials/attachment-132e238be20d.txt"
+      "B": "tasks/materials/attachment-132e238be20d.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
     },
     "resources": {
       "invoices-history": "mock/remittances/prior-postings.txt"
@@ -603,7 +609,8 @@
     "prompt": "tasks/RMT-723/TASK.md",
     "arms": {
       "A": null,
-      "B": "tasks/materials/attachment-132e238be20d.txt"
+      "B": "tasks/materials/attachment-132e238be20d.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
     },
     "resources": {
       "invoices-history": "mock/remittances/prior-postings.txt"
@@ -616,7 +623,8 @@
     "prompt": "tasks/RMT-751/TASK.md",
     "arms": {
       "A": null,
-      "B": "tasks/materials/attachment-132e238be20d.txt"
+      "B": "tasks/materials/attachment-132e238be20d.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
     },
     "resources": {
       "invoices-history": "mock/remittances/prior-postings.txt"
@@ -629,7 +637,8 @@
     "prompt": "tasks/RMT-793/TASK.md",
     "arms": {
       "A": null,
-      "B": "tasks/materials/attachment-132e238be20d.txt"
+      "B": "tasks/materials/attachment-132e238be20d.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
     },
     "resources": {
       "invoices-history": "mock/remittances/prior-postings.txt"
@@ -642,7 +651,8 @@
     "prompt": "tasks/RMT-779/TASK.md",
     "arms": {
       "A": null,
-      "B": "tasks/materials/attachment-132e238be20d.txt"
+      "B": "tasks/materials/attachment-132e238be20d.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
     },
     "resources": {
       "invoices-history": "mock/remittances/prior-postings.txt"
@@ -655,7 +665,8 @@
     "prompt": "tasks/RMT-814/TASK.md",
     "arms": {
       "A": null,
-      "B": "tasks/materials/attachment-132e238be20d.txt"
+      "B": "tasks/materials/attachment-132e238be20d.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
     },
     "resources": {
       "invoices-history": "mock/remittances/prior-postings.txt"
@@ -668,7 +679,8 @@
     "prompt": "tasks/RMT-821/TASK.md",
     "arms": {
       "A": null,
-      "B": "tasks/materials/attachment-132e238be20d.txt"
+      "B": "tasks/materials/attachment-132e238be20d.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
     },
     "resources": {
       "invoices-history": "mock/remittances/prior-postings.txt"
@@ -681,7 +693,8 @@
     "prompt": "tasks/RMT-737/TASK.md",
     "arms": {
       "A": null,
-      "B": "tasks/materials/attachment-132e238be20d.txt"
+      "B": "tasks/materials/attachment-132e238be20d.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
     },
     "resources": {
       "invoices-history": "mock/remittances/prior-postings.txt"
@@ -694,7 +707,8 @@
     "prompt": "tasks/RMT-758/TASK.md",
     "arms": {
       "A": null,
-      "B": "tasks/materials/attachment-132e238be20d.txt"
+      "B": "tasks/materials/attachment-132e238be20d.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
     },
     "resources": {
       "invoices-history": "mock/remittances/prior-postings.txt"
@@ -707,7 +721,8 @@
     "prompt": "tasks/RMT-765/TASK.md",
     "arms": {
       "A": null,
-      "B": "tasks/materials/attachment-132e238be20d.txt"
+      "B": "tasks/materials/attachment-132e238be20d.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
     },
     "resources": {
       "invoices-history": "mock/remittances/prior-postings.txt"
@@ -720,7 +735,8 @@
     "prompt": "tasks/RMT-786/TASK.md",
     "arms": {
       "A": null,
-      "B": "tasks/materials/attachment-132e238be20d.txt"
+      "B": "tasks/materials/attachment-132e238be20d.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
     },
     "resources": {
       "invoices-history": "mock/remittances/prior-postings.txt"

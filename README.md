@@ -4,6 +4,8 @@ English · [简体中文](README.zh-CN.md)
 
 Lynx Benchmark measures whether a model makes better finance decisions when it can use a workflow Skill distilled by Lynx Cognition from earlier demonstrations. In 40 synthetic cases fixed before evaluation, the same model used Chrome to read supporting documents in ownCloud and submit a decision to finance in Rocket.Chat. With the GLM-distilled Skill, the number of fully correct first submissions rose from **24/40 to 40/40**. Scores improved on 16 cases and stayed the same on 24.
 
+On four earlier native short-payment tickets, scores averaged **43.75 without a Skill, 86.25 with GLM and 100 with DeepSeek**. In 32 approval decisions using raw Skills, DeepSeek reached **93.75%** and GLM **100%**, from a **78.13%** baseline. On an end-to-end Numbers workbook, both the baseline and the Lynx Skill delivered a valid file once in two attempts. [Matched distiller results, incomplete deliveries and receipts](results/distillers.md)
+
 | Task | Cases | Mean without Skill | Mean with GLM Skill | Fully correct first submissions, without → with |
 |---|---:|---:|---:|---:|
 | Apply short payments to receivables in Chrome | 24 | 70.83 | 100.00 | 12/24 → 24/24 |

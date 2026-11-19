@@ -53,22 +53,22 @@ The two scheduled batches contain 56 cases. The archive adds 15 historical cases
 
 | Case | Inputs | Available arms |
 |---|---|---|
-| [RMT-716](RMT-716/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B |
-| [RMT-723](RMT-723/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B |
-| [RMT-730](RMT-730/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B |
-| [RMT-737](RMT-737/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B |
-| [RMT-744](RMT-744/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B |
-| [RMT-751](RMT-751/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B |
-| [RMT-758](RMT-758/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B |
-| [RMT-765](RMT-765/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B |
-| [RMT-772](RMT-772/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B |
-| [RMT-779](RMT-779/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B |
-| [RMT-786](RMT-786/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B |
-| [RMT-793](RMT-793/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B |
-| [RMT-800](RMT-800/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B |
-| [RMT-807](RMT-807/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B |
-| [RMT-814](RMT-814/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B |
-| [RMT-821](RMT-821/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B |
+| [RMT-716](RMT-716/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / D |
+| [RMT-723](RMT-723/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / D |
+| [RMT-730](RMT-730/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / D |
+| [RMT-737](RMT-737/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / D |
+| [RMT-744](RMT-744/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / D |
+| [RMT-751](RMT-751/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / D |
+| [RMT-758](RMT-758/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / D |
+| [RMT-765](RMT-765/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / D |
+| [RMT-772](RMT-772/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / D |
+| [RMT-779](RMT-779/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / D |
+| [RMT-786](RMT-786/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / D |
+| [RMT-793](RMT-793/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / D |
+| [RMT-800](RMT-800/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / D |
+| [RMT-807](RMT-807/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / D |
+| [RMT-814](RMT-814/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / D |
+| [RMT-821](RMT-821/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / D |
 
 ## Historical cases and ledger variants
 

@@ -1,0 +1,39 @@
+{
+  "task": "workbook-evaluation",
+  "metric": "accepted end-to-end delivery",
+  "operator": "gpt-6.1-terra",
+  "reasoning": "high",
+  "timeout_seconds": 900,
+  "freeze_sha256": "6bdefca140a7f39791a8494be7b6b2ee1ea52c225ddf8395f2b7fd98389c29f5",
+  "source_report_sha256": "ded5de30832469a607d834fce74bab596f0578387d0c314aa71e2a55f1bda32e",
+  "attempts": [
+    {
+      "run_id": "20261117T170738Z-6c0492edbf8044709b133b179d279410",
+      "planned_label": "A1",
+      "arm": "A",
+      "accepted_complete": true,
+      "seconds": 647.4405786250136
+    },
+    {
+      "run_id": "20261117T172009Z-06f886a86a4e4ebda3b8c24a945f75cd",
+      "planned_label": "B1",
+      "arm": "B",
+      "accepted_complete": false,
+      "seconds": 567.4987869579927
+    },
+    {
+      "run_id": "20261117T173632Z-3ede6d6d2d4343dd837fbf7b01f2c1d9",
+      "planned_label": "B2",
+      "arm": "B",
+      "accepted_complete": true,
+      "seconds": 806.0826995000243
+    },
+    {
+      "run_id": "20261117T175140Z-86daede66d7b48d39bc564645e617b45",
+      "planned_label": "A2",
+      "arm": "A",
+      "accepted_complete": false,
+      "seconds": 589.6356236670399
+    }
+  ]
+}

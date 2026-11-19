@@ -108,10 +108,10 @@ services:
     depends_on:
       rocketchat: {condition: service_healthy}
       npc-seed: {condition: service_completed_successfully}
-    env_file:
-      - path: .env
-        required: false
     environment:
+      LITELLM_API_KEY: ${LITELLM_API_KEY:-}
+      LITELLM_BASE_URL: ${LITELLM_BASE_URL:-https://api.deepseek.com/v1}
+      LITELLM_MODEL: ${LITELLM_MODEL:-deepseek-chat}
       BOT_URL: http://rocketchat:3000
       REDIS_OM_URL: redis://default:theagentcompany@redis-stack:6379
       SCENARIOS_FILE_PATH: /bench-evaluation/vendor-quote-scenarios.json

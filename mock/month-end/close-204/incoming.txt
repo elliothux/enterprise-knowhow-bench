@@ -1,0 +1,1 @@
+Close batch close-204. Reconcile every invoice against the five current documents and send one eight-row CSV posting instruction here.

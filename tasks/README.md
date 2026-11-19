@@ -1,6 +1,6 @@
 # Task catalog
 
-The two scheduled batches contain 56 cases. The archive adds 15 historical cases, two of which have an additional ledger variant listed separately. Select a case ID to read the participant prompt. For a manual trial, run `python3 bench.py prepare CASE --arm A --out TRIAL` and give the participant the generated `TRIAL/work/TASK.md` and its assigned tools. Use a new trial directory for each arm. In native tasks the runner fills the double-brace placeholders with the trial's room, folder and Chrome Guest marker.
+The original finance and remittance schedules contain 56 cases. Further close, inspection, cutoff and lockbox schedules are listed below. The archive adds 15 historical cases, two of which have an additional ledger variant listed separately. Select a case ID to read the participant prompt. For a manual trial, run `python3 bench.py prepare CASE --arm A --out TRIAL` and give the participant the generated `TRIAL/work/TASK.md` and its assigned tools. Use a new trial directory for each arm. In native tasks the runner fills the double-brace placeholders with the trial's room, folder and Chrome Guest marker.
 
 [Running and scoring](RUN.md) · [Training and extension tasks](../cases/README.md) · [Machine-readable task manifest](manifest.json) · [Frozen run order and controls](schedule.json)
 
@@ -91,3 +91,59 @@ The two scheduled batches contain 56 cases. The archive adds 15 historical cases
 | [INV-8350](INV-8350/TASK.md) | [invoices-history](../tasks/materials/precedents-c74b38b6b289.txt) | A / B / C / D |
 | [INV-8385](INV-8385/TASK.md) | [invoices-history](../tasks/materials/precedents-c74b38b6b289.txt) | A / B / C / D |
 | [T-320](T-320/TASK.md) | [Use the trial lookup tool](RUN.md#run-a-case-manually) | A / B / C |
+
+## Month-end cash application in native Chrome
+
+Each task requires the operator to reconcile eight invoices across five documents in ownCloud and send one posting file as a message in Rocket.Chat. Each arm gets its own private room and folder. The assigned Skill and rubric are frozen before the first session. [Run guide](RUN.md) · [Schedule](schedules/month-end.json)
+
+| Task | Participant packet | Available arms |
+|---|---|---|
+| [close-118](close-118/TASK.md) | [Journal, advice, approvals, register and closing instruction](../mock/month-end/close-118) | A / B / D |
+| [close-204](close-204/TASK.md) | [Journal, advice, approvals, register and closing instruction](../mock/month-end/close-204) | A / B / D |
+
+## Joint receivables and payables close in the simulated ERP
+
+For each of eight counterparties, post two short payments, carry the collectible AR balance into AP and issue a payment decision under a scoped setoff mandate. Each shift produces 24 scored invoice instructions. [Run guide](RUN.md) · [Schedule](schedules/joint-close.json)
+
+| Shift | Current ledgers | Available arms |
+|---|---|---|
+| [net-31](net-31/TASK.md) | [Current records and mandates](../mock/joint-close/net-31/current-registers.txt) | A / B / D |
+| [net-42](net-42/TASK.md) | [Current records and mandates](../mock/joint-close/net-42/current-registers.txt) | A / B / D |
+
+The [bank chargeback workbook cases](../cases/chargebacks/README.md) have a separate entry point for XLSX delivery and multi-state recalculation.
+
+## Scanned proof-of-delivery claims
+
+Each case provides two signed receiving diagrams. Read the bay quantities and marks, apply the supervisor's four amendments and submit eight claim postings. All arms see the same diagrams and ledger. [Three-arm schedule](schedules/pod-inspection.json)
+
+| Case | North dock | South dock | Available arms |
+|---|---|---|---|
+| [pod-47](pod-47/TASK.md) | [Inspection sheet](../mock/pod-inspection/pod-47/North.png) | [Inspection sheet](../mock/pod-inspection/pod-47/South.png) | A / B / D |
+| [pod-83](pod-83/TASK.md) | [Inspection sheet](../mock/pod-inspection/pod-83/North.png) | [Inspection sheet](../mock/pod-inspection/pod-83/South.png) | A / B / D |
+
+## Bank lockbox matching
+
+All 36 invoices and all twelve receipts are present. Each bank deposit covers three invoices. The ERP displays every locally balanced triple, and the operator must find a globally consistent posting without double allocation. [Run instructions](RUN.md#bank-lockbox-matching) · [Schedule](schedules/lockbox.json)
+
+| Shift | Register and candidate suggestions | Available arms |
+|---|---|---|
+| [lockbox-41](lockbox-41/TASK.md) | [Ledger and ERP suggestions](../mock/lockbox/lockbox-41) | A / B / D |
+| [lockbox-76](lockbox-76/TASK.md) | [Ledger and ERP suggestions](../mock/lockbox/lockbox-76) | A / B / D |
+
+## Invoices still open at cutoff
+
+Each eight-invoice shift includes a signed status register identifying external evidence still pending. Finance records the share actually posted correctly by cutoff and whether each invoice received the correct posting or escalation. [Schedule](schedules/cutoff.json) · [Scoring](RUN.md#invoices-still-open-at-cutoff)
+
+| Shift | Status register and invoices | Available arms |
+|---|---|---|
+| [cutoff-19](cutoff-19/TASK.md) | [Evidence at 17:00](../mock/cutoff/cutoff-19/status-and-ledgers.txt) | A / B / D |
+| [cutoff-27](cutoff-27/TASK.md) | [Evidence at 17:00](../mock/cutoff/cutoff-27/status-and-ledgers.txt) | A / B / D |
+
+### Month-end lockbox shifts
+
+For each larger shift the ERP contains 108 open invoices, 18 electronic remittances with references and 18 legacy remittances that require cross-receipt matching. The two payers have separate ledgers. [Schedule](schedules/monthly-lockbox.json) · [Independent uniqueness verifier](../evaluation/verify_lockbox.py)
+
+| Shift | Source registers and exact candidate triples | Available arms |
+|---|---|---|
+| [lockbox-month-11](lockbox-month-11/TASK.md) | [Inputs](../mock/lockbox/lockbox-month-11) | A / B / D |
+| [lockbox-month-23](lockbox-month-23/TASK.md) | [Inputs](../mock/lockbox/lockbox-month-23) | A / B / D |

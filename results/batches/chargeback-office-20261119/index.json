@@ -1,0 +1,91 @@
+{
+  "surface": "office",
+  "model": "gpt-6.1-terra",
+  "limit_seconds": 900,
+  "schedule": [
+    [
+      "cb-17",
+      "A"
+    ],
+    [
+      "cb-17",
+      "B"
+    ],
+    [
+      "cb-17",
+      "D"
+    ],
+    [
+      "cb-28",
+      "D"
+    ],
+    [
+      "cb-28",
+      "B"
+    ],
+    [
+      "cb-28",
+      "A"
+    ]
+  ],
+  "cases": {
+    "cb-17": {
+      "A": {
+        "score": 100.0,
+        "exact": true,
+        "receipt": "e698105f7716862fa5c73014871dadee31303ab6c28770ff825796c66fc1a942",
+        "correct": 384,
+        "checked": 384,
+        "exit": 0
+      },
+      "B": {
+        "score": 100.0,
+        "exact": true,
+        "receipt": "b424e101f6e1de4471e1d32fd26409e2b6c697d2a86750d1d49c27620d688093",
+        "correct": 384,
+        "checked": 384,
+        "exit": 0
+      },
+      "D": {
+        "score": 100.0,
+        "exact": true,
+        "receipt": "10e2b193974c07907d1d007472858f6f15b26fd4c4a81383a930441b2c77ce66",
+        "correct": 384,
+        "checked": 384,
+        "exit": 0
+      }
+    },
+    "cb-28": {
+      "D": {
+        "score": 100.0,
+        "exact": true,
+        "receipt": "c053036c8016a5271cacddffa913e6f5ec2de7eb84ff8329a4d569d12a96d981",
+        "correct": 384,
+        "checked": 384,
+        "exit": 0
+      },
+      "B": {
+        "score": 100.0,
+        "exact": true,
+        "receipt": "0aca6869b828435909380676b02b7ad8779cca9a2820b10cda2e223d00f1a52b",
+        "correct": 384,
+        "checked": 384,
+        "exit": 0
+      },
+      "A": {
+        "score": 100.0,
+        "exact": true,
+        "receipt": "c5ee75f1c30f17b7f43ceb659bbe3f4c1257966422c5a8027b69d1cb6e104ecb",
+        "correct": 384,
+        "checked": 384,
+        "exit": 0
+      }
+    }
+  },
+  "freeze_sha256": "9634c6649fb28de5cc5ba5a597104abfefed4e5d10600131df04a0e19c15973d",
+  "private_archive_sha256": {
+    "protocol.zip": "ed4b979d164e9e1d5bebf11ff8c3602f7c3147c7d36b1ef46bcccf81c7baaa1f",
+    "cb-17.zip": "8daec7648fc9a117d397d1619a6fa0a6804f018d06e12846104b6fd307bddeb4",
+    "cb-28.zip": "c4d8e4f3018ca49d974abc42b47676a81ca8a619d7aba36e80675419b02e38b7"
+  }
+}

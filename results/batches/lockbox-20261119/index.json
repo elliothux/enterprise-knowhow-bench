@@ -1,0 +1,81 @@
+{
+  "skills": {
+    "B": {
+      "source_file": "tasks/materials/lockbox-glm.txt",
+      "evaluated_sha256": "b272e8ea934362508efe0b7688fae3f415ad2ba18db71f63574f094f55c37b17",
+      "public_sha256": "b272e8ea934362508efe0b7688fae3f415ad2ba18db71f63574f094f55c37b17"
+    },
+    "D": {
+      "source_file": "tasks/materials/lockbox-deepseek.txt",
+      "evaluated_sha256": "88a2e34f8a778e8549c62fdec7f91fde1dcfdda6fff3f7c69f0c2baf261de1e6",
+      "public_sha256": "88a2e34f8a778e8549c62fdec7f91fde1dcfdda6fff3f7c69f0c2baf261de1e6"
+    }
+  },
+  "cases": {
+    "lockbox-41": {
+      "A": {
+        "score": 25.0,
+        "fully_correct_invoices": 3,
+        "exact": false,
+        "valid_delivery": true
+      },
+      "B": {
+        "score": 100.0,
+        "fully_correct_invoices": 12,
+        "exact": true,
+        "valid_delivery": true
+      },
+      "D": {
+        "score": 25.0,
+        "fully_correct_invoices": 3,
+        "exact": false,
+        "valid_delivery": true
+      }
+    },
+    "lockbox-76": {
+      "B": {
+        "score": 100.0,
+        "fully_correct_invoices": 12,
+        "exact": true,
+        "valid_delivery": true
+      },
+      "A": {
+        "score": 100.0,
+        "fully_correct_invoices": 12,
+        "exact": true,
+        "valid_delivery": true
+      },
+      "D": {
+        "score": 100.0,
+        "fully_correct_invoices": 12,
+        "exact": true,
+        "valid_delivery": true
+      }
+    }
+  },
+  "schedule": [
+    {
+      "case": "lockbox-41",
+      "family": "lockbox",
+      "order": "AB",
+      "control": "D"
+    },
+    {
+      "case": "lockbox-76",
+      "family": "lockbox",
+      "order": "BA",
+      "control": "D"
+    }
+  ],
+  "assigned_sessions": 6,
+  "model": "gpt-6.1-terra",
+  "reasoning": "high",
+  "limit_seconds": 300,
+  "environment": {
+    "os": "macOS-26.4-arm64-arm-64bit",
+    "architecture": "arm64",
+    "python": "3.12.16"
+  },
+  "plan_sha256": "3e5e23677b7d2be54efaad2a1624468d739e7a569f838c38e886ec9d4a45f4c9",
+  "freeze_sha256": "f60ade322ed2a52622bc70b6702069c00634a8ea6f5a493b8a087dc2eb92543d"
+}

@@ -1,0 +1,148 @@
+All amounts SGD. Each receipt clears exactly three invoices of the same payer. Every invoice is settled exactly once.
+Invoice | payer | face | applied credit | outstanding
+IV-10868 | EdiCo | 527.75 | 7.75 | 520.00
+IV-11699 | LegacyCo | 534.00 | 7.75 | 526.25
+IV-15014 | EdiCo | 591.25 | 16.75 | 574.50
+IV-15199 | LegacyCo | 633.75 | 0.00 | 633.75
+IV-16387 | LegacyCo | 670.00 | 10.50 | 659.50
+IV-17042 | LegacyCo | 583.00 | 0.00 | 583.00
+IV-17441 | EdiCo | 610.75 | 6.25 | 604.50
+IV-20796 | LegacyCo | 700.75 | 2.50 | 698.25
+IV-22009 | EdiCo | 600.50 | 0.00 | 600.50
+IV-24650 | EdiCo | 641.25 | 0.00 | 641.25
+IV-27250 | EdiCo | 534.25 | 10.50 | 523.75
+IV-27353 | EdiCo | 573.50 | 2.50 | 571.00
+IV-27427 | LegacyCo | 712.25 | 2.50 | 709.75
+IV-27985 | LegacyCo | 765.00 | 16.75 | 748.25
+IV-30302 | LegacyCo | 553.25 | 10.50 | 542.75
+IV-30314 | EdiCo | 647.25 | 0.00 | 647.25
+IV-30681 | EdiCo | 687.25 | 7.75 | 679.50
+IV-30789 | EdiCo | 687.50 | 16.75 | 670.75
+IV-31598 | EdiCo | 557.75 | 10.50 | 547.25
+IV-32602 | LegacyCo | 720.50 | 7.75 | 712.75
+IV-33515 | EdiCo | 638.50 | 7.75 | 630.75
+IV-34576 | LegacyCo | 524.00 | 10.50 | 513.50
+IV-34807 | LegacyCo | 627.00 | 2.50 | 624.50
+IV-35139 | LegacyCo | 645.50 | 2.50 | 643.00
+IV-35457 | EdiCo | 599.75 | 0.00 | 599.75
+IV-35540 | LegacyCo | 669.50 | 7.75 | 661.75
+IV-36155 | EdiCo | 599.75 | 2.50 | 597.25
+IV-37665 | LegacyCo | 659.75 | 0.00 | 659.75
+IV-38006 | EdiCo | 577.50 | 7.75 | 569.75
+IV-38059 | EdiCo | 623.75 | 7.75 | 616.00
+IV-38280 | EdiCo | 525.75 | 16.75 | 509.00
+IV-38297 | LegacyCo | 674.75 | 0.00 | 674.75
+IV-38792 | EdiCo | 720.25 | 0.00 | 720.25
+IV-39082 | LegacyCo | 516.25 | 0.00 | 516.25
+IV-39346 | LegacyCo | 668.25 | 0.00 | 668.25
+IV-41313 | EdiCo | 571.75 | 0.00 | 571.75
+IV-43528 | EdiCo | 538.50 | 0.00 | 538.50
+IV-43921 | LegacyCo | 619.75 | 0.00 | 619.75
+IV-44194 | EdiCo | 655.00 | 0.00 | 655.00
+IV-45899 | EdiCo | 523.50 | 16.75 | 506.75
+IV-46074 | LegacyCo | 754.75 | 6.25 | 748.50
+IV-46575 | EdiCo | 545.00 | 2.50 | 542.50
+IV-47113 | LegacyCo | 521.00 | 6.25 | 514.75
+IV-47368 | LegacyCo | 668.00 | 2.50 | 665.50
+IV-47774 | LegacyCo | 509.50 | 2.50 | 507.00
+IV-48713 | LegacyCo | 567.25 | 0.00 | 567.25
+IV-51883 | LegacyCo | 658.75 | 16.75 | 642.00
+IV-52541 | EdiCo | 635.25 | 2.50 | 632.75
+IV-53368 | EdiCo | 634.25 | 7.75 | 626.50
+IV-53372 | LegacyCo | 506.75 | 2.50 | 504.25
+IV-53955 | LegacyCo | 583.75 | 0.00 | 583.75
+IV-55122 | EdiCo | 635.00 | 7.75 | 627.25
+IV-56687 | EdiCo | 553.25 | 2.50 | 550.75
+IV-57400 | EdiCo | 656.75 | 7.75 | 649.00
+IV-58198 | EdiCo | 712.00 | 7.75 | 704.25
+IV-58499 | LegacyCo | 737.25 | 7.75 | 729.50
+IV-58864 | LegacyCo | 625.00 | 10.50 | 614.50
+IV-60064 | LegacyCo | 739.25 | 10.50 | 728.75
+IV-60326 | EdiCo | 655.75 | 2.50 | 653.25
+IV-61005 | LegacyCo | 594.75 | 2.50 | 592.25
+IV-62204 | LegacyCo | 515.25 | 0.00 | 515.25
+IV-63083 | LegacyCo | 700.00 | 6.25 | 693.75
+IV-64376 | LegacyCo | 766.00 | 16.75 | 749.25
+IV-64557 | LegacyCo | 750.25 | 16.75 | 733.50
+IV-64629 | LegacyCo | 555.25 | 16.75 | 538.50
+IV-65341 | LegacyCo | 512.75 | 0.00 | 512.75
+IV-65477 | EdiCo | 590.50 | 6.25 | 584.25
+IV-66132 | LegacyCo | 582.75 | 2.50 | 580.25
+IV-66966 | LegacyCo | 686.00 | 10.50 | 675.50
+IV-67877 | EdiCo | 636.00 | 0.00 | 636.00
+IV-68096 | EdiCo | 523.00 | 2.50 | 520.50
+IV-68195 | EdiCo | 606.75 | 2.50 | 604.25
+IV-68212 | EdiCo | 528.75 | 2.50 | 526.25
+IV-68402 | EdiCo | 579.25 | 7.75 | 571.50
+IV-68535 | EdiCo | 685.00 | 6.25 | 678.75
+IV-71150 | LegacyCo | 695.00 | 2.50 | 692.50
+IV-71234 | LegacyCo | 727.75 | 16.75 | 711.00
+IV-72070 | LegacyCo | 638.25 | 0.00 | 638.25
+IV-72076 | LegacyCo | 617.75 | 0.00 | 617.75
+IV-72863 | EdiCo | 749.75 | 0.00 | 749.75
+IV-73316 | EdiCo | 530.25 | 7.75 | 522.50
+IV-73415 | LegacyCo | 721.75 | 16.75 | 705.00
+IV-74678 | LegacyCo | 626.50 | 6.25 | 620.25
+IV-75507 | EdiCo | 604.00 | 6.25 | 597.75
+IV-78573 | LegacyCo | 608.50 | 2.50 | 606.00
+IV-78942 | EdiCo | 578.25 | 6.25 | 572.00
+IV-80075 | EdiCo | 522.75 | 7.75 | 515.00
+IV-80565 | LegacyCo | 747.25 | 6.25 | 741.00
+IV-81239 | EdiCo | 555.75 | 16.75 | 539.00
+IV-81395 | EdiCo | 707.50 | 0.00 | 707.50
+IV-82658 | LegacyCo | 733.50 | 10.50 | 723.00
+IV-83483 | EdiCo | 642.50 | 16.75 | 625.75
+IV-83501 | EdiCo | 645.25 | 0.00 | 645.25
+IV-84576 | LegacyCo | 672.25 | 16.75 | 655.50
+IV-86447 | EdiCo | 614.75 | 7.75 | 607.00
+IV-87357 | EdiCo | 748.75 | 0.00 | 748.75
+IV-89360 | LegacyCo | 605.50 | 0.00 | 605.50
+IV-89954 | EdiCo | 559.75 | 10.50 | 549.25
+IV-91104 | LegacyCo | 702.50 | 0.00 | 702.50
+IV-91588 | EdiCo | 580.50 | 7.75 | 572.75
+IV-92574 | LegacyCo | 623.00 | 7.75 | 615.25
+IV-93842 | LegacyCo | 587.00 | 7.75 | 579.25
+IV-95623 | EdiCo | 523.75 | 7.75 | 516.00
+IV-96316 | LegacyCo | 539.50 | 2.50 | 537.00
+IV-96807 | EdiCo | 550.00 | 2.50 | 547.50
+IV-98108 | EdiCo | 722.75 | 0.00 | 722.75
+IV-99331 | LegacyCo | 577.75 | 6.25 | 571.50
+IV-99718 | EdiCo | 575.00 | 0.00 | 575.00
+
+Bank receipt | payer | amount | invoice count | bank-confirmed invoice references
+BK-1142 | EdiCo | 1884.00 | 3 | IV-24650, IV-43528, IV-58198
+BK-1903 | LegacyCo | 1738.50 | 3 | none supplied
+BK-2208 | LegacyCo | 2043.25 | 3 | none supplied
+BK-2253 | EdiCo | 1872.25 | 3 | IV-30314, IV-55122, IV-75507
+BK-2467 | LegacyCo | 1865.50 | 3 | none supplied
+BK-2942 | EdiCo | 1765.50 | 3 | IV-36155, IV-46575, IV-83483
+BK-3148 | EdiCo | 1855.25 | 3 | IV-30681, IV-60326, IV-73316
+BK-3175 | EdiCo | 1829.25 | 3 | IV-33515, IV-53368, IV-78942
+BK-3275 | EdiCo | 2009.00 | 3 | IV-44194, IV-68195, IV-72863
+BK-3353 | EdiCo | 1836.75 | 3 | IV-38280, IV-57400, IV-68535
+BK-4514 | LegacyCo | 2101.75 | 3 | none supplied
+BK-4520 | LegacyCo | 1714.75 | 3 | none supplied
+BK-4598 | LegacyCo | 1972.00 | 3 | none supplied
+BK-4642 | LegacyCo | 1881.00 | 3 | none supplied
+BK-4910 | LegacyCo | 2047.00 | 3 | none supplied
+BK-5115 | EdiCo | 1804.50 | 3 | IV-45899, IV-98108, IV-99718
+BK-5295 | LegacyCo | 1870.75 | 3 | none supplied
+BK-5494 | EdiCo | 2063.75 | 3 | IV-38792, IV-67877, IV-81395
+BK-5708 | EdiCo | 1752.50 | 3 | IV-15014, IV-27353, IV-86447
+BK-5723 | EdiCo | 1717.00 | 3 | IV-10868, IV-30789, IV-68212
+BK-5870 | LegacyCo | 1696.75 | 3 | none supplied
+BK-6535 | LegacyCo | 1972.25 | 3 | none supplied
+BK-6704 | LegacyCo | 2114.75 | 3 | none supplied
+BK-6747 | LegacyCo | 1647.75 | 3 | none supplied
+BK-6829 | EdiCo | 1933.00 | 3 | IV-81239, IV-83501, IV-87357
+BK-6904 | EdiCo | 1651.50 | 3 | IV-38059, IV-68096, IV-80075
+BK-7487 | EdiCo | 1674.25 | 3 | IV-27250, IV-35457, IV-56687
+BK-7620 | EdiCo | 1696.25 | 3 | IV-52541, IV-95623, IV-96807
+BK-7696 | LegacyCo | 2045.00 | 3 | none supplied
+BK-7788 | EdiCo | 1745.00 | 3 | IV-22009, IV-41313, IV-91588
+BK-7915 | LegacyCo | 2110.50 | 3 | none supplied
+BK-8032 | LegacyCo | 1825.50 | 3 | none supplied
+BK-8322 | EdiCo | 1688.50 | 3 | IV-31598, IV-38006, IV-68402
+BK-9071 | LegacyCo | 1728.75 | 3 | none supplied
+BK-9600 | EdiCo | 1738.00 | 3 | IV-17441, IV-65477, IV-89954
+BK-9813 | LegacyCo | 1738.00 | 3 | none supplied

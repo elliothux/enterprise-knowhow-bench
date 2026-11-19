@@ -1,0 +1,798 @@
+
+Historical workflow Skill:
+---
+name: "lynx-01a1eeed-11cc-72af-b3c8-8231c7301c60"
+description: "Test guidance for shortpay-cash-application cases."
+---
+
+# shortpay-cash-application
+
+**Test only.** Use the supplied case facts to recommend a next action. Ask for missing information. Never claim to have performed a business action.
+
+## Steps
+
+### 1. "s1-open-dispatch-channel"
+
+Role
+
+> 现金入账操作员
+
+System
+
+> Rocket.Chat
+
+Window
+
+> shortpay-desk-<desk> 频道
+
+Action
+
+> 按分配的现量台子目录（Settlement <desk>）打开对应的 shortpay-desk-<desk> 频道，阅读 dispatch_customer_vm 的派发消息，记下发票号、汇款标签（TERMS / DAMAGE）以及客户提出的扣款索赔金额。示例（仅格式示例，非固定数据）：对发票 I-3475 的 DAMAGE 汇款短款入账，客户另提 SGD 63.00 损毁扣款索赔
+
+### 2. "s2-open-settlement-folder"
+
+Role
+
+> 现金入账操作员
+
+System
+
+> ownCloud
+
+Window
+
+> 文件 - Documents/Settlement <desk>
+
+Action
+
+> 登录 ownCloud（账号 theagentcompany），进入 Documents/Settlement <desk> 文件夹，这里存放该现金台的 Bank and invoice .pdf（银行收据与发票明细）与 Desk procedure .pdf（作业规则）
+
+### 3. "s3-read-procedure-and-bank"
+
+Role
+
+> 现金入账操作员
+
+System
+
+> ownCloud
+
+Window
+
+> Settlement <desk> 文件 - Desk procedure .pdf / Bank and invoice .pdf
+
+Action
+
+> 读取 Desk procedure .pdf 中的入账规则，并读取 Bank and invoice .pdf 中该收据与发票的款项明细：商品、运费、税、毛额、已过账贷项、银行收款额、付款指令日、银行起息日、ERP 导入日，以及是否有承运方案件（准备金、责任状态）和已签收货证明上的异常。示例（仅格式示例）：收据对应发票 I-3475 与运单 S-3475，商品 990.00、运费 160.00、税 70.00，已过账 GOODS 贷项 0.00，银行收款 1157.00，付款指令日与银行起息日均为 2026-11-13，ERP 导入日 2026-11-18，该笔转账无事故记录，承运商准备金 60.00、责任待定
+
+### 4. "s4-first-post-bank-receipt"
+
+Role
+
+> 现金入账操作员
+
+System
+
+> 现金入账台（ERP 过账）
+
+Window
+
+> 收据 → 发票过账界面
+
+Action
+
+> 按发票号将该银行收款先过账到对应发票。发票毛额已包含商品、运费与税，只能用同发票上「已过账」的贷项（如已过账的 GOODS 贷项）冲减；待处理索赔（pending claims）、草稿贷项（draft credits）与客户借记单不沖减。计算短款：毛额 − 已过账贷项 − 银行收款 = 短款。
+
+### 5. "s5-compute-residual-treatments"
+
+Role
+
+> 现金入账操作员
+
+System
+
+> 现金入账台
+
+Window
+
+> 短款分析（折扣 / 索赔转出 / 小额核销 / 可回收）
+
+Action
+
+> 按汇款标签与所满足的条件计算各项处理金额，并分别列示四类金额，不得合并或静默豁免：① 折扣；② 转入索赔；③ 小额核销；④ 可回收余额。折扣只适用于 TERMS 汇款；转索赔只适用于 DAMAGE 汇款；小额核销只适用于「其他」残余短款且两项上限同时满足；任何未处理掉的残余都列为可回收余额。
+
+### 6. "s6-follow-up-route"
+
+Role
+
+> 现金入账操作员
+
+System
+
+> 现金入账台
+
+Window
+
+> 跟进对象判定
+
+Action
+
+> 按以下优先级判定跟进对象（首个成立者生效）：若任一笔金额已转入索赔 → CLAIMS；否则若有任何可回收余额 → COLLECTIONS；否则 → CLOSED。即使索赔承担跟进，也必须在结果行中报告剩余可回收金额。
+
+### 7. "s7-post-result-row"
+
+Role
+
+> 现金入账操作员
+
+System
+
+> Rocket.Chat
+
+Window
+
+> shortpay-desk-<desk> 频道消息输入框
+
+Action
+
+> 在派发该任务的频道消息输入框中按固定字段顺序录入结果行：「发票号,折扣,转入索赔,小额核销,可回收余额,跟进对象」，四项金额分别列示、不得合并或省略可回收余额，然后按 Enter 发送并确认消息已出现在频道中。案例示例（仅格式示例）：I-3475,0.00,60.00,0.00,3.00,CLAIMS
+
+## Decisions
+
+### "d-remittance-label"
+
+After step "s4-first-post-bank-receipt"
+
+> 本笔汇款的汇款标签是哪一类，决定可适用的处理？
+
+#### "d-opt-terms"
+
+> TERMS（可享 2% 早付折扣）
+
+Condition
+
+> 汇款标签为 TERMS：仅当同时满足时限条件时可给折扣——以银行起息日（绝不用 ERP 导入日）判断是否在折扣截止日或之前；若已过截止日，最多再给 2 个周一至周五工作日宽限，且必须同时具备客户的付款指令在截止日前已发出、以及银行运营部门（Bank Operations）针对该笔转账「已确认」收款行中断；付款方自身事故或未经确认的通知不符合条件
+
+Next steps: "s5-compute-residual-treatments"
+
+#### "d-opt-damage"
+
+> DAMAGE（可转索赔）
+
+Condition
+
+> 汇款标签为 DAMAGE：按「短款、客户扣款、承运商登记准备金」三者取小转入 Claims，即使在责任调查中也可转；须同时具备与开票运单挂钩的承运方案件（carrier case）以及该运单「已签收」货证明上的异常；条件不成立则该金额保持可回收；DAMAGE 汇款的任何残余一律不得转为坏账核销
+
+Next steps: "s5-compute-residual-treatments"
+
+## Exceptions
+
+### "e-damage-claims-conditions"
+
+Condition
+
+> 汇款标签为 DAMAGE，准备把金额转入 Claims，但缺少与开票运单挂钩的承运方案件，或该运单已签收货证明上无异常
+
+Handling
+
+> 不得转索赔：该金额保量为可回收余额，结果行把转入索赔记为 0.00、可回收余额如实列示；DAMAGE 汇款的任何残余仍不得转为坏账核销。参照数值示例：短款 3.00、客户扣款 63.00、承运商登记准备金 60.00 时取小得 60.00 转 Claims
+
+### "e-terms-grace-fails"
+
+Condition
+
+> TERMS 汇款已过折扣截止日（按银行起息日判断），但缺少合格宽限：付款指令未在截止日前发出、或银行运营部门未「确认」收款行中断、或仅有付款方自身事故/未经确认的通知
+
+Handling
+
+> 不给 2% 折扣：结果行折扣记 0.00，短款原样作为可回收余额处理（若属其他残余短款再按 SGD 8.00 与 0.50% 双上限判断能否小额核销）
+
+### "e-small-balance-limit-exceeded"
+
+Condition
+
+> 其他残余短款超过任一核销上限：残余金额 > SGD 8.00，或残余金额 > 毛额发票扣除实际已过账贷项后的 0.50%，或该残余出现在 DAMAGE 汇款上
+
+Handling
+
+> 不得部分核销，也不得静默免除：整笔残余列为可回收余额，结果行小额核销记 0.00，跟进对象按 CLAIMS → COLLECTIONS → CLOSED 优先级判定
+
+### "e-pending-credit-not-posted"
+
+Condition
+
+> 客户以借记单（debit note）、待处理索赔（pending claim）或草稿贷项（draft credit）主张发票已被冲减
+
+Handling
+
+> 不作为已过账贷项处理：只有在同一发票上已过账的贷项才能冲减毛额；其余一律按未冲减计算短款，并把相应金额列为可回收余额
+
+### "e-procedure-pdf-unreadable"
+
+Condition
+
+> Desk procedure .pdf 已下载打开但正文未在可读文本中呈现，无法核对其中写明的作业流程
+
+Handling
+
+> 记录为证据缺失，先取得 PDF 正文再执行后续入账核对，不得依据未读到的正文下结论
+
+## Test review
+
+### Unanswered · d-remittance-label
+
+> 本笔汇款的汇款标签是哪一类，决定可适用的处理？
+
+## Open limits
+
+These limits are unresolved. Ask for the missing information. Do not treat this Skill as fully automatic, and do not apply a limit outside the nodes it names.
+
+### Unresolved · "q-erp-posting-observation"
+
+Question
+
+> 收据 3475 是否已在 ERP 中按第 4 步实际过账到发票 I-3475？本次录制中只观察到在频道发布结果行，ERP 界面证据缺失，无法确认实际过账动作。
+
+Why it is open
+
+> 固定证据中的任务结果列为未解决项：频道消息只报告入账结果，是否已在 ERP 中实际过账收据无法确认。
+
+Affects: "s4-first-post-bank-receipt"
+
+### Unresolved · "q-collectible-balance-destination"
+
+Question
+
+> 判定为可回收的余额（如 I-3475 的 3.00）在发布结果行之后，是转入 COLLECTIONS 队列还是保留在客户账户上？本次录制未观察到后续处理。
+
+Why it is open
+
+> 固定证据中的任务结果将该余额去向列为未解决：可回收 3.00 是否已转入 COLLECTIONS 或保留在客户账户无法确认。
+
+Affects: "s6-follow-up-route"
+
+### Unresolved · "q-row-column-format"
+
+Question
+
+> 结果行六列（发票号,折扣,转入索赔,小额核销,可回收余额,跟进对象）中各列的顺序与格式是否固定？本次录制的屏幕文本未说明各列含义。
+
+Why it is open
+
+> 案例只观察到粘贴与发送结果行，各列含义未在屏幕文本中说明。
+
+Affects: "s7-post-result-row"
+
+### Unresolved · "q-posting-system"
+
+Question
+
+> 首笔银行收款过账与后续在 ERP 中的实际操作，在现金入账台系统的哪个界面完成？录制中未观察到该界面的操作系统与字段。
+
+Why it is open
+
+> 固定证据只观察到结果行发布，未覆盖过账界面；来源文件仅规定先过账到发票，未说明系统位置。
+
+Affects: "s4-first-post-bank-receipt"
+
+## Sources
+
+Procedure version 2 (01a1eef0-1d8a-7533-b946-44a2ee9f2c1a) · Compiler 3
+
+### "s1-open-dispatch-channel"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s1
+- Trace: 01M7QEPA4E9KSQQAJYWHG3BXKD · Revision: 1 · Step: s4
+- Human review: 01a1eeee-e9dd-7358-bb95-c8fe37663c7e
+
+### "s2-open-settlement-folder"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s2
+- Trace: 01M7QEPA4DCV1PG317C8T51Q3D · Revision: 1 · Step: s3
+- Human review: 01a1eeee-e9dd-7358-bb95-c8fe37663c7e
+
+### "s3-read-procedure-and-bank"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s3
+- Trace: 01M7QEPA4DCV1PG317C8T51Q3D · Revision: 1 · Step: s4
+- Trace: 01M7QEPA4DCV1PG317C8T51Q3D · Revision: 1 · Step: s5
+- Case material: 01a1eeed-0d00-70c4-b16e-a5bfa380887d · Material: 7e1854fe629eb231fd45d11e35b60c7fbe33fa8cc6b668cf209c4b84827e92bc
+- Human review: 01a1eeee-e9dd-7358-bb95-c8fe37663c7e
+
+### "s4-first-post-bank-receipt"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s3
+- Case material: 01a1eeed-0d00-70c4-b16e-a5bfa380887d · Material: 7e1854fe629eb231fd45d11e35b60c7fbe33fa8cc6b668cf209c4b84827e92bc
+- Human review: 01a1eeee-e9dd-7358-bb95-c8fe37663c7e
+
+### "s5-compute-residual-treatments"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s3
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s5
+- Trace: 01M7QEPA4E9KSQQAJYWHG3BXKD · Revision: 1 · Step: s6
+- Case material: 01a1eeed-0d00-70c4-b16e-a5bfa380887d · Material: 7e1854fe629eb231fd45d11e35b60c7fbe33fa8cc6b668cf209c4b84827e92bc
+- Human review: 01a1eeee-e9dd-7358-bb95-c8fe37663c7e
+
+### "s6-follow-up-route"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s3
+- Trace: 01M7QEPA4E9KSQQAJYWHG3BXKD · Revision: 1 · Step: s6
+- Case material: 01a1eeed-0d00-70c4-b16e-a5bfa380887d · Material: 7e1854fe629eb231fd45d11e35b60c7fbe33fa8cc6b668cf209c4b84827e92bc
+- Human review: 01a1eeee-e9dd-7358-bb95-c8fe37663c7e
+
+### "s7-post-result-row"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s5
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s6
+- Trace: 01M7QEPA4E9KSQQAJYWHG3BXKD · Revision: 1 · Step: s7
+- Case material: 01a1eeed-0d00-70c4-b16e-a5bfa380887d · Material: 7e1854fe629eb231fd45d11e35b60c7fbe33fa8cc6b668cf209c4b84827e92bc
+- Human review: 01a1eeee-e9dd-7358-bb95-c8fe37663c7e
+
+### "d-remittance-label"
+- Human review: 01a1eeee-e9dd-7358-bb95-c8fe37663c7e
+
+### "d-opt-terms"
+- Trace: 01M7QEPA4E9KSQQAJYWHG3BXKD · Revision: 1 · Step: s6
+- Case material: 01a1eeed-0d00-70c4-b16e-a5bfa380887d · Material: 7e1854fe629eb231fd45d11e35b60c7fbe33fa8cc6b668cf209c4b84827e92bc
+- Human review: 01a1eeee-e9dd-7358-bb95-c8fe37663c7e
+
+### "d-opt-damage"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s3
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s5
+- Case material: 01a1eeed-0d00-70c4-b16e-a5bfa380887d · Material: 7e1854fe629eb231fd45d11e35b60c7fbe33fa8cc6b668cf209c4b84827e92bc
+- Human review: 01a1eeee-e9dd-7358-bb95-c8fe37663c7e
+
+### "e-damage-claims-conditions"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s3
+- Case material: 01a1eeed-0d00-70c4-b16e-a5bfa380887d · Material: 7e1854fe629eb231fd45d11e35b60c7fbe33fa8cc6b668cf209c4b84827e92bc
+- Human review: 01a1eeee-e9dd-7358-bb95-c8fe37663c7e
+
+### "e-terms-grace-fails"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s3
+- Case material: 01a1eeed-0d00-70c4-b16e-a5bfa380887d · Material: 7e1854fe629eb231fd45d11e35b60c7fbe33fa8cc6b668cf209c4b84827e92bc
+- Human review: 01a1eeee-e9dd-7358-bb95-c8fe37663c7e
+
+### "e-small-balance-limit-exceeded"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s3
+- Case material: 01a1eeed-0d00-70c4-b16e-a5bfa380887d · Material: 7e1854fe629eb231fd45d11e35b60c7fbe33fa8cc6b668cf209c4b84827e92bc
+- Human review: 01a1eeee-e9dd-7358-bb95-c8fe37663c7e
+
+### "e-pending-credit-not-posted"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s3
+- Case material: 01a1eeed-0d00-70c4-b16e-a5bfa380887d · Material: 7e1854fe629eb231fd45d11e35b60c7fbe33fa8cc6b668cf209c4b84827e92bc
+- Human review: 01a1eeee-e9dd-7358-bb95-c8fe37663c7e
+
+### "e-procedure-pdf-unreadable"
+- Trace: 01M7QEPA4DCV1PG317C8T51Q3D · Revision: 1 · Step: s6
+- Human review: 01a1eeee-e9dd-7358-bb95-c8fe37663c7e
+
+### "q-erp-posting-observation"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s3
+
+### "q-collectible-balance-destination"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s6
+
+### "q-row-column-format"
+- Trace: 01M7QEPA4E9KSQQAJYWHG3BXKD · Revision: 1 · Step: s6
+
+### "q-posting-system"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s3
+
+Historical payment approval Skill (raw candidate):
+---
+name: "lynx-01a1ee87-8359-771e-946b-83532ca4f4f8"
+description: "Test guidance for benchmark-payment-release-v1 cases."
+---
+
+# benchmark-payment-release-v1
+
+**Test only.** Use the supplied case facts to recommend a next action. Ask for missing information. Never claim to have performed a business action.
+
+## Steps
+
+### 1. "s1"
+
+Role
+
+> 付款放行复核员
+
+System
+
+> ownCloud（浏览器）
+
+Window
+
+> Files（文件列表）
+
+Action
+
+> 导航进入 /Documents/Benchmark Suite/payment-release-training 文件夹，确认目录含 01-readme-policy.pdf 至 08-settlement-register.pdf 共 9 个文件（含 task.md）
+
+### 2. "s2"
+
+Role
+
+> 付款放行复核员
+
+System
+
+> ownCloud（浏览器）
+
+Window
+
+> PDF 查看器（#pdfviewer）
+
+Action
+
+> 打开 01-readme-policy.pdf 的 PDF 查看器，阅读索引与当前政策 POL-TR-CURRENT（状态 APPROVED，2026-12-06T00:00:00 起生效，替代 POL-TR-ARCHIVE）；确认业务键为 (vendor_id, invoice_id)，需评估全部门禁：NOT_POSTED、DUPLICATE、NO_BALANCE、PO_MISMATCH、RECEIPT_SHORT、BANK_UNVERIFIED、ACTIVE_HOLD
+
+### 3. "s3"
+
+Role
+
+> 付款放行复核员
+
+System
+
+> ownCloud（浏览器）
+
+Window
+
+> PDF 查看器
+
+Action
+
+> 关闭当前文档回到文件列表，打开 02-archived-policy.pdf，确认其状态为 ARCHIVED、已于 2026-12-06T00:00:00 前失效并被 POL-TR-CURRENT 取代，不适用于本次复核
+
+### 4. "s4"
+
+Role
+
+> 付款放行复核员
+
+System
+
+> ownCloud（浏览器）
+
+Window
+
+> PDF 查看器
+
+Action
+
+> 打开 03-exception-bulletin.pdf，阅读公告 BUL-TR-01 的豁免记录：EX-TR-1（ASTER PX-102，RECEIPT_SHORT，上限 750.00 SGD）、EX-TR-2（BAY PX-202，DUPLICATE，900.00 SGD）、EX-TR-3（COPPER PX-302，PO_MISMATCH,BANK_UNVERIFIED，640.00 SGD）
+
+### 5. "s5"
+
+Role
+
+> 付款放行复核员
+
+System
+
+> ownCloud（浏览器）
+
+Window
+
+> PDF 查看器/预览
+
+Action
+
+> 打开并翻页阅读 04-invoice-revisions.pdf 的发票修订记录（案例示例：INV-TR-1-R2 PX-101 ASTER gross_sgd=1100.25 POSTED；第 2 页含 INV-TR-7-R1、INV-TR-8-R1 及 INV-TR-LATE-R9（event_on 2026-12-08，recorded_on 2026-12-09，VOID，9999.00 SGD）），文档并标注「apply the policy in 01-readme-policy.pdf」
+
+### 6. "s6"
+
+Role
+
+> 付款放行复核员
+
+System
+
+> ownCloud（浏览器）
+
+Window
+
+> PDF 预览
+
+Action
+
+> 打开并阅读 05-po-receipts.pdf：POREC-TR-1..8（APPROVED）与收货记录 GR-TR-1..8（ACCEPTED），注意部分金额与发票不一致（案例示例：PO-TR-6 为 600.00 SGD）
+
+### 7. "s7"
+
+Role
+
+> 付款放行复核员
+
+System
+
+> ownCloud（浏览器）
+
+Window
+
+> PDF 预览/查看器
+
+Action
+
+> 打开并阅读 06-bank-controls.pdf：bank_events BC/BV-TR-1..4 的 maker-checker 变更与验证记录，以及 COPPER 账户 SIM-TR-COPPER-02 的新变更 BC-TR-3-NEW
+
+### 8. "s8"
+
+Role
+
+> 付款放行复核员
+
+System
+
+> ownCloud（浏览器）
+
+Window
+
+> PDF 查看器
+
+Action
+
+> 打开并阅读 07-hold-events.pdf 的持有事件记录 HE-TR-1 至 HE-TR-8
+
+### 9. "s9"
+
+Role
+
+> 付款放行复核员
+
+System
+
+> ownCloud（浏览器）
+
+Window
+
+> PDF 预览
+
+Action
+
+> 打开并逐条阅读 08-settlement-register.pdf 的结算登记表（案例示例：AUD-TR-1 至 AUD-TR-8（AUD-TR-4 为 CONFIRMED，其余审计条目为 CLEAR）、CR-TR-1（ASTER/PX-101，POSTED，100.10 SGD）、PAY-TR-1（SETTLED，200.05 SGD）、PAY-TR-PENDING（PENDING，50.00 SGD）及两条重复的 PAY-TR-8（DELTA/PX-402，SETTLED，300.00 SGD））
+
+### 10. "s10"
+
+Role
+
+> 付款放行复核员
+
+System
+
+> 浏览器（ownCloud + Chrome 保存面板）
+
+Window
+
+> 保存对话框（Save As）
+
+Action
+
+> 点击 PDF 查看器/预览的 Download，在保存面板将文件保存到本地 active-task 文件夹（<trial-workspace>），文件名与源 PDF 一致，并在下载列表回读确认显示「文件名 + 大小 • Done」（案例示例：01-readme-policy.pdf 6.7 KB Done、02-archived-policy.pdf 1,018 B Done、04-invoice-revisions.pdf 3.8 KB Done、08-settlement-register.pdf 4.2 KB Done）
+
+### 11. "s11"
+
+Role
+
+> 付款放行复核员
+
+System
+
+> ownCloud（浏览器）
+
+Window
+
+> Files（文件列表）/ New 菜单
+
+Action
+
+> 目录中未见 payment-release.csv 时，点击「New」→「Upload」，在文件选择对话框中选择本地 payment-release.csv 上传，确认目录文件数由 9 变为 10 且列表中出现 payment-release.csv（1 KB）
+
+### 12. "s12"
+
+Role
+
+> 付款放行复核员
+
+System
+
+> ownCloud（浏览器）
+
+Window
+
+> 文件行 Share / 共享面板（Public Links）
+
+Action
+
+> 点击 payment-release.csv 行内「Share」打开共享面板，点击「Create public link」创建公开链接，确认链接生成（案例示例：http://localhost:8092/index.php/s/rgHzTLToHZMppO2）且文件在列表中标记为 Shared
+
+### 13. "s13"
+
+Role
+
+> 付款放行复核员
+
+System
+
+> Rocket.Chat（浏览器）
+
+Window
+
+> suite-payment-release-training 频道
+
+Action
+
+> 登录 Rocket.Chat，打开 suite-payment-release-training 频道，阅读说明消息（EXAMINER FIXED FACTS：案例目录 Documents/Benchmark Suite/payment-release-training、索引文件 01-readme-policy.pdf、共享链接，注明仅模拟、不得发起实际付款）；本次未在频道发送消息
+
+## Decisions
+
+## Exceptions
+
+### "e-save-unconfirmed"
+
+Condition
+
+> 点击 Download 或在保存面板设置文件名后，文件是否成功保存未获确认（查看器停留同页、Save 最终点击未记录或文件尾部未确认）
+
+Handling
+
+> 不视作已保存；在浏览器下载列表回读该文件，确认显示「文件名 + 大小 • Done」后再继续（案例：06-bank-controls.pdf 与 07-hold-events.pdf 下载区均显示 Done）
+
+## Test review
+
+## Open limits
+
+These limits are unresolved. Ask for the missing information. Do not treat this Skill as fully automatic, and do not apply a limit outside the nodes it names.
+
+### Unresolved · "q-local-save-required"
+
+Question
+
+> 04 号及以后的来源 PDF 是仅在 ownCloud 在线阅读即可，还是必须下载保存到本地 active-task 文件夹才算完成取证？
+
+Why it is open
+
+> trace 01M7MXQAYZAKRHB4KEYFK4TADG 翻阅 04-invoice-revisions.pdf 后是否另行保存未获确认（file_tail_unconfirmed），而其他案例对 03–08 号 PDF 均记录了保存面板动作。
+
+Affects: "s5", "s10"
+
+### Unresolved · "q-archived-save"
+
+Question
+
+> 02-archived-policy.pdf 已确认为 ARCHIVED、不适用于本次复核，是否仍需要将其保存到本地文件夹？
+
+Why it is open
+
+> 该案例将其保存到 active-task，但结局里仍列「是否也应保存到同一文件夹」为未解决事项。
+
+Affects: "s3"
+
+### Unresolved · "q-csv-content"
+
+Question
+
+> 八个业务键各自的付款放行结论（如 RELEASE/HOLD 及理由）依据哪些门禁比对结果得出，payment-release.csv 的具体内容如何编制？
+
+Why it is open
+
+> 所有已读 Trace 均未记录对照 POL-TR-CURRENT 各门禁评估业务键或编写 CSV 内容的动作；AZ5Q 直接从上传已存在的 payment-release.csv 开始。
+
+Affects: "s11"
+
+### Unresolved · "q-public-link-scope"
+
+Question
+
+> 对 payment-release.csv 创建公开链接且显示「Anyone with the link has access」是否符合任务对可见范围的要求，还是需要限定共享对象？
+
+Why it is open
+
+> AZ5Q 的结局明确将公开链接可见范围是否合规列为未在画面确认的事项。
+
+Affects: "s12"
+
+### Unresolved · "q-channel-message"
+
+Question
+
+> 交付时是否需要在 suite-payment-release-training 频道内发送建议或消息，还是仅通过 ownCloud 共享链接交付即可？
+
+Why it is open
+
+> 该案例读频道说明后在输入框按键又回退，未发送任何消息；频道内未显示具体业务要求。
+
+Affects: "s13"
+
+### Unresolved · "q-settlement-exceptions"
+
+Question
+
+> 结算登记表中 AUD-TR-4 状态为 CONFIRMED、PAY-TR-PENDING 仍为 PENDING、PAY-TR-8 出现两次，这些是否属于需要处理的例外？处理方式分别是什么？
+
+Why it is open
+
+> 该案例结局将这三项列为未解决的例外，且后续审阅结论未在记录中出现。
+
+Affects: "s9"
+
+## Sources
+
+Procedure version 1 (01a1ee8a-38f1-725c-97fd-52a45aa60870) · Compiler 3
+
+### "s1"
+- Trace: 01M7MXQAYXZB505SYV7FVJ6XBA · Revision: 1 · Step: s2
+- Trace: 01M7MXQAZ0D9JYA4YXP4YN6RVX · Revision: 1 · Step: s1
+- Trace: 01M7MXQAZ5Q6DK375ZMQCXFV8S · Revision: 1 · Step: s1
+
+### "s2"
+- Trace: 01M7MXQAYXZB505SYV7FVJ6XBA · Revision: 1 · Step: s4
+- Trace: 01M7MXQAYXZB505SYV7FVJ6XBA · Revision: 1 · Step: s6
+- Trace: 01M7MXQAYZAKRHB4KEY439Q2YK · Revision: 1 · Step: s1
+
+### "s3"
+- Trace: 01M7MXQAYZAKRHB4KEY439Q2YK · Revision: 1 · Step: s3
+
+### "s4"
+- Trace: 01M7MXQAYZAKRHB4KEY439Q2YK · Revision: 1 · Step: s10
+- Trace: 01M7MXQAYZAKRHB4KEYFK4TADG · Revision: 1 · Step: s2
+
+### "s5"
+- Trace: 01M7MXQAYZAKRHB4KEYFK4TADG · Revision: 1 · Step: s5
+- Trace: 01M7MXQAYZAKRHB4KEYFK4TADG · Revision: 1 · Step: s6
+- Trace: 01M7MXQAZ0D9JYA4YXP4YN6RVX · Revision: 1 · Step: s2
+
+### "s6"
+- Trace: 01M7MXQAZ0D9JYA4YXP4YN6RVX · Revision: 1 · Step: s7
+
+### "s7"
+- Trace: 01M7MXQAZ0D9JYA4YXP4YN6RVX · Revision: 1 · Step: s9
+- Trace: 01M7MXQAZ1DJPYV7DR8NH8BNBP · Revision: 1 · Step: s4
+
+### "s8"
+- Trace: 01M7MXQAZ1DJPYV7DR8NH8BNBP · Revision: 1 · Step: s5
+- Trace: 01M7MXQAZ4811JBGAA2GGFCQJN · Revision: 1 · Step: s1
+
+### "s9"
+- Trace: 01M7MXQAZ4811JBGAA2GGFCQJN · Revision: 1 · Step: s2
+- Trace: 01M7MXQAZ4811JBGAA2GGFCQJN · Revision: 1 · Step: s7
+
+### "s10"
+- Trace: 01M7MXQAYXZB505SYV7FVJ6XBA · Revision: 1 · Step: s7
+- Trace: 01M7MXQAYZAKRHB4KEY439Q2YK · Revision: 1 · Step: s5
+- Trace: 01M7MXQAYZAKRHB4KEY439Q2YK · Revision: 1 · Step: s8
+- Trace: 01M7MXQAYZAKRHB4KEYFK4TADG · Revision: 1 · Step: s1
+- Trace: 01M7MXQAZ0D9JYA4YXP4YN6RVX · Revision: 1 · Step: s3
+- Trace: 01M7MXQAZ0D9JYA4YXP4YN6RVX · Revision: 1 · Step: s7
+- Trace: 01M7MXQAZ1DJPYV7DR8NH8BNBP · Revision: 1 · Step: s2
+- Trace: 01M7MXQAZ1DJPYV7DR8NH8BNBP · Revision: 1 · Step: s9
+- Trace: 01M7MXQAZ4811JBGAA2GGFCQJN · Revision: 1 · Step: s10
+
+### "s11"
+- Trace: 01M7MXQAZ5Q6DK375ZMQCXFV8S · Revision: 1 · Step: s2
+- Trace: 01M7MXQAZ5Q6DK375ZMQCXFV8S · Revision: 1 · Step: s3
+- Trace: 01M7MXQAZ5Q6DK375ZMQCXFV8S · Revision: 1 · Step: s4
+
+### "s12"
+- Trace: 01M7MXQAZ5Q6DK375ZMQCXFV8S · Revision: 1 · Step: s5
+- Trace: 01M7MXQAZ5Q6DK375ZMQCXFV8S · Revision: 1 · Step: s6
+
+### "s13"
+- Trace: 01M7MXQAZ6G0FCEN433DQ6MN3J · Revision: 1 · Step: s1
+- Trace: 01M7MXQAZ6G0FCEN433DQ6MN3J · Revision: 1 · Step: s2
+- Trace: 01M7MXQAZ6G0FCEN433DQ6MN3J · Revision: 1 · Step: s3
+
+### "e-save-unconfirmed"
+- Trace: 01M7MXQAYXZB505SYV7FVJ6XBA · Revision: 1 · Step: s7
+- Trace: 01M7MXQAZ1DJPYV7DR8NH8BNBP · Revision: 1 · Step: s8
+
+### "q-local-save-required"
+- Trace: 01M7MXQAYZAKRHB4KEYFK4TADG · Revision: 1 · Step: s6
+
+### "q-archived-save"
+- Trace: 01M7MXQAYZAKRHB4KEY439Q2YK · Revision: 1 · Step: s3
+
+### "q-csv-content"
+- Trace: 01M7MXQAZ5Q6DK375ZMQCXFV8S · Revision: 1 · Step: s4
+
+### "q-public-link-scope"
+- Trace: 01M7MXQAZ5Q6DK375ZMQCXFV8S · Revision: 1 · Step: s6
+
+### "q-channel-message"
+- Trace: 01M7MXQAZ6G0FCEN433DQ6MN3J · Revision: 1 · Step: s4
+
+### "q-settlement-exceptions"
+- Trace: 01M7MXQAZ4811JBGAA2GGFCQJN · Revision: 1 · Step: s7

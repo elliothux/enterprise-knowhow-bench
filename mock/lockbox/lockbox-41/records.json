@@ -1,0 +1,208 @@
+{
+  "receivables": {
+    "IV-1945": {
+      "face": 57300,
+      "credit": 225
+    },
+    "IV-2029": {
+      "face": 55050,
+      "credit": 1200
+    },
+    "IV-2402": {
+      "face": 53225,
+      "credit": 600
+    },
+    "IV-2706": {
+      "face": 52525,
+      "credit": 600
+    },
+    "IV-3155": {
+      "face": 52475,
+      "credit": 225
+    },
+    "IV-3218": {
+      "face": 54275,
+      "credit": 0
+    },
+    "IV-3285": {
+      "face": 57050,
+      "credit": 225
+    },
+    "IV-3394": {
+      "face": 50750,
+      "credit": 375
+    },
+    "IV-3501": {
+      "face": 56575,
+      "credit": 225
+    },
+    "IV-3708": {
+      "face": 56075,
+      "credit": 600
+    },
+    "IV-4017": {
+      "face": 54950,
+      "credit": 375
+    },
+    "IV-4156": {
+      "face": 54275,
+      "credit": 1200
+    },
+    "IV-4333": {
+      "face": 54825,
+      "credit": 1200
+    },
+    "IV-4434": {
+      "face": 54950,
+      "credit": 1375
+    },
+    "IV-4460": {
+      "face": 57275,
+      "credit": 1200
+    },
+    "IV-4513": {
+      "face": 52650,
+      "credit": 225
+    },
+    "IV-4797": {
+      "face": 53875,
+      "credit": 1375
+    },
+    "IV-4808": {
+      "face": 56025,
+      "credit": 600
+    },
+    "IV-4903": {
+      "face": 56925,
+      "credit": 600
+    },
+    "IV-4922": {
+      "face": 53375,
+      "credit": 1200
+    },
+    "IV-5722": {
+      "face": 57700,
+      "credit": 1200
+    },
+    "IV-5998": {
+      "face": 54325,
+      "credit": 225
+    },
+    "IV-6455": {
+      "face": 51200,
+      "credit": 0
+    },
+    "IV-6830": {
+      "face": 55250,
+      "credit": 225
+    },
+    "IV-7105": {
+      "face": 56950,
+      "credit": 1375
+    },
+    "IV-7130": {
+      "face": 57600,
+      "credit": 600
+    },
+    "IV-7156": {
+      "face": 56675,
+      "credit": 225
+    },
+    "IV-7413": {
+      "face": 50625,
+      "credit": 375
+    },
+    "IV-7729": {
+      "face": 57475,
+      "credit": 1375
+    },
+    "IV-8034": {
+      "face": 57025,
+      "credit": 0
+    },
+    "IV-8101": {
+      "face": 50925,
+      "credit": 600
+    },
+    "IV-8568": {
+      "face": 52775,
+      "credit": 375
+    },
+    "IV-8714": {
+      "face": 52700,
+      "credit": 600
+    },
+    "IV-9433": {
+      "face": 51375,
+      "credit": 375
+    },
+    "IV-9772": {
+      "face": 55350,
+      "credit": 1375
+    },
+    "IV-9833": {
+      "face": 52850,
+      "credit": 1375
+    }
+  },
+  "receipts": {
+    "BK-132": {
+      "cents": 158275,
+      "confirmed_refs": [
+        "IV-3285"
+      ]
+    },
+    "BK-230": {
+      "cents": 156475,
+      "confirmed_refs": []
+    },
+    "BK-256": {
+      "cents": 165600,
+      "confirmed_refs": [
+        "IV-4460",
+        "IV-4808",
+        "IV-5998"
+      ]
+    },
+    "BK-550": {
+      "cents": 158475,
+      "confirmed_refs": []
+    },
+    "BK-574": {
+      "cents": 159125,
+      "confirmed_refs": []
+    },
+    "BK-673": {
+      "cents": 165700,
+      "confirmed_refs": []
+    },
+    "BK-711": {
+      "cents": 159450,
+      "confirmed_refs": []
+    },
+    "BK-775": {
+      "cents": 163000,
+      "confirmed_refs": []
+    },
+    "BK-836": {
+      "cents": 163025,
+      "confirmed_refs": []
+    },
+    "BK-837": {
+      "cents": 164925,
+      "confirmed_refs": []
+    },
+    "BK-886": {
+      "cents": 163700,
+      "confirmed_refs": []
+    },
+    "BK-924": {
+      "cents": 163550,
+      "confirmed_refs": [
+        "IV-5722",
+        "IV-7105",
+        "IV-9833"
+      ]
+    }
+  }
+}

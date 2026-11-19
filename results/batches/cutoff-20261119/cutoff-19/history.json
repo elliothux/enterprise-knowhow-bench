@@ -1,0 +1,198 @@
+{
+  "case": "cutoff-19",
+  "line_score_order": [
+    "I-47740",
+    "I-43890",
+    "I-47207",
+    "I-48588",
+    "I-44288",
+    "I-42209",
+    "I-48932",
+    "I-47888"
+  ],
+  "arms": {
+    "A": {
+      "session": "01a1f2ab-f153-7021-8453-b12150b52a5c",
+      "operator": "gpt-6.1-terra",
+      "seconds": 39.007,
+      "exit": 0,
+      "receipt": {
+        "sha256": "8a7416a8e641d297b33455001db4ca8a85c66e45a6533c2063f1d7300d72bbbf"
+      },
+      "valid_delivery": true,
+      "first_submission": "I-47740,WAIT,BANK,BA-411\nI-43890,WAIT,BANK,BA-411\nI-47207,8.00,0.00,0.00,0.00,CLOSED\nI-48588,8.05,0.00,0.00,0.00,CLOSED\nI-44288,6.05,0.00,0.00,0.00,CLOSED\nI-42209,6.00,0.00,0.00,0.00,CLOSED\nI-48932,0.00,0.00,0.00,8.40,CLAIMS\nI-47888,5.00,0.00,0.00,0.00,CLOSED",
+      "score": 0.0,
+      "line_scores": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "exact": false,
+      "posted_correctly": 0,
+      "blocked_at_cutoff": 2,
+      "unsafe_postings": 0,
+      "handling_score": 48.75,
+      "handling_line_scores": [
+        100,
+        100,
+        30,
+        10,
+        30,
+        10,
+        80,
+        30
+      ],
+      "handling_exact": false,
+      "fully_correct_invoices": 0,
+      "actions": [
+        {
+          "step": "Read rules",
+          "exit": 0
+        },
+        {
+          "step": "Read invoices-history",
+          "exit": 0
+        },
+        {
+          "step": "Submit posting",
+          "exit": 0
+        }
+      ],
+      "trace_violations": [],
+      "hashes": {
+        "agent.log": "1bda5afddb399e5e4b2e3ca233924f38f07f3ad78cf4634fe925ea74a759fa6c",
+        "stderr.log": "b16e8b04477263f4c5b352745e788fe73fd7091968308e301b69a873311e7d62",
+        "execution.json": "7b222ac0c5616561f1a145bc8cb70ca7d9606d6a79ebbf028d853d5c88c44d01",
+        "score.json": "e1bb1dd63db3f5fe41e4fe159fe7520a2477d8b9eaed5c368e2f7119b13d8734",
+        "work/TASK.md": "ce6143e8c85122d6ef097e0cd33e07f9afa47b2645e3635e77fd6217f701c2e7"
+      }
+    },
+    "B": {
+      "session": "01a1f2ac-87a1-7fc2-8a5b-86d8a7490273",
+      "operator": "gpt-6.1-terra",
+      "seconds": 23.848,
+      "exit": 0,
+      "receipt": {
+        "sha256": "7d501d90d5a4f121002a0b762db2ffe9fba3b7ea3502d5401dc2921da95d2da1"
+      },
+      "valid_delivery": true,
+      "first_submission": "I-47740,WAIT,BANK,BA-411\nI-43890,WAIT,BANK,BA-411\nI-47207,0.00,0.00,8.00,0.00,CLOSED\nI-48588,0.00,0.00,0.00,8.05,COLLECTIONS\nI-44288,0.00,0.00,6.05,0.00,CLOSED\nI-42209,0.00,0.00,0.00,6.00,COLLECTIONS\nI-48932,0.00,0.00,0.00,8.40,COLLECTIONS\nI-47888,0.00,0.00,5.00,0.00,CLOSED",
+      "score": 75.0,
+      "line_scores": [
+        0,
+        0,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "exact": false,
+      "posted_correctly": 6,
+      "blocked_at_cutoff": 2,
+      "unsafe_postings": 0,
+      "handling_score": 100.0,
+      "handling_line_scores": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "handling_exact": true,
+      "fully_correct_invoices": 6,
+      "actions": [
+        {
+          "step": "Read rules",
+          "exit": 0
+        },
+        {
+          "step": "Read invoices-history",
+          "exit": 0
+        },
+        {
+          "step": "Submit posting",
+          "exit": 0
+        }
+      ],
+      "trace_violations": [],
+      "hashes": {
+        "agent.log": "57f556739c990f288dfb0d99975a265dd799cf9a0a5f523846246d4b54154840",
+        "stderr.log": "ae97b726b3d3a39fa5efdd6a5827b05d1f38809a5a184d2ca461601711ebf9ad",
+        "execution.json": "6b42c320bb166f8ce85e9f93cb6cc7ba7699cba600ccb0ac23cfa31eee384313",
+        "score.json": "c45317123fd9964ed7e9e34460697ac19b6651fbf67b011969415e3e347cd2fb",
+        "work/TASK.md": "60c311f7ff4834d1407e784e95099cb119794e30be7e249d0f0e06f3bb335513"
+      }
+    },
+    "D": {
+      "session": "01a1f2ad-cc08-79d3-a829-4e494ca6dfcf",
+      "operator": "gpt-6.1-terra",
+      "seconds": 22.58,
+      "exit": 0,
+      "receipt": {
+        "sha256": "7d501d90d5a4f121002a0b762db2ffe9fba3b7ea3502d5401dc2921da95d2da1"
+      },
+      "valid_delivery": true,
+      "first_submission": "I-47740,WAIT,BANK,BA-411\nI-43890,WAIT,BANK,BA-411\nI-47207,0.00,0.00,8.00,0.00,CLOSED\nI-48588,0.00,0.00,0.00,8.05,COLLECTIONS\nI-44288,0.00,0.00,6.05,0.00,CLOSED\nI-42209,0.00,0.00,0.00,6.00,COLLECTIONS\nI-48932,0.00,0.00,0.00,8.40,COLLECTIONS\nI-47888,0.00,0.00,5.00,0.00,CLOSED",
+      "score": 75.0,
+      "line_scores": [
+        0,
+        0,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "exact": false,
+      "posted_correctly": 6,
+      "blocked_at_cutoff": 2,
+      "unsafe_postings": 0,
+      "handling_score": 100.0,
+      "handling_line_scores": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "handling_exact": true,
+      "fully_correct_invoices": 6,
+      "actions": [
+        {
+          "step": "Read rules",
+          "exit": 0
+        },
+        {
+          "step": "Read invoices-history",
+          "exit": 0
+        },
+        {
+          "step": "Submit posting",
+          "exit": 0
+        }
+      ],
+      "trace_violations": [],
+      "hashes": {
+        "agent.log": "f099b9e93d9751f75067669ec6946255fd5997fe50c1e79da30973bc6c8019a4",
+        "stderr.log": "ab46c1347f3eae6fc7e3dbd5fcd126861cf499f737f7b43c83af315104409ac6",
+        "execution.json": "2340ede75122dbc3f955002d572a4d2979db1e7d9dad5bda089e0709e2719a38",
+        "score.json": "d0d8dafc2614db5d3273152ba42f193bd30700122b02e4cb3c85979f2e704ecc",
+        "work/TASK.md": "972b5cb7bb393b0a7900c1f5297b677b8f35e47014274a9f162c2ca78619303b"
+      }
+    }
+  }
+}

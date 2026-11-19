@@ -34,6 +34,7 @@ def freeze(root, repository, tasks, rows):
     for row in rows:
         task = tasks[row["case"]]
         inputs.update([task["prompt"], *task["resources"].values(), *filter(None, task["arms"].values())])
+        inputs.update(task.get("images", []))
         if "ledger" in task:
             inputs.add(task["ledger"])
         if "fixtures" in task:

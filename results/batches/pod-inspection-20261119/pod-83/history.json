@@ -1,0 +1,129 @@
+{
+  "case": "pod-83",
+  "line_score_order": [
+    "AR-83071",
+    "AR-83084",
+    "AR-83097",
+    "AR-83110",
+    "AR-83123",
+    "AR-83136",
+    "AR-83149",
+    "AR-83162"
+  ],
+  "arms": {
+    "B": {
+      "session": "01a1f2a8-3db0-7d43-9a15-6658e6768053",
+      "operator": "gpt-6.1-terra",
+      "seconds": 27.927,
+      "exit": 0,
+      "receipt": {
+        "sha256": "a0541695a35673498e7757f57d5f12164873080d1ad04fe92f6ebfe0cfb9a7f1"
+      },
+      "valid_delivery": true,
+      "first_submission": "AR-83071,20,25.20,7.95,0.00,CLAIMS\nAR-83084,30,71.10,12.40,19.30,COLLECTIONS\nAR-83097,20,37.80,37.80,0.00,CLAIMS\nAR-83110,11,11.88,11.88,31.37,COLLECTIONS\nAR-83123,11,23.54,23.54,0.00,CLAIMS\nAR-83136,10,27.70,27.70,39.03,COLLECTIONS\nAR-83149,31,46.81,18.50,16.30,COLLECTIONS\nAR-83162,21,35.49,35.00,14.00,COLLECTIONS",
+      "score": 100.0,
+      "line_scores": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "exact": true,
+      "fully_correct_invoices": 8,
+      "actions": [
+        {
+          "step": "Submit posting",
+          "exit": 0
+        }
+      ],
+      "trace_violations": [],
+      "hashes": {
+        "agent.log": "3a1e50b226b5a748f6bd2bcfe8c6a2737114f0c864018e14718c8dc5bb6c9c8d",
+        "stderr.log": "6c1a0468029c39f78a1c237b7863a359702f091f01165ba54d2c16f0f8581e47",
+        "execution.json": "31ce02c36f0b9be2e8aa554e3eec8fe8ea6d15e83a7bac8224075c0e23482700",
+        "score.json": "211d9c88a3f644b5b91b74580f1903b2b3885d7e23bb61573f1ca206f436395d",
+        "work/TASK.md": "b745b81ee2494dcdd9711913ed82d403e4b20632ad9ec38031daa0e502e165a2"
+      }
+    },
+    "A": {
+      "session": "01a1f2a8-a992-7900-990c-ea442b3b3f58",
+      "operator": "gpt-6.1-terra",
+      "seconds": 20.662,
+      "exit": 0,
+      "receipt": {
+        "sha256": "a0541695a35673498e7757f57d5f12164873080d1ad04fe92f6ebfe0cfb9a7f1"
+      },
+      "valid_delivery": true,
+      "first_submission": "AR-83071,20,25.20,7.95,0.00,CLAIMS\nAR-83084,30,71.10,12.40,19.30,COLLECTIONS\nAR-83097,20,37.80,37.80,0.00,CLAIMS\nAR-83110,11,11.88,11.88,31.37,COLLECTIONS\nAR-83123,11,23.54,23.54,0.00,CLAIMS\nAR-83136,10,27.70,27.70,39.03,COLLECTIONS\nAR-83149,31,46.81,18.50,16.30,COLLECTIONS\nAR-83162,21,35.49,35.00,14.00,COLLECTIONS",
+      "score": 100.0,
+      "line_scores": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "exact": true,
+      "fully_correct_invoices": 8,
+      "actions": [
+        {
+          "step": "Submit posting",
+          "exit": 0
+        }
+      ],
+      "trace_violations": [],
+      "hashes": {
+        "agent.log": "50de221dd3461a5c7d919a00b9cceb4d60a7b9215c105c66f063c4b63e2e2828",
+        "stderr.log": "6b4a439b5612d92a4bf1328aff7fb4b04ba1063889ce04374e8c8024c7510dc6",
+        "execution.json": "17708a6fd91d4432fe078cefe9e03739fe233bbe1b008eabd7fe7601e51c5869",
+        "score.json": "39d59b0cf35d59c84f75e3a6922f7ca07c079fe67a346cd6c0cc9677026393c7",
+        "work/TASK.md": "dfb485783c6f1ea4253fb914694bb6866ffa00b58e35a57cb41b48b610c8b755"
+      }
+    },
+    "D": {
+      "session": "01a1f2a9-4ee2-7822-8b74-1354ad75e454",
+      "operator": "gpt-6.1-terra",
+      "seconds": 24.661,
+      "exit": 0,
+      "receipt": {
+        "sha256": "a0541695a35673498e7757f57d5f12164873080d1ad04fe92f6ebfe0cfb9a7f1"
+      },
+      "valid_delivery": true,
+      "first_submission": "AR-83071,20,25.20,7.95,0.00,CLAIMS\nAR-83084,30,71.10,12.40,19.30,COLLECTIONS\nAR-83097,20,37.80,37.80,0.00,CLAIMS\nAR-83110,11,11.88,11.88,31.37,COLLECTIONS\nAR-83123,11,23.54,23.54,0.00,CLAIMS\nAR-83136,10,27.70,27.70,39.03,COLLECTIONS\nAR-83149,31,46.81,18.50,16.30,COLLECTIONS\nAR-83162,21,35.49,35.00,14.00,COLLECTIONS",
+      "score": 100.0,
+      "line_scores": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "exact": true,
+      "fully_correct_invoices": 8,
+      "actions": [
+        {
+          "step": "Submit posting",
+          "exit": 0
+        }
+      ],
+      "trace_violations": [],
+      "hashes": {
+        "agent.log": "2b15783eb2663e9873e1bd81654c697a068f4cb1f2d1908794d5f57d30fa08b9",
+        "stderr.log": "048dbeb8c3d65130ce646335a6427fa7747d895103d1d8c05994cda34b44d271",
+        "execution.json": "c347ec96aa6cba67ddc51e551bab9063643f389be2d2b8b3394828439782ec70",
+        "score.json": "f1a26c83e81ce4d1673957ba9e77c8312ffddc9392d12a5c74ba384a62722b00",
+        "work/TASK.md": "cb6d42a3128ef3c9ad940f8337a128f0bcf9a26195e4af3a603c2ea52c2e371d"
+      }
+    }
+  }
+}

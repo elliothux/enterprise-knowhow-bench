@@ -1,0 +1,422 @@
+
+Historical invoice reconciliation Skill:
+---
+name: "lynx-01a1ee16-80b7-76a6-86db-d4c5c149f8de"
+description: "Test guidance for benchmark-invoice-reconciliation-v1 cases."
+---
+
+# benchmark-invoice-reconciliation-v1
+
+**Test only.** Use the supplied case facts to recommend a next action. Ask for missing information. Never claim to have performed a business action.
+
+## Steps
+
+### 1. "locate-case-folder"
+
+Role
+
+> 任务执行人
+
+System
+
+> ownCloud（文件应用）
+
+Window
+
+> 当前任务的案例资料目录
+
+Action
+
+> 在 ownCloud 中进入当前任务规定的案例资料目录（路径取自当次任务说明），核对目录内资料清单与当前任务要求一致
+
+### 2. "download-reference-docs"
+
+Role
+
+> 任务执行人
+
+System
+
+> ownCloud / 浏览器下载
+
+Window
+
+> 下载保存对话框
+
+Action
+
+> 逐个下载当次任务列出的参考资料（规则文档、发票 current/history、贷项、付款资料）；每份资料在保存对话框中确认文件名并确认保存，以浏览器下载完成提示作为保存完成的依据。训练录制中仅观察到规则文档一份确认保存完成，其余文件是否下载未被观察到
+
+### 3. "read-rules"
+
+Role
+
+> 任务执行人
+
+System
+
+> 浏览器 / Rocket.Chat 任务频道
+
+Window
+
+> 规则文档与本任务频道消息
+
+Action
+
+> 读取本次任务的规则来源（规则文档与本任务频道消息），提取以当前任务为准的参数：业务截止日、本位币、发票去重键与取舍规则、贷项与付款的计入条件、输出文件名与 CSV 表头字段、交付方式（上传后公开分享并在频道公布链接及本地保存链接的要求）
+
+### 4. "read-invoices-current"
+
+Role
+
+> 任务执行人
+
+System
+
+> 浏览器（PDF 标签页）
+
+Window
+
+> 发票 current 资料
+
+Action
+
+> 查看发票 current 资料，逐份读取每张发票的最新版本记录：供应商、发票号、版本、金额、到期日与状态（含 VOID/DRAFT 等状态标记），作为去重的当前候选
+
+### 5. "read-invoices-history"
+
+Role
+
+> 任务执行人
+
+System
+
+> 浏览器（PDF 标签页）
+
+Window
+
+> 发票 history 资料
+
+Action
+
+> 查看发票 history 资料，逐份读取同一发票号更早的版本与其他状态记录；按当前任务规则的业务键（如 vendor_id + invoice_id）识别重复，保留规则规定的最新有效版本（通常为 updated_on 不晚于业务截止日中版本最新的一条），丢弃较旧记录；若规则要求逐版本输出则改为全部保留
+
+### 6. "read-credit-notes"
+
+Role
+
+> 任务执行人
+
+System
+
+> 浏览器（PDF 标签页）
+
+Window
+
+> 贷项资料
+
+Action
+
+> 查看贷项资料，逐条读取贷项记录（供应商、关联发票号、金额、日期与状态）；仅把已过账状态（如 POSTED，DRAFT 等未过账状态不计入）、日期不晚于业务截止日且供应商与发票号同时匹配的贷项计入对应发票贷项金额，其余仅记录不计入
+
+### 7. "read-remittances"
+
+Role
+
+> 任务执行人
+
+System
+
+> 浏览器（PDF 标签页）
+
+Window
+
+> 付款资料
+
+Action
+
+> 查看付款资料，逐条读取付款记录（供应商、关联发票号、金额、日期与状态）；仅把已结清状态（如 SETTLED；PENDING、FAILED、REVERSED 等不计入）、日期不晚于业务截止日且供应商与发票号同时匹配的付款计入对应发票已付金额，其余仅记录不计入
+
+### 8. "upload-output-file"
+
+Role
+
+> 任务执行人
+
+System
+
+> ownCloud
+
+Window
+
+> 当前任务案例资料目录
+
+Action
+
+> 把按当前任务要求命名的输出文件（默认 reconciliation.csv；文件名以当前任务要求为准）上传到案例资料目录；录制中上传动作本身未被捕获，仅观察到该文件随后出现在目录中
+
+### 9. "create-public-link"
+
+Role
+
+> 任务执行人
+
+System
+
+> ownCloud
+
+Window
+
+> 输出文件共享面板
+
+Action
+
+> 打开已上传输出文件的共享动作，在其原本没有共享链接时创建公共链接，并核对链接未设置密码/登录限制、访客可直接下载该文件；生成的链接 URL 属于当次执行结果，不写为固定值
+
+### 10. "save-link-local"
+
+Role
+
+> 任务执行人
+
+System
+
+> 本地文件系统
+
+Window
+
+> 当前任务指定的链接保存文件
+
+Action
+
+> 按当前任务要求把公共链接保存到本地链接文件（默认 link.txt，名称以当前任务要求为准）；录制中未观察到该文件被创建或写入
+
+### 11. "post-link-room"
+
+Role
+
+> 任务执行人
+
+System
+
+> Rocket.Chat
+
+Window
+
+> 当前任务指定的交付频道
+
+Action
+
+> 使用当次任务提供的账号登录 Rocket.Chat，打开本任务指定的交付频道，把输出文件的公共链接发布到该频道；录制中只观察到在消息输入框中键入内容，未观察到发送动作与已发布消息
+
+### 12. "verify-public-link"
+
+Role
+
+> 查看人
+
+System
+
+> ownCloud 公开分享页
+
+Window
+
+> 输出文件分享页
+
+Action
+
+> 用公共链接打开分享页，核对页面提供该输出文件的下载入口（Direct link 与内联预览）；只据此确认链接可访问，不据此认定文件由本次执行创建或内容正确
+
+## Decisions
+
+## Exceptions
+
+### "exc-unobserved-calculation"
+
+Condition
+
+> 输出文件的生成过程（按规则计算、生成 CSV 并写入内容）在录制中未被观察到：上传前目录中并无该文件，之后它直接以小于 1 KB 的大小出现在目录中
+
+Handling
+
+> 把计算与 CSV 生成视为未观察步骤：不得认定输出内容已按截止日、去重与状态规则正确，需在上传前自行核对表头、行数与金额后再交付
+
+### "exc-upload-not-captured"
+
+Condition
+
+> 上传输出文件的动作未被捕获，仅能看到文件已出现在案例资料目录中；看到文件存在不能证明由本次执行创建
+
+Handling
+
+> 以共享面板状态与目录清单确认该文件确为本任务交付物后再创建分享；如无法确认来源，先重新上传或核对文件内容
+
+### "exc-link-txt"
+
+Condition
+
+> 任务要求把公共链接保存到本地链接文件，但录制中未见该文件被创建或写入的任何步骤
+
+Handling
+
+> 本地链接保存未完成即视为交付未闭环，须先确认或补做保存，再判定任务完成
+
+### "exc-channel-send-not-observed"
+
+Condition
+
+> 频道公布链接的发送动作与已发布消息内容未被观察到，仅观察到在消息输入框内键入内容
+
+Handling
+
+> 不得认定链接已发布到频道；须确认频道内出现含公共链接的消息后才算完成交付
+
+## Test review
+
+## Open limits
+
+These limits are unresolved. Ask for the missing information. Do not treat this Skill as fully automatic, and do not apply a limit outside the nodes it names.
+
+### Unresolved · "q-post-link-content"
+
+Question
+
+> 在频道消息输入框中键入的内容是否为公共链接 URL，以及是否实际发送？这决定「公布链接」这一步骤能否视为完成。
+
+Why it is open
+
+> Trace 只观察到在输入框中键入内容，未观察到发送后的消息内容或发送动作本身。
+
+Affects: "post-link-room", "verify-public-link"
+
+### Unresolved · "q-link-txt"
+
+Question
+
+> 公共链接是否已保存到本地 link.txt？这决定交付流程中是否需要补做本地保存。
+
+Why it is open
+
+> Trace 中未见任何写入 link.txt 的步骤。
+
+Affects: "exc-link-txt", "save-link-local"
+
+### Unresolved · "q-csv-calculation"
+
+Question
+
+> reconciliation.csv 的金额计算（尤其 IN-501 的 SETTLED 付款与贷记处理）是否按规则执行且正确？这决定对账结果是否需要重算后再上传。
+
+Why it is open
+
+> Trace 未观察到任何计算或编写 CSV 的步骤，文件出现方式未记录。
+
+Affects: "exc-unobserved-calculation", "verify-public-link"
+
+### Unresolved · "q-link-newness"
+
+Question
+
+> 公共链接是否为本次新建且未设置密码/登录限制？这决定是否需要重新创建分享设置。
+
+Why it is open
+
+> Trace 显示面板此前没有共享链接、随后生成新链接，但链接是否设置了密码未见记录。
+
+Affects: "create-public-link"
+
+## Sources
+
+Procedure version 2 (01a1ee21-f9d1-71fa-9ac8-db0d890ed3e5) · Compiler 3
+
+### "locate-case-folder"
+- Trace: 01M7MQ8590MW1SSSMQPJ4KHHZ9 · Revision: 1 · Step: s1
+- Trace: 01M7MQ8590MW1SSSMQPJ4KHHZ9 · Revision: 1 · Step: s2
+- Trace: 01M7MQ8590MW1SSSMQPJ4KHHZ9 · Revision: 1 · Step: s3
+- Trace: 01M7MQ859458WMSWBK97TBJ8MP · Revision: 1 · Step: s5
+- Human review: 01a1ee1f-857b-74a3-923b-aec0edbf68ec
+
+### "download-reference-docs"
+- Trace: 01M7MQ8590MW1SSSMQPJ4KHHZ9 · Revision: 1 · Step: s4
+- Trace: 01M7MQ8590MW1SSSMQPJ4KHHZ9 · Revision: 1 · Step: s5
+- Human review: 01a1ee1f-857b-74a3-923b-aec0edbf68ec
+
+### "read-rules"
+- Trace: 01M7MQ8590MW1SSSMQPQQS33NK · Revision: 1 · Step: s3
+- Trace: 01M7MQ859458WMSWBK97TBJ8MP · Revision: 1 · Step: s10
+- Human review: 01a1ee1f-857b-74a3-923b-aec0edbf68ec
+
+### "read-invoices-current"
+- Trace: 01M7MQ859458WMSWBK97TBJ8MP · Revision: 1 · Step: s1
+- Human review: 01a1ee1f-857b-74a3-923b-aec0edbf68ec
+
+### "read-invoices-history"
+- Trace: 01M7MQ859458WMSWBK97TBJ8MP · Revision: 1 · Step: s2
+- Human review: 01a1ee1f-857b-74a3-923b-aec0edbf68ec
+
+### "read-credit-notes"
+- Trace: 01M7MQ859458WMSWBK97TBJ8MP · Revision: 1 · Step: s3
+- Human review: 01a1ee1f-857b-74a3-923b-aec0edbf68ec
+
+### "read-remittances"
+- Trace: 01M7MQ859458WMSWBK97TBJ8MP · Revision: 1 · Step: s4
+- Human review: 01a1ee1f-857b-74a3-923b-aec0edbf68ec
+
+### "upload-output-file"
+- Trace: 01M7MQ859458WMSWBK97TBJ8MP · Revision: 1 · Step: s5
+- Trace: 01M7MQ859458WMSWBK97TBJ8MP · Revision: 1 · Step: s6
+- Human review: 01a1ee1f-857b-74a3-923b-aec0edbf68ec
+
+### "create-public-link"
+- Trace: 01M7MQ859458WMSWBK97TBJ8MP · Revision: 1 · Step: s7
+- Human review: 01a1ee1f-857b-74a3-923b-aec0edbf68ec
+
+### "save-link-local"
+- Trace: 01M7MQ859458WMSWBK97TBJ8MP · Revision: 1 · Step: s10
+- Human review: 01a1ee1f-857b-74a3-923b-aec0edbf68ec
+
+### "post-link-room"
+- Trace: 01M7MQ859458WMSWBK97TBJ8MP · Revision: 1 · Step: s8
+- Trace: 01M7MQ859458WMSWBK97TBJ8MP · Revision: 1 · Step: s9
+- Trace: 01M7MQ859458WMSWBK97TBJ8MP · Revision: 1 · Step: s10
+- Trace: 01M7MQ859458WMSWBK97TBJ8MP · Revision: 1 · Step: s11
+- Human review: 01a1ee1f-857b-74a3-923b-aec0edbf68ec
+
+### "verify-public-link"
+- Trace: 01M7MQ8595TBFBFR5N2Y9BRGD4 · Revision: 1 · Step: s1
+- Trace: 01M7MQ8595TBFBFR5N2Y9BRGD4 · Revision: 1 · Step: s2
+- Trace: 01M7MQ8595TBFBFR5N2Y9BRGD4 · Revision: 1 · Step: s3
+- Trace: 01M7MQ8595TBFBFR5N2GQGJQF5 · Revision: 1 · Step: s1
+- Human review: 01a1ee1f-857b-74a3-923b-aec0edbf68ec
+
+### "exc-unobserved-calculation"
+- Trace: 01M7MQ859458WMSWBK97TBJ8MP · Revision: 1 · Step: s6
+- Human review: 01a1ee1f-857b-74a3-923b-aec0edbf68ec
+
+### "exc-upload-not-captured"
+- Trace: 01M7MQ859458WMSWBK97TBJ8MP · Revision: 1 · Step: s5
+- Trace: 01M7MQ859458WMSWBK97TBJ8MP · Revision: 1 · Step: s6
+- Human review: 01a1ee1f-857b-74a3-923b-aec0edbf68ec
+
+### "exc-link-txt"
+- Trace: 01M7MQ859458WMSWBK97TBJ8MP · Revision: 1 · Step: s10
+- Human review: 01a1ee1f-857b-74a3-923b-aec0edbf68ec
+
+### "exc-channel-send-not-observed"
+- Trace: 01M7MQ859458WMSWBK97TBJ8MP · Revision: 1 · Step: s11
+- Trace: 01M7MQ8595TBFBFR5N2GQGJQF5 · Revision: 1 · Step: s1
+- Human review: 01a1ee1f-857b-74a3-923b-aec0edbf68ec
+
+### "q-post-link-content"
+- Trace: 01M7MQ859458WMSWBK97TBJ8MP · Revision: 1 · Step: s11
+- Trace: 01M7MQ8595TBFBFR5N2GQGJQF5 · Revision: 1 · Step: s1
+
+### "q-link-txt"
+- Trace: 01M7MQ859458WMSWBK97TBJ8MP · Revision: 1 · Step: s10
+
+### "q-csv-calculation"
+- Trace: 01M7MQ8595TBFBFR5N2Y9BRGD4 · Revision: 1 · Step: s4
+- Trace: 01M7MQ859458WMSWBK97TBJ8MP · Revision: 1 · Step: s6
+
+### "q-link-newness"
+- Trace: 01M7MQ859458WMSWBK97TBJ8MP · Revision: 1 · Step: s7

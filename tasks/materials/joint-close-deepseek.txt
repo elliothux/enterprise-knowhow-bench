@@ -1,0 +1,929 @@
+
+Historical workflow Skill:
+---
+name: "lynx-01a1eeed-11cc-72af-b3c8-8231c7301c60"
+description: "Test guidance for shortpay-cash-application cases."
+---
+
+# shortpay-cash-application
+
+**Test only.** Use the supplied case facts to recommend a next action. Ask for missing information. Never claim to have performed a business action.
+
+## Steps
+
+### 1. "arrive-channel"
+
+Role
+
+> 现金入账台专员
+
+System
+
+> Rocket.Chat
+
+Window
+
+> 本台派发频道（如 shortpay-desk-*）
+
+Action
+
+> 进入派发给本现金入账台的频道，读取派发消息中的发票号、汇款标签（TERMS 或 DAMAGE）、客户扣款/索赔金额，以及台账摘录所在现金台文件夹
+
+### 2. "open-settlement-folder"
+
+Role
+
+> 现金入账台专员
+
+System
+
+> ownCloud
+
+Window
+
+> Documents/Settlement <desk>
+
+Action
+
+> 登录 ownCloud，进入 Documents 下派发消息指定的 Settlement <desk> 文件夹，确认其中有 Bank and invoice.pdf 与 Desk procedure.pdf
+
+### 3. "read-desk-procedure"
+
+Role
+
+> 现金入账台专员
+
+System
+
+> ownCloud
+
+Window
+
+> Desk procedure.pdf
+
+Action
+
+> 下载并阅读 Desk procedure.pdf 以核对现金入账规则；若正文不可读，按培训证据中的规则执行并保留为证据缺口，不猜测正文
+
+### 4. "read-bank-and-invoice"
+
+Role
+
+> 现金入账台专员
+
+System
+
+> ownCloud
+
+Window
+
+> Bank and invoice.pdf
+
+Action
+
+> 读取收据与发票明细：商品、运费、税（发票毛额 = 商品 + 运费 + 税）、同一发票上已过账贷项、银行收款额、付款指令日、银行起息日、ERP 导入日、承运方案件及其登记准备金与责任状态、签收证明是否有异常
+
+### 5. "book-receipt"
+
+Role
+
+> 现金入账台专员
+
+System
+
+> 现金入账/ERP 入账界面
+
+Window
+
+> 收据过账
+
+Action
+
+> 先把银行收款按发票毛额记到该发票上：毛额含商品、运费和税，仅减去同一发票上的已过账贷项；待定索赔与草稿贷项尚未冲减账户，不能用于减少应收
+
+### 6. "classify-other-residual"
+
+Role
+
+> 现金入账台专员
+
+System
+
+> 台账/计算页
+
+Window
+
+> 入账计算
+
+Action
+
+> 按汇款标签与授权规则算出四类金额并保持分离：折扣（仅 TERMS，按 x-terms-discount）、索赔转出（仅 DAMAGE，按 x-damage-claims）、小额核销（仅非 DAMAGE 且同时满足两个限额）、可回收余额（其余部分）；不得静默免除任何余额
+
+### 7. "choose-followup"
+
+Role
+
+> 现金入账台专员
+
+System
+
+> 台账/计算页
+
+Window
+
+> 入账计算
+
+Action
+
+> 确定跟进标签：凡有金额转入 Claims 即为 CLAIMS；否则若仍有可回收余额则为 COLLECTIONS；否则为 CLOSED；即使 Claims owns the follow-up 也要在同一结果行中报告剩余可回收金额
+
+### 8. "compose-result-row"
+
+Role
+
+> 现金入账台专员
+
+System
+
+> Rocket.Chat
+
+Window
+
+> 派发频道消息输入框
+
+Action
+
+> 在派发频道消息输入框写入逗号分隔的结果行，按固定列序填：折扣、索赔转出额、小额核销额、可回收余额、跟进标签（如 larch 的 I-3475,0.00,60.00,0.00,3.00,CLAIMS）
+
+### 9. "post-result-row"
+
+Role
+
+> 现金入账台专员
+
+System
+
+> Rocket.Chat
+
+Window
+
+> 派发频道
+
+Action
+
+> 按 Enter 将结果行发送到派发频道，核对频道中已出现本人发布的结果行，作为该发票现金入账的落地记录
+
+## Decisions
+
+### "d-remittance-label"
+
+After step "read-bank-and-invoice"
+
+> 这笔汇款是哪种标签？
+
+#### "o-terms"
+
+> TERMS（正常条款汇款）
+
+Condition
+
+> 汇款标签为 TERMS：按 x-terms-discount 与 x-terms-grace 判折扣资格
+
+Next steps: "classify-other-residual"
+
+#### "o-damage"
+
+> DAMAGE（损毁索赔汇款）
+
+Condition
+
+> 汇款标签为 DAMAGE：按 x-damage-claims / x-damage-conditions-fail / x-damage-no-writeoff 处理
+
+Next steps: "classify-other-residual"
+
+## Exceptions
+
+### "x-terms-discount"
+
+Condition
+
+> TERMS 汇款申请早付折扣
+
+Handling
+
+> 按商品金额减已过账商品贷项计算 2% 折扣，不含运费与税；四舍五入（half up）到分；可享折扣不得超过实际剩余短款；用银行起息日而非 ERP 导入日判断是否在折扣截止日前
+
+### "x-terms-grace"
+
+Condition
+
+> 银行起息日晚于折扣截止日
+
+Handling
+
+> 最多允许两个周一至周五工作日宽限，且须同时满足：客户付款指令在截止日前已发出，且银行运营部门已为该笔转账 CONFIRMED 收款行中断；付款方自身原因或未经确认的通知不符合条件
+
+### "x-damage-claims"
+
+Condition
+
+> DAMAGE 汇款且满足转索赔前提：承运方案件与已开发票运单关联，且其签收证明上有异常
+
+Handling
+
+> 取短款、客户扣款、承运商登记准备金三者较小值转入 Claims，即使责任仍在调查中也照此处理；剩余部分保持可回收（larch：短款 3.00、客户扣款 63.00、准备金 60.00，取 60.00，剩 3.00 可回收）
+
+### "x-damage-conditions-fail"
+
+Condition
+
+> DAMAGE 汇款但承运方案件未与已开发票运单关联，或签收证明无异常
+
+Handling
+
+> 不转索赔，金额保持可回收；此外也不得核销（DAMAGE 汇款上的任何残余都不得转为坏账）
+
+### "x-customer-debit-note"
+
+Condition
+
+> 存在客户借记单（customer debit note），或贷项仍为草稿/待定状态
+
+Handling
+
+> 不视为已过账贷项：不得用于减少发票毛额、不得计入折扣基数、也不得用于小额核销的 0.50% 基数
+
+### "x-damage-no-writeoff"
+
+Condition
+
+> 汇款标签为 DAMAGE 且存在残余短款
+
+Handling
+
+> 任何残余都不得核销、不得转为坏账，即使调整确实合理；残余保持可回收并单独列示（larch 小额核销列为 0.00）
+
+### "x-no-partial-writeoff"
+
+Condition
+
+> 其他残余短款在授权处理后的金额未同时满足：≤ SGD 8.00 且 ≤ 毛额发票（减实际已过账贷项，记账前金额）的 0.50%
+
+Handling
+
+> 只要任一限额被超过（如残余 9.00 超过 8.00，或超过毛额的 0.50%）就不核销，不得部分核销；整笔残余保持可回收并单独列示，不得静默免除余额。等于限额时合格
+
+### "x-procedure-body-missing"
+
+Condition
+
+> Desk procedure.pdf 已下载但其正文无法读取
+
+Handling
+
+> 不推测其规则；按培训证据中的规则执行，并把文件正文列为证据缺口
+
+## Test review
+
+### Unanswered · d-remittance-label
+
+> 这笔汇款是哪种标签？
+
+## Open limits
+
+These limits are unresolved. Ask for the missing information. Do not treat this Skill as fully automatic, and do not apply a limit outside the nodes it names.
+
+### Unresolved · "q-erp-posting"
+
+Question
+
+> 收据是否必须在 ERP 中另行执行过账动作（在哪个界面、以哪个日期），还是发出结果行即完成入账？
+
+Why it is open
+
+> 培训证据要求先按毛额把银行收款记到发票上，但未描述具体系统或过账动作与时点；larch 案例只发出了结果行，无法据此写出可操作过账步骤。
+
+Affects: "book-receipt"
+
+### Unresolved · "q-collectible-followup"
+
+Question
+
+> 跟进标签为 CLAIMS 仍报告剩余可回收金额后，该金额由谁、以何种方式承接（保留在客户账户、转入 COLLECTIONS，还是等索赔结案后再处理）？
+
+Why it is open
+
+> 培训证据只要求即使 Claims 掌握跟进也要报告剩余可回收金额，未规定该金额的后续动作。
+
+Affects: "post-result-row"
+
+### Unresolved · "q-grace-confirmation-source"
+
+Question
+
+> “银行运营部门已为该笔转账 CONFIRMED 收款行中断”由谁记录、以何种凭证（银行通知、系统标记、台账备注）体现并在哪里核验？
+
+Why it is open
+
+> 宽限规则依赖该确认，但证据只给出判定条件，未说明在流程中如何核验与留存。
+
+Affects: "x-terms-grace"
+
+### Unresolved · "q-ember-columns"
+
+Question
+
+> ember 案例发布的数据行“I-3091,22.00,0.00,0.00,7.50,COLLECTIONS”中各列含义是否与 larch 相同列序（折扣、索赔转出、小额核销、可回收、跟进）？22.00 与 7.50 分别对应该发票的哪些项目？
+
+Why it is open
+
+> 该案例只观察到结果行，未读到发票与汇款明细，无法据证据核对列定义与该行是否合规。
+
+Affects: "compose-result-row"
+
+## Sources
+
+Procedure version 4 (01a1ef0f-ea5a-7391-bed5-a9bf00fa0a03) · Compiler 3
+
+### "arrive-channel"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s1
+- Trace: 01M7QEPA4E9KSQQAJYWHG3BXKD · Revision: 1 · Step: s4
+- Human review: 01a1ef05-9ff0-711f-bf36-28bac0668748
+
+### "open-settlement-folder"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s2
+- Trace: 01M7QEPA4DCV1PG317C8T51Q3D · Revision: 1 · Step: s3
+- Human review: 01a1ef05-9ff0-711f-bf36-28bac0668748
+
+### "read-desk-procedure"
+- Trace: 01M7QEPA4DCV1PG317C8T51Q3D · Revision: 1 · Step: s4
+- Trace: 01M7QEPA4DCV1PG317C8T51Q3D · Revision: 1 · Step: s5
+- Human review: 01a1ef05-9ff0-711f-bf36-28bac0668748
+
+### "read-bank-and-invoice"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s3
+- Human review: 01a1ef05-9ff0-711f-bf36-28bac0668748
+
+### "book-receipt"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s3
+- Human review: 01a1ef05-9ff0-711f-bf36-28bac0668748
+
+### "classify-other-residual"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s3
+- Trace: 01M7QEPA4E9KSQQAJYWHG3BXKD · Revision: 1 · Step: s6
+- Human review: 01a1ef05-9ff0-711f-bf36-28bac0668748
+
+### "choose-followup"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s6
+- Trace: 01M7QEPA4E9KSQQAJYWHG3BXKD · Revision: 1 · Step: s7
+- Human review: 01a1ef05-9ff0-711f-bf36-28bac0668748
+
+### "compose-result-row"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s5
+- Trace: 01M7QEPA4E9KSQQAJYWHG3BXKD · Revision: 1 · Step: s6
+- Human review: 01a1ef05-9ff0-711f-bf36-28bac0668748
+
+### "post-result-row"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s6
+- Trace: 01M7QEPA4E9KSQQAJYWHG3BXKD · Revision: 1 · Step: s7
+- Human review: 01a1ef05-9ff0-711f-bf36-28bac0668748
+
+### "d-remittance-label"
+- Human review: 01a1ef05-9ff0-711f-bf36-28bac0668748
+
+### "o-terms"
+- Trace: 01M7QEPA4E9KSQQAJYWHG3BXKD · Revision: 1 · Step: s4
+- Human review: 01a1ef05-9ff0-711f-bf36-28bac0668748
+
+### "o-damage"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s1
+- Human review: 01a1ef05-9ff0-711f-bf36-28bac0668748
+
+### "x-terms-discount"
+- Trace: 01M7QEPA4E9KSQQAJYWHG3BXKD · Revision: 1 · Step: s4
+- Case material: 01a1eeed-0d00-70c4-b16e-a5bfa380887d · Material: 7e1854fe629eb231fd45d11e35b60c7fbe33fa8cc6b668cf209c4b84827e92bc
+- Human review: 01a1ef05-9ff0-711f-bf36-28bac0668748
+
+### "x-terms-grace"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s3
+- Case material: 01a1eeed-0d00-70c4-b16e-a5bfa380887d · Material: 7e1854fe629eb231fd45d11e35b60c7fbe33fa8cc6b668cf209c4b84827e92bc
+- Human review: 01a1ef05-9ff0-711f-bf36-28bac0668748
+
+### "x-damage-claims"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s3
+- Case material: 01a1eeed-0d00-70c4-b16e-a5bfa380887d · Material: 7e1854fe629eb231fd45d11e35b60c7fbe33fa8cc6b668cf209c4b84827e92bc
+- Human review: 01a1ef05-9ff0-711f-bf36-28bac0668748
+
+### "x-damage-conditions-fail"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s3
+- Case material: 01a1eeed-0d00-70c4-b16e-a5bfa380887d · Material: 7e1854fe629eb231fd45d11e35b60c7fbe33fa8cc6b668cf209c4b84827e92bc
+- Human review: 01a1ef05-9ff0-711f-bf36-28bac0668748
+
+### "x-customer-debit-note"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s3
+- Case material: 01a1eeed-0d00-70c4-b16e-a5bfa380887d · Material: 7e1854fe629eb231fd45d11e35b60c7fbe33fa8cc6b668cf209c4b84827e92bc
+- Human review: 01a1ef05-9ff0-711f-bf36-28bac0668748
+
+### "x-damage-no-writeoff"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s5
+- Case material: 01a1eeed-0d00-70c4-b16e-a5bfa380887d · Material: 7e1854fe629eb231fd45d11e35b60c7fbe33fa8cc6b668cf209c4b84827e92bc
+- Human review: 01a1ef05-9ff0-711f-bf36-28bac0668748
+
+### "x-no-partial-writeoff"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s5
+- Case material: 01a1eeed-0d00-70c4-b16e-a5bfa380887d · Material: 7e1854fe629eb231fd45d11e35b60c7fbe33fa8cc6b668cf209c4b84827e92bc
+- Human review: 01a1ef05-9ff0-711f-bf36-28bac0668748
+
+### "x-procedure-body-missing"
+- Trace: 01M7QEPA4DCV1PG317C8T51Q3D · Revision: 1 · Step: s4
+- Trace: 01M7QEPA4DCV1PG317C8T51Q3D · Revision: 1 · Step: s5
+- Human review: 01a1ef05-9ff0-711f-bf36-28bac0668748
+
+### "q-erp-posting"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s3
+
+### "q-collectible-followup"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s6
+
+### "q-grace-confirmation-source"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s3
+- Case material: 01a1eeed-0d00-70c4-b16e-a5bfa380887d · Material: 7e1854fe629eb231fd45d11e35b60c7fbe33fa8cc6b668cf209c4b84827e92bc
+
+### "q-ember-columns"
+- Trace: 01M7QEPA4E9KSQQAJYWHG3BXKD · Revision: 1 · Step: s6
+
+Historical payment approval Skill (raw candidate):
+---
+name: "lynx-01a1ee87-8358-73e5-9efb-4a5fa80a9de8"
+description: "Test guidance for benchmark-payment-release-v1 cases."
+---
+
+# benchmark-payment-release-v1
+
+**Test only.** Use the supplied case facts to recommend a next action. Ask for missing information. Never claim to have performed a business action.
+
+## Steps
+
+### 1. "orient-dossier"
+
+Role
+
+> 付款复核员（本地桌面操作者）
+
+System
+
+> ownCloud Files（http://localhost:8092）+ Chrome PDF 查看器
+
+Window
+
+> Documents/Benchmark Suite/payment-release-training
+
+Action
+
+> 从 ownCloud 的 Documents 目录进入 Benchmark Suite，再打开 payment-release-training 文件夹，在浏览器 #pdfviewer 中打开 01-readme-policy.pdf（fileid=846），读到大纲：SIMULATION ONLY、审核日为 2026-12-08 / Singapore (UTC+08)、事件截止 2026-12-08T17:00:00、记录截止 2026-12-09T09:00:00、八个业务键清单与 01–08 号 PDF 的档案索引，并要求交付七列 payment-release.csv（记录保存目录示例：<trial-workspace>）。
+
+### 2. "select-policy"
+
+Role
+
+> 付款复核员
+
+System
+
+> ownCloud Files + Chrome PDF 查看器
+
+Window
+
+> 01-readme-policy.pdf / 02-archived-policy.pdf
+
+Action
+
+> 点击 Next 翻页读政策正文，记录 POL-TR-CURRENT 的 Status APPROVED、effective from 2026-12-06T00:00:00，以及 NOT_POSTED、DUPLICATE、NO_BALANCE、PO_MISMATCH、RECEIPT_SHORT、BANK_UNVERIFIED、ACTIVE_HOLD 七个闸口与全部评估不短路的要求；同时打开 02-archived-policy.pdf，读到“Status ARCHIVED”“expired immediately before 2026-12-06T00:00:00”“Retained for audit, not applicable to this review”，据此确定只适用 POL-TR-CURRENT。
+
+### 3. "read-invoice-revisions"
+
+Role
+
+> 付款复核员
+
+System
+
+> Chrome PDF 查看器
+
+Window
+
+> 04-invoice-revisions.pdf
+
+Action
+
+> 阅读 04-invoice-revisions.pdf 的发票修订记录：按 (vendor_id, invoice_id) 在两项时间截止过滤后判定并取最大数值修订，记录其状态；页面标注“apply the policy in 01-readme-policy.pdf”。
+
+### 4. "read-exception-bulletin"
+
+Role
+
+> 付款复核员
+
+System
+
+> Chrome PDF 查看器
+
+Window
+
+> 03-exception-bulletin.pdf
+
+Action
+
+> 阅读公告 BUL-TR-01，记录三条 CFO 例外及其豁免原因、金额上限与有效期；公告声明“Approval text cannot override the policy’s non-waivable gates”。案例示例：EX-TR-1（ASTER/PX-102，RECEIPT_SHORT，750.00 SGD）、EX-TR-2（BAY/PX-202，DUPLICATE，900.00 SGD）、EX-TR-3（COPPER/PX-302，PO_MISMATCH,BANK_UNVERIFIED，640.00 SGD）。
+
+### 5. "read-po-receipts"
+
+Role
+
+> 付款复核员
+
+System
+
+> Chrome PDF 查看器 / 保存对话框
+
+Window
+
+> 05-po-receipts.pdf
+
+Action
+
+> 以文件名 05-po-receipts 保存并阅读 05-po-receipts.pdf：确认所选 APPROVED PO 与其金额，以及该 vendor/invoice/PO 下所选 ACCEPTED 收货金额合计；案例示例中 PO-TR-6 为 600.00。
+
+### 6. "read-bank-controls"
+
+Role
+
+> 付款复核员
+
+System
+
+> Chrome PDF 查看器 / 保存对话框
+
+Window
+
+> 06-bank-controls.pdf
+
+Action
+
+> 把文件名设为 06-bank-controls 保存并阅读 06-bank-controls.pdf：查看各 vendor 的 CHANGE / VERIFY 事件（含案例中的 BC-TR-1-BASE 至 BC-TR-4-BASE、以及 COPPER 账户 SIM-TR-COPPER-02 的新变更 BC-TR-3-NEW），按 (event_on, sequence) 判断最新 ACTIVE CHANGE 是否被合规 VERIFY 覆盖。
+
+### 7. "read-hold-events"
+
+Role
+
+> 付款复核员
+
+System
+
+> Chrome PDF 查看器 / 保存对话框
+
+Window
+
+> 07-hold-events.pdf
+
+Action
+
+> 把文件名设为 07-hold-events 保存并阅读 07-hold-events.pdf：核对每个业务键的 OPEN / CLOSE 事件（案例中为 HE-TR-1 至 HE-TR-8），只接受同 business key、同 hold_id 且由 AP_CONTROLLER/RISK_MANAGER 记录的后续 CLOSE。
+
+### 8. "read-settlement-register"
+
+Role
+
+> 付款复核员
+
+System
+
+> Chrome PDF 查看器
+
+Window
+
+> 08-settlement-register.pdf
+
+Action
+
+> 阅读 08-settlement-register.pdf 的信用、付款与重复审计条目（案例中 AUD-TR-1 至 AUD-TR-8、CR-TR-1、PAY-TR-1、PAY-TR-PENDING 及两条 PAY-TR-8），页面提示“apply the policy in 01-readme-policy.pdf”；只取 vendor_id 与 invoice_id 都匹配的结算条目。
+
+### 9. "find-local-output-file"
+
+Role
+
+> 付款复核员
+
+System
+
+> TextEdit / Chrome 的 Open 面板
+
+Window
+
+> 本地 active-task 文件夹
+
+Action
+
+> 在 Open 面板中定位本地路径 <trial-workspace>，检查是否已有既存产出文件（如 task.md 或早先的 CSV），再回到浏览器继续取证。
+
+### 10. "check-chat-channel"
+
+Role
+
+> 付款复核员
+
+System
+
+> Rocket.Chat
+
+Window
+
+> suite-payment-release-training 频道
+
+Action
+
+> 登录 Rocket.Chat 并打开 suite-payment-release-training 频道，读到 EXAMINER FIXED FACTS：案例目录 Documents/Benchmark Suite/payment-release-training、索引文件 01-readme-policy.pdf，并注明仅模拟、不得发起实际付款。
+
+### 11. "upload-deliverable"
+
+Role
+
+> 付款复核员
+
+System
+
+> ownCloud Files
+
+Window
+
+> payment-release-training 目录（上传与共享）
+
+Action
+
+> 确认目录中只有 01–08 号 PDF 与 task.md、缺少 payment-release.csv 后，用 New → Upload 把本地 payment-release.csv 上传到 payment-release-training，目录文件数由 9 变为 10，列表出现 payment-release.csv（1 KB）。
+
+### 12. "share-deliverable"
+
+Role
+
+> 付款复核员
+
+System
+
+> ownCloud Files（Sharing 面板）
+
+Window
+
+> payment-release-training 目录 / payment-release.csv 行
+
+Action
+
+> 点击 payment-release.csv 行内的 Share，在 Sharing 面板确认“There are currently no link shares”后点击“Create public link”，生成 payment-release.csv link（案例为 http://localhost:8092/index.php/s/rgHzTLToHZMppO2），列表中该文件标记为 Shared。
+
+### 13. "save-source-pdf"
+
+Role
+
+> 付款复核员
+
+System
+
+> Chrome 保存对话框（下载区）
+
+Window
+
+> payment-release-training 各来源 PDF
+
+Action
+
+> 对逐份查看的来源 PDF 点击查看器 Download / 保存，在保存面板把文件名设为对应编号（如 04-invoice-revisions、05-po-receipts、06-bank-controls、07-hold-events），目标目录取 active-task，并在下载列表确认显示“Done”。
+
+## Decisions
+
+## Exceptions
+
+### "exc-pdf-tail-unconfirmed"
+
+Condition
+
+> 最后一份来源 PDF（07-hold-events.pdf 或 08-settlement-register.pdf）刚打开或刚命名保存，下载列表尚未回显“Done”，该 PDF 尾部亦未确认
+
+Handling
+
+> 回到 ownCloud 的 payment-release-training 标签页重新查看该 PDF 与下载区，确认显示 Done 后再继续下一步；未确认的保存不作为已完成取证。
+
+### "exc-save-vs-view"
+
+Condition
+
+> 在 PDF 查看器中 Download 后浏览器只是静默回到同一页（如 01-readme-policy.pdf 仍显示“of 3”），没有出现保存面板或“Done”提示
+
+Handling
+
+> 视为取证阅读已完成但落盘未确认：继续按 save-source-pdf 用保存面板另存并在下载区核对“Done”，不要仅凭点击 Download 就认定文件已在本地。
+
+### "exc-owncloud-integrity"
+
+Condition
+
+> ownCloud 页面提示“There were problems with the code integrity check”或“ownCloud 10.1.1 is available”横幅
+
+Handling
+
+> 按案例观察到的做法继续在 payment-release-training 目录内取证，不把这些横幅当作资料缺失或需要处理的前置条件。
+
+### "exc-archived-policy-superseded"
+
+Condition
+
+> 打开 02-archived-policy.pdf 后读到“Status ARCHIVED; expired immediately before 2026-12-06T00:00:00”“Superseded by POL-TR-CURRENT. Retained for audit, not applicable to this review.”
+
+Handling
+
+> 只按 POL-TR-CURRENT 评估闸口；不采用归档政策的 legacy 条款（5% 收付短缺容忍、同日银行核对不看 actor/sequence、AP_CLERK 可关闭 hold），归档文件仅作审计留存（案例中仍被另存到 active-task）。
+
+### "exc-chat-no-rules"
+
+Condition
+
+> Rocket.Chat 的 suite-payment-release-training 频道只给出案例目录与 01-readme-policy.pdf 索引，标注“EXAMINER FIXED FACTS”，未提供规则、答案或批准
+
+Handling
+
+> 业务要求以 ownCloud 中 task.md 与 01-readme-policy.pdf 为准；频道内发送框中已有内容被清除且未发送，案例中不通过聊天获取或回帖结论。
+
+### "exc-missing-deliverable"
+
+Condition
+
+> payment-release-training 目录已有 01–08 号 PDF 与 task.md 共 9 个文件，但缺少 payment-release.csv
+
+Handling
+
+> 用 New → Upload 把本地 CSV 上传到该目录，随后在文件行 Share 面板创建链接，列表中该文件标记为 Shared。
+
+## Test review
+
+## Open limits
+
+These limits are unresolved. Ask for the missing information. Do not treat this Skill as fully automatic, and do not apply a limit outside the nodes it names.
+
+### Unresolved · "q-csv-content"
+
+Question
+
+> 上传的 payment-release.csv 实际包含哪些业务键行、reason_codes、net_payable_sgd 与证据引用（七个列的具体取值）？这些取值是否应作为本流程的产出范例？
+
+Why it is open
+
+> 只有上传动作与“1 KB”大小被观察到，文件内容未被核对，无法确认八个业务键（如 ASTER/PX-101、COPPER/PX-302）的放行/HOLD 判定样例，从而无法判断哪些闸口在本案真的被豁免或触发，也无法确认 deliverable 步骤该产出什么。
+
+Affects: "upload-deliverable", "share-deliverable"
+
+### Unresolved · "q-open-local-file"
+
+Question
+
+> 在 active-task 文件夹的 Open 面板里原本选中的是哪个文件，打开它的目的是读取已有产出还是写入复核结果？该目的会怎样改变“先逐份取证、再上传 CSV”的顺序？
+
+Why it is open
+
+> 两次 Open 面板都停在 <trial-workspace>，但目标文件名与被打开后的内容没有记录，无法判断是否存在既存的 payment-release.csv 或应沿用的模板，这决定 find-local-output-file 之后是先取证还是先补写产出。
+
+Affects: "find-local-output-file"
+
+### Unresolved · "q-share-scope"
+
+Question
+
+> 交付要求是否指定共享链接的可见范围（例如只允许组织内账号访问），还是“Anyone with the link has access”的公开链接就可以？
+
+Why it is open
+
+> outcome 已指出公开链接“Anyone with the link has access”是否符合可见范围要求未在画面中确认；这会影响 share-deliverable 是否需要在创建后调整链接权限。
+
+Affects: "share-deliverable"
+
+### Unresolved · "q-chat-no-reply"
+
+Question
+
+> 在 suite-payment-release-training 频道是否需要回帖说明放行结果（以及回帖应包含哪些字段），还是只需上传 CSV？
+
+Why it is open
+
+> 频道里只读了两条说明消息，输入框内容被清除且未发送，看不出是否有回帖要求；这会决定流程在 share-deliverable 之后是否要再加一步沟通动作。
+
+Affects: "check-chat-channel"
+
+## Sources
+
+Procedure version 1 (01a1ee88-fc0e-761f-8a2f-7fd940f5553f) · Compiler 3
+
+### "orient-dossier"
+- Trace: 01M7MXQAYXZB505SYV7FVJ6XBA · Revision: 1 · Step: s2
+- Trace: 01M7MXQAYXZB505SYV7FVJ6XBA · Revision: 1 · Step: s4
+- Trace: 01M7MXQAYZAKRHB4KEY439Q2YK · Revision: 1 · Step: s1
+- Trace: 01M7MXQAZ0D9JYA4YXP4YN6RVX · Revision: 1 · Step: s1
+- Trace: 01M7MXQAZ1DJPYV7DR8NH8BNBP · Revision: 1 · Step: s3
+- Case material: 1b1ddec1-5738-5dbe-8cde-99d95455f36c · Material: 3faaba7142acfe43ae43e6b6739b14e12fb0c954a77c1f4c5687c0a4e9ce0c86
+
+### "select-policy"
+- Trace: 01M7MXQAYXZB505SYV7FVJ6XBA · Revision: 1 · Step: s5
+- Trace: 01M7MXQAYXZB505SYV7FVJ6XBA · Revision: 1 · Step: s6
+- Trace: 01M7MXQAYZAKRHB4KEY439Q2YK · Revision: 1 · Step: s3
+- Case material: 1b1ddec1-5738-5dbe-8cde-99d95455f36c · Material: 3faaba7142acfe43ae43e6b6739b14e12fb0c954a77c1f4c5687c0a4e9ce0c86
+
+### "read-invoice-revisions"
+- Trace: 01M7MXQAYZAKRHB4KEYFK4TADG · Revision: 1 · Step: s5
+- Trace: 01M7MXQAYZAKRHB4KEYFK4TADG · Revision: 1 · Step: s6
+- Trace: 01M7MXQAZ0D9JYA4YXP4YN6RVX · Revision: 1 · Step: s2
+- Trace: 01M7MXQAZ0D9JYA4YXP4YN6RVX · Revision: 1 · Step: s3
+
+### "read-exception-bulletin"
+- Trace: 01M7MXQAYZAKRHB4KEYFK4TADG · Revision: 1 · Step: s2
+- Trace: 01M7MXQAYZAKRHB4KEY439Q2YK · Revision: 1 · Step: s10
+- Case material: 1b1ddec1-5738-5dbe-8cde-99d95455f36c · Material: 3faaba7142acfe43ae43e6b6739b14e12fb0c954a77c1f4c5687c0a4e9ce0c86
+
+### "read-po-receipts"
+- Trace: 01M7MXQAZ0D9JYA4YXP4YN6RVX · Revision: 1 · Step: s7
+- Trace: 01M7MXQAZ0D9JYA4YXP4YN6RVX · Revision: 1 · Step: s8
+
+### "read-bank-controls"
+- Trace: 01M7MXQAZ0D9JYA4YXP4YN6RVX · Revision: 1 · Step: s9
+- Trace: 01M7MXQAZ1DJPYV7DR8NH8BNBP · Revision: 1 · Step: s2
+- Trace: 01M7MXQAZ1DJPYV7DR8NH8BNBP · Revision: 1 · Step: s4
+
+### "read-hold-events"
+- Trace: 01M7MXQAZ1DJPYV7DR8NH8BNBP · Revision: 1 · Step: s5
+- Trace: 01M7MXQAZ1DJPYV7DR8NH8BNBP · Revision: 1 · Step: s8
+- Trace: 01M7MXQAZ4811JBGAA2GGFCQJN · Revision: 1 · Step: s1
+
+### "read-settlement-register"
+- Trace: 01M7MXQAZ4811JBGAA2GGFCQJN · Revision: 1 · Step: s2
+- Trace: 01M7MXQAZ4811JBGAA2GGFCQJN · Revision: 1 · Step: s7
+- Trace: 01M7MXQAZ4811JBGAA2GGFCQJN · Revision: 1 · Step: s10
+
+### "find-local-output-file"
+- Trace: 01M7MXQAZ4811JBGAA2GGFCQJN · Revision: 1 · Step: s4
+- Trace: 01M7MXQAZ4811JBGAA2GGFCQJN · Revision: 1 · Step: s8
+- Trace: 01M7MXQAZ4811JBGAA2GGFCQJN · Revision: 1 · Step: s9
+
+### "check-chat-channel"
+- Trace: 01M7MXQAZ6G0FCEN433DQ6MN3J · Revision: 1 · Step: s2
+- Trace: 01M7MXQAZ6G0FCEN433DQ6MN3J · Revision: 1 · Step: s3
+
+### "upload-deliverable"
+- Trace: 01M7MXQAZ5Q6DK375ZMQCXFV8S · Revision: 1 · Step: s2
+- Trace: 01M7MXQAZ5Q6DK375ZMQCXFV8S · Revision: 1 · Step: s3
+- Trace: 01M7MXQAZ5Q6DK375ZMQCXFV8S · Revision: 1 · Step: s4
+
+### "share-deliverable"
+- Trace: 01M7MXQAZ5Q6DK375ZMQCXFV8S · Revision: 1 · Step: s5
+- Trace: 01M7MXQAZ5Q6DK375ZMQCXFV8S · Revision: 1 · Step: s6
+
+### "save-source-pdf"
+- Trace: 01M7MXQAYXZB505SYV7FVJ6XBA · Revision: 1 · Step: s7
+- Trace: 01M7MXQAYZAKRHB4KEY439Q2YK · Revision: 1 · Step: s5
+- Trace: 01M7MXQAYZAKRHB4KEY439Q2YK · Revision: 1 · Step: s8
+- Trace: 01M7MXQAZ0D9JYA4YXP4YN6RVX · Revision: 1 · Step: s7
+- Trace: 01M7MXQAZ1DJPYV7DR8NH8BNBP · Revision: 1 · Step: s1
+- Trace: 01M7MXQAZ1DJPYV7DR8NH8BNBP · Revision: 1 · Step: s9
+- Trace: 01M7MXQAYZAKRHB4KEYFK4TADG · Revision: 1 · Step: s1
+
+### "exc-pdf-tail-unconfirmed"
+- Trace: 01M7MXQAZ1DJPYV7DR8NH8BNBP · Revision: 1 · Step: s9
+- Trace: 01M7MXQAZ4811JBGAA2GGFCQJN · Revision: 1 · Step: s10
+
+### "exc-save-vs-view"
+- Trace: 01M7MXQAYXZB505SYV7FVJ6XBA · Revision: 1 · Step: s7
+
+### "exc-owncloud-integrity"
+- Trace: 01M7MXQAZ1DJPYV7DR8NH8BNBP · Revision: 1 · Step: s3
+- Case material: 1b1ddec1-5738-5dbe-8cde-99d95455f36c · Material: 3faaba7142acfe43ae43e6b6739b14e12fb0c954a77c1f4c5687c0a4e9ce0c86
+
+### "exc-archived-policy-superseded"
+- Trace: 01M7MXQAYZAKRHB4KEY439Q2YK · Revision: 1 · Step: s3
+- Trace: 01M7MXQAYXZB505SYV7FVJ6XBA · Revision: 1 · Step: s6
+- Case material: 1b1ddec1-5738-5dbe-8cde-99d95455f36c · Material: 3faaba7142acfe43ae43e6b6739b14e12fb0c954a77c1f4c5687c0a4e9ce0c86
+
+### "exc-chat-no-rules"
+- Trace: 01M7MXQAZ6G0FCEN433DQ6MN3J · Revision: 1 · Step: s3
+
+### "exc-missing-deliverable"
+- Trace: 01M7MXQAZ5Q6DK375ZMQCXFV8S · Revision: 1 · Step: s1
+
+### "q-csv-content"
+- Trace: 01M7MXQAZ5Q6DK375ZMQCXFV8S · Revision: 1 · Step: s4
+- Trace: 01M7MXQAZ5Q6DK375ZMQCXFV8S · Revision: 1 · Step: s6
+
+### "q-open-local-file"
+- Trace: 01M7MXQAZ4811JBGAA2GGFCQJN · Revision: 1 · Step: s9
+- Trace: 01M7MXQAZ4811JBGAA2GGFCQJN · Revision: 1 · Step: s5
+
+### "q-share-scope"
+- Trace: 01M7MXQAZ5Q6DK375ZMQCXFV8S · Revision: 1 · Step: s6
+
+### "q-chat-no-reply"
+- Trace: 01M7MXQAZ6G0FCEN433DQ6MN3J · Revision: 1 · Step: s4
+- Trace: 01M7MXQAZ6G0FCEN433DQ6MN3J · Revision: 1 · Step: s3

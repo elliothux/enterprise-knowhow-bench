@@ -1,0 +1,164 @@
+Current corporate crosswalk: vendor / AR invoices / mandate legal entity / status / floor
+VEND-170 | I-47740,I-43890 | VEND-170 | SIGNED | SGD 5.00
+VEND-172 | I-44288,I-42209 | VEND-172 | SIGNED | SGD 6.00
+VEND-174 | I-46544,I-46528 | VEND-174 | DRAFT | SGD 5.00
+VEND-176 | I-47144,I-42701 | VEND-176-HOLDCO | SIGNED | SGD 6.00
+VEND-178 | I-45707,I-42877 | VEND-178 | SIGNED | SGD 5.00
+VEND-180 | I-43654,I-42376 | VEND-180 | WITHDRAWN | SGD 6.00
+VEND-182 | I-46316,I-44746 | VEND-182 | SIGNED | SGD 5.00
+VEND-184 | I-42800,I-45699 | VEND-184 | SIGNED | SGD 6.00
+
+AP ledger extracts:
+{"event_cutoff":"2026-12-15T17:00:00","recorded_cutoff":"2026-12-16T09:00:00","key":{"vendor_id":"VEND-170","invoice_id":"INV-8245"},"invoices":[{"ref":"J20-INV-1","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-14T12:00:00","vendor_id":"VEND-170","invoice_id":"INV-8245","revision":2,"status":"POSTED","gross_sgd":"810","po_id":"PO-033"}],"purchase_orders":[{"ref":"J20-PUR-1","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-14T12:00:00","vendor_id":"VEND-170","invoice_id":"INV-8245","revision":1,"status":"APPROVED","po_id":"PO-033","amount_sgd":"810"}],"receipts":[{"ref":"J20-REC-1","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-14T12:00:00","vendor_id":"VEND-170","invoice_id":"INV-8245","revision":1,"status":"ACCEPTED","po_id":"PO-033","receipt_id":"GR-007","amount_sgd":"810"}],"bank_events":[{"ref":"J20-BAN-1","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-14T12:00:00","vendor_id":"VEND-170","invoice_id":"INV-8245","kind":"CHANGE","sequence":1,"account_ref":"AC-003","change_ref":"","actor_id":"edgar","role":"AP_ANALYST","status":"ACTIVE"},{"ref":"J20-BAN-2","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-14T12:00:00","vendor_id":"VEND-170","invoice_id":"INV-8245","kind":"VERIFY","sequence":2,"account_ref":"AC-003","change_ref":"J20-BAN-1","actor_id":"anita","role":"TREASURY_REVIEWER","status":"VERIFIED"}],"hold_events":[],"settlements":[],"exceptions":[]}
+{"event_cutoff":"2026-12-15T17:00:00","recorded_cutoff":"2026-12-16T09:00:00","key":{"vendor_id":"VEND-172","invoice_id":"INV-8259"},"invoices":[{"ref":"J22-INV-1","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-14T12:00:00","vendor_id":"VEND-172","invoice_id":"INV-8259","revision":2,"status":"POSTED","gross_sgd":"832","po_id":"PO-033"}],"purchase_orders":[{"ref":"J22-PUR-1","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-14T12:00:00","vendor_id":"VEND-172","invoice_id":"INV-8259","revision":1,"status":"APPROVED","po_id":"PO-033","amount_sgd":"832"}],"receipts":[{"ref":"J22-REC-1","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-14T12:00:00","vendor_id":"VEND-172","invoice_id":"INV-8259","revision":1,"status":"ACCEPTED","po_id":"PO-033","receipt_id":"GR-007","amount_sgd":"832"}],"bank_events":[{"ref":"J22-BAN-1","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-14T12:00:00","vendor_id":"VEND-172","invoice_id":"INV-8259","kind":"CHANGE","sequence":1,"account_ref":"AC-003","change_ref":"","actor_id":"edgar","role":"AP_ANALYST","status":"ACTIVE"},{"ref":"J22-BAN-2","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-14T12:00:00","vendor_id":"VEND-172","invoice_id":"INV-8259","kind":"VERIFY","sequence":2,"account_ref":"AC-003","change_ref":"J22-BAN-1","actor_id":"anita","role":"TREASURY_MANAGER","status":"VERIFIED"}],"hold_events":[],"settlements":[],"exceptions":[]}
+{"event_cutoff":"2026-12-15T17:00:00","recorded_cutoff":"2026-12-16T09:00:00","key":{"vendor_id":"VEND-174","invoice_id":"INV-8273"},"invoices":[{"ref":"J24-INV-1","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-14T12:00:00","vendor_id":"VEND-174","invoice_id":"INV-8273","revision":2,"status":"POSTED","gross_sgd":"854","po_id":"PO-033"}],"purchase_orders":[{"ref":"J24-PUR-1","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-14T12:00:00","vendor_id":"VEND-174","invoice_id":"INV-8273","revision":1,"status":"APPROVED","po_id":"PO-033","amount_sgd":"854"}],"receipts":[{"ref":"J24-REC-1","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-14T12:00:00","vendor_id":"VEND-174","invoice_id":"INV-8273","revision":1,"status":"ACCEPTED","po_id":"PO-033","receipt_id":"GR-007","amount_sgd":"819"}],"bank_events":[{"ref":"J24-BAN-1","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-14T12:00:00","vendor_id":"VEND-174","invoice_id":"INV-8273","kind":"CHANGE","sequence":1,"account_ref":"AC-003","change_ref":"","actor_id":"edgar","role":"AP_ANALYST","status":"ACTIVE"},{"ref":"J24-BAN-2","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-14T12:00:00","vendor_id":"VEND-174","invoice_id":"INV-8273","kind":"VERIFY","sequence":2,"account_ref":"AC-003","change_ref":"J24-BAN-1","actor_id":"anita","role":"TREASURY_REVIEWER","status":"VERIFIED"}],"hold_events":[],"settlements":[],"exceptions":[{"ref":"J24-EXC-1","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-14T12:00:00","vendor_id":"VEND-174","invoice_id":"INV-8273","invoice_revision":2,"waive_reasons":["RECEIPT_SHORT"],"amount_cap_sgd":"854","valid_until":"2026-12-15T17:00:00","role":"AP_CONTROLLER"}]}
+{"event_cutoff":"2026-12-15T17:00:00","recorded_cutoff":"2026-12-16T09:00:00","key":{"vendor_id":"VEND-176","invoice_id":"INV-8287"},"invoices":[{"ref":"J26-INV-1","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-14T12:00:00","vendor_id":"VEND-176","invoice_id":"INV-8287","revision":2,"status":"POSTED","gross_sgd":"876","po_id":"PO-033"},{"ref":"J26-INV-2","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-16T09:00:01","vendor_id":"VEND-176","invoice_id":"INV-8287","revision":3,"status":"VOID","gross_sgd":"876","po_id":"PO-033"}],"purchase_orders":[{"ref":"J26-PUR-1","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-14T12:00:00","vendor_id":"VEND-176","invoice_id":"INV-8287","revision":1,"status":"APPROVED","po_id":"PO-033","amount_sgd":"876"}],"receipts":[{"ref":"J26-REC-1","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-14T12:00:00","vendor_id":"VEND-176","invoice_id":"INV-8287","revision":1,"status":"ACCEPTED","po_id":"PO-033","receipt_id":"GR-007","amount_sgd":"876"}],"bank_events":[{"ref":"J26-BAN-1","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-14T12:00:00","vendor_id":"VEND-176","invoice_id":"INV-8287","kind":"CHANGE","sequence":1,"account_ref":"AC-003","change_ref":"","actor_id":"edgar","role":"AP_ANALYST","status":"ACTIVE"},{"ref":"J26-BAN-2","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-14T12:00:00","vendor_id":"VEND-176","invoice_id":"INV-8287","kind":"VERIFY","sequence":2,"account_ref":"AC-003","change_ref":"J26-BAN-1","actor_id":"anita","role":"TREASURY_REVIEWER","status":"VERIFIED"}],"hold_events":[],"settlements":[],"exceptions":[]}
+{"event_cutoff":"2026-12-15T17:00:00","recorded_cutoff":"2026-12-16T09:00:00","key":{"vendor_id":"VEND-178","invoice_id":"INV-8301"},"invoices":[{"ref":"J28-INV-1","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-14T12:00:00","vendor_id":"VEND-178","invoice_id":"INV-8301","revision":2,"status":"POSTED","gross_sgd":"898","po_id":"PO-033"}],"purchase_orders":[{"ref":"J28-PUR-1","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-14T12:00:00","vendor_id":"VEND-178","invoice_id":"INV-8301","revision":1,"status":"APPROVED","po_id":"PO-033","amount_sgd":"898"}],"receipts":[{"ref":"J28-REC-1","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-14T12:00:00","vendor_id":"VEND-178","invoice_id":"INV-8301","revision":1,"status":"ACCEPTED","po_id":"PO-033","receipt_id":"GR-007","amount_sgd":"898"}],"bank_events":[{"ref":"J28-BAN-1","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-14T12:00:00","vendor_id":"VEND-178","invoice_id":"INV-8301","kind":"CHANGE","sequence":1,"account_ref":"AC-003","change_ref":"","actor_id":"edgar","role":"AP_ANALYST","status":"ACTIVE"},{"ref":"J28-BAN-2","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-14T12:00:00","vendor_id":"VEND-178","invoice_id":"INV-8301","kind":"VERIFY","sequence":2,"account_ref":"AC-003","change_ref":"J28-BAN-1","actor_id":"anita","role":"TREASURY_REVIEWER","status":"VERIFIED"}],"hold_events":[],"settlements":[{"ref":"J28-SET-1","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-14T12:00:00","vendor_id":"VEND-178","invoice_id":"INV-8301","entry_id":"DA-67","revision":1,"kind":"DUPLICATE_AUDIT","status":"CONFIRMED","amount_sgd":"0"}],"exceptions":[]}
+{"event_cutoff":"2026-12-15T17:00:00","recorded_cutoff":"2026-12-16T09:00:00","key":{"vendor_id":"VEND-180","invoice_id":"INV-8315"},"invoices":[{"ref":"J30-INV-1","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-14T12:00:00","vendor_id":"VEND-180","invoice_id":"INV-8315","revision":2,"status":"POSTED","gross_sgd":"920","po_id":"PO-033"}],"purchase_orders":[{"ref":"J30-PUR-1","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-14T12:00:00","vendor_id":"VEND-180","invoice_id":"INV-8315","revision":1,"status":"APPROVED","po_id":"PO-033","amount_sgd":"920"}],"receipts":[{"ref":"J30-REC-1","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-14T12:00:00","vendor_id":"VEND-180","invoice_id":"INV-8315","revision":1,"status":"ACCEPTED","po_id":"PO-033","receipt_id":"GR-007","amount_sgd":"920"}],"bank_events":[{"ref":"J30-BAN-1","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-14T12:00:00","vendor_id":"VEND-180","invoice_id":"INV-8315","kind":"CHANGE","sequence":1,"account_ref":"AC-003","change_ref":"","actor_id":"edgar","role":"AP_ANALYST","status":"ACTIVE"},{"ref":"J30-BAN-2","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-14T12:00:00","vendor_id":"VEND-180","invoice_id":"INV-8315","kind":"VERIFY","sequence":2,"account_ref":"AC-003","change_ref":"J30-BAN-1","actor_id":"edgar","role":"TREASURY_REVIEWER","status":"VERIFIED"}],"hold_events":[],"settlements":[],"exceptions":[]}
+{"event_cutoff":"2026-12-15T17:00:00","recorded_cutoff":"2026-12-16T09:00:00","key":{"vendor_id":"VEND-182","invoice_id":"INV-8329"},"invoices":[{"ref":"J32-INV-1","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-14T12:00:00","vendor_id":"VEND-182","invoice_id":"INV-8329","revision":2,"status":"POSTED","gross_sgd":"942","po_id":"PO-033"}],"purchase_orders":[{"ref":"J32-PUR-1","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-14T12:00:00","vendor_id":"VEND-182","invoice_id":"INV-8329","revision":1,"status":"APPROVED","po_id":"PO-033","amount_sgd":"942"}],"receipts":[{"ref":"J32-REC-1","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-14T12:00:00","vendor_id":"VEND-182","invoice_id":"INV-8329","revision":1,"status":"ACCEPTED","po_id":"PO-033","receipt_id":"GR-007","amount_sgd":"907"}],"bank_events":[{"ref":"J32-BAN-1","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-14T12:00:00","vendor_id":"VEND-182","invoice_id":"INV-8329","kind":"CHANGE","sequence":1,"account_ref":"AC-003","change_ref":"","actor_id":"edgar","role":"AP_ANALYST","status":"ACTIVE"},{"ref":"J32-BAN-2","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-14T12:00:00","vendor_id":"VEND-182","invoice_id":"INV-8329","kind":"VERIFY","sequence":2,"account_ref":"AC-003","change_ref":"J32-BAN-1","actor_id":"anita","role":"TREASURY_REVIEWER","status":"VERIFIED"}],"hold_events":[],"settlements":[],"exceptions":[{"ref":"J32-EXC-1","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-14T12:00:00","vendor_id":"VEND-182","invoice_id":"INV-8329","invoice_revision":2,"waive_reasons":["RECEIPT_SHORT"],"amount_cap_sgd":"942","valid_until":"2026-12-15T17:00:00","role":"CFO"}]}
+{"event_cutoff":"2026-12-15T17:00:00","recorded_cutoff":"2026-12-16T09:00:00","key":{"vendor_id":"VEND-184","invoice_id":"INV-8343"},"invoices":[{"ref":"J34-INV-1","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-14T12:00:00","vendor_id":"VEND-184","invoice_id":"INV-8343","revision":2,"status":"POSTED","gross_sgd":"964","po_id":"PO-033"},{"ref":"J34-INV-2","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-16T09:00:00","vendor_id":"VEND-184","invoice_id":"INV-8343","revision":3,"status":"VOID","gross_sgd":"964","po_id":"PO-033"}],"purchase_orders":[{"ref":"J34-PUR-1","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-14T12:00:00","vendor_id":"VEND-184","invoice_id":"INV-8343","revision":1,"status":"APPROVED","po_id":"PO-033","amount_sgd":"964"}],"receipts":[{"ref":"J34-REC-1","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-14T12:00:00","vendor_id":"VEND-184","invoice_id":"INV-8343","revision":1,"status":"ACCEPTED","po_id":"PO-033","receipt_id":"GR-007","amount_sgd":"964"}],"bank_events":[{"ref":"J34-BAN-1","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-14T12:00:00","vendor_id":"VEND-184","invoice_id":"INV-8343","kind":"CHANGE","sequence":1,"account_ref":"AC-003","change_ref":"","actor_id":"edgar","role":"AP_ANALYST","status":"ACTIVE"},{"ref":"J34-BAN-2","event_on":"2026-12-14T10:30:00","recorded_on":"2026-12-14T12:00:00","vendor_id":"VEND-184","invoice_id":"INV-8343","kind":"VERIFY","sequence":2,"account_ref":"AC-003","change_ref":"J34-BAN-1","actor_id":"anita","role":"TREASURY_REVIEWER","status":"VERIFIED"}],"hold_events":[],"settlements":[],"exceptions":[]}
+
+AR receipt extracts:
+ERP and bank reconciliation | receipt 47740 | SGD
+Invoice I-47740, shipment S-47740. Merchandise 960.00, freight 60.10, tax 29.90.
+Ledger credit on this invoice: 70.00, GOODS, POSTED.
+Bank receipt 974.90. Payment instruction 2026-11-13; bank value 2026-11-13; ERP imported 2026-11-18.
+Contract prompt-payment rate 2%; prompt-payment deadline 2026-11-13.
+Incident record for this transfer: NONE.
+Carrier case: shipment S-47740, reserve 0.00, liability pending. Signed POD exception on invoiced shipment: NO.
+Please post the short payment on invoice I-47740. The customer's remittance label is OTHER, with a separate damage deduction claim of SGD 0.00. The ledger extract is in the assigned cash-desk folder.
+
+ERP and bank reconciliation | receipt 43890 | SGD
+Invoice I-43890, shipment S-43890. Merchandise 941.00, freight 70.00, tax 29.00.
+Ledger credit on this invoice: 0.00, GOODS, POSTED.
+Bank receipt 1035.00. Payment instruction 2026-11-13; bank value 2026-11-13; ERP imported 2026-11-18.
+Contract prompt-payment rate 2%; prompt-payment deadline 2026-11-13.
+Incident record for this transfer: NONE.
+Carrier case: shipment S-43890, reserve 0.00, liability pending. Signed POD exception on invoiced shipment: NO.
+Please post the short payment on invoice I-43890. The customer's remittance label is OTHER, with a separate damage deduction claim of SGD 0.00. The ledger extract is in the assigned cash-desk folder.
+
+ERP and bank reconciliation | receipt 44288 | SGD
+Invoice I-44288, shipment S-44288. Merchandise 1125.00, freight 92.60, tax 32.40.
+Ledger credit on this invoice: 65.00, GOODS, DRAFT.
+Bank receipt 1243.95. Payment instruction 2026-11-13; bank value 2026-11-13; ERP imported 2026-11-18.
+Contract prompt-payment rate 2%; prompt-payment deadline 2026-11-13.
+Incident record for this transfer: NONE.
+Carrier case: shipment S-44288, reserve 0.00, liability pending. Signed POD exception on invoiced shipment: NO.
+Please post the short payment on invoice I-44288. The customer's remittance label is OTHER, with a separate damage deduction claim of SGD 0.00. The ledger extract is in the assigned cash-desk folder.
+
+ERP and bank reconciliation | receipt 42209 | SGD
+Invoice I-42209, shipment S-42209. Merchandise 1150.00, freight 102.70, tax 37.30.
+Ledger credit on this invoice: 160.00, GOODS, POSTED.
+Bank receipt 1124.00. Payment instruction 2026-11-13; bank value 2026-11-13; ERP imported 2026-11-18.
+Contract prompt-payment rate 2%; prompt-payment deadline 2026-11-13.
+Incident record for this transfer: NONE.
+Carrier case: shipment S-42209, reserve 0.00, liability pending. Signed POD exception on invoiced shipment: NO.
+Please post the short payment on invoice I-42209. The customer's remittance label is OTHER, with a separate damage deduction claim of SGD 0.00. The ledger extract is in the assigned cash-desk folder.
+
+ERP and bank reconciliation | receipt 46544 | SGD
+Invoice I-46544, shipment S-46544. Merchandise 2020.00, freight 95.20, tax 24.80.
+Ledger credit on this invoice: 0.00, GOODS, POSTED.
+Bank receipt 2132.00. Payment instruction 2026-11-13; bank value 2026-11-13; ERP imported 2026-11-18.
+Contract prompt-payment rate 2%; prompt-payment deadline 2026-11-13.
+Incident record for this transfer: NONE.
+Carrier case: shipment S-46544, reserve 0.00, liability pending. Signed POD exception on invoiced shipment: NO.
+Please post the short payment on invoice I-46544. The customer's remittance label is OTHER, with a separate damage deduction claim of SGD 0.00. The ledger extract is in the assigned cash-desk folder.
+
+ERP and bank reconciliation | receipt 46528 | SGD
+Invoice I-46528, shipment S-46528. Merchandise 1320.00, freight 95.30, tax 24.70.
+Ledger credit on this invoice: 0.00, GOODS, POSTED.
+Bank receipt 1434.90. Payment instruction 2026-11-13; bank value 2026-11-13; ERP imported 2026-11-18.
+Contract prompt-payment rate 2%; prompt-payment deadline 2026-11-13.
+Incident record for this transfer: NONE.
+Carrier case: shipment S-46528, reserve 7.20, liability pending. Signed POD exception on invoiced shipment: NO.
+Please post the short payment on invoice I-46528. The customer's remittance label is DAMAGE, with a separate damage deduction claim of SGD 5.10. The ledger extract is in the assigned cash-desk folder.
+
+ERP and bank reconciliation | receipt 47144 | SGD
+Invoice I-47144, shipment S-47144. Merchandise 1300.00, freight 57.90, tax 42.10.
+Ledger credit on this invoice: 0.00, GOODS, POSTED.
+Bank receipt 1391.60. Payment instruction 2026-11-13; bank value 2026-11-13; ERP imported 2026-11-18.
+Contract prompt-payment rate 2%; prompt-payment deadline 2026-11-13.
+Incident record for this transfer: NONE.
+Carrier case: shipment PREV-47144, reserve 9.00, liability pending. Signed POD exception on invoiced shipment: YES.
+Please post the short payment on invoice I-47144. The customer's remittance label is DAMAGE, with a separate damage deduction claim of SGD 8.40. The ledger extract is in the assigned cash-desk folder.
+
+ERP and bank reconciliation | receipt 42701 | SGD
+Invoice I-42701, shipment S-42701. Merchandise 1460.00, freight 97.80, tax 42.20.
+Ledger credit on this invoice: 0.00, GOODS, POSTED.
+Bank receipt 1593.85. Payment instruction 2026-11-13; bank value 2026-11-18; ERP imported 2026-11-18.
+Contract prompt-payment rate 2%; prompt-payment deadline 2026-11-13.
+Bank Operations confirmed a receiving-bank service interruption affecting this transfer on its value date.
+Carrier case: shipment S-42701, reserve 0.00, liability pending. Signed POD exception on invoiced shipment: NO.
+Please post the short payment on invoice I-42701. The customer's remittance label is TERMS, with a separate damage deduction claim of SGD 0.00. The ledger extract is in the assigned cash-desk folder.
+
+ERP and bank reconciliation | receipt 45707 | SGD
+Invoice I-45707, shipment S-45707. Merchandise 1250.00, freight 90.40, tax 9.60.
+Ledger credit on this invoice: 0.00, GOODS, POSTED.
+Bank receipt 1320.90. Payment instruction 2026-11-13; bank value 2026-11-17; ERP imported 2026-11-18.
+Contract prompt-payment rate 2%; prompt-payment deadline 2026-11-13.
+Bank Operations confirmed a receiving-bank service interruption affecting this transfer on its value date.
+Carrier case: shipment S-45707, reserve 0.00, liability pending. Signed POD exception on invoiced shipment: NO.
+Please post the short payment on invoice I-45707. The customer's remittance label is TERMS, with a separate damage deduction claim of SGD 0.00. The ledger extract is in the assigned cash-desk folder.
+
+ERP and bank reconciliation | receipt 42877 | SGD
+Invoice I-42877, shipment S-42877. Merchandise 1290.00, freight 90.50, tax 19.50.
+Ledger credit on this invoice: 0.00, GOODS, POSTED.
+Bank receipt 1381.00. Payment instruction 2026-11-13; bank value 2026-11-13; ERP imported 2026-11-18.
+Contract prompt-payment rate 2%; prompt-payment deadline 2026-11-13.
+Incident record for this transfer: NONE.
+Carrier case: shipment S-42877, reserve 17.50, liability pending. Signed POD exception on invoiced shipment: YES.
+Please post the short payment on invoice I-42877. The customer's remittance label is DAMAGE, with a separate damage deduction claim of SGD 14.60. The ledger extract is in the assigned cash-desk folder.
+
+ERP and bank reconciliation | receipt 43654 | SGD
+Invoice I-43654, shipment S-43654. Merchandise 1460.00, freight 103.00, tax 37.00.
+Ledger credit on this invoice: 0.00, GOODS, POSTED.
+Bank receipt 1593.85. Payment instruction 2026-11-13; bank value 2026-11-18; ERP imported 2026-11-18.
+Contract prompt-payment rate 2%; prompt-payment deadline 2026-11-13.
+Bank Operations confirmed a receiving-bank service interruption affecting this transfer on its value date.
+Carrier case: shipment S-43654, reserve 0.00, liability pending. Signed POD exception on invoiced shipment: NO.
+Please post the short payment on invoice I-43654. The customer's remittance label is TERMS, with a separate damage deduction claim of SGD 0.00. The ledger extract is in the assigned cash-desk folder.
+
+ERP and bank reconciliation | receipt 42376 | SGD
+Invoice I-42376, shipment S-42376. Merchandise 1150.00, freight 113.10, tax 26.90.
+Ledger credit on this invoice: 160.00, GOODS, POSTED.
+Bank receipt 1124.00. Payment instruction 2026-11-13; bank value 2026-11-13; ERP imported 2026-11-18.
+Contract prompt-payment rate 2%; prompt-payment deadline 2026-11-13.
+Incident record for this transfer: NONE.
+Carrier case: shipment S-42376, reserve 0.00, liability pending. Signed POD exception on invoiced shipment: NO.
+Please post the short payment on invoice I-42376. The customer's remittance label is OTHER, with a separate damage deduction claim of SGD 0.00. The ledger extract is in the assigned cash-desk folder.
+
+ERP and bank reconciliation | receipt 46316 | SGD
+Invoice I-46316, shipment S-46316. Merchandise 2125.00, freight 110.70, tax 29.30.
+Ledger credit on this invoice: 0.00, GOODS, POSTED.
+Bank receipt 2256.95. Payment instruction 2026-11-13; bank value 2026-11-13; ERP imported 2026-11-18.
+Contract prompt-payment rate 2%; prompt-payment deadline 2026-11-13.
+Incident record for this transfer: NONE.
+Carrier case: shipment S-46316, reserve 0.00, liability pending. Signed POD exception on invoiced shipment: NO.
+Please post the short payment on invoice I-46316. The customer's remittance label is OTHER, with a separate damage deduction claim of SGD 0.00. The ledger extract is in the assigned cash-desk folder.
+
+ERP and bank reconciliation | receipt 44746 | SGD
+Invoice I-44746, shipment S-44746. Merchandise 1250.00, freight 95.60, tax 4.40.
+Ledger credit on this invoice: 0.00, GOODS, POSTED.
+Bank receipt 1320.90. Payment instruction 2026-11-13; bank value 2026-11-17; ERP imported 2026-11-18.
+Contract prompt-payment rate 2%; prompt-payment deadline 2026-11-13.
+Bank Operations confirmed a receiving-bank service interruption affecting this transfer on its value date.
+Carrier case: shipment S-44746, reserve 0.00, liability pending. Signed POD exception on invoiced shipment: NO.
+Please post the short payment on invoice I-44746. The customer's remittance label is TERMS, with a separate damage deduction claim of SGD 0.00. The ledger extract is in the assigned cash-desk folder.
+
+ERP and bank reconciliation | receipt 42800 | SGD
+Invoice I-42800, shipment S-42800. Merchandise 1140.00, freight 98.20, tax 11.80.
+Ledger credit on this invoice: 90.00, GOODS, DRAFT.
+Bank receipt 1236.75. Payment instruction 2026-11-13; bank value 2026-11-13; ERP imported 2026-11-18.
+Contract prompt-payment rate 2%; prompt-payment deadline 2026-11-13.
+Incident record for this transfer: NONE.
+Carrier case: shipment S-42800, reserve 0.00, liability pending. Signed POD exception on invoiced shipment: NO.
+Please post the short payment on invoice I-42800. The customer's remittance label is TERMS, with a separate damage deduction claim of SGD 0.00. The ledger extract is in the assigned cash-desk folder.
+
+ERP and bank reconciliation | receipt 45699 | SGD
+Invoice I-45699, shipment S-45699. Merchandise 1150.00, freight 118.30, tax 21.70.
+Ledger credit on this invoice: 160.00, GOODS, POSTED.
+Bank receipt 1124.00. Payment instruction 2026-11-13; bank value 2026-11-13; ERP imported 2026-11-18.
+Contract prompt-payment rate 2%; prompt-payment deadline 2026-11-13.
+Incident record for this transfer: NONE.
+Carrier case: shipment S-45699, reserve 0.00, liability pending. Signed POD exception on invoiced shipment: NO.
+Please post the short payment on invoice I-45699. The customer's remittance label is OTHER, with a separate damage deduction claim of SGD 0.00. The ledger extract is in the assigned cash-desk folder.

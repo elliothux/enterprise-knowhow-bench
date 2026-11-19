@@ -2,9 +2,11 @@
 
 English · [简体中文](README.zh-CN.md)
 
-Lynx Benchmark measures whether a model makes better finance decisions when it can use a workflow Skill distilled by Lynx Cognition from earlier demonstrations. In 40 synthetic cases fixed before evaluation, the same model used Chrome to read supporting documents in ownCloud and submit a decision to finance in Rocket.Chat. With the GLM-distilled Skill, the number of fully correct first submissions rose from **24/40 to 40/40**. Scores improved on 16 cases and stayed the same on 24.
+Lynx Benchmark measures the effect of a workflow Skill distilled from earlier demonstrations by Lynx Cognition. The same operator runs each case with no Skill, with a GLM-5.3 Skill and, where scheduled, with a DeepSeek Flash Skill.
 
-On four earlier native short-payment tickets, scores averaged **43.75 without a Skill, 86.25 with GLM and 100 with DeepSeek**. In 32 approval decisions using raw Skills, DeepSeek reached **93.75%** and GLM **100%**, from a **78.13%** baseline. On an end-to-end Numbers workbook, both the baseline and the Lynx Skill delivered a valid file once in two attempts. [Matched distiller results, incomplete deliveries and receipts](results/distillers.md)
+**Two fully solvable month-end bank closes remained incomplete in all three arms.** Each shift had 108 invoices. In one, all three operators correctly placed 54/108 invoices (50.00%). In the other, all three placed 57/108 (52.78%). Every first submission was received on time. An independent verifier confirms exactly one complete allocation for each ledger. [Compare the six receipts and reproduce the result](results/batches/monthly-lockbox-20261119/README.md) · [Results across the new workflows](results/close-workflows.md)
+
+On the original 40 native finance tickets, Chrome was used to read ownCloud documents and deliver a first decision to Rocket.Chat. The baseline fully completed **24/40**, and the GLM Skill completed **40/40**. These short single-invoice tasks and the multi-receipt closes have different acceptance criteria. The following table gives the original business scores.
 
 | Task | Cases | Mean without Skill | Mean with GLM Skill | Fully correct first submissions, without → with |
 |---|---:|---:|---:|---:|

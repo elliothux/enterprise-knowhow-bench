@@ -1,0 +1,81 @@
+{
+  "skills": {
+    "B": {
+      "source_file": "tasks/materials/attachment-132e238be20d.txt",
+      "evaluated_sha256": "132e238be20d2881bc0a87c988991df145234acedc4f9626169c643b322fec3a",
+      "public_sha256": "132e238be20d2881bc0a87c988991df145234acedc4f9626169c643b322fec3a"
+    },
+    "D": {
+      "source_file": "tasks/materials/cash-D-a59224b81247.txt",
+      "evaluated_sha256": "a59224b81247410480eedd01915b02931526f5b7a21298d1036baa21fcb30c07",
+      "public_sha256": "a59224b81247410480eedd01915b02931526f5b7a21298d1036baa21fcb30c07"
+    }
+  },
+  "cases": {
+    "pod-47": {
+      "A": {
+        "score": 100.0,
+        "fully_correct_invoices": 8,
+        "exact": true,
+        "valid_delivery": true
+      },
+      "B": {
+        "score": 100.0,
+        "fully_correct_invoices": 8,
+        "exact": true,
+        "valid_delivery": true
+      },
+      "D": {
+        "score": 100.0,
+        "fully_correct_invoices": 8,
+        "exact": true,
+        "valid_delivery": true
+      }
+    },
+    "pod-83": {
+      "B": {
+        "score": 100.0,
+        "fully_correct_invoices": 8,
+        "exact": true,
+        "valid_delivery": true
+      },
+      "A": {
+        "score": 100.0,
+        "fully_correct_invoices": 8,
+        "exact": true,
+        "valid_delivery": true
+      },
+      "D": {
+        "score": 100.0,
+        "fully_correct_invoices": 8,
+        "exact": true,
+        "valid_delivery": true
+      }
+    }
+  },
+  "schedule": [
+    {
+      "case": "pod-47",
+      "family": "pod-inspection",
+      "order": "AB",
+      "control": "D"
+    },
+    {
+      "case": "pod-83",
+      "family": "pod-inspection",
+      "order": "BA",
+      "control": "D"
+    }
+  ],
+  "assigned_sessions": 6,
+  "model": "gpt-6.1-terra",
+  "reasoning": "high",
+  "limit_seconds": 300,
+  "environment": {
+    "os": "macOS-26.4-arm64-arm-64bit",
+    "architecture": "arm64",
+    "python": "3.12.16"
+  },
+  "plan_sha256": "ab46477b1e94b9284ff0d57d0d5e45e5a0e07f6d8e3fb579802457948888bf5a",
+  "freeze_sha256": "e2d7f419c2ed52784b7a23e0369600a2c16b5de476cdbbd48a36a2de8d93f4b9"
+}

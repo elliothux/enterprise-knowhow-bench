@@ -1,0 +1,75 @@
+Signed exception register at 17:00
+BA-411 BANK: one consolidated bank advice for SGD 2009.90 covers I-47740 and I-43890. Neither the payer nor Treasury has sent an invoice split. The aggregate alone permits multiple allocations. Response due tomorrow.
+All other invoice source fields are verified. No further replies are available as of this cutoff.
+
+ERP and bank reconciliation | receipt 47740 | SGD
+Invoice I-47740, shipment S-47740. Merchandise 960.00, freight 60.10, tax 29.90.
+Ledger credit on this invoice: 70.00, GOODS, POSTED.
+Contract prompt-payment rate 2%; prompt-payment deadline 2026-11-13.
+Incident record for this transfer: NONE.
+Carrier case: shipment S-47740, reserve 0.00, liability pending. Signed POD exception on invoiced shipment: NO.
+Please post the short payment on invoice I-47740. The customer's remittance label is OTHER, with a separate damage deduction claim of SGD 0.00. The ledger extract is in the assigned cash-desk folder.
+Bank posting is pending attribution. See signed cutoff status BA-411.
+
+ERP and bank reconciliation | receipt 43890 | SGD
+Invoice I-43890, shipment S-43890. Merchandise 941.00, freight 70.00, tax 29.00.
+Ledger credit on this invoice: 0.00, GOODS, POSTED.
+Contract prompt-payment rate 2%; prompt-payment deadline 2026-11-13.
+Incident record for this transfer: NONE.
+Carrier case: shipment S-43890, reserve 0.00, liability pending. Signed POD exception on invoiced shipment: NO.
+Please post the short payment on invoice I-43890. The customer's remittance label is OTHER, with a separate damage deduction claim of SGD 0.00. The ledger extract is in the assigned cash-desk folder.
+Bank posting is pending attribution. See signed cutoff status BA-411.
+
+ERP and bank reconciliation | receipt 47207 | SGD
+Invoice I-47207, shipment S-47207. Merchandise 2020.00, freight 91.30, tax 28.70.
+Ledger credit on this invoice: 0.00, GOODS, POSTED.
+Bank receipt 2132.00. Payment instruction 2026-11-13; bank value 2026-11-13; ERP imported 2026-11-18.
+Contract prompt-payment rate 2%; prompt-payment deadline 2026-11-13.
+Incident record for this transfer: NONE.
+Carrier case: shipment S-47207, reserve 0.00, liability pending. Signed POD exception on invoiced shipment: NO.
+Please post the short payment on invoice I-47207. The customer's remittance label is OTHER, with a separate damage deduction claim of SGD 0.00. The ledger extract is in the assigned cash-desk folder.
+
+ERP and bank reconciliation | receipt 48588 | SGD
+Invoice I-48588, shipment S-48588. Merchandise 2125.00, freight 96.40, tax 43.60.
+Ledger credit on this invoice: 0.00, GOODS, POSTED.
+Bank receipt 2256.95. Payment instruction 2026-11-13; bank value 2026-11-13; ERP imported 2026-11-18.
+Contract prompt-payment rate 2%; prompt-payment deadline 2026-11-13.
+Incident record for this transfer: NONE.
+Carrier case: shipment S-48588, reserve 0.00, liability pending. Signed POD exception on invoiced shipment: NO.
+Please post the short payment on invoice I-48588. The customer's remittance label is OTHER, with a separate damage deduction claim of SGD 0.00. The ledger extract is in the assigned cash-desk folder.
+
+ERP and bank reconciliation | receipt 44288 | SGD
+Invoice I-44288, shipment S-44288. Merchandise 1125.00, freight 92.60, tax 32.40.
+Ledger credit on this invoice: 65.00, GOODS, DRAFT.
+Bank receipt 1243.95. Payment instruction 2026-11-13; bank value 2026-11-13; ERP imported 2026-11-18.
+Contract prompt-payment rate 2%; prompt-payment deadline 2026-11-13.
+Incident record for this transfer: NONE.
+Carrier case: shipment S-44288, reserve 0.00, liability pending. Signed POD exception on invoiced shipment: NO.
+Please post the short payment on invoice I-44288. The customer's remittance label is OTHER, with a separate damage deduction claim of SGD 0.00. The ledger extract is in the assigned cash-desk folder.
+
+ERP and bank reconciliation | receipt 42209 | SGD
+Invoice I-42209, shipment S-42209. Merchandise 1150.00, freight 102.70, tax 37.30.
+Ledger credit on this invoice: 160.00, GOODS, POSTED.
+Bank receipt 1124.00. Payment instruction 2026-11-13; bank value 2026-11-13; ERP imported 2026-11-18.
+Contract prompt-payment rate 2%; prompt-payment deadline 2026-11-13.
+Incident record for this transfer: NONE.
+Carrier case: shipment S-42209, reserve 0.00, liability pending. Signed POD exception on invoiced shipment: NO.
+Please post the short payment on invoice I-42209. The customer's remittance label is OTHER, with a separate damage deduction claim of SGD 0.00. The ledger extract is in the assigned cash-desk folder.
+
+ERP and bank reconciliation | receipt 48932 | SGD
+Invoice I-48932, shipment S-48932. Merchandise 1300.00, freight 54.00, tax 46.00.
+Ledger credit on this invoice: 0.00, GOODS, POSTED.
+Bank receipt 1391.60. Payment instruction 2026-11-13; bank value 2026-11-13; ERP imported 2026-11-18.
+Contract prompt-payment rate 2%; prompt-payment deadline 2026-11-13.
+Incident record for this transfer: NONE.
+Carrier case: shipment PREV-48932, reserve 9.00, liability pending. Signed POD exception on invoiced shipment: YES.
+Please post the short payment on invoice I-48932. The customer's remittance label is DAMAGE, with a separate damage deduction claim of SGD 8.40. The ledger extract is in the assigned cash-desk folder.
+
+ERP and bank reconciliation | receipt 47888 | SGD
+Invoice I-47888, shipment S-47888. Merchandise 941.00, freight 73.90, tax 25.10.
+Ledger credit on this invoice: 0.00, GOODS, POSTED.
+Bank receipt 1035.00. Payment instruction 2026-11-13; bank value 2026-11-13; ERP imported 2026-11-18.
+Contract prompt-payment rate 2%; prompt-payment deadline 2026-11-13.
+Incident record for this transfer: NONE.
+Carrier case: shipment S-47888, reserve 0.00, liability pending. Signed POD exception on invoiced shipment: NO.
+Please post the short payment on invoice I-47888. The customer's remittance label is OTHER, with a separate damage deduction claim of SGD 0.00. The ledger extract is in the assigned cash-desk folder.

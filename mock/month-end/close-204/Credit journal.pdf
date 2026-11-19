@@ -1,0 +1,53 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [4 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 5 0 R >>
+endobj
+5 0 obj
+<< /Length 495 >>
+stream
+BT /F1 10 Tf 13 TL 40 800 Td
+(Credit memo events / same business day / local time) Tj
+T*
+(Each entry shows invoice, amount, event time and status.) Tj
+T*
+(I-8276 credit 9.53   15:58 POSTED) Tj
+T*
+(I-8215 credit 18.20   16:03 POSTED) Tj
+T*
+(I-8244 credit 5.11   15:58 POSTED) Tj
+T*
+(I-8237 credit 23.30   16:03 POSTED) Tj
+T*
+(I-8263 credit 75.20   15:52 DRAFT) Tj
+T*
+(I-8294 credit 7.40   15:52 DRAFT) Tj
+T*
+(I-8281 credit 14.50   15:58 POSTED) Tj
+T*
+(I-8250 credit 6.98   15:58 POSTED) Tj
+T*
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000185 00000 n 
+0000000311 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+856
+%%EOF

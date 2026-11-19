@@ -1,0 +1,23 @@
+#!/usr/bin/env python3
+import hashlib
+import os
+from pathlib import Path
+import sys
+import tempfile
+
+root = Path(__file__).resolve().parent
+if len(sys.argv) != 2:
+    sys.exit('Usage: ./submit filename.xlsx')
+source = Path(sys.argv[1]).resolve()
+if source.parent != root or source.suffix.lower() != '.xlsx':
+    sys.exit('Choose an XLSX in this workspace')
+data = source.read_bytes()
+with tempfile.NamedTemporaryFile(dir=root) as stage:
+    stage.write(data)
+    stage.flush()
+    try:
+        os.link(stage.name, root/'delivery.xlsx')
+    except FileExistsError:
+        sys.exit('The queue already received a workbook')
+(root.parent/'receipt.sha256').write_text(hashlib.sha256(data).hexdigest()+'\n')
+print('Finance received workbook SHA256 ' + hashlib.sha256(data).hexdigest())

@@ -1,0 +1,53 @@
+{
+  "case": "cb-28",
+  "arm": "D",
+  "exit": 0,
+  "receipt": "c053036c8016a5271cacddffa913e6f5ec2de7eb84ff8329a4d569d12a96d981",
+  "prompt_sha256": "de56a0c52ed38d47d78c5c989edc17c8e4d07bce3d7181a14d14d34c2bdb7733",
+  "checked": 384,
+  "correct": 384,
+  "score": 100.0,
+  "exact": true,
+  "states": {
+    "original": {
+      "correct": 48,
+      "errors": []
+    },
+    "early_cutoffs": {
+      "correct": 48,
+      "errors": []
+    },
+    "late_chargebacks": {
+      "correct": 48,
+      "errors": []
+    },
+    "receipt_amendment": {
+      "correct": 48,
+      "errors": []
+    },
+    "invoice_priority": {
+      "correct": 48,
+      "errors": []
+    },
+    "reordered_registers": {
+      "correct": 48,
+      "errors": []
+    },
+    "early_overpayment": {
+      "correct": 48,
+      "errors": []
+    },
+    "two_reversals": {
+      "correct": 48,
+      "errors": []
+    }
+  },
+  "shell_calls": 6,
+  "session": "01a1f297-4dcf-71d0-be1f-81c094494a75",
+  "source_hashes": {
+    "agent.log": "55830122b203dee1d6611ab2c250657fd3357a3fdd4c561f56b7dd3f6d487f3c",
+    "stderr.log": "552fc60db9f8a6b7b9d36874d82a71167f6c5ec02b8ab3a27ba17043deb26d30",
+    "score.json": "2e3a12f8f7636aa5a80a5acc0b652b66ec3666254ccd17de29e999e7d4e02dfc",
+    "work/TASK.md": "de56a0c52ed38d47d78c5c989edc17c8e4d07bce3d7181a14d14d34c2bdb7733"
+  }
+}

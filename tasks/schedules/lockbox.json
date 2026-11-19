@@ -1,0 +1,14 @@
+[
+  {
+    "case": "lockbox-41",
+    "family": "lockbox",
+    "order": "AB",
+    "control": "D"
+  },
+  {
+    "case": "lockbox-76",
+    "family": "lockbox",
+    "order": "BA",
+    "control": "D"
+  }
+]

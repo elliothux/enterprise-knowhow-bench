@@ -1,0 +1,3 @@
+# Chargeback workbooks with local authoring tools
+
+The operator could use local spreadsheet tools and Python to create a reusable XLSX and submit it to the local Finance queue. All six submitted workbooks recalculated correctly in LibreOffice on the original ledger and seven changed states: 384/384 formula-backed amounts for each submission. This establishes a working solution for both published templates and all tested states. The index links cases by ID. Each case directory contains the A, B and D first XLSX files and detailed grades. [Six-session index](index.json) · [Cases, rubric and rerun commands](../../../cases/chargebacks/README.md)

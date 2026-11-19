@@ -718,5 +718,1693 @@
         "COLLECTIONS"
       ]
     }
+  ],
+  "close-118": [
+    {
+      "invoice": "I-7124",
+      "target": [
+        2056,
+        551,
+        0,
+        684,
+        "COLLECTIONS"
+      ]
+    },
+    {
+      "invoice": "I-7147",
+      "target": [
+        1740,
+        533,
+        0,
+        663,
+        "COLLECTIONS"
+      ]
+    },
+    {
+      "invoice": "I-7129",
+      "target": [
+        1186,
+        0,
+        425,
+        0,
+        "CLOSED"
+      ]
+    },
+    {
+      "invoice": "I-7193",
+      "target": [
+        1312,
+        277,
+        345,
+        0,
+        "CLAIMS"
+      ]
+    },
+    {
+      "invoice": "I-7154",
+      "target": [
+        1896,
+        359,
+        445,
+        0,
+        "CLAIMS"
+      ]
+    },
+    {
+      "invoice": "I-7180",
+      "target": [
+        816,
+        0,
+        0,
+        507,
+        "COLLECTIONS"
+      ]
+    },
+    {
+      "invoice": "I-7115",
+      "target": [
+        1890,
+        445,
+        0,
+        553,
+        "COLLECTIONS"
+      ]
+    },
+    {
+      "invoice": "I-7163",
+      "target": [
+        1223,
+        0,
+        0,
+        725,
+        "COLLECTIONS"
+      ]
+    }
+  ],
+  "close-204": [
+    {
+      "invoice": "I-8263",
+      "target": [
+        2500,
+        526,
+        0,
+        517,
+        "COLLECTIONS"
+      ]
+    },
+    {
+      "invoice": "I-8215",
+      "target": [
+        1523,
+        764,
+        0,
+        750,
+        "COLLECTIONS"
+      ]
+    },
+    {
+      "invoice": "I-8276",
+      "target": [
+        988,
+        0,
+        0,
+        502,
+        "COLLECTIONS"
+      ]
+    },
+    {
+      "invoice": "I-8250",
+      "target": [
+        864,
+        396,
+        388,
+        0,
+        "CLAIMS"
+      ]
+    },
+    {
+      "invoice": "I-8237",
+      "target": [
+        2133,
+        615,
+        0,
+        604,
+        "COLLECTIONS"
+      ]
+    },
+    {
+      "invoice": "I-8294",
+      "target": [
+        1155,
+        0,
+        487,
+        0,
+        "CLOSED"
+      ]
+    },
+    {
+      "invoice": "I-8244",
+      "target": [
+        2150,
+        330,
+        323,
+        0,
+        "CLAIMS"
+      ]
+    },
+    {
+      "invoice": "I-8281",
+      "target": [
+        1019,
+        0,
+        491,
+        0,
+        "CLOSED"
+      ]
+    }
+  ],
+  "net-31": {
+    "receivables": [
+      {
+        "invoice": "I-47740",
+        "target": [
+          0,
+          0,
+          0,
+          510,
+          "COLLECTIONS"
+        ]
+      },
+      {
+        "invoice": "I-43890",
+        "target": [
+          0,
+          0,
+          500,
+          0,
+          "CLOSED"
+        ]
+      },
+      {
+        "invoice": "I-44288",
+        "target": [
+          0,
+          0,
+          605,
+          0,
+          "CLOSED"
+        ]
+      },
+      {
+        "invoice": "I-42209",
+        "target": [
+          0,
+          0,
+          0,
+          600,
+          "COLLECTIONS"
+        ]
+      },
+      {
+        "invoice": "I-46544",
+        "target": [
+          0,
+          0,
+          800,
+          0,
+          "CLOSED"
+        ]
+      },
+      {
+        "invoice": "I-46528",
+        "target": [
+          0,
+          0,
+          0,
+          510,
+          "COLLECTIONS"
+        ]
+      },
+      {
+        "invoice": "I-47144",
+        "target": [
+          0,
+          0,
+          0,
+          840,
+          "COLLECTIONS"
+        ]
+      },
+      {
+        "invoice": "I-42701",
+        "target": [
+          0,
+          0,
+          615,
+          0,
+          "CLOSED"
+        ]
+      },
+      {
+        "invoice": "I-45707",
+        "target": [
+          2500,
+          0,
+          410,
+          0,
+          "CLOSED"
+        ]
+      },
+      {
+        "invoice": "I-42877",
+        "target": [
+          0,
+          1460,
+          0,
+          440,
+          "CLAIMS"
+        ]
+      },
+      {
+        "invoice": "I-43654",
+        "target": [
+          0,
+          0,
+          615,
+          0,
+          "CLOSED"
+        ]
+      },
+      {
+        "invoice": "I-42376",
+        "target": [
+          0,
+          0,
+          0,
+          600,
+          "COLLECTIONS"
+        ]
+      },
+      {
+        "invoice": "I-46316",
+        "target": [
+          0,
+          0,
+          0,
+          805,
+          "COLLECTIONS"
+        ]
+      },
+      {
+        "invoice": "I-44746",
+        "target": [
+          2500,
+          0,
+          410,
+          0,
+          "CLOSED"
+        ]
+      },
+      {
+        "invoice": "I-42800",
+        "target": [
+          1325,
+          0,
+          0,
+          0,
+          "CLOSED"
+        ]
+      },
+      {
+        "invoice": "I-45699",
+        "target": [
+          0,
+          0,
+          0,
+          600,
+          "COLLECTIONS"
+        ]
+      }
+    ],
+    "payables": [
+      {
+        "invoice": "INV-8245",
+        "exposure": 510,
+        "decision": "HOLD",
+        "reasons": [
+          "SETOFF_REVIEW"
+        ]
+      },
+      {
+        "invoice": "INV-8259",
+        "exposure": 600,
+        "decision": "HOLD",
+        "reasons": [
+          "BANK_UNVERIFIED",
+          "SETOFF_REVIEW"
+        ]
+      },
+      {
+        "invoice": "INV-8273",
+        "exposure": 510,
+        "decision": "HOLD",
+        "reasons": [
+          "RECEIPT_SHORT"
+        ]
+      },
+      {
+        "invoice": "INV-8287",
+        "exposure": 840,
+        "decision": "RELEASE",
+        "reasons": [
+          "NONE"
+        ]
+      },
+      {
+        "invoice": "INV-8301",
+        "exposure": 440,
+        "decision": "HOLD",
+        "reasons": [
+          "DUPLICATE"
+        ]
+      },
+      {
+        "invoice": "INV-8315",
+        "exposure": 600,
+        "decision": "HOLD",
+        "reasons": [
+          "BANK_UNVERIFIED"
+        ]
+      },
+      {
+        "invoice": "INV-8329",
+        "exposure": 805,
+        "decision": "HOLD",
+        "reasons": [
+          "SETOFF_REVIEW"
+        ]
+      },
+      {
+        "invoice": "INV-8343",
+        "exposure": 600,
+        "decision": "HOLD",
+        "reasons": [
+          "NOT_POSTED",
+          "SETOFF_REVIEW"
+        ]
+      }
+    ]
+  },
+  "net-42": {
+    "receivables": [
+      {
+        "invoice": "I-47207",
+        "target": [
+          0,
+          0,
+          800,
+          0,
+          "CLOSED"
+        ]
+      },
+      {
+        "invoice": "I-48588",
+        "target": [
+          0,
+          0,
+          0,
+          805,
+          "COLLECTIONS"
+        ]
+      },
+      {
+        "invoice": "I-48932",
+        "target": [
+          0,
+          0,
+          0,
+          840,
+          "COLLECTIONS"
+        ]
+      },
+      {
+        "invoice": "I-47888",
+        "target": [
+          0,
+          0,
+          500,
+          0,
+          "CLOSED"
+        ]
+      },
+      {
+        "invoice": "I-48346",
+        "target": [
+          0,
+          0,
+          605,
+          0,
+          "CLOSED"
+        ]
+      },
+      {
+        "invoice": "I-45573",
+        "target": [
+          0,
+          1980,
+          0,
+          620,
+          "CLAIMS"
+        ]
+      },
+      {
+        "invoice": "I-42900",
+        "target": [
+          0,
+          0,
+          590,
+          0,
+          "CLOSED"
+        ]
+      },
+      {
+        "invoice": "I-42320",
+        "target": [
+          0,
+          0,
+          0,
+          510,
+          "COLLECTIONS"
+        ]
+      },
+      {
+        "invoice": "I-45814",
+        "target": [
+          0,
+          0,
+          0,
+          805,
+          "COLLECTIONS"
+        ]
+      },
+      {
+        "invoice": "I-43665",
+        "target": [
+          2500,
+          0,
+          640,
+          0,
+          "CLOSED"
+        ]
+      },
+      {
+        "invoice": "I-42437",
+        "target": [
+          0,
+          0,
+          590,
+          0,
+          "CLOSED"
+        ]
+      },
+      {
+        "invoice": "I-42625",
+        "target": [
+          0,
+          0,
+          0,
+          510,
+          "COLLECTIONS"
+        ]
+      },
+      {
+        "invoice": "I-47971",
+        "target": [
+          2500,
+          0,
+          640,
+          0,
+          "CLOSED"
+        ]
+      },
+      {
+        "invoice": "I-48952",
+        "target": [
+          0,
+          1980,
+          0,
+          620,
+          "CLAIMS"
+        ]
+      },
+      {
+        "invoice": "I-46999",
+        "target": [
+          0,
+          1460,
+          0,
+          440,
+          "CLAIMS"
+        ]
+      },
+      {
+        "invoice": "I-43731",
+        "target": [
+          2340,
+          0,
+          590,
+          0,
+          "CLOSED"
+        ]
+      }
+    ],
+    "payables": [
+      {
+        "invoice": "INV-8252",
+        "exposure": 805,
+        "decision": "HOLD",
+        "reasons": [
+          "NO_BALANCE",
+          "SETOFF_REVIEW"
+        ]
+      },
+      {
+        "invoice": "INV-8266",
+        "exposure": 840,
+        "decision": "HOLD",
+        "reasons": [
+          "SETOFF_REVIEW"
+        ]
+      },
+      {
+        "invoice": "INV-8280",
+        "exposure": 620,
+        "decision": "HOLD",
+        "reasons": [
+          "BANK_UNVERIFIED"
+        ]
+      },
+      {
+        "invoice": "INV-8294",
+        "exposure": 510,
+        "decision": "HOLD",
+        "reasons": [
+          "PO_MISMATCH",
+          "RECEIPT_SHORT"
+        ]
+      },
+      {
+        "invoice": "INV-8308",
+        "exposure": 805,
+        "decision": "HOLD",
+        "reasons": [
+          "RECEIPT_SHORT",
+          "SETOFF_REVIEW"
+        ]
+      },
+      {
+        "invoice": "INV-8322",
+        "exposure": 510,
+        "decision": "HOLD",
+        "reasons": [
+          "ACTIVE_HOLD"
+        ]
+      },
+      {
+        "invoice": "INV-8336",
+        "exposure": 620,
+        "decision": "HOLD",
+        "reasons": [
+          "ACTIVE_HOLD",
+          "SETOFF_REVIEW"
+        ]
+      },
+      {
+        "invoice": "INV-8350",
+        "exposure": 440,
+        "decision": "HOLD",
+        "reasons": [
+          "BANK_UNVERIFIED",
+          "SETOFF_REVIEW"
+        ]
+      }
+    ]
+  },
+  "cutoff-19": [
+    {
+      "invoice": "I-47740",
+      "wait": {
+        "owner": "BANK",
+        "ticket": "BA-411"
+      }
+    },
+    {
+      "invoice": "I-43890",
+      "wait": {
+        "owner": "BANK",
+        "ticket": "BA-411"
+      }
+    },
+    {
+      "invoice": "I-47207",
+      "target": [
+        0,
+        0,
+        800,
+        0,
+        "CLOSED"
+      ]
+    },
+    {
+      "invoice": "I-48588",
+      "target": [
+        0,
+        0,
+        0,
+        805,
+        "COLLECTIONS"
+      ]
+    },
+    {
+      "invoice": "I-44288",
+      "target": [
+        0,
+        0,
+        605,
+        0,
+        "CLOSED"
+      ]
+    },
+    {
+      "invoice": "I-42209",
+      "target": [
+        0,
+        0,
+        0,
+        600,
+        "COLLECTIONS"
+      ]
+    },
+    {
+      "invoice": "I-48932",
+      "target": [
+        0,
+        0,
+        0,
+        840,
+        "COLLECTIONS"
+      ]
+    },
+    {
+      "invoice": "I-47888",
+      "target": [
+        0,
+        0,
+        500,
+        0,
+        "CLOSED"
+      ]
+    }
+  ],
+  "cutoff-27": [
+    {
+      "invoice": "I-46544",
+      "target": [
+        0,
+        0,
+        800,
+        0,
+        "CLOSED"
+      ]
+    },
+    {
+      "invoice": "I-46528",
+      "wait": {
+        "owner": "BANK",
+        "ticket": "BA-519"
+      }
+    },
+    {
+      "invoice": "I-48346",
+      "target": [
+        0,
+        0,
+        605,
+        0,
+        "CLOSED"
+      ]
+    },
+    {
+      "invoice": "I-45573",
+      "target": [
+        0,
+        1980,
+        0,
+        620,
+        "CLAIMS"
+      ]
+    },
+    {
+      "invoice": "I-47144",
+      "wait": {
+        "owner": "AR_CONTROL",
+        "ticket": "CJ-205"
+      }
+    },
+    {
+      "invoice": "I-42701",
+      "wait": {
+        "owner": "AR_CONTROL",
+        "ticket": "CJ-205"
+      }
+    },
+    {
+      "invoice": "I-42900",
+      "target": [
+        0,
+        0,
+        590,
+        0,
+        "CLOSED"
+      ]
+    },
+    {
+      "invoice": "I-42320",
+      "target": [
+        0,
+        0,
+        0,
+        510,
+        "COLLECTIONS"
+      ]
+    }
+  ],
+  "pod-47": [
+    {
+      "invoice": "AR-47019",
+      "units": 11,
+      "loss": 1859,
+      "claim": 1859,
+      "collectible": 3041,
+      "owner": "COLLECTIONS"
+    },
+    {
+      "invoice": "AR-47032",
+      "units": 39,
+      "loss": 4914,
+      "claim": 795,
+      "collectible": 0,
+      "owner": "CLAIMS"
+    },
+    {
+      "invoice": "AR-47045",
+      "units": 11,
+      "loss": 2607,
+      "claim": 1240,
+      "collectible": 1930,
+      "owner": "COLLECTIONS"
+    },
+    {
+      "invoice": "AR-47058",
+      "units": 0,
+      "loss": 0,
+      "claim": 0,
+      "collectible": 3810,
+      "owner": "COLLECTIONS"
+    },
+    {
+      "invoice": "AR-47071",
+      "units": 11,
+      "loss": 1188,
+      "claim": 1188,
+      "collectible": 3137,
+      "owner": "COLLECTIONS"
+    },
+    {
+      "invoice": "AR-47084",
+      "units": 21,
+      "loss": 4494,
+      "claim": 2500,
+      "collectible": 0,
+      "owner": "CLAIMS"
+    },
+    {
+      "invoice": "AR-47097",
+      "units": 15,
+      "loss": 4155,
+      "claim": 4155,
+      "collectible": 2518,
+      "owner": "COLLECTIONS"
+    },
+    {
+      "invoice": "AR-47110",
+      "units": 22,
+      "loss": 3322,
+      "claim": 1850,
+      "collectible": 1630,
+      "owner": "COLLECTIONS"
+    }
+  ],
+  "pod-83": [
+    {
+      "invoice": "AR-83071",
+      "units": 20,
+      "loss": 2520,
+      "claim": 795,
+      "collectible": 0,
+      "owner": "CLAIMS"
+    },
+    {
+      "invoice": "AR-83084",
+      "units": 30,
+      "loss": 7110,
+      "claim": 1240,
+      "collectible": 1930,
+      "owner": "COLLECTIONS"
+    },
+    {
+      "invoice": "AR-83097",
+      "units": 20,
+      "loss": 3780,
+      "claim": 3780,
+      "collectible": 0,
+      "owner": "CLAIMS"
+    },
+    {
+      "invoice": "AR-83110",
+      "units": 11,
+      "loss": 1188,
+      "claim": 1188,
+      "collectible": 3137,
+      "owner": "COLLECTIONS"
+    },
+    {
+      "invoice": "AR-83123",
+      "units": 11,
+      "loss": 2354,
+      "claim": 2354,
+      "collectible": 0,
+      "owner": "CLAIMS"
+    },
+    {
+      "invoice": "AR-83136",
+      "units": 10,
+      "loss": 2770,
+      "claim": 2770,
+      "collectible": 3903,
+      "owner": "COLLECTIONS"
+    },
+    {
+      "invoice": "AR-83149",
+      "units": 31,
+      "loss": 4681,
+      "claim": 1850,
+      "collectible": 1630,
+      "owner": "COLLECTIONS"
+    },
+    {
+      "invoice": "AR-83162",
+      "units": 21,
+      "loss": 3549,
+      "claim": 3500,
+      "collectible": 1400,
+      "owner": "COLLECTIONS"
+    }
+  ],
+  "lockbox-41": [
+    {
+      "invoice": "BK-132",
+      "matches": [
+        "IV-3285",
+        "IV-6455",
+        "IV-7413"
+      ]
+    },
+    {
+      "invoice": "BK-230",
+      "matches": [
+        "IV-2029",
+        "IV-3155",
+        "IV-3394"
+      ]
+    },
+    {
+      "invoice": "BK-256",
+      "matches": [
+        "IV-4460",
+        "IV-4808",
+        "IV-5998"
+      ]
+    },
+    {
+      "invoice": "BK-550",
+      "matches": [
+        "IV-4434",
+        "IV-4797",
+        "IV-8568"
+      ]
+    },
+    {
+      "invoice": "BK-574",
+      "matches": [
+        "IV-2402",
+        "IV-2706",
+        "IV-4017"
+      ]
+    },
+    {
+      "invoice": "BK-673",
+      "matches": [
+        "IV-1945",
+        "IV-4922",
+        "IV-7156"
+      ]
+    },
+    {
+      "invoice": "BK-711",
+      "matches": [
+        "IV-3218",
+        "IV-4156",
+        "IV-8714"
+      ]
+    },
+    {
+      "invoice": "BK-775",
+      "matches": [
+        "IV-3501",
+        "IV-4903",
+        "IV-8101"
+      ]
+    },
+    {
+      "invoice": "BK-836",
+      "matches": [
+        "IV-6830",
+        "IV-7130",
+        "IV-9433"
+      ]
+    },
+    {
+      "invoice": "BK-837",
+      "matches": [
+        "IV-3708",
+        "IV-4513",
+        "IV-8034"
+      ]
+    },
+    {
+      "invoice": "BK-886",
+      "matches": [
+        "IV-4333",
+        "IV-7729",
+        "IV-9772"
+      ]
+    },
+    {
+      "invoice": "BK-924",
+      "matches": [
+        "IV-5722",
+        "IV-7105",
+        "IV-9833"
+      ]
+    }
+  ],
+  "lockbox-76": [
+    {
+      "invoice": "BK-247",
+      "matches": [
+        "IV-6896",
+        "IV-7721",
+        "IV-7892"
+      ]
+    },
+    {
+      "invoice": "BK-256",
+      "matches": [
+        "IV-4052",
+        "IV-8366",
+        "IV-8552"
+      ]
+    },
+    {
+      "invoice": "BK-266",
+      "matches": [
+        "IV-1382",
+        "IV-4695",
+        "IV-5127"
+      ]
+    },
+    {
+      "invoice": "BK-366",
+      "matches": [
+        "IV-5433",
+        "IV-7563",
+        "IV-8406"
+      ]
+    },
+    {
+      "invoice": "BK-372",
+      "matches": [
+        "IV-4261",
+        "IV-4658",
+        "IV-5237"
+      ]
+    },
+    {
+      "invoice": "BK-426",
+      "matches": [
+        "IV-5635",
+        "IV-8042",
+        "IV-8665"
+      ]
+    },
+    {
+      "invoice": "BK-508",
+      "matches": [
+        "IV-5882",
+        "IV-7399",
+        "IV-9295"
+      ]
+    },
+    {
+      "invoice": "BK-671",
+      "matches": [
+        "IV-1656",
+        "IV-1977",
+        "IV-3735"
+      ]
+    },
+    {
+      "invoice": "BK-712",
+      "matches": [
+        "IV-5788",
+        "IV-6053",
+        "IV-6606"
+      ]
+    },
+    {
+      "invoice": "BK-716",
+      "matches": [
+        "IV-5154",
+        "IV-5265",
+        "IV-9493"
+      ]
+    },
+    {
+      "invoice": "BK-720",
+      "matches": [
+        "IV-2481",
+        "IV-6232",
+        "IV-8343"
+      ]
+    },
+    {
+      "invoice": "BK-984",
+      "matches": [
+        "IV-2866",
+        "IV-4025",
+        "IV-9446"
+      ]
+    }
+  ],
+  "lockbox-month-11": [
+    {
+      "invoice": "BK-1142",
+      "matches": [
+        "IV-24650",
+        "IV-43528",
+        "IV-58198"
+      ]
+    },
+    {
+      "invoice": "BK-1903",
+      "matches": [
+        "IV-51883",
+        "IV-53372",
+        "IV-61005"
+      ]
+    },
+    {
+      "invoice": "BK-2208",
+      "matches": [
+        "IV-73415",
+        "IV-82658",
+        "IV-92574"
+      ]
+    },
+    {
+      "invoice": "BK-2253",
+      "matches": [
+        "IV-30314",
+        "IV-55122",
+        "IV-75507"
+      ]
+    },
+    {
+      "invoice": "BK-2467",
+      "matches": [
+        "IV-20796",
+        "IV-30302",
+        "IV-34807"
+      ]
+    },
+    {
+      "invoice": "BK-2942",
+      "matches": [
+        "IV-36155",
+        "IV-46575",
+        "IV-83483"
+      ]
+    },
+    {
+      "invoice": "BK-3148",
+      "matches": [
+        "IV-30681",
+        "IV-60326",
+        "IV-73316"
+      ]
+    },
+    {
+      "invoice": "BK-3175",
+      "matches": [
+        "IV-33515",
+        "IV-53368",
+        "IV-78942"
+      ]
+    },
+    {
+      "invoice": "BK-3275",
+      "matches": [
+        "IV-44194",
+        "IV-68195",
+        "IV-72863"
+      ]
+    },
+    {
+      "invoice": "BK-3353",
+      "matches": [
+        "IV-38280",
+        "IV-57400",
+        "IV-68535"
+      ]
+    },
+    {
+      "invoice": "BK-4514",
+      "matches": [
+        "IV-16387",
+        "IV-32602",
+        "IV-58499"
+      ]
+    },
+    {
+      "invoice": "BK-4520",
+      "matches": [
+        "IV-43921",
+        "IV-47113",
+        "IV-66132"
+      ]
+    },
+    {
+      "invoice": "BK-4598",
+      "matches": [
+        "IV-39346",
+        "IV-47368",
+        "IV-72070"
+      ]
+    },
+    {
+      "invoice": "BK-4642",
+      "matches": [
+        "IV-17042",
+        "IV-71150",
+        "IV-89360"
+      ]
+    },
+    {
+      "invoice": "BK-4910",
+      "matches": [
+        "IV-27427",
+        "IV-35540",
+        "IV-66966"
+      ]
+    },
+    {
+      "invoice": "BK-5115",
+      "matches": [
+        "IV-45899",
+        "IV-98108",
+        "IV-99718"
+      ]
+    },
+    {
+      "invoice": "BK-5295",
+      "matches": [
+        "IV-39082",
+        "IV-46074",
+        "IV-78573"
+      ]
+    },
+    {
+      "invoice": "BK-5494",
+      "matches": [
+        "IV-38792",
+        "IV-67877",
+        "IV-81395"
+      ]
+    },
+    {
+      "invoice": "BK-5708",
+      "matches": [
+        "IV-15014",
+        "IV-27353",
+        "IV-86447"
+      ]
+    },
+    {
+      "invoice": "BK-5723",
+      "matches": [
+        "IV-10868",
+        "IV-30789",
+        "IV-68212"
+      ]
+    },
+    {
+      "invoice": "BK-5870",
+      "matches": [
+        "IV-35139",
+        "IV-62204",
+        "IV-64629"
+      ]
+    },
+    {
+      "invoice": "BK-6535",
+      "matches": [
+        "IV-37665",
+        "IV-53955",
+        "IV-60064"
+      ]
+    },
+    {
+      "invoice": "BK-6704",
+      "matches": [
+        "IV-27985",
+        "IV-71234",
+        "IV-84576"
+      ]
+    },
+    {
+      "invoice": "BK-6747",
+      "matches": [
+        "IV-11699",
+        "IV-47774",
+        "IV-58864"
+      ]
+    },
+    {
+      "invoice": "BK-6829",
+      "matches": [
+        "IV-81239",
+        "IV-83501",
+        "IV-87357"
+      ]
+    },
+    {
+      "invoice": "BK-6904",
+      "matches": [
+        "IV-38059",
+        "IV-68096",
+        "IV-80075"
+      ]
+    },
+    {
+      "invoice": "BK-7487",
+      "matches": [
+        "IV-27250",
+        "IV-35457",
+        "IV-56687"
+      ]
+    },
+    {
+      "invoice": "BK-7620",
+      "matches": [
+        "IV-52541",
+        "IV-95623",
+        "IV-96807"
+      ]
+    },
+    {
+      "invoice": "BK-7696",
+      "matches": [
+        "IV-63083",
+        "IV-64557",
+        "IV-72076"
+      ]
+    },
+    {
+      "invoice": "BK-7788",
+      "matches": [
+        "IV-22009",
+        "IV-41313",
+        "IV-91588"
+      ]
+    },
+    {
+      "invoice": "BK-7915",
+      "matches": [
+        "IV-64376",
+        "IV-74678",
+        "IV-80565"
+      ]
+    },
+    {
+      "invoice": "BK-8032",
+      "matches": [
+        "IV-38297",
+        "IV-93842",
+        "IV-99331"
+      ]
+    },
+    {
+      "invoice": "BK-8322",
+      "matches": [
+        "IV-31598",
+        "IV-38006",
+        "IV-68402"
+      ]
+    },
+    {
+      "invoice": "BK-9071",
+      "matches": [
+        "IV-34576",
+        "IV-65341",
+        "IV-91104"
+      ]
+    },
+    {
+      "invoice": "BK-9600",
+      "matches": [
+        "IV-17441",
+        "IV-65477",
+        "IV-89954"
+      ]
+    },
+    {
+      "invoice": "BK-9813",
+      "matches": [
+        "IV-15199",
+        "IV-48713",
+        "IV-96316"
+      ]
+    }
+  ],
+  "lockbox-month-23": [
+    {
+      "invoice": "BK-1103",
+      "matches": [
+        "IV-18612",
+        "IV-25720",
+        "IV-52475"
+      ]
+    },
+    {
+      "invoice": "BK-1306",
+      "matches": [
+        "IV-17298",
+        "IV-44373",
+        "IV-62395"
+      ]
+    },
+    {
+      "invoice": "BK-1554",
+      "matches": [
+        "IV-17135",
+        "IV-72130",
+        "IV-81390"
+      ]
+    },
+    {
+      "invoice": "BK-1584",
+      "matches": [
+        "IV-23056",
+        "IV-38092",
+        "IV-42533"
+      ]
+    },
+    {
+      "invoice": "BK-1722",
+      "matches": [
+        "IV-40871",
+        "IV-51443",
+        "IV-75428"
+      ]
+    },
+    {
+      "invoice": "BK-2025",
+      "matches": [
+        "IV-18175",
+        "IV-51138",
+        "IV-71375"
+      ]
+    },
+    {
+      "invoice": "BK-2062",
+      "matches": [
+        "IV-18314",
+        "IV-44122",
+        "IV-96386"
+      ]
+    },
+    {
+      "invoice": "BK-2894",
+      "matches": [
+        "IV-23159",
+        "IV-61788",
+        "IV-67172"
+      ]
+    },
+    {
+      "invoice": "BK-2922",
+      "matches": [
+        "IV-43920",
+        "IV-77914",
+        "IV-97956"
+      ]
+    },
+    {
+      "invoice": "BK-2925",
+      "matches": [
+        "IV-38534",
+        "IV-74641",
+        "IV-81556"
+      ]
+    },
+    {
+      "invoice": "BK-3108",
+      "matches": [
+        "IV-26459",
+        "IV-38992",
+        "IV-94013"
+      ]
+    },
+    {
+      "invoice": "BK-3247",
+      "matches": [
+        "IV-22342",
+        "IV-30611",
+        "IV-54674"
+      ]
+    },
+    {
+      "invoice": "BK-3433",
+      "matches": [
+        "IV-21149",
+        "IV-48664",
+        "IV-52292"
+      ]
+    },
+    {
+      "invoice": "BK-3612",
+      "matches": [
+        "IV-33841",
+        "IV-59712",
+        "IV-64711"
+      ]
+    },
+    {
+      "invoice": "BK-3875",
+      "matches": [
+        "IV-28532",
+        "IV-58201",
+        "IV-96232"
+      ]
+    },
+    {
+      "invoice": "BK-4061",
+      "matches": [
+        "IV-23212",
+        "IV-51568",
+        "IV-81251"
+      ]
+    },
+    {
+      "invoice": "BK-4137",
+      "matches": [
+        "IV-22739",
+        "IV-49736",
+        "IV-79912"
+      ]
+    },
+    {
+      "invoice": "BK-4364",
+      "matches": [
+        "IV-30693",
+        "IV-48359",
+        "IV-98517"
+      ]
+    },
+    {
+      "invoice": "BK-4497",
+      "matches": [
+        "IV-11842",
+        "IV-82200",
+        "IV-84017"
+      ]
+    },
+    {
+      "invoice": "BK-5032",
+      "matches": [
+        "IV-23351",
+        "IV-35218",
+        "IV-48338"
+      ]
+    },
+    {
+      "invoice": "BK-5782",
+      "matches": [
+        "IV-57168",
+        "IV-76069",
+        "IV-82275"
+      ]
+    },
+    {
+      "invoice": "BK-6223",
+      "matches": [
+        "IV-28016",
+        "IV-34155",
+        "IV-56071"
+      ]
+    },
+    {
+      "invoice": "BK-6356",
+      "matches": [
+        "IV-11492",
+        "IV-31027",
+        "IV-61191"
+      ]
+    },
+    {
+      "invoice": "BK-6387",
+      "matches": [
+        "IV-62201",
+        "IV-83300",
+        "IV-93083"
+      ]
+    },
+    {
+      "invoice": "BK-6558",
+      "matches": [
+        "IV-51749",
+        "IV-77896",
+        "IV-79894"
+      ]
+    },
+    {
+      "invoice": "BK-6879",
+      "matches": [
+        "IV-48496",
+        "IV-56765",
+        "IV-69348"
+      ]
+    },
+    {
+      "invoice": "BK-7001",
+      "matches": [
+        "IV-48327",
+        "IV-69570",
+        "IV-72849"
+      ]
+    },
+    {
+      "invoice": "BK-7051",
+      "matches": [
+        "IV-33822",
+        "IV-46713",
+        "IV-81227"
+      ]
+    },
+    {
+      "invoice": "BK-7460",
+      "matches": [
+        "IV-30691",
+        "IV-39202",
+        "IV-47487"
+      ]
+    },
+    {
+      "invoice": "BK-7553",
+      "matches": [
+        "IV-56817",
+        "IV-63268",
+        "IV-84677"
+      ]
+    },
+    {
+      "invoice": "BK-8191",
+      "matches": [
+        "IV-30135",
+        "IV-38664",
+        "IV-53623"
+      ]
+    },
+    {
+      "invoice": "BK-8503",
+      "matches": [
+        "IV-12985",
+        "IV-61480",
+        "IV-62510"
+      ]
+    },
+    {
+      "invoice": "BK-8542",
+      "matches": [
+        "IV-14655",
+        "IV-37200",
+        "IV-64617"
+      ]
+    },
+    {
+      "invoice": "BK-8825",
+      "matches": [
+        "IV-65393",
+        "IV-81362",
+        "IV-88037"
+      ]
+    },
+    {
+      "invoice": "BK-9127",
+      "matches": [
+        "IV-22048",
+        "IV-42534",
+        "IV-73596"
+      ]
+    },
+    {
+      "invoice": "BK-9764",
+      "matches": [
+        "IV-67444",
+        "IV-71562",
+        "IV-83687"
+      ]
+    }
   ]
 }

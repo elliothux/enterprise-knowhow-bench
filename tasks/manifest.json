@@ -971,5 +971,171 @@
     "resources": {
       "rules": "tasks/materials/policy-5fc40debeb27.txt"
     }
+  },
+  "close-118": {
+    "group": "month-end",
+    "type": "native-cash-batch",
+    "prompt": "tasks/close-118/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/attachment-132e238be20d.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/month-end/close-118"
+  },
+  "close-204": {
+    "group": "month-end",
+    "type": "native-cash-batch",
+    "prompt": "tasks/close-204/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/attachment-132e238be20d.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/month-end/close-204"
+  },
+  "net-31": {
+    "group": "joint-close",
+    "type": "cross-ledger",
+    "prompt": "tasks/net-31/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/joint-close-glm.txt",
+      "D": "tasks/materials/joint-close-deepseek.txt"
+    },
+    "resources": {
+      "rules": "mock/joint-close/net-31/current-registers.txt",
+      "invoices-history": "mock/joint-close/prior-shifts.txt"
+    }
+  },
+  "net-42": {
+    "group": "joint-close",
+    "type": "cross-ledger",
+    "prompt": "tasks/net-42/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/joint-close-glm.txt",
+      "D": "tasks/materials/joint-close-deepseek.txt"
+    },
+    "resources": {
+      "rules": "mock/joint-close/net-42/current-registers.txt",
+      "invoices-history": "mock/joint-close/prior-shifts.txt"
+    }
+  },
+  "cutoff-19": {
+    "group": "cutoff",
+    "type": "cutoff-cash",
+    "prompt": "tasks/cutoff-19/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/attachment-132e238be20d.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
+    },
+    "resources": {
+      "rules": "mock/cutoff/cutoff-19/status-and-ledgers.txt",
+      "invoices-history": "mock/remittances/prior-postings.txt"
+    }
+  },
+  "cutoff-27": {
+    "group": "cutoff",
+    "type": "cutoff-cash",
+    "prompt": "tasks/cutoff-27/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/attachment-132e238be20d.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
+    },
+    "resources": {
+      "rules": "mock/cutoff/cutoff-27/status-and-ledgers.txt",
+      "invoices-history": "mock/remittances/prior-postings.txt"
+    }
+  },
+  "pod-47": {
+    "group": "pod-inspection",
+    "type": "damage-inspection",
+    "prompt": "tasks/pod-47/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/attachment-132e238be20d.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
+    },
+    "resources": {},
+    "images": [
+      "mock/pod-inspection/pod-47/North.png",
+      "mock/pod-inspection/pod-47/South.png"
+    ]
+  },
+  "pod-83": {
+    "group": "pod-inspection",
+    "type": "damage-inspection",
+    "prompt": "tasks/pod-83/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/attachment-132e238be20d.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
+    },
+    "resources": {},
+    "images": [
+      "mock/pod-inspection/pod-83/North.png",
+      "mock/pod-inspection/pod-83/South.png"
+    ]
+  },
+  "lockbox-41": {
+    "group": "lockbox",
+    "type": "lockbox",
+    "prompt": "tasks/lockbox-41/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/lockbox-glm.txt",
+      "D": "tasks/materials/lockbox-deepseek.txt"
+    },
+    "resources": {
+      "rules": "mock/lockbox/lockbox-41/ledger.txt",
+      "invoices-history": "mock/lockbox/lockbox-41/erp-suggestions.txt"
+    }
+  },
+  "lockbox-76": {
+    "group": "lockbox",
+    "type": "lockbox",
+    "prompt": "tasks/lockbox-76/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/lockbox-glm.txt",
+      "D": "tasks/materials/lockbox-deepseek.txt"
+    },
+    "resources": {
+      "rules": "mock/lockbox/lockbox-76/ledger.txt",
+      "invoices-history": "mock/lockbox/lockbox-76/erp-suggestions.txt"
+    }
+  },
+  "lockbox-month-11": {
+    "group": "monthly-lockbox",
+    "type": "lockbox",
+    "prompt": "tasks/lockbox-month-11/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/lockbox-glm.txt",
+      "D": "tasks/materials/lockbox-deepseek.txt"
+    },
+    "resources": {
+      "rules": "mock/lockbox/lockbox-month-11/ledger.txt",
+      "invoices-history": "mock/lockbox/lockbox-month-11/erp-suggestions.txt"
+    }
+  },
+  "lockbox-month-23": {
+    "group": "monthly-lockbox",
+    "type": "lockbox",
+    "prompt": "tasks/lockbox-month-23/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/lockbox-glm.txt",
+      "D": "tasks/materials/lockbox-deepseek.txt"
+    },
+    "resources": {
+      "rules": "mock/lockbox/lockbox-month-23/ledger.txt",
+      "invoices-history": "mock/lockbox/lockbox-month-23/erp-suggestions.txt"
+    }
   }
 }

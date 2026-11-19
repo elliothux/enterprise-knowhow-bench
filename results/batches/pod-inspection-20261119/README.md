@@ -1,0 +1,3 @@
+# Scanned proof-of-delivery claims
+
+Each case had two signed dock diagrams with 60 marked pallet positions, four superseding supervisor corrections and eight invoice lines. All three arms processed both shifts with eight fully correct claim instructions on each. The six first receipts are retained because this template did not distinguish the tested conditions. The operator saw the legible raster diagrams as image inputs and could inspect the assigned images. Transfers used damaged quantities, replacement cost, shortfall and carrier reserves. [Six-session index](index.json) · [First shift](pod-47/history.json) · [Second shift](pod-83/history.json) · [Participant instructions](../../../tasks/pod-47/TASK.md)

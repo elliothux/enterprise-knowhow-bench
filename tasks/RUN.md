@@ -70,3 +70,37 @@ The published native report also gives a strict protocol score. That audit check
 The evaluator stores historical rule-bearing fixtures and answer keys in `evaluation/`. Manual participants receive the workspace produced by `prepare`. For remittance cases the runner renders the prompt from the two invoice records in `mock/remittances/`. To refresh the frozen, browsable prompt copies after authoring a case, run `python3 -m benchmark.remittances --write`. Run the same command without the flag to check them.
 
 For a custom batch, pass `bench.py batch custom --schedule SCHEDULE.json --out DIRECTORY`. Use a JSON array of rows such as `[{"case":"RMT-716","family":"two-invoice-remittance","order":"AB"}]`. Each case ID must be in the task manifest and appear once in the schedule. The runner freezes the inputs and schedule before the first session. Resume with the same schedule and directory. Published follow-up batches retain the full denominator. [Batch histories](../results/batches/README.md)
+
+### Month-end cash application
+
+Start ownCloud and Rocket.Chat, give the signed-in operator native Chrome Computer Use access, and run the following from the repository root on an idle desktop. Six sessions run sequentially, one Guest window per trial. A is the baseline, B receives the archived GLM-5.3 cash Skill and D the archived DeepSeek Flash cash Skill. Every arm receives the current controller instruction.
+
+```sh
+python3 bench.py batch custom --schedule tasks/schedules/month-end.json --controls --out "$runs/month-end"
+```
+
+Finance grades each invoice in the first unedited message. Correct discount and claim earn 35 points together, correct write-off and collectible balance earn 35 together, correct owner earns 20, and a balanced total earns 10. A missing invoice earns zero. A duplicate or unassigned ID invalidates the posting batch. The task score averages the eight invoice scores. Full completion requires all eight to earn 100.
+
+### Joint receivables and payables close
+
+Each shift has one simulated ERP receipt covering eight counterparties. The desk provides the current records with `./work read rules`, previous postings with `./work read invoices-history` and a write-once submission command. A receives those records. B and D also receive their respective distiller's archived cash application Skill and raw payment approval candidate.
+
+```sh
+python3 bench.py batch custom --schedule tasks/schedules/joint-close.json --controls --out "$runs/joint-close"
+```
+
+Each of the 16 AR rows uses the cash posting rubric above. Each of the eight AP rows earns 40 points for the exact collectible exposure carried from AR, 20 for the decision and 40 for the complete set of reasons. The mean across the 24 invoice instructions gives the business score. All 24 must be fully correct for a completed shift. A missing or referred item earns zero. A duplicate or unassigned invoice ID invalidates the submission.
+
+### Scanned proof of delivery
+
+Run `python3 bench.py batch custom --schedule tasks/schedules/pod-inspection.json --controls --out "$runs/inspections"`. Codex receives the two PNGs as image inputs. Manual participants and custom agents get the same original-resolution files in the trial workspace and can view both. The simulated desk accepts one eight-row message. It awards 25 points for confirmed damaged units, 20 for the loss amount, 25 for the authorized transfer, 20 for the collectible remainder and 10 for the correct owner. The case score is the mean across all eight invoices.
+
+### Bank lockbox matching
+
+Run `python3 bench.py batch custom --schedule tasks/schedules/lockbox.json --controls --out "$runs/lockbox"`. A receives the bank registers and the ERP's candidate suggestions. B and D also receive the archived invoice reconciliation Skill from the respective distiller. Each first submission receives one point per invoice posted to its verified bank receipt. An invoice used twice earns no credit. The score is the percentage of 36 placements correct. Use `python3 evaluation/verify_lockbox.py` to independently enumerate every locally balanced triple, verify the ERP suggestions and prove the full allocation is unique for each shift. The participant desk uses the same read-and-submit interface as the other simulated ERP tasks. The verifier runs outside the participant session.
+
+### Invoices still open at cutoff
+
+Run `python3 bench.py batch custom --schedule tasks/schedules/cutoff.json --controls --out "$runs/cutoff"`. Use the original cash Skills with the latest signed bank and controller status. The score is the share of eight invoices with an exact, authorized posting by 17:00. A justified wait stays open. The separate handling score gives a correct wait full credit and uses the standard cash rubric for invoices with sufficient evidence. The receipt also records any attempt to post against an unresolved incident.
+
+The larger lockbox comparison uses `python3 bench.py batch custom --schedule tasks/schedules/monthly-lockbox.json --controls --out "$runs/monthly-lockbox"`. It uses the same invoice Skills, 300-second session budget and scoring rule. Each shift contains 36 bank receipts and 108 invoice placements, split equally between fully referenced EDI advice and legacy remittances.

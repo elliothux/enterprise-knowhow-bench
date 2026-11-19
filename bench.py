@@ -65,6 +65,8 @@ def prepare(args):
         (work/'work').chmod(0o755)
         for name, source in task['resources'].items():
             shutil.copyfile(ROOT/source, work/(name+'.txt'))
+    for image in task.get('images', []):
+        shutil.copyfile(ROOT/image, work/Path(image).name)
     attachment = task['arms'][args.arm]
     if attachment:
         prompt += (ROOT/attachment).read_text()
@@ -132,6 +134,9 @@ def execute(args):
         raise ValueError(f'Agent executable not found: {cmd[0]}')
     run=prepare(args)
     cwd=run/'work'
+    if not args.agent:
+        for image in TASKS[args.case].get('images', []):
+            cmd[-1:-1] = ['-i', str(cwd/Path(image).name)]
     limit=600 if TASKS[args.case]['type'].startswith('native-') else 300
     env={k:v for k,v in os.environ.items() if not k.startswith(('CODEX_THREAD','CODEX_SESSION','CODEX_INTERNAL_ORIGINATOR','CODEX_APP_TOOLS_'))}
     start=time.monotonic()

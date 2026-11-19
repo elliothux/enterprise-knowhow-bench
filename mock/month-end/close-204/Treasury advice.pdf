@@ -1,0 +1,51 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [4 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 5 0 R >>
+endobj
+5 0 obj
+<< /Length 354 >>
+stream
+BT /F1 10 Tf 13 TL 40 800 Td
+(Bank postings / value date today / amounts applied to invoices) Tj
+T*
+(I-8250 wire SGD 593.78) Tj
+T*
+(I-8281 wire SGD 873.96) Tj
+T*
+(I-8294 wire SGD 703.97) Tj
+T*
+(I-8215 wire SGD 918.14) Tj
+T*
+(I-8276 wire SGD 848.78) Tj
+T*
+(I-8244 wire SGD 1131.04) Tj
+T*
+(I-8237 wire SGD 1004.67) Tj
+T*
+(I-8263 wire SGD 1307.27) Tj
+T*
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000185 00000 n 
+0000000311 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+715
+%%EOF

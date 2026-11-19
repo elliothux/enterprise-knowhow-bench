@@ -1,0 +1,14 @@
+[
+  {
+    "case": "lockbox-month-11",
+    "family": "monthly-lockbox",
+    "order": "AB",
+    "control": "D"
+  },
+  {
+    "case": "lockbox-month-23",
+    "family": "monthly-lockbox",
+    "order": "BA",
+    "control": "D"
+  }
+]

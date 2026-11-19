@@ -1,0 +1,81 @@
+{
+  "skills": {
+    "B": {
+      "source_file": "tasks/materials/lockbox-glm.txt",
+      "evaluated_sha256": "b272e8ea934362508efe0b7688fae3f415ad2ba18db71f63574f094f55c37b17",
+      "public_sha256": "b272e8ea934362508efe0b7688fae3f415ad2ba18db71f63574f094f55c37b17"
+    },
+    "D": {
+      "source_file": "tasks/materials/lockbox-deepseek.txt",
+      "evaluated_sha256": "88a2e34f8a778e8549c62fdec7f91fde1dcfdda6fff3f7c69f0c2baf261de1e6",
+      "public_sha256": "88a2e34f8a778e8549c62fdec7f91fde1dcfdda6fff3f7c69f0c2baf261de1e6"
+    }
+  },
+  "cases": {
+    "lockbox-month-11": {
+      "A": {
+        "score": 50.0,
+        "fully_correct_invoices": 18,
+        "exact": false,
+        "valid_delivery": true
+      },
+      "B": {
+        "score": 50.0,
+        "fully_correct_invoices": 18,
+        "exact": false,
+        "valid_delivery": true
+      },
+      "D": {
+        "score": 50.0,
+        "fully_correct_invoices": 18,
+        "exact": false,
+        "valid_delivery": true
+      }
+    },
+    "lockbox-month-23": {
+      "B": {
+        "score": 52.77777777777778,
+        "fully_correct_invoices": 19,
+        "exact": false,
+        "valid_delivery": true
+      },
+      "A": {
+        "score": 52.77777777777778,
+        "fully_correct_invoices": 19,
+        "exact": false,
+        "valid_delivery": true
+      },
+      "D": {
+        "score": 52.77777777777778,
+        "fully_correct_invoices": 19,
+        "exact": false,
+        "valid_delivery": true
+      }
+    }
+  },
+  "schedule": [
+    {
+      "case": "lockbox-month-11",
+      "family": "monthly-lockbox",
+      "order": "AB",
+      "control": "D"
+    },
+    {
+      "case": "lockbox-month-23",
+      "family": "monthly-lockbox",
+      "order": "BA",
+      "control": "D"
+    }
+  ],
+  "assigned_sessions": 6,
+  "model": "gpt-6.1-terra",
+  "reasoning": "high",
+  "limit_seconds": 300,
+  "environment": {
+    "os": "macOS-26.4-arm64-arm-64bit",
+    "architecture": "arm64",
+    "python": "3.12.16"
+  },
+  "plan_sha256": "0d7598df6235aadb3175d4c13294128eeed1c5dfcb4e23b5bb5f77f022aeb9ed",
+  "freeze_sha256": "cd4604785ba2bc7e70500dad585063ed604c0940338306a3a8b71ed676ec4d16"
+}

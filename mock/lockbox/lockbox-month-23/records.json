@@ -1,0 +1,798 @@
+{
+  "receivables": {
+    "IV-11492": {
+      "face": 73350,
+      "credit": 0,
+      "payer": "EdiCo"
+    },
+    "IV-11842": {
+      "face": 63175,
+      "credit": 250,
+      "payer": "LegacyCo"
+    },
+    "IV-12985": {
+      "face": 69850,
+      "credit": 1675,
+      "payer": "LegacyCo"
+    },
+    "IV-14655": {
+      "face": 58025,
+      "credit": 1050,
+      "payer": "EdiCo"
+    },
+    "IV-17135": {
+      "face": 63100,
+      "credit": 775,
+      "payer": "LegacyCo"
+    },
+    "IV-17298": {
+      "face": 73150,
+      "credit": 625,
+      "payer": "LegacyCo"
+    },
+    "IV-18175": {
+      "face": 66775,
+      "credit": 775,
+      "payer": "LegacyCo"
+    },
+    "IV-18314": {
+      "face": 65875,
+      "credit": 250,
+      "payer": "EdiCo"
+    },
+    "IV-18612": {
+      "face": 60675,
+      "credit": 250,
+      "payer": "LegacyCo"
+    },
+    "IV-21149": {
+      "face": 51275,
+      "credit": 0,
+      "payer": "EdiCo"
+    },
+    "IV-22048": {
+      "face": 63200,
+      "credit": 775,
+      "payer": "LegacyCo"
+    },
+    "IV-22342": {
+      "face": 70050,
+      "credit": 0,
+      "payer": "LegacyCo"
+    },
+    "IV-22739": {
+      "face": 56500,
+      "credit": 250,
+      "payer": "EdiCo"
+    },
+    "IV-23056": {
+      "face": 55800,
+      "credit": 625,
+      "payer": "EdiCo"
+    },
+    "IV-23159": {
+      "face": 74175,
+      "credit": 1050,
+      "payer": "LegacyCo"
+    },
+    "IV-23212": {
+      "face": 73750,
+      "credit": 775,
+      "payer": "LegacyCo"
+    },
+    "IV-23351": {
+      "face": 72750,
+      "credit": 0,
+      "payer": "EdiCo"
+    },
+    "IV-25720": {
+      "face": 59525,
+      "credit": 775,
+      "payer": "LegacyCo"
+    },
+    "IV-26459": {
+      "face": 58475,
+      "credit": 250,
+      "payer": "EdiCo"
+    },
+    "IV-28016": {
+      "face": 66975,
+      "credit": 1675,
+      "payer": "LegacyCo"
+    },
+    "IV-28532": {
+      "face": 50975,
+      "credit": 0,
+      "payer": "LegacyCo"
+    },
+    "IV-30135": {
+      "face": 67050,
+      "credit": 1050,
+      "payer": "EdiCo"
+    },
+    "IV-30611": {
+      "face": 65225,
+      "credit": 775,
+      "payer": "LegacyCo"
+    },
+    "IV-30691": {
+      "face": 53550,
+      "credit": 1050,
+      "payer": "LegacyCo"
+    },
+    "IV-30693": {
+      "face": 63375,
+      "credit": 0,
+      "payer": "EdiCo"
+    },
+    "IV-31027": {
+      "face": 62800,
+      "credit": 1675,
+      "payer": "EdiCo"
+    },
+    "IV-33822": {
+      "face": 67475,
+      "credit": 1050,
+      "payer": "LegacyCo"
+    },
+    "IV-33841": {
+      "face": 54500,
+      "credit": 775,
+      "payer": "EdiCo"
+    },
+    "IV-34155": {
+      "face": 69950,
+      "credit": 250,
+      "payer": "LegacyCo"
+    },
+    "IV-35218": {
+      "face": 55700,
+      "credit": 625,
+      "payer": "EdiCo"
+    },
+    "IV-37200": {
+      "face": 61350,
+      "credit": 1050,
+      "payer": "EdiCo"
+    },
+    "IV-38092": {
+      "face": 60450,
+      "credit": 250,
+      "payer": "EdiCo"
+    },
+    "IV-38534": {
+      "face": 68825,
+      "credit": 0,
+      "payer": "EdiCo"
+    },
+    "IV-38664": {
+      "face": 61175,
+      "credit": 0,
+      "payer": "EdiCo"
+    },
+    "IV-38992": {
+      "face": 73400,
+      "credit": 250,
+      "payer": "EdiCo"
+    },
+    "IV-39202": {
+      "face": 61925,
+      "credit": 1675,
+      "payer": "LegacyCo"
+    },
+    "IV-40871": {
+      "face": 58425,
+      "credit": 625,
+      "payer": "EdiCo"
+    },
+    "IV-42533": {
+      "face": 63900,
+      "credit": 775,
+      "payer": "EdiCo"
+    },
+    "IV-42534": {
+      "face": 61450,
+      "credit": 625,
+      "payer": "LegacyCo"
+    },
+    "IV-43920": {
+      "face": 61750,
+      "credit": 1050,
+      "payer": "EdiCo"
+    },
+    "IV-44122": {
+      "face": 72575,
+      "credit": 1675,
+      "payer": "EdiCo"
+    },
+    "IV-44373": {
+      "face": 65925,
+      "credit": 775,
+      "payer": "LegacyCo"
+    },
+    "IV-46713": {
+      "face": 64500,
+      "credit": 1050,
+      "payer": "LegacyCo"
+    },
+    "IV-47487": {
+      "face": 66800,
+      "credit": 0,
+      "payer": "LegacyCo"
+    },
+    "IV-48327": {
+      "face": 55275,
+      "credit": 775,
+      "payer": "EdiCo"
+    },
+    "IV-48338": {
+      "face": 57475,
+      "credit": 250,
+      "payer": "EdiCo"
+    },
+    "IV-48359": {
+      "face": 51575,
+      "credit": 625,
+      "payer": "EdiCo"
+    },
+    "IV-48496": {
+      "face": 54550,
+      "credit": 1675,
+      "payer": "LegacyCo"
+    },
+    "IV-48664": {
+      "face": 60300,
+      "credit": 1050,
+      "payer": "EdiCo"
+    },
+    "IV-49736": {
+      "face": 53900,
+      "credit": 775,
+      "payer": "EdiCo"
+    },
+    "IV-51138": {
+      "face": 65775,
+      "credit": 1675,
+      "payer": "LegacyCo"
+    },
+    "IV-51443": {
+      "face": 67225,
+      "credit": 775,
+      "payer": "EdiCo"
+    },
+    "IV-51568": {
+      "face": 60075,
+      "credit": 1050,
+      "payer": "LegacyCo"
+    },
+    "IV-51749": {
+      "face": 53650,
+      "credit": 1675,
+      "payer": "LegacyCo"
+    },
+    "IV-52292": {
+      "face": 66050,
+      "credit": 1675,
+      "payer": "EdiCo"
+    },
+    "IV-52475": {
+      "face": 50500,
+      "credit": 0,
+      "payer": "LegacyCo"
+    },
+    "IV-53623": {
+      "face": 57125,
+      "credit": 1050,
+      "payer": "EdiCo"
+    },
+    "IV-54674": {
+      "face": 72175,
+      "credit": 625,
+      "payer": "LegacyCo"
+    },
+    "IV-56071": {
+      "face": 68975,
+      "credit": 0,
+      "payer": "LegacyCo"
+    },
+    "IV-56765": {
+      "face": 56350,
+      "credit": 250,
+      "payer": "LegacyCo"
+    },
+    "IV-56817": {
+      "face": 73000,
+      "credit": 775,
+      "payer": "EdiCo"
+    },
+    "IV-57168": {
+      "face": 68400,
+      "credit": 250,
+      "payer": "EdiCo"
+    },
+    "IV-58201": {
+      "face": 52825,
+      "credit": 1675,
+      "payer": "LegacyCo"
+    },
+    "IV-59712": {
+      "face": 51500,
+      "credit": 625,
+      "payer": "EdiCo"
+    },
+    "IV-61191": {
+      "face": 54825,
+      "credit": 1050,
+      "payer": "EdiCo"
+    },
+    "IV-61480": {
+      "face": 61075,
+      "credit": 1050,
+      "payer": "LegacyCo"
+    },
+    "IV-61788": {
+      "face": 65875,
+      "credit": 775,
+      "payer": "LegacyCo"
+    },
+    "IV-62201": {
+      "face": 53600,
+      "credit": 625,
+      "payer": "LegacyCo"
+    },
+    "IV-62395": {
+      "face": 70300,
+      "credit": 1675,
+      "payer": "LegacyCo"
+    },
+    "IV-62510": {
+      "face": 53050,
+      "credit": 250,
+      "payer": "LegacyCo"
+    },
+    "IV-63268": {
+      "face": 58800,
+      "credit": 625,
+      "payer": "EdiCo"
+    },
+    "IV-64617": {
+      "face": 74825,
+      "credit": 625,
+      "payer": "EdiCo"
+    },
+    "IV-64711": {
+      "face": 58625,
+      "credit": 625,
+      "payer": "EdiCo"
+    },
+    "IV-65393": {
+      "face": 61175,
+      "credit": 1050,
+      "payer": "EdiCo"
+    },
+    "IV-67172": {
+      "face": 52350,
+      "credit": 0,
+      "payer": "LegacyCo"
+    },
+    "IV-67444": {
+      "face": 68150,
+      "credit": 1050,
+      "payer": "LegacyCo"
+    },
+    "IV-69348": {
+      "face": 71150,
+      "credit": 0,
+      "payer": "LegacyCo"
+    },
+    "IV-69570": {
+      "face": 69175,
+      "credit": 1050,
+      "payer": "EdiCo"
+    },
+    "IV-71375": {
+      "face": 52200,
+      "credit": 775,
+      "payer": "LegacyCo"
+    },
+    "IV-71562": {
+      "face": 54100,
+      "credit": 625,
+      "payer": "LegacyCo"
+    },
+    "IV-72130": {
+      "face": 51500,
+      "credit": 250,
+      "payer": "LegacyCo"
+    },
+    "IV-72849": {
+      "face": 65775,
+      "credit": 625,
+      "payer": "EdiCo"
+    },
+    "IV-73596": {
+      "face": 57500,
+      "credit": 250,
+      "payer": "LegacyCo"
+    },
+    "IV-74641": {
+      "face": 68050,
+      "credit": 250,
+      "payer": "EdiCo"
+    },
+    "IV-75428": {
+      "face": 69025,
+      "credit": 625,
+      "payer": "EdiCo"
+    },
+    "IV-76069": {
+      "face": 62675,
+      "credit": 250,
+      "payer": "EdiCo"
+    },
+    "IV-77896": {
+      "face": 54500,
+      "credit": 775,
+      "payer": "LegacyCo"
+    },
+    "IV-77914": {
+      "face": 63300,
+      "credit": 1675,
+      "payer": "EdiCo"
+    },
+    "IV-79894": {
+      "face": 53500,
+      "credit": 0,
+      "payer": "LegacyCo"
+    },
+    "IV-79912": {
+      "face": 53450,
+      "credit": 625,
+      "payer": "EdiCo"
+    },
+    "IV-81227": {
+      "face": 71875,
+      "credit": 1675,
+      "payer": "LegacyCo"
+    },
+    "IV-81251": {
+      "face": 67150,
+      "credit": 250,
+      "payer": "LegacyCo"
+    },
+    "IV-81362": {
+      "face": 71675,
+      "credit": 0,
+      "payer": "EdiCo"
+    },
+    "IV-81390": {
+      "face": 54075,
+      "credit": 1675,
+      "payer": "LegacyCo"
+    },
+    "IV-81556": {
+      "face": 73175,
+      "credit": 0,
+      "payer": "EdiCo"
+    },
+    "IV-82200": {
+      "face": 69750,
+      "credit": 625,
+      "payer": "LegacyCo"
+    },
+    "IV-82275": {
+      "face": 73075,
+      "credit": 250,
+      "payer": "EdiCo"
+    },
+    "IV-83300": {
+      "face": 72200,
+      "credit": 0,
+      "payer": "LegacyCo"
+    },
+    "IV-83687": {
+      "face": 70275,
+      "credit": 775,
+      "payer": "LegacyCo"
+    },
+    "IV-84017": {
+      "face": 70725,
+      "credit": 1050,
+      "payer": "LegacyCo"
+    },
+    "IV-84677": {
+      "face": 67025,
+      "credit": 775,
+      "payer": "EdiCo"
+    },
+    "IV-88037": {
+      "face": 55825,
+      "credit": 0,
+      "payer": "EdiCo"
+    },
+    "IV-93083": {
+      "face": 57350,
+      "credit": 775,
+      "payer": "LegacyCo"
+    },
+    "IV-94013": {
+      "face": 62625,
+      "credit": 775,
+      "payer": "EdiCo"
+    },
+    "IV-96232": {
+      "face": 54725,
+      "credit": 625,
+      "payer": "LegacyCo"
+    },
+    "IV-96386": {
+      "face": 56375,
+      "credit": 1050,
+      "payer": "EdiCo"
+    },
+    "IV-97956": {
+      "face": 61650,
+      "credit": 250,
+      "payer": "EdiCo"
+    },
+    "IV-98517": {
+      "face": 56950,
+      "credit": 775,
+      "payer": "EdiCo"
+    }
+  },
+  "receipts": {
+    "BK-1103": {
+      "cents": 169675,
+      "confirmed_refs": [],
+      "payer": "LegacyCo"
+    },
+    "BK-1306": {
+      "cents": 206300,
+      "confirmed_refs": [],
+      "payer": "LegacyCo"
+    },
+    "BK-1554": {
+      "cents": 165975,
+      "confirmed_refs": [],
+      "payer": "LegacyCo"
+    },
+    "BK-1584": {
+      "cents": 178500,
+      "confirmed_refs": [
+        "IV-23056",
+        "IV-38092",
+        "IV-42533"
+      ],
+      "payer": "EdiCo"
+    },
+    "BK-1722": {
+      "cents": 192650,
+      "confirmed_refs": [
+        "IV-40871",
+        "IV-51443",
+        "IV-75428"
+      ],
+      "payer": "EdiCo"
+    },
+    "BK-2025": {
+      "cents": 181525,
+      "confirmed_refs": [],
+      "payer": "LegacyCo"
+    },
+    "BK-2062": {
+      "cents": 191850,
+      "confirmed_refs": [
+        "IV-18314",
+        "IV-44122",
+        "IV-96386"
+      ],
+      "payer": "EdiCo"
+    },
+    "BK-2894": {
+      "cents": 190575,
+      "confirmed_refs": [],
+      "payer": "LegacyCo"
+    },
+    "BK-2922": {
+      "cents": 183725,
+      "confirmed_refs": [
+        "IV-43920",
+        "IV-77914",
+        "IV-97956"
+      ],
+      "payer": "EdiCo"
+    },
+    "BK-2925": {
+      "cents": 209800,
+      "confirmed_refs": [
+        "IV-38534",
+        "IV-74641",
+        "IV-81556"
+      ],
+      "payer": "EdiCo"
+    },
+    "BK-3108": {
+      "cents": 193225,
+      "confirmed_refs": [
+        "IV-26459",
+        "IV-38992",
+        "IV-94013"
+      ],
+      "payer": "EdiCo"
+    },
+    "BK-3247": {
+      "cents": 206050,
+      "confirmed_refs": [],
+      "payer": "LegacyCo"
+    },
+    "BK-3433": {
+      "cents": 174900,
+      "confirmed_refs": [
+        "IV-21149",
+        "IV-48664",
+        "IV-52292"
+      ],
+      "payer": "EdiCo"
+    },
+    "BK-3612": {
+      "cents": 162600,
+      "confirmed_refs": [
+        "IV-33841",
+        "IV-59712",
+        "IV-64711"
+      ],
+      "payer": "EdiCo"
+    },
+    "BK-3875": {
+      "cents": 156225,
+      "confirmed_refs": [],
+      "payer": "LegacyCo"
+    },
+    "BK-4061": {
+      "cents": 198900,
+      "confirmed_refs": [],
+      "payer": "LegacyCo"
+    },
+    "BK-4137": {
+      "cents": 162200,
+      "confirmed_refs": [
+        "IV-22739",
+        "IV-49736",
+        "IV-79912"
+      ],
+      "payer": "EdiCo"
+    },
+    "BK-4364": {
+      "cents": 170500,
+      "confirmed_refs": [
+        "IV-30693",
+        "IV-48359",
+        "IV-98517"
+      ],
+      "payer": "EdiCo"
+    },
+    "BK-4497": {
+      "cents": 201725,
+      "confirmed_refs": [],
+      "payer": "LegacyCo"
+    },
+    "BK-5032": {
+      "cents": 185050,
+      "confirmed_refs": [
+        "IV-23351",
+        "IV-35218",
+        "IV-48338"
+      ],
+      "payer": "EdiCo"
+    },
+    "BK-5782": {
+      "cents": 203400,
+      "confirmed_refs": [
+        "IV-57168",
+        "IV-76069",
+        "IV-82275"
+      ],
+      "payer": "EdiCo"
+    },
+    "BK-6223": {
+      "cents": 203975,
+      "confirmed_refs": [],
+      "payer": "LegacyCo"
+    },
+    "BK-6356": {
+      "cents": 188250,
+      "confirmed_refs": [
+        "IV-11492",
+        "IV-31027",
+        "IV-61191"
+      ],
+      "payer": "EdiCo"
+    },
+    "BK-6387": {
+      "cents": 181750,
+      "confirmed_refs": [],
+      "payer": "LegacyCo"
+    },
+    "BK-6558": {
+      "cents": 159200,
+      "confirmed_refs": [],
+      "payer": "LegacyCo"
+    },
+    "BK-6879": {
+      "cents": 180125,
+      "confirmed_refs": [],
+      "payer": "LegacyCo"
+    },
+    "BK-7001": {
+      "cents": 187775,
+      "confirmed_refs": [
+        "IV-48327",
+        "IV-69570",
+        "IV-72849"
+      ],
+      "payer": "EdiCo"
+    },
+    "BK-7051": {
+      "cents": 200075,
+      "confirmed_refs": [],
+      "payer": "LegacyCo"
+    },
+    "BK-7460": {
+      "cents": 179550,
+      "confirmed_refs": [],
+      "payer": "LegacyCo"
+    },
+    "BK-7553": {
+      "cents": 196650,
+      "confirmed_refs": [
+        "IV-56817",
+        "IV-63268",
+        "IV-84677"
+      ],
+      "payer": "EdiCo"
+    },
+    "BK-8191": {
+      "cents": 183250,
+      "confirmed_refs": [
+        "IV-30135",
+        "IV-38664",
+        "IV-53623"
+      ],
+      "payer": "EdiCo"
+    },
+    "BK-8503": {
+      "cents": 181000,
+      "confirmed_refs": [],
+      "payer": "LegacyCo"
+    },
+    "BK-8542": {
+      "cents": 191475,
+      "confirmed_refs": [
+        "IV-14655",
+        "IV-37200",
+        "IV-64617"
+      ],
+      "payer": "EdiCo"
+    },
+    "BK-8825": {
+      "cents": 187625,
+      "confirmed_refs": [
+        "IV-65393",
+        "IV-81362",
+        "IV-88037"
+      ],
+      "payer": "EdiCo"
+    },
+    "BK-9127": {
+      "cents": 180500,
+      "confirmed_refs": [],
+      "payer": "LegacyCo"
+    },
+    "BK-9764": {
+      "cents": 190075,
+      "confirmed_refs": [],
+      "payer": "LegacyCo"
+    }
+  }
+}

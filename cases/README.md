@@ -22,3 +22,5 @@ python3 benchmark/suite_data.py verify landed-cost-evaluation --workspace /path/
 ```
 
 The workbook tasks require native Numbers interaction and LibreOffice for recalculation. For the vendor quote, start the `vendor-quote` NPC profile, then follow the prompt to contact the vendor, download and upload the files, and share the result. Grade it with `python3 benchmark/verify_case.py --workspace /path/to/submission --output /path/to/grade.json`. [Service setup](../README.md#start-the-local-services)
+
+Two additional bank chargeback cases require a formula-driven workbook that survives changes to the bank event stream. They have their own templates, runnable three-arm schedule and LibreOffice grader. [Bank chargeback task and reproduction commands](chargebacks/README.md)

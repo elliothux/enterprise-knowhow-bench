@@ -1,0 +1,175 @@
+{
+  "case": "lockbox-41",
+  "line_score_order": [
+    "BK-132",
+    "BK-230",
+    "BK-256",
+    "BK-550",
+    "BK-574",
+    "BK-673",
+    "BK-711",
+    "BK-775",
+    "BK-836",
+    "BK-837",
+    "BK-886",
+    "BK-924"
+  ],
+  "arms": {
+    "A": {
+      "session": "01a1f2b0-15b1-7601-84fe-bda14a5a814a",
+      "operator": "gpt-6.1-terra",
+      "seconds": 56.984,
+      "exit": 0,
+      "receipt": {
+        "sha256": "a7d67f1d176fd367a66252549e0fc9961ef69907eded4dea3e07b8a69fba7270"
+      },
+      "valid_delivery": true,
+      "first_submission": "BK-132,IV-3285,IV-6455,IV-7413\nBK-230,REFER\nBK-256,IV-4460,IV-4808,IV-5998\nBK-550,REFER\nBK-574,REFER\nBK-673,REFER\nBK-711,REFER\nBK-775,REFER\nBK-836,REFER\nBK-837,REFER\nBK-886,REFER\nBK-924,IV-5722,IV-7105,IV-9833",
+      "score": 25.0,
+      "line_scores": [
+        100.0,
+        0.0,
+        100.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        100.0
+      ],
+      "correct_placements": 9,
+      "exact_receipts": 3,
+      "exact": false,
+      "fully_correct_invoices": 3,
+      "actions": [
+        {
+          "step": "Read rules",
+          "exit": 0
+        },
+        {
+          "step": "Read invoices-history",
+          "exit": 0
+        },
+        {
+          "step": "Submit posting",
+          "exit": 0
+        }
+      ],
+      "trace_violations": [],
+      "hashes": {
+        "agent.log": "c5e8e649393e1e8b67427b2418e9b060b35b392b6574874aff37c3a84fc677dc",
+        "stderr.log": "259d0a7843f7de9702963cdcc314147f86ff62a057690b30a1686897affe861d",
+        "execution.json": "58826c7f4587b00f9d0ed5f48ee735ac76ea735296a9ad9fe9efc180df1053ed",
+        "score.json": "1ba440e0e53fe35ebed50e5920796eceedb0e645a334870b29cb1684fbc32179",
+        "work/TASK.md": "d873ecbd66bcc5661a03e417e608039dde1a7fbe8987627bb2c3d54e4cc409fe"
+      }
+    },
+    "B": {
+      "session": "01a1f2b0-f097-7f42-8cfc-cd9b44326821",
+      "operator": "gpt-6.1-terra",
+      "seconds": 91.39,
+      "exit": 0,
+      "receipt": {
+        "sha256": "c8f1fcece96154c239c7d9e1c2203419049e066ab3ad7456510d6c5797269714"
+      },
+      "valid_delivery": true,
+      "first_submission": "BK-132,IV-3285,IV-6455,IV-7413\nBK-230,IV-2029,IV-3155,IV-3394\nBK-256,IV-4460,IV-4808,IV-5998\nBK-550,IV-4434,IV-4797,IV-8568\nBK-574,IV-2402,IV-2706,IV-4017\nBK-673,IV-1945,IV-4922,IV-7156\nBK-711,IV-3218,IV-4156,IV-8714\nBK-775,IV-3501,IV-4903,IV-8101\nBK-836,IV-6830,IV-7130,IV-9433\nBK-837,IV-3708,IV-4513,IV-8034\nBK-886,IV-4333,IV-7729,IV-9772\nBK-924,IV-5722,IV-7105,IV-9833",
+      "score": 100.0,
+      "line_scores": [
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "correct_placements": 36,
+      "exact_receipts": 12,
+      "exact": true,
+      "fully_correct_invoices": 12,
+      "actions": [
+        {
+          "step": "Read rules",
+          "exit": 0
+        },
+        {
+          "step": "Read invoices-history",
+          "exit": 0
+        },
+        {
+          "step": "Submit posting",
+          "exit": 0
+        }
+      ],
+      "trace_violations": [],
+      "hashes": {
+        "agent.log": "99f59d037e902561a77dc3fef4aa70630b7e1a3f3cdd531961254d52fc998660",
+        "stderr.log": "8a1bdb9f6ba915307438a8986b5295108e1e4aa2e1d0fa32be81781a3b5385af",
+        "execution.json": "ddc9fb0a4d34afda7b7303f3269461e33bf19978cd5c19924d96df9aaa7673ed",
+        "score.json": "1c050873637a3e0bee348ad4c350907856cf41fe22439a3ba8686d57455a63e1",
+        "work/TASK.md": "fc8a5ee5afd9432c59af3b7c39ecddbc5aae133a4b284835e2a5b9b0c889ed6d"
+      }
+    },
+    "D": {
+      "session": "01a1f2b4-659f-7df3-aed4-24c2e80130c4",
+      "operator": "gpt-6.1-terra",
+      "seconds": 37.207,
+      "exit": 0,
+      "receipt": {
+        "sha256": "a7d67f1d176fd367a66252549e0fc9961ef69907eded4dea3e07b8a69fba7270"
+      },
+      "valid_delivery": true,
+      "first_submission": "BK-132,IV-3285,IV-6455,IV-7413\nBK-230,REFER\nBK-256,IV-4460,IV-4808,IV-5998\nBK-550,REFER\nBK-574,REFER\nBK-673,REFER\nBK-711,REFER\nBK-775,REFER\nBK-836,REFER\nBK-837,REFER\nBK-886,REFER\nBK-924,IV-5722,IV-7105,IV-9833",
+      "score": 25.0,
+      "line_scores": [
+        100.0,
+        0.0,
+        100.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        100.0
+      ],
+      "correct_placements": 9,
+      "exact_receipts": 3,
+      "exact": false,
+      "fully_correct_invoices": 3,
+      "actions": [
+        {
+          "step": "Read rules",
+          "exit": 0
+        },
+        {
+          "step": "Read invoices-history",
+          "exit": 0
+        },
+        {
+          "step": "Submit posting",
+          "exit": 0
+        }
+      ],
+      "trace_violations": [],
+      "hashes": {
+        "agent.log": "4a3cdcef5f26005910b5a964f61f18c1ca14ba84bf73c3ceb2edf6550c6d6c59",
+        "stderr.log": "7ea93a2355bb68e19dfd4f7e14b214ddf34b493c2f4ceb91339364cd77c7d431",
+        "execution.json": "07baeff9d506ace56644d072ad77d27992b0d2a6f0d3243a51c8c5bb27f74a96",
+        "score.json": "9e78bb3213952198b4dedaf597eefdc19978d60aeb535cabdbc303b2cee3caa7",
+        "work/TASK.md": "610f74f0fd9639714261e7a48bfa6b583533b42bd975c5704f32c6c9af7410ca"
+      }
+    }
+  }
+}

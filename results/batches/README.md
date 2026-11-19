@@ -7,3 +7,5 @@ Each batch has its own frozen schedule, denominator and checksums. Its index rec
 The November 19 regression selected RMT-716 in advance to check the publication workflow on a previously improved case. Its two sessions are reported separately from the original 16-remittance cohort.
 
 [All 16 remittances with both distillers and all 48 first submissions](remittance-distillers-20261119/README.md)
+
+The [close-workflow report](../close-workflows.md) covers the individual schedules, scores and first receipts for the subsequent financial stress tests.

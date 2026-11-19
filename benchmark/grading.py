@@ -23,9 +23,102 @@ def cash(target, rows):
             + 20 * (post[4] == expected[4]) + 10 * (sum(post[:4]) == sum(expected[:4])))
 
 
+def joint_close(target, rows):
+    receivables, payables = target['receivables'], target['payables']
+    assigned = {line['invoice'] for line in [*receivables, *payables]}
+    submitted = {row[0].strip().upper(): [v.strip().upper() for v in row] for row in rows}
+    if len(submitted) != len(rows) or not submitted.keys() <= assigned:
+        submitted = {}
+    scores = [cash(line, [submitted[line['invoice']]]) if line['invoice'] in submitted else 0
+              for line in receivables]
+    for payable in payables:
+        row = submitted.get(payable['invoice'], [])
+        points = 0
+        if len(row) == 4:
+            try:
+                value = Decimal(row[1])
+                exposure_correct = value.is_finite() and value * 100 == payable['exposure']
+            except (InvalidOperation, OverflowError):
+                exposure_correct = False
+            points = (40 * exposure_correct + 20 * (row[2] == payable['decision'])
+                      + 40 * (sorted(row[3].split(';')) == payable['reasons']))
+        scores.append(points)
+    return {'score':sum(scores)/len(scores), 'line_scores':scores, 'exact':all(s==100 for s in scores)}
+
+
+def inspection(target, rows):
+    records = {r[0].strip().upper():r for r in rows}
+    if len(records) != len(rows) or not records.keys() <= {line['invoice'] for line in target}:
+        records = {}
+    scores = []
+    for line in target:
+        r = records.get(line['invoice'], [])
+        value = 0
+        if len(r) == 6:
+            for i,(key,multiplier,points) in enumerate([('units',1,25),('loss',100,20),
+                    ('claim',100,25),('collectible',100,20)],1):
+                try:
+                    number=Decimal(r[i].strip())
+                    if number.is_finite() and number*multiplier == line[key]:
+                        value+=points
+                except (InvalidOperation,OverflowError):
+                    pass
+            value+=10*(r[5].strip().upper()==line['owner'])
+        scores.append(value)
+    return {'score': sum(scores)/len(scores), 'line_scores':scores, 'exact':all(s==100 for s in scores)}
+
+
+def cutoff_cash(target, rows):
+    submitted={r[0].strip().upper():[v.strip().upper() for v in r] for r in rows}
+    if len(submitted)!=len(rows) or not submitted.keys() <= {t['invoice'] for t in target}:
+        submitted={}
+    line_scores,handling=[],[]
+    blocked=unsafe=0
+    for item in target:
+        row=submitted.get(item['invoice'],[])
+        if 'wait' in item:
+            wait=item['wait']
+            correct=row==[item['invoice'],'WAIT',wait['owner'],wait['ticket']]
+            blocked+=1
+            unsafe+=int(len(row)==6)
+            line_scores.append(0)
+            handling.append(100*correct)
+        else:
+            grade=cash(item,[row]) if row else 0
+            line_scores.append(100*int(grade==100))
+            handling.append(grade)
+    return {'score':sum(line_scores)/len(target),'line_scores':line_scores,'exact':all(line_scores),
+            'posted_correctly':line_scores.count(100),'blocked_at_cutoff':blocked,'unsafe_postings':unsafe,
+            'handling_score':sum(handling)/len(target),'handling_line_scores':handling,'handling_exact':all(v==100 for v in handling)}
+
+
+def lockbox(target, rows):
+    from collections import Counter
+    submitted = {r[0].strip().upper(): [v.strip().upper() for v in r[1:]] for r in rows}
+    if len(submitted) != len(rows) or not submitted.keys() <= {t['invoice'] for t in target}:
+        submitted = {}
+    occurrences = Counter(item for values in submitted.values() for item in values if item!='REFER')
+    correct = []
+    for receipt in target:
+        assigned=submitted.get(receipt['invoice'],[])
+        correct.append(sum(item in receipt['matches'] and occurrences[item]==1 for item in assigned)
+                       if len(assigned)==3 else 0)
+    total=sum(correct)
+    return {'score':100*total/(3*len(target)), 'line_scores':[100*n/3 for n in correct],
+            'correct_placements':total, 'exact_receipts':correct.count(3), 'exact':all(n==3 for n in correct)}
+
+
 def grade(kind, target, text, reads=0):
     rows = [row for line in text.splitlines() if (row := next(csv.reader([line.strip().strip('`').strip()]), []))]
-    if kind == 'packet':
+    if kind == 'lockbox':
+        return lockbox(target,rows)
+    if kind == 'cutoff-cash':
+        return cutoff_cash(target,rows)
+    if kind == 'damage-inspection':
+        return inspection(target,rows)
+    if kind == 'cross-ledger':
+        return joint_close(target, rows)
+    if kind in ('packet','native-cash-batch'):
         ids = [r[0].strip().upper() for r in rows]
         valid = len(ids) == len(set(ids)) and set(ids) <= {line['invoice'] for line in target}
         scores = [cash(line, rows) if valid else 0 for line in target]

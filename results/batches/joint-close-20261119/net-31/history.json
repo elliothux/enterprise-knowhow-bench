@@ -1,0 +1,217 @@
+{
+  "case": "net-31",
+  "line_score_order": [
+    "I-47740",
+    "I-43890",
+    "I-44288",
+    "I-42209",
+    "I-46544",
+    "I-46528",
+    "I-47144",
+    "I-42701",
+    "I-45707",
+    "I-42877",
+    "I-43654",
+    "I-42376",
+    "I-46316",
+    "I-44746",
+    "I-42800",
+    "I-45699",
+    "INV-8245",
+    "INV-8259",
+    "INV-8273",
+    "INV-8287",
+    "INV-8301",
+    "INV-8315",
+    "INV-8329",
+    "INV-8343"
+  ],
+  "arms": {
+    "A": {
+      "session": "01a1f28b-06ab-7001-b456-86d5a0df8cc8",
+      "operator": "gpt-6.1-terra",
+      "seconds": 81.897,
+      "exit": 0,
+      "receipt": {
+        "sha256": "526cc927a7969a9034db1f671196214b23ba350bf09c7f3181e8d08e23cf0cbd"
+      },
+      "valid_delivery": true,
+      "first_submission": "I-47740,5.10,0.00,0.00,0.00,CLOSED\nI-43890,5.00,0.00,0.00,0.00,CLOSED\nI-44288,6.05,0.00,0.00,0.00,CLOSED\nI-42209,6.00,0.00,0.00,0.00,CLOSED\nI-46544,8.00,0.00,0.00,0.00,CLOSED\nI-46528,0.00,0.00,0.00,5.10,COLLECTIONS\nI-47144,0.00,0.00,0.00,8.40,COLLECTIONS\nI-42701,REFER\nI-45707,REFER\nI-42877,0.00,14.60,0.00,4.40,CLAIMS\nI-43654,REFER\nI-42376,6.00,0.00,0.00,0.00,CLOSED\nI-46316,8.05,0.00,0.00,0.00,CLOSED\nI-44746,REFER\nI-42800,13.25,0.00,0.00,0.00,CLOSED\nI-45699,6.00,0.00,0.00,0.00,CLOSED\nINV-8245,0.00,RELEASE,NONE\nINV-8259,0.00,HOLD,BANK_UNVERIFIED\nINV-8273,5.10,HOLD,RECEIPT_SHORT\nINV-8287,REFER\nINV-8301,REFER\nINV-8315,REFER\nINV-8329,REFER\nINV-8343,0.00,HOLD,NOT_POSTED",
+      "score": 28.333333333333332,
+      "line_scores": [
+        10,
+        30,
+        30,
+        10,
+        30,
+        100,
+        100,
+        0,
+        0,
+        100,
+        0,
+        10,
+        10,
+        0,
+        100,
+        10,
+        0,
+        20,
+        100,
+        0,
+        0,
+        0,
+        0,
+        20
+      ],
+      "exact": false,
+      "fully_correct_invoices": 5,
+      "actions": [
+        {
+          "step": "Read rules",
+          "exit": 0
+        },
+        {
+          "step": "Read invoices-history",
+          "exit": 0
+        },
+        {
+          "step": "Submit posting",
+          "exit": 0
+        }
+      ],
+      "trace_violations": [],
+      "hashes": {
+        "agent.log": "2f03ea357c3927cdfdc4cc6d9d38d3468090d55535d69cf2b404ddb4443e328f",
+        "stderr.log": "597ef82bc7b43f8b93df47b0a822b3c2957eb97ca68d7fbb12c50d57ce5565fc",
+        "execution.json": "315d1b44cfb6b90e53f9208915338b189e38b7534fdfe92aa622b2659ec3b4a5",
+        "score.json": "02643c88ff74d19f1b6c3dfe7f87f05a04dcb9f255515954d9b70872f94df44c",
+        "work/TASK.md": "661023f6bc0e4a5087864baf63914f4a55e8c39964ec4ac9686866be09ed40bf"
+      }
+    },
+    "B": {
+      "session": "01a1f28c-474e-7042-b959-75214f98b5b2",
+      "operator": "gpt-6.1-terra",
+      "seconds": 40.475,
+      "exit": 0,
+      "receipt": {
+        "sha256": "16328502c648bba51a30e7e580cbfe1c2211e172a37c7cf4460b5c33273971c1"
+      },
+      "valid_delivery": true,
+      "first_submission": "I-47740,0.00,0.00,0.00,5.10,COLLECTIONS\nI-43890,0.00,0.00,5.00,0.00,CLOSED\nI-44288,0.00,0.00,6.05,0.00,CLOSED\nI-42209,0.00,0.00,0.00,6.00,COLLECTIONS\nI-46544,0.00,0.00,8.00,0.00,CLOSED\nI-46528,0.00,0.00,0.00,5.10,COLLECTIONS\nI-47144,0.00,0.00,0.00,8.40,COLLECTIONS\nI-42701,0.00,0.00,6.15,0.00,CLOSED\nI-45707,25.00,0.00,4.10,0.00,CLOSED\nI-42877,0.00,14.60,0.00,4.40,CLAIMS\nI-43654,0.00,0.00,6.15,0.00,CLOSED\nI-42376,0.00,0.00,0.00,6.00,COLLECTIONS\nI-46316,0.00,0.00,0.00,8.05,COLLECTIONS\nI-44746,25.00,0.00,4.10,0.00,CLOSED\nI-42800,13.25,0.00,0.00,0.00,CLOSED\nI-45699,0.00,0.00,0.00,6.00,COLLECTIONS\nINV-8245,5.10,HOLD,SETOFF_REVIEW\nINV-8259,6.00,HOLD,BANK_UNVERIFIED;SETOFF_REVIEW\nINV-8273,5.10,HOLD,RECEIPT_SHORT\nINV-8287,8.40,RELEASE,NONE\nINV-8301,4.40,HOLD,DUPLICATE\nINV-8315,6.00,HOLD,BANK_UNVERIFIED\nINV-8329,8.05,HOLD,SETOFF_REVIEW\nINV-8343,6.00,HOLD,NOT_POSTED;SETOFF_REVIEW",
+      "score": 100.0,
+      "line_scores": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "exact": true,
+      "fully_correct_invoices": 24,
+      "actions": [
+        {
+          "step": "Read rules",
+          "exit": 0
+        },
+        {
+          "step": "Read invoices-history",
+          "exit": 0
+        },
+        {
+          "step": "Submit posting",
+          "exit": 0
+        }
+      ],
+      "trace_violations": [],
+      "hashes": {
+        "agent.log": "462e85b9039c43b9ac5fcc1142054e51a6900bb01cae6acfdcb90954430a9166",
+        "stderr.log": "a9b9b06ae271463f14f045a5b9dd118858b74b4e8e2025ba3fa9424a699eae5c",
+        "execution.json": "020d2d1f0089670f1b900f5f17a0cf0c9c52760bba731ccaf7f52b07140c448a",
+        "score.json": "c0289e282c7dfb79a15a2a65dbded24bc51724cd90771eabf40d7015cf703c70",
+        "work/TASK.md": "ff6bbf090b05787fbc78a73b3d35bb323bf03e750afa81c401f001953e18ae2d"
+      }
+    },
+    "D": {
+      "session": "01a1f28e-5903-7372-89df-be3a6244af4f",
+      "operator": "gpt-6.1-terra",
+      "seconds": 37.566,
+      "exit": 0,
+      "receipt": {
+        "sha256": "16328502c648bba51a30e7e580cbfe1c2211e172a37c7cf4460b5c33273971c1"
+      },
+      "valid_delivery": true,
+      "first_submission": "I-47740,0.00,0.00,0.00,5.10,COLLECTIONS\nI-43890,0.00,0.00,5.00,0.00,CLOSED\nI-44288,0.00,0.00,6.05,0.00,CLOSED\nI-42209,0.00,0.00,0.00,6.00,COLLECTIONS\nI-46544,0.00,0.00,8.00,0.00,CLOSED\nI-46528,0.00,0.00,0.00,5.10,COLLECTIONS\nI-47144,0.00,0.00,0.00,8.40,COLLECTIONS\nI-42701,0.00,0.00,6.15,0.00,CLOSED\nI-45707,25.00,0.00,4.10,0.00,CLOSED\nI-42877,0.00,14.60,0.00,4.40,CLAIMS\nI-43654,0.00,0.00,6.15,0.00,CLOSED\nI-42376,0.00,0.00,0.00,6.00,COLLECTIONS\nI-46316,0.00,0.00,0.00,8.05,COLLECTIONS\nI-44746,25.00,0.00,4.10,0.00,CLOSED\nI-42800,13.25,0.00,0.00,0.00,CLOSED\nI-45699,0.00,0.00,0.00,6.00,COLLECTIONS\nINV-8245,5.10,HOLD,SETOFF_REVIEW\nINV-8259,6.00,HOLD,BANK_UNVERIFIED;SETOFF_REVIEW\nINV-8273,5.10,HOLD,RECEIPT_SHORT\nINV-8287,8.40,RELEASE,NONE\nINV-8301,4.40,HOLD,DUPLICATE\nINV-8315,6.00,HOLD,BANK_UNVERIFIED\nINV-8329,8.05,HOLD,SETOFF_REVIEW\nINV-8343,6.00,HOLD,NOT_POSTED;SETOFF_REVIEW",
+      "score": 100.0,
+      "line_scores": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "exact": true,
+      "fully_correct_invoices": 24,
+      "actions": [
+        {
+          "step": "Read rules",
+          "exit": 0
+        },
+        {
+          "step": "Read invoices-history",
+          "exit": 0
+        },
+        {
+          "step": "Submit posting",
+          "exit": 0
+        }
+      ],
+      "trace_violations": [],
+      "hashes": {
+        "agent.log": "be59ea62dd8a2fd43882318e2472a366efa61deb703a4cf8d715f5b0de9cc2cc",
+        "stderr.log": "6e98264ab7794721dcec4151dce0417da71f85bde33e690af3855822aa4382c3",
+        "execution.json": "6ab29e48aa669550106b6228f8352c4b52721419460f15e94c9e77707da1387e",
+        "score.json": "2e9bd79b474423e864065c923c9b8f5e82b02401732e1141a97d932c866a662e",
+        "work/TASK.md": "54a8f0478f238c576a425ce723195ed0a6b8a3c16bdf612ede8cc6607751bdf0"
+      }
+    }
+  }
+}

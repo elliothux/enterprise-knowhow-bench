@@ -1,0 +1,271 @@
+{
+  "case": "lockbox-month-23",
+  "line_score_order": [
+    "BK-1103",
+    "BK-1306",
+    "BK-1554",
+    "BK-1584",
+    "BK-1722",
+    "BK-2025",
+    "BK-2062",
+    "BK-2894",
+    "BK-2922",
+    "BK-2925",
+    "BK-3108",
+    "BK-3247",
+    "BK-3433",
+    "BK-3612",
+    "BK-3875",
+    "BK-4061",
+    "BK-4137",
+    "BK-4364",
+    "BK-4497",
+    "BK-5032",
+    "BK-5782",
+    "BK-6223",
+    "BK-6356",
+    "BK-6387",
+    "BK-6558",
+    "BK-6879",
+    "BK-7001",
+    "BK-7051",
+    "BK-7460",
+    "BK-7553",
+    "BK-8191",
+    "BK-8503",
+    "BK-8542",
+    "BK-8825",
+    "BK-9127",
+    "BK-9764"
+  ],
+  "arms": {
+    "B": {
+      "session": "01a1f2b8-2135-7a63-8926-4003f4dad46a",
+      "operator": "gpt-6.1-terra",
+      "seconds": 41.215,
+      "exit": 0,
+      "receipt": {
+        "sha256": "e2fcab8556309591603cf8cbdb55118ed295a91cdb11bd2c944e2a2bd98985a9"
+      },
+      "valid_delivery": true,
+      "first_submission": "BK-1103,REFER\nBK-1306,REFER\nBK-1554,REFER\nBK-1584,IV-23056,IV-38092,IV-42533\nBK-1722,IV-40871,IV-51443,IV-75428\nBK-2025,REFER\nBK-2062,IV-18314,IV-44122,IV-96386\nBK-2894,REFER\nBK-2922,IV-43920,IV-77914,IV-97956\nBK-2925,IV-38534,IV-74641,IV-81556\nBK-3108,IV-26459,IV-38992,IV-94013\nBK-3247,REFER\nBK-3433,IV-21149,IV-48664,IV-52292\nBK-3612,IV-33841,IV-59712,IV-64711\nBK-3875,IV-28532,IV-58201,IV-96232\nBK-4061,REFER\nBK-4137,IV-22739,IV-49736,IV-79912\nBK-4364,IV-30693,IV-48359,IV-98517\nBK-4497,REFER\nBK-5032,IV-23351,IV-35218,IV-48338\nBK-5782,IV-57168,IV-76069,IV-82275\nBK-6223,REFER\nBK-6356,IV-11492,IV-31027,IV-61191\nBK-6387,REFER\nBK-6558,REFER\nBK-6879,REFER\nBK-7001,IV-48327,IV-69570,IV-72849\nBK-7051,REFER\nBK-7460,REFER\nBK-7553,IV-56817,IV-63268,IV-84677\nBK-8191,IV-30135,IV-38664,IV-53623\nBK-8503,REFER\nBK-8542,IV-14655,IV-37200,IV-64617\nBK-8825,IV-65393,IV-81362,IV-88037\nBK-9127,REFER\nBK-9764,REFER",
+      "score": 52.77777777777778,
+      "line_scores": [
+        0.0,
+        0.0,
+        0.0,
+        100.0,
+        100.0,
+        0.0,
+        100.0,
+        0.0,
+        100.0,
+        100.0,
+        100.0,
+        0.0,
+        100.0,
+        100.0,
+        100.0,
+        0.0,
+        100.0,
+        100.0,
+        0.0,
+        100.0,
+        100.0,
+        0.0,
+        100.0,
+        0.0,
+        0.0,
+        0.0,
+        100.0,
+        0.0,
+        0.0,
+        100.0,
+        100.0,
+        0.0,
+        100.0,
+        100.0,
+        0.0,
+        0.0
+      ],
+      "correct_placements": 57,
+      "exact_receipts": 19,
+      "exact": false,
+      "fully_correct_invoices": 19,
+      "actions": [
+        {
+          "step": "Read rules",
+          "exit": 0
+        },
+        {
+          "step": "Read invoices-history",
+          "exit": 0
+        },
+        {
+          "step": "Submit posting",
+          "exit": 0
+        }
+      ],
+      "trace_violations": [],
+      "hashes": {
+        "agent.log": "649a2114121f970435f7f506230a938ad42eeabfc4903684a7cb1376451c1ad5",
+        "stderr.log": "bc000408a55c9ab93b05aa3bec034b075f6c718b086d5fa6e596731e6fcd53f1",
+        "execution.json": "7a29fce3c965731a57cde5b17b5f3b5c15bb3f6c5194461c51f6fd9a35c33015",
+        "score.json": "3a74c73444b7e5e8f35b083ac2c02d58dda57ed08bca6da7b48554ea826062bb",
+        "work/TASK.md": "c8895ca9542e6711a5d0615526feccd6fe318f650b6efcbb2e9635bb2a9f3e35"
+      }
+    },
+    "A": {
+      "session": "01a1f2b8-c3f9-7760-afa4-8369b919e1df",
+      "operator": "gpt-6.1-terra",
+      "seconds": 57.087,
+      "exit": 0,
+      "receipt": {
+        "sha256": "aff10ba8e8be8072737f4fe34b2fb66c96cbebb300196161539a1c3a61484982"
+      },
+      "valid_delivery": true,
+      "first_submission": "BK-1103,REFER\nBK-1306,REFER\nBK-1554,IV-42534,IV-62510,IV-67172\nBK-1584,IV-23056,IV-38092,IV-42533\nBK-1722,IV-40871,IV-51443,IV-75428\nBK-2025,REFER\nBK-2062,IV-18314,IV-44122,IV-96386\nBK-2894,REFER\nBK-2922,IV-43920,IV-77914,IV-97956\nBK-2925,IV-38534,IV-74641,IV-81556\nBK-3108,IV-26459,IV-38992,IV-94013\nBK-3247,REFER\nBK-3433,IV-21149,IV-48664,IV-52292\nBK-3612,IV-33841,IV-59712,IV-64711\nBK-3875,IV-28532,IV-58201,IV-96232\nBK-4061,REFER\nBK-4137,IV-22739,IV-49736,IV-79912\nBK-4364,IV-30693,IV-48359,IV-98517\nBK-4497,REFER\nBK-5032,IV-23351,IV-35218,IV-48338\nBK-5782,IV-57168,IV-76069,IV-82275\nBK-6223,REFER\nBK-6356,IV-11492,IV-31027,IV-61191\nBK-6387,REFER\nBK-6558,REFER\nBK-6879,REFER\nBK-7001,IV-48327,IV-69570,IV-72849\nBK-7051,REFER\nBK-7460,REFER\nBK-7553,IV-56817,IV-63268,IV-84677\nBK-8191,IV-30135,IV-38664,IV-53623\nBK-8503,REFER\nBK-8542,IV-14655,IV-37200,IV-64617\nBK-8825,IV-65393,IV-81362,IV-88037\nBK-9127,REFER\nBK-9764,REFER",
+      "score": 52.77777777777778,
+      "line_scores": [
+        0.0,
+        0.0,
+        0.0,
+        100.0,
+        100.0,
+        0.0,
+        100.0,
+        0.0,
+        100.0,
+        100.0,
+        100.0,
+        0.0,
+        100.0,
+        100.0,
+        100.0,
+        0.0,
+        100.0,
+        100.0,
+        0.0,
+        100.0,
+        100.0,
+        0.0,
+        100.0,
+        0.0,
+        0.0,
+        0.0,
+        100.0,
+        0.0,
+        0.0,
+        100.0,
+        100.0,
+        0.0,
+        100.0,
+        100.0,
+        0.0,
+        0.0
+      ],
+      "correct_placements": 57,
+      "exact_receipts": 19,
+      "exact": false,
+      "fully_correct_invoices": 19,
+      "actions": [
+        {
+          "step": "Read rules",
+          "exit": 0
+        },
+        {
+          "step": "Read invoices-history",
+          "exit": 0
+        },
+        {
+          "step": "Submit posting",
+          "exit": 0
+        }
+      ],
+      "trace_violations": [],
+      "hashes": {
+        "agent.log": "2885ab055d1c1bac171b8fab4a5573535569b5e168a7292c90b99bd76bfc0092",
+        "stderr.log": "ca7ca8b9b6fa44df2b5b80d8acdd237a7c40f616a8871c41d1b5cf922d586f6a",
+        "execution.json": "077af2683b7ca5d8da088e19c4132f18b2c4fff58aad524717db88c101a74ce1",
+        "score.json": "00bb33664689630ddbc018a137e01a11077c4f65e41ae4ba96bcb8db45692b65",
+        "work/TASK.md": "f284acdd381385fad5aab3f590dede1f6e21e8c25e733a79ef89d2fde0e6b6eb"
+      }
+    },
+    "D": {
+      "session": "01a1f2ba-2ff9-7dd3-825b-68c3c7d8a47a",
+      "operator": "gpt-6.1-terra",
+      "seconds": 41.54,
+      "exit": 0,
+      "receipt": {
+        "sha256": "e2fcab8556309591603cf8cbdb55118ed295a91cdb11bd2c944e2a2bd98985a9"
+      },
+      "valid_delivery": true,
+      "first_submission": "BK-1103,REFER\nBK-1306,REFER\nBK-1554,REFER\nBK-1584,IV-23056,IV-38092,IV-42533\nBK-1722,IV-40871,IV-51443,IV-75428\nBK-2025,REFER\nBK-2062,IV-18314,IV-44122,IV-96386\nBK-2894,REFER\nBK-2922,IV-43920,IV-77914,IV-97956\nBK-2925,IV-38534,IV-74641,IV-81556\nBK-3108,IV-26459,IV-38992,IV-94013\nBK-3247,REFER\nBK-3433,IV-21149,IV-48664,IV-52292\nBK-3612,IV-33841,IV-59712,IV-64711\nBK-3875,IV-28532,IV-58201,IV-96232\nBK-4061,REFER\nBK-4137,IV-22739,IV-49736,IV-79912\nBK-4364,IV-30693,IV-48359,IV-98517\nBK-4497,REFER\nBK-5032,IV-23351,IV-35218,IV-48338\nBK-5782,IV-57168,IV-76069,IV-82275\nBK-6223,REFER\nBK-6356,IV-11492,IV-31027,IV-61191\nBK-6387,REFER\nBK-6558,REFER\nBK-6879,REFER\nBK-7001,IV-48327,IV-69570,IV-72849\nBK-7051,REFER\nBK-7460,REFER\nBK-7553,IV-56817,IV-63268,IV-84677\nBK-8191,IV-30135,IV-38664,IV-53623\nBK-8503,REFER\nBK-8542,IV-14655,IV-37200,IV-64617\nBK-8825,IV-65393,IV-81362,IV-88037\nBK-9127,REFER\nBK-9764,REFER",
+      "score": 52.77777777777778,
+      "line_scores": [
+        0.0,
+        0.0,
+        0.0,
+        100.0,
+        100.0,
+        0.0,
+        100.0,
+        0.0,
+        100.0,
+        100.0,
+        100.0,
+        0.0,
+        100.0,
+        100.0,
+        100.0,
+        0.0,
+        100.0,
+        100.0,
+        0.0,
+        100.0,
+        100.0,
+        0.0,
+        100.0,
+        0.0,
+        0.0,
+        0.0,
+        100.0,
+        0.0,
+        0.0,
+        100.0,
+        100.0,
+        0.0,
+        100.0,
+        100.0,
+        0.0,
+        0.0
+      ],
+      "correct_placements": 57,
+      "exact_receipts": 19,
+      "exact": false,
+      "fully_correct_invoices": 19,
+      "actions": [
+        {
+          "step": "Read rules",
+          "exit": 0
+        },
+        {
+          "step": "Read invoices-history",
+          "exit": 0
+        },
+        {
+          "step": "Submit posting",
+          "exit": 0
+        }
+      ],
+      "trace_violations": [],
+      "hashes": {
+        "agent.log": "2ab06cbecc965de2b0ef7135558e609175bdbd30680b527210251f74df04805c",
+        "stderr.log": "67fbb0e2221ff214bcf07adf7879914c074ce0d7952df00e51a38942abeb074a",
+        "execution.json": "f242405bbbf859bae37572b02e24d65d0bab3f6493a51d0084f97dae77aadf1e",
+        "score.json": "bf37ec52485cef47e7bc303c5f3511f437ca88e3cd5753f6cbb3a5c458aa355e",
+        "work/TASK.md": "57782d5394ced91d926a416e6d70ede7f0df55a953e9b03e3723a511e6280d53"
+      }
+    }
+  }
+}

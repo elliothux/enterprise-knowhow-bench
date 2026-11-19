@@ -1,0 +1,105 @@
+{
+  "skills": {
+    "B": {
+      "source_file": "tasks/materials/attachment-132e238be20d.txt",
+      "evaluated_sha256": "132e238be20d2881bc0a87c988991df145234acedc4f9626169c643b322fec3a",
+      "public_sha256": "132e238be20d2881bc0a87c988991df145234acedc4f9626169c643b322fec3a"
+    },
+    "D": {
+      "source_file": "tasks/materials/cash-D-a59224b81247.txt",
+      "evaluated_sha256": "a59224b81247410480eedd01915b02931526f5b7a21298d1036baa21fcb30c07",
+      "public_sha256": "a59224b81247410480eedd01915b02931526f5b7a21298d1036baa21fcb30c07"
+    }
+  },
+  "cases": {
+    "cutoff-19": {
+      "A": {
+        "score": 0.0,
+        "fully_correct_invoices": 0,
+        "exact": false,
+        "valid_delivery": true,
+        "handling_score": 48.75,
+        "handling_exact": false,
+        "unsafe_postings": 0,
+        "blocked_at_cutoff": 2
+      },
+      "B": {
+        "score": 75.0,
+        "fully_correct_invoices": 6,
+        "exact": false,
+        "valid_delivery": true,
+        "handling_score": 100.0,
+        "handling_exact": true,
+        "unsafe_postings": 0,
+        "blocked_at_cutoff": 2
+      },
+      "D": {
+        "score": 75.0,
+        "fully_correct_invoices": 6,
+        "exact": false,
+        "valid_delivery": true,
+        "handling_score": 100.0,
+        "handling_exact": true,
+        "unsafe_postings": 0,
+        "blocked_at_cutoff": 2
+      }
+    },
+    "cutoff-27": {
+      "B": {
+        "score": 62.5,
+        "fully_correct_invoices": 5,
+        "exact": false,
+        "valid_delivery": true,
+        "handling_score": 100.0,
+        "handling_exact": true,
+        "unsafe_postings": 0,
+        "blocked_at_cutoff": 3
+      },
+      "A": {
+        "score": 25.0,
+        "fully_correct_invoices": 2,
+        "exact": false,
+        "valid_delivery": true,
+        "handling_score": 75.625,
+        "handling_exact": false,
+        "unsafe_postings": 0,
+        "blocked_at_cutoff": 3
+      },
+      "D": {
+        "score": 62.5,
+        "fully_correct_invoices": 5,
+        "exact": false,
+        "valid_delivery": true,
+        "handling_score": 100.0,
+        "handling_exact": true,
+        "unsafe_postings": 0,
+        "blocked_at_cutoff": 3
+      }
+    }
+  },
+  "schedule": [
+    {
+      "case": "cutoff-19",
+      "family": "cutoff",
+      "order": "AB",
+      "control": "D"
+    },
+    {
+      "case": "cutoff-27",
+      "family": "cutoff",
+      "order": "BA",
+      "control": "D"
+    }
+  ],
+  "assigned_sessions": 6,
+  "model": "gpt-6.1-terra",
+  "reasoning": "high",
+  "limit_seconds": 300,
+  "environment": {
+    "os": "macOS-26.4-arm64-arm-64bit",
+    "architecture": "arm64",
+    "python": "3.12.16"
+  },
+  "plan_sha256": "e9b33fcdc5bb880fad94f1cbfbf6359bb4d6950bab62789368aef8b7bece1657",
+  "freeze_sha256": "f434cadc3aacd87c0bea9237b626156a10584e366966bcba06de3eba8938349e"
+}

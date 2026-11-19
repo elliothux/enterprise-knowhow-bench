@@ -1,79 +1,82 @@
-# 跨软件财务交接 Benchmark
+# Cross-application finance handoffs
 
-本次在 macOS VM 上用原生 Chrome 完成了 40 张新工单的预定评测，核对 110 个独立模型会话。每张工单要从 Rocket.Chat 私有队列接单，去 ownCloud 读本次和过往凭据，再把核销指令或付款审核决定正式交回财务。使用了两套既有产品 Skill；本次工单未用于训练。
+The scheduled evaluation covered 40 new finance cases and 110 independent model sessions on a macOS VM. In each case the operator used native Chrome to pick up a request in a private Rocket.Chat queue, read current and historical records in ownCloud, and submit cash application instructions or a payment release decision to finance. The two workflows used Skills distilled before the evaluation. All 40 cases were held out of training.
 
-## 全部预定工单
+## Results for all scheduled cases
 
-| 业务任务 | 张数 | 无 Skill 均分 | GLM Skill 均分 | 平均分差 | 提高 / 持平 / 下降 | 无 Skill 首交全对 | GLM 首交全对 |
+| Task | Cases | Mean without Skill | Mean with GLM Skill | Gain | Improved / tied / declined | Fully correct without Skill | Fully correct with GLM |
 |---|---:|---:|---:|---:|---|---:|---:|
-| 应收短付核销 | 24 | 70.83 | 100.00 | +29.17 | 12 / 12 / 0 | 12/24 | 24/24 |
-| 应付放行审核 | 16 | 75.00 | 100.00 | +25.00 | 4 / 12 / 0 | 12/16 | 16/16 |
+| Apply short payments to receivables | 24 | 70.83 | 100.00 | +29.17 | 12 / 12 / 0 | 12/24 | 24/24 |
+| Review payments for release | 16 | 75.00 | 100.00 | +25.00 | 4 / 12 / 0 | 12/16 | 16/16 |
 
-全部 40 张中，首交全对从 24/40 到 40/40，相差 +40.0 个百分点。应收评折扣、理赔、销账与应收金额、责任方、对平四项；应付按首份决定及全部理由全对计分。两种均分各用自己的业务口径。
+Across all 40 cases, fully correct first submissions rose from 24/40 to 40/40, a gain of 40.0 percentage points. The receivables rubric awards points for four criteria: discount and claims amounts, write-off and collectible balance, follow-up owner, and reconciliation of amounts. The payables rubric awards full credit only when the first decision and every applicable reason are correct. The means use each task's own rubric.
 
-## 哪些判断有差距
+## Results by decision rule
 
-| 判断 | 张数 | 无 Skill | GLM Skill | 分差 | 提高 / 持平 / 下降 |
+| Rule tested | Cases | No Skill | GLM Skill | Gain | Improved / tied / declined |
 |---|---:|---:|---:|---:|---|
-| 运单与签收凭据 | 4 | 82.50 | 100.00 | +17.50 | 1 / 3 / 0 |
-| 贷项与核销基数 | 4 | 47.50 | 100.00 | +52.50 | 3 / 1 / 0 |
-| 金额与比例双上限 | 4 | 72.50 | 100.00 | +27.50 | 2 / 2 / 0 |
-| 银行宽限与指令时点 | 4 | 55.00 | 100.00 | +45.00 | 3 / 1 / 0 |
-| 理赔转入上限 | 4 | 95.00 | 100.00 | +5.00 | 1 / 3 / 0 |
-| 折扣基数及上限 | 4 | 72.50 | 100.00 | +27.50 | 2 / 2 / 0 |
-| 多个独立付款门禁 | 4 | 50.00 | 100.00 | +50.00 | 2 / 2 / 0 |
-| 豁免理由、权限和有效期 | 4 | 75.00 | 100.00 | +25.00 | 1 / 3 / 0 |
-| 新账户与核验记录 | 4 | 75.00 | 100.00 | +25.00 | 1 / 3 / 0 |
-| 暂扣关闭权限与顺序 | 4 | 100.00 | 100.00 | +0.00 | 0 / 4 / 0 |
+| Shipment match and signed proof of delivery | 4 | 82.50 | 100.00 | +17.50 | 1 / 3 / 0 |
+| Posted credits and the write-off base | 4 | 47.50 | 100.00 | +52.50 | 3 / 1 / 0 |
+| Absolute and percentage write-off limits | 4 | 72.50 | 100.00 | +27.50 | 2 / 2 / 0 |
+| Bank grace period and payment instruction timing | 4 | 55.00 | 100.00 | +45.00 | 3 / 1 / 0 |
+| Cap on transfers to claims | 4 | 95.00 | 100.00 | +5.00 | 1 / 3 / 0 |
+| Discount base and cap | 4 | 72.50 | 100.00 | +27.50 | 2 / 2 / 0 |
+| Multiple independent payment release checks | 4 | 50.00 | 100.00 | +50.00 | 2 / 2 / 0 |
+| Waiver scope, authority and expiry | 4 | 75.00 | 100.00 | +25.00 | 1 / 3 / 0 |
+| New bank account and verification record | 4 | 75.00 | 100.00 | +25.00 | 1 / 3 / 0 |
+| Authority and event order for closing a hold | 4 | 100.00 | 100.00 | +0.00 | 0 / 4 / 0 |
 
-## 首交回执中的差异
+## What changed in the first submission
 
-- 应收短付核销最大正分差为 I-22711（贷项与核销基数），0 → 100。无 Skill 首交 `REFER I-22711: SGD 4.76 remains after cash and posted credit; prior examples do not establish write-off treatment for this OTHER-labelled residual.`，GLM 首交 `I-22711,0.00,0.00,0.00,4.76,COLLECTIONS`。
-- 应收短付核销每次排除一个判断层后，其余工单平均分差范围为 +24.50 至 +34.00。
-- 应付放行审核最大正分差为 INV-15427（多个独立付款门禁），0 → 100。无 Skill 首交 `INV-15427,RELEASE,NONE`，GLM 首交 `INV-15427,HOLD,BANK_UNVERIFIED`。
-- 应付放行审核每次排除一个判断层后，其余工单平均分差范围为 +16.67 至 +33.33。
+Invoice I-22711, which tests posted credits and the write-off base, had the largest receivables gain, from 0 to 100. The baseline submitted `REFER I-22711: SGD 4.76 remains after cash and posted credit; prior examples do not establish write-off treatment for this OTHER-labelled residual.` With the GLM Skill, the operator submitted `I-22711,0.00,0.00,0.00,4.76,COLLECTIONS`. Dropping each receivables rule group in turn left a mean gain of +24.50 to +34.00 on the remaining cases.
 
-## 风险、清理与耗时
+Invoice INV-15427, which tests multiple independent release checks, had the largest payables gain, from 0 to 100. The baseline submitted `INV-15427,RELEASE,NONE`. With the GLM Skill, the operator submitted `INV-15427,HOLD,BANK_UNVERIFIED`. Dropping each payables rule group in turn left a mean gain of +16.67 to +33.33.
 
-- 应收短付核销。人工转交 1 → 0，过度折让 1 → 0。自动原生协议通过 23/24 → 22/24。将所有协议未通过的会话计零，均分为 66.67 → 91.67。两组协议均通过的 21 对，均分差 33.3333。全部试次用时中位数 148 → 150 秒。
-- 应付放行审核。人工转交 3 → 0，错误放行 1 → 0。自动原生协议通过 16/16 → 16/16。将所有协议未通过的会话计零，均分为 75.00 → 100.00。两组协议均通过的 16 对，均分差 25.0。全部试次用时中位数 157 → 147 秒。
+## Operational errors, browser checks and elapsed time
 
-分项业务成绩以接收方首交和底层消息日志为准。协议严格成绩还要求原生轨迹完整，包括 Guest 关闭的自动证据。无正式交付统一计零；表中同时保留了未通过的执行。
+| Measure, without Skill → with GLM Skill | Receivables | Payables |
+|---|---:|---:|
+| Referrals for manual review | 1 → 0 | 3 → 0 |
+| Excessive concession on a short payment | 1 → 0 | — |
+| Incorrect payment release | — | 1 → 0 |
+| Passed automated native browser checks | 23/24 → 22/24 | 16/16 → 16/16 |
+| Mean score counting each failed browser check as zero | 66.67 → 91.67 | 75.00 → 100.00 |
+| Pairs in which both arms passed the browser checks | 21 | 16 |
+| Mean gain on those pairs | +33.3333 | +25.0 |
+| Median duration across all trials, seconds | 148 → 150 | 157 → 147 |
 
-## 两个预定对照
+The business score uses the recipient's first delivery and the underlying message log. The strict protocol also requires a complete native trace, including automated evidence that the Guest window closed. Missing submissions score zero. The table includes trials that failed verification.
 
-| 同题对照 | 业务 | 配对张数 | GLM Skill | 对照均分 | 对照减 GLM |
+## Scheduled controls
+
+| Control on the same cases | Task | Paired cases | GLM Skill mean | Control mean | Control minus GLM |
 |---|---|---:|---:|---:|---:|
-| DeepSeek Flash 蒸馏 | 应收短付核销 | 12 | 100.00 | 100.00 | +0.00 |
-| 直接附制度原文 | 应收短付核销 | 6 | 100.00 | 100.00 | +0.00 |
-| DeepSeek Flash 蒸馏 | 应付放行审核 | 8 | 100.00 | 100.00 | +0.00 |
-| 直接附制度原文 | 应付放行审核 | 4 | 100.00 | 100.00 | +0.00 |
+| DeepSeek Flash-distilled Skill | Receivables | 12 | 100.00 | 100.00 | +0.00 |
+| Full policy text | Receivables | 6 | 100.00 | 100.00 | +0.00 |
+| DeepSeek Flash-distilled Skill | Payables | 8 | 100.00 | 100.00 | +0.00 |
+| Full policy text | Payables | 4 | 100.00 | 100.00 | +0.00 |
 
-主实验测接班人已有交易和历史工单时，分发公司规程带来的变化。全文制度对照衡量直接给同一训练来源的效果。每个业务族、每种生成模型仅使用一份实际产品成品，编辑阶段均为 DeepSeek Flash；两个额外对照在主配对之后执行。
+The main comparison measures what changes when operators who already have transaction records and closed cases also receive the company procedure as a Skill. The full-policy control supplies the source policy from the same training material. Each distillation model produced one product Skill per workflow, and both used DeepSeek Flash for the editing stage. The additional controls ran after the main pairs.
 
-## 专项回归集与分母
+## Case selection and interpretation
 
-历史案例库原有 45 个协议条目。合并同一发票的重复轮次及变体，只计真实首份正式业务交付，历史可核实正例有 15 个独立业务键。本轮 A/B 有 16 张新工单取得由两侧 UI 和财务首交共同支持的正分差。历史模拟 ERP、历史原生操作、本次两种原生工单分别计量。首问只少查一次制度、草稿改进和运行中断不会增加上述数量。
+The historical collection contained 45 protocol entries. After grouping repeat runs and variants of the same invoice and requiring an actual first business submission, 15 distinct historical cases had a verifiable gain. In this batch, 16 new cases improved with both arms' UI traces and the finance recipient's first delivery available as evidence. Historical simulated ERP cases, historical native cases and the two current native workflows are counted separately. Fewer policy lookups on a first question, better drafts and interrupted runs do not count as improved business submissions.
 
-工单是按公司规则边界定向抽取的合成情形，角色和业务动作在真实本地应用中执行。阳性样本适合做回归；本报告的提升以整批预先冻结、包含持平与退步的工单计算。同一机制的四张工单相关。样本覆盖的是这两个财务岗位，不能推出所有企业任务的平均收益。
+The cases are synthetic and deliberately exercise the boundaries of company rules. The operator performs business actions in real local applications. The improved-case archive supports regression testing. The gains in this report use the entire batch fixed before evaluation, including ties and any declines. The four cases targeting each rule are related. These figures describe the two finance roles evaluated here. [Scores for all 40 cases](finance-scores.csv) · [First-submission histories](README.md)
 
-参见[全部 40 张工单成绩](finance-scores.csv)和[有效工单的首交历史](README.md)。
+## GLM and DeepSeek on cases where a Skill improved the score
 
-## 在确实能拉开分差的工单上比较两种蒸馏模型
+The table selects cases from the scheduled DeepSeek sample where at least one Skill beat the common baseline and all three UI traces and receipts were verified. Both Skills face the same selection criterion. This subset measures their gains on cases with an observed improvement. The scheduled controls above give the comparison across the full sample.
 
-下表只看预定 DeepSeek 抽测中至少一款 Skill 胜过同一无 Skill 基线、三方 UI 与回执均已核对的工单。入选条件对两款 Skill 对称。它回答同题中谁多提了多少分；总体模型比较使用上面的预定抽样分母。
-
-| 业务 | 工单 | 无 Skill | GLM | DeepSeek | GLM 提分 | DeepSeek 提分 | GLM 减 DeepSeek |
+| Task | Case | No Skill | GLM | DeepSeek | GLM gain | DeepSeek gain | GLM minus DeepSeek |
 |---|---|---:|---:|---:|---:|---:|---:|
-| 应收短付核销 | ar-23951 | 30 | 100 | 100 | +70 | +70 | +0 |
-| 应收短付核销 | ar-21731 | 45 | 100 | 100 | +55 | +55 | +0 |
-| 应收短付核销 | ar-26437 | 30 | 100 | 100 | +70 | +70 | +0 |
-| 应收短付核销 | ar-22803 | 45 | 100 | 100 | +55 | +55 | +0 |
-| 应收短付核销 | ar-23217 | 45 | 100 | 100 | +55 | +55 | +0 |
-| 应付放行审核 | ap-1026 | 0 | 100 | 100 | +100 | +100 | +0 |
+| Receivables | ar-23951 | 30 | 100 | 100 | +70 | +70 | +0 |
+| Receivables | ar-21731 | 45 | 100 | 100 | +55 | +55 | +0 |
+| Receivables | ar-26437 | 30 | 100 | 100 | +70 | +70 | +0 |
+| Receivables | ar-22803 | 45 | 100 | 100 | +55 | +55 | +0 |
+| Receivables | ar-23217 | 45 | 100 | 100 | +55 | +55 | +0 |
+| Payables | ap-1026 | 0 | 100 | 100 | +100 | +100 | +0 |
 
-应收短付核销入选 5 张。GLM 相对无 Skill 平均 +61.00，DeepSeek 平均 +61.00。两者直接比较，GLM 高 0 张、相同 5 张、低 0 张。
+Both Skills gained an average of 61.00 points over baseline on the five receivables cases and 100.00 on the one payables case. They tied on every case in the subset.
 
-应付放行审核入选 1 张。GLM 相对无 Skill 平均 +100.00，DeepSeek 平均 +100.00。两者直接比较，GLM 高 0 张、相同 1 张、低 0 张。
-
-另有同一产品 Skill 在独立双发票回款指令上的[16 张模拟 ERP 筛查结果](remittances.md)。这些工单单独统计。
+The same receivables Skill was also evaluated on 16 independent two-invoice remittances in the simulated ERP. Those scores are reported separately. [Two-invoice remittance results](remittances.md)

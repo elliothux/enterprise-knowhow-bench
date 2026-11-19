@@ -4,7 +4,7 @@
   "variants": [
     {
       "protocol": "finance-ap-1059",
-      "metric": "财务首次正式交付",
+      "metric": "First formal submission to finance",
       "environment": {
         "execution_model": "gpt-6.1-terra",
         "cli": "codex-cli 0.169.0",

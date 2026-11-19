@@ -4,12 +4,12 @@
   "variants": [
     {
       "protocol": "ap-handoff-inv-8329",
-      "metric": "首次决定和完整理由均正确",
+      "metric": "Correct first decision and complete set of reasons",
       "environment": {
         "model": "gpt-6.1-terra/high",
         "budget": 300,
         "cli": "739cda86e15d30a6e2b40cf8dcbbfb988aaf48b305b27065573bb8e9fd41d002",
-        "recorded_host": "历史冻结协议未逐次记录宿主 OS 补丁号。"
+        "recorded_host": "The historical protocol did not record the host OS patch level for each trial."
       },
       "sessions": [
         "ap-handoff/20261118T061046Z/12A",

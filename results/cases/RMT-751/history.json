@@ -4,7 +4,7 @@
   "variants": [
     {
       "protocol": "remittance-rmt-751",
-      "metric": "两张发票首交核销分的均值",
+      "metric": "Mean first-submission cash application score across both invoices",
       "environment": {
         "model": "gpt-6.1-terra",
         "cli": "codex-cli 0.169.0",

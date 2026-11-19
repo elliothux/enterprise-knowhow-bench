@@ -4,7 +4,7 @@
   "variants": [
     {
       "protocol": "cash-i-7547",
-      "metric": "财务队列首次核销操作分",
+      "metric": "Cash application score on the first submission to the finance queue",
       "environment": {
         "execution_model": "gpt-6.1-terra/high",
         "cli": "codex-cli 0.169.0",

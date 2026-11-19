@@ -1,20 +1,22 @@
 # Lynx Benchmark
 
-在 40 张预先冻结的合成财务工单上，同一操作模型用原生 Chrome 从 ownCloud 读取业务凭据，在 Rocket.Chat 向财务交付核销或审批指令。加入 Lynx Cognition 从先前示范中蒸馏的 GLM Skill 后，首次交付全对的工单从 **24/40 提高到 40/40**。16 张提分，24 张持平。
+English · [简体中文](README.zh-CN.md)
 
-| 实验 | 工单数 | 无 Skill 均分 | GLM Skill 均分 | 两组首交全对 |
-|---|---:|---:|---:|---|
-| 原生跨软件应收核销 | 24 | 70.83 | 100.00 | 12/24 → 24/24 |
-| 原生跨软件应付审批 | 16 | 75.00 | 100.00 | 12/16 → 16/16 |
-| 双发票核销，模拟 ERP CLI | 16 | 28.13 | 94.84 | 0/16 → 13/16 |
+Lynx Benchmark measures whether a model makes better finance decisions when it can use a workflow Skill distilled by Lynx Cognition from earlier demonstrations. In 40 synthetic cases fixed before evaluation, the same model used Chrome to read supporting documents in ownCloud and submit a decision to finance in Rocket.Chat. With the GLM-distilled Skill, the number of fully correct first submissions rose from **24/40 to 40/40**. Scores improved on 16 cases and stayed the same on 24.
 
-应收核销同时考查折扣与理赔、销账与余额、跟进责任和金额对平。应付审批要求决定和全部适用原因均正确。一张应付工单的首次提交从直接放行变为暂扣，原因是新收款账户未完成核验。[该工单的两份回执与操作记录](results/cases/AP-1026/history.json)
+| Task | Cases | Mean without Skill | Mean with GLM Skill | Fully correct first submissions, without → with |
+|---|---:|---:|---:|---:|
+| Apply short payments to receivables in Chrome | 24 | 70.83 | 100.00 | 12/24 → 24/24 |
+| Review payments for release in Chrome | 16 | 75.00 | 100.00 | 12/16 → 16/16 |
+| Apply two-invoice remittances in a simulated ERP CLI | 16 | 28.13 | 94.84 | 0/16 → 13/16 |
 
-两款蒸馏模型在预定的 20 张同题抽测上业务得分均为 100。其中 6 张相对无 Skill 确有提升，GLM 与 DeepSeek 在这 6 张上也都得到相同分数。另有 10 张直接给制度全文的对照得到满分。样本针对两个财务岗位的规则边界。业务得分以接收方首条交付为准，报告另列原生浏览器协议未通过时计零的成绩。[原生实验报告](results/finance.md) · [模拟 ERP 报告](results/remittances.md)
+The receivables tasks score how the model allocates a short payment, balances the amounts and assigns follow-up. Payables tasks require the correct decision and every applicable reason. On one payables case, the baseline released a payment to a new bank account. With the Skill, the model placed it on hold because the account had yet to be verified. [Compare the submissions and action histories](results/cases/AP-1026/history.json).
 
-## 自己跑一道题
+The GLM and DeepSeek Skills both scored 100 on all 20 cases selected in advance for a head-to-head comparison. On six of those cases, both improved on the baseline by the same amount. Supplying the full policy also earned full marks on all ten cases scheduled for that control. These cases target the rules of two finance roles. Business scores use the first submission received by finance. The native report also gives scores under a stricter protocol that assigns zero when the browser trace fails verification. [Native finance report](results/finance.md) · [Simulated ERP report](results/remittances.md)
 
-[公开题库](tasks/README.md)包含完整题面、输入资料和各组附件。使用 Python 3.10+，普通克隆即可运行。下面的双发票题无需 Docker；示例使用本机已登录的 Codex CLI。可用 `--model` 指定可访问的模型，或接入[自己的 Agent](tasks/RUN.md)。
+## Run a case
+
+Use Python 3.10 or later. This two-invoice example runs with a signed-in Codex CLI and needs no Docker services. Arm A runs without a Skill. Arm B receives the GLM Skill. Use the same execution model for both arms. Select an available model with `--model`, or use your own agent. [Task catalog and inputs](tasks/README.md) · [Agent setup and scoring](tasks/RUN.md)
 
 ```sh
 git clone https://github.com/elliothux/lynx-benchmark.git
@@ -26,31 +28,31 @@ python3 bench.py run RMT-716 --arm B --out "$runs/B"
 python3 bench.py compare "$runs/A" "$runs/B"
 ```
 
-跑原生跨软件题时先启动下方 Compose，然后执行 `python3 bench.py run ar-22153 --arm A --out "$runs/chrome-A"`。执行器会为本次运行新建工单、装入两份 PDF，并读取财务队列的首条交付评分。也可以人工操作、跑整批，或使用原始训练与扩展题。[运行与评分说明](tasks/RUN.md) · [其他 11 份题面](cases/README.md)
+For a native cross-application case, start the local services described below and run `python3 bench.py run ar-22153 --arm A --out "$runs/chrome-A"`. The runner creates a case for this trial, loads two PDFs and scores the first submission to the finance queue. You can also run cases manually, execute a full batch or use the original training and extension tasks. [Run guide](tasks/RUN.md) · [11 additional task packets](cases/README.md)
 
-## 运行历史
+## Run history
 
-[有效工单目录](results/README.md)收录 46 张至少一次正式业务首交提分的独立工单，含本轮 31 张和历史 15 张。其中 20 张走原生 Chrome，26 张走模拟 ERP CLI。每张记录保留正式对照的条件、得分、首次交付、操作顺序及原始日志哈希。目录按提分筛选；报告使用预定整批作为分母。[原生 40 张全部得分](results/finance-scores.csv) · [双发票 16 张全部得分](results/remittance-scores.json) · [实测环境](results/environment.json)
+The archive contains 46 distinct cases with a documented improvement on at least one scored first submission. Of these, 31 come from the current batches and 15 from earlier experiments. Twenty used native Chrome and 26 used the simulated ERP CLI. Each record includes conditions, scores, first submissions, actions in order and checksums for the source logs. The reports use every case in the scheduled batch to calculate their results. [Archive of improved cases](results/README.md) · [All 40 native scores](results/finance-scores.csv) · [All 16 remittance scores](results/remittance-scores.json) · [Recorded environment](results/environment.json)
 
-## 启动本地业务环境
+## Start the local services
 
-需要 Docker Compose v2.24 以上、Python 3 和可运行 `linux/amd64` 镜像的 Docker 引擎。从普通克隆的项目根目录运行以下命令。首次启动会下载固定摘要的上游镜像并导入 Rocket.Chat 初始数据。
+Use Docker Compose v2.24 or later, Python 3 and a Docker engine that can run `linux/amd64` images. Run these commands at the repository root. The first start downloads upstream images pinned by digest and imports the initial Rocket.Chat data.
 
 ```sh
 docker compose up -d --wait
 python3 mock/seed.py --case ar-22153
 ```
 
-打开 [ownCloud](http://localhost:8092)，在 Documents 下进入 `Enterprise review ar-22153` 查看当前凭据与上一班的交付。打开 [Rocket.Chat](http://localhost:13000) 的私有房间 `finance-review-ar-22153` 查看初始工单。两个系统的上游演示账户及密码均为 `theagentcompany`。端口只发布到回环地址。
+In ownCloud, open `Documents/Enterprise review ar-22153` to read the current documents and the previous shift's handoff. In Rocket.Chat, open the private room `finance-review-ar-22153` for the initial request. Both services use `theagentcompany` as the demo username and password. The ports bind to the loopback interface. [Open ownCloud](http://localhost:8092) · [Open Rocket.Chat](http://localhost:13000)
 
-省略 `--case` 会装入全部 40 张原生财务工单。重复执行会核对原文件并复用初始消息。初始请求由装载账户发出；正式实验另有独立财务接收账号核对操作员的首条提交。双发票 CLI 数据可直接在 [mock/remittances](mock/remittances) 查阅。发布成绩采自原生 macOS VM；Compose 提供相应的业务服务与样本，公开的 bench.py 负责出题、运行和业务评分。
+Omit `--case` to load all 40 native finance cases. Rerunning the seed command checks existing files and reuses the initial messages. The seeding account sends the initial request. In the reported experiments, a separate finance account verified the operator's first submission. The published runs used a native macOS VM. Compose provides the corresponding business services and fixtures, and `bench.py` prepares, runs and scores cases. [Simulated ERP remittance data](mock/remittances)
 
-可选供应商询价 NPC 使用 Redis 和模型 API。将 `.env.example` 复制为 `.env` 并填写 NPC 配置后，再执行 `docker compose --profile vendor-quote up -d --wait`。使用 `docker compose stop` 可保留当前业务数据并停止服务。
+The optional vendor-quote NPC uses Redis and a model API. Copy `.env.example` to `.env`, enter the NPC configuration and run `docker compose --profile vendor-quote up -d --wait`. To stop the services and retain their data, run `docker compose stop`.
 
-## 维护者
+## Maintainers
 
-有私库读取权限的维护者可运行 `git submodule update --init runner` 获取锁定版本的执行器。题库、参评附件、公开执行器和业务评分均位于主仓库。
+A standard public clone includes the tasks, participant materials, runner and business scoring. Maintainers with private repository access can also fetch the pinned internal runner with `git submodule update --init runner`.
 
-环境镜像和基础模拟数据来自 [TheAgentCompany](https://github.com/TheAgentCompany/TheAgentCompany)。企业工单使用合成交易，提交终点为测试财务队列。
+The service images and base fixtures come from TheAgentCompany. The benchmark uses synthetic transactions and a test finance queue. [TheAgentCompany](https://github.com/TheAgentCompany/TheAgentCompany)
 
-在仓库根目录运行 `shasum -a 256 -c SHA256SUMS` 可校验题面、参评附件、题库数据和发布结果。
+Run `shasum -a 256 -c SHA256SUMS` from the repository root to verify the task packets, participant materials, fixtures and published results.

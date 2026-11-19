@@ -1,10 +1,10 @@
-# 双发票核销首交
+# First submissions on two-invoice remittances
 
-16 张独立回款指令，每张含两张独立核销的发票。32 个全新模型会话各有原始日志。无 Skill 与 GLM Skill 的均分分别为 28.12 和 94.84。两行都正确的工单从 0/16 到 13/16。
+The batch contained 16 independent remittances, each with two invoices to apply separately. Both arms ran each case in a fresh model session, yielding 32 source logs. The mean business score rose from 28.13 without a Skill to 94.84 with the GLM Skill. The number of remittances with two fully correct rows rose from 0/16 to 13/16.
 
-整批提高 15 张、持平 1 张、下降 0 张，两侧均有合规首交的工单共 16 张。每张工单只计一次。原生示范和产品蒸馏来自既有短付训练，评估时模型使用本地模拟 ERP CLI；该实验衡量核销决策，跨软件执行另见原生确认集。
+Scores improved on 15 remittances and tied on one. All 16 had a compliant first submission in both arms, and each counted once. The native demonstrations and distilled Skill came from earlier short-payment training. The evaluation used a local simulated ERP CLI to measure cash application decisions. The [native finance report](finance.md) covers cross-application execution.
 
-| 回款工单 | 两张发票 | 无 Skill | GLM Skill | 分差 |
+| Remittance | Invoices | No Skill | GLM Skill | Difference |
 |---|---|---:|---:|---:|
 | RMT-716 | I-47740, I-43890 | 0 | 100 | +100 |
 | RMT-723 | I-47207, I-48588 | 0 | 100 | +100 |
@@ -23,8 +23,8 @@
 | RMT-814 | I-42800, I-45699 | 0 | 100 | +100 |
 | RMT-821 | I-46999, I-43731 | 72.5 | 100 | +27.5 |
 
-## 分差发生在哪里
+## Referrals and invoice accuracy
 
-无 Skill 时，11 张工单的首交至少有一行转人工，合计 19/32 行。GLM Skill 组对应为 0 张、0/32 行。逐发票全对从 6/32 到 29/32。企业专有处置规则可通过 Skill 获取，两组均能查询相同的已结案例。这里同时测到了减少转人工和正确处理金额两种收益。
+Without a Skill, the model referred at least one invoice for manual review on 11 remittances, or 19 of the 32 invoice rows. With the GLM Skill, it referred none. Fully correct invoice rows rose from 6/32 to 29/32. Both arms could look up the same closed cases. The Skill also supplied the company's rules for handling short payments. The scores capture both the reduction in referrals and the accuracy of the amounts submitted.
 
-[全部工单成绩](remittance-scores.json) · [冻结答案](answer-key.json) · [合成账本](../mock/remittances)
+[All case scores](remittance-scores.json) · [Frozen answer key](answer-key.json) · [Synthetic ledgers](../mock/remittances)

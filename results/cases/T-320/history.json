@@ -4,11 +4,11 @@
   "variants": [
     {
       "protocol": "first-contact-t-320",
-      "metric": "无需查制度即首次答对",
+      "metric": "Correct first answer without consulting the policy",
       "environment": {
         "model": "gpt-6.1-terra/high",
         "budget": 300,
-        "recorded_host": "历史冻结协议未逐次记录宿主 OS 补丁号。"
+        "recorded_host": "The historical protocol did not record the host OS patch level for each trial."
       },
       "sessions": [
         "first-contact/20261118T054400Z/10A",

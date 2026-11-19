@@ -1,8 +1,8 @@
-# 有效工单运行历史
+# Run histories for cases with a score improvement
 
-按独立业务工单归档，含首次交付、各组得分、原始文件校验值和按发生顺序提取的操作。历史同一发票的正式变体合并在同一记录中。
+Each record covers one business case and includes first submissions, scores by arm, source-file checksums and actions in chronological order. Historical trials and variants for the same invoice share a record. For results across all scheduled cases, including ties, see the [native finance report](finance.md) and the [two-invoice remittance report](remittances.md).
 
-| 工单 | 执行方式 | 归档会话 |
+| Case | Interface | Archived sessions |
 |---|---|---:|
 | [AP-1026](cases/AP-1026/history.json) | Native Chrome | 3 |
 | [AP-1059](cases/AP-1059/history.json) | Native Chrome | 2 |

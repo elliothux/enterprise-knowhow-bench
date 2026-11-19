@@ -1,0 +1,223 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [4 0 R 6 0 R 8 0 R] /Count 3 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 5 0 R >>
+endobj
+5 0 obj
+<< /Length 1401 >>
+stream
+BT /F1 10 Tf 13 TL 40 800 Td
+(README / payment recommendation dossier) Tj
+T*
+(payment-release-training) Tj
+T*
+(SIMULATION ONLY. No money is moved; do not initiate any payment.) Tj
+T*
+(Review date / timezone: 2026-12-08 / Singapore \(UTC+08\).) Tj
+T*
+(Event cutoff \(inclusive\): 2026-12-08T17:00:00) Tj
+T*
+(Recorded cutoff \(inclusive\): 2026-12-09T09:00:00) Tj
+T*
+() Tj
+T*
+(Output roster: one recommendation for EACH of these eight business keys:) Tj
+T*
+(ASTER / PX-101) Tj
+T*
+(ASTER / PX-102) Tj
+T*
+(BAY / PX-201) Tj
+T*
+(BAY / PX-202) Tj
+T*
+(COPPER / PX-301) Tj
+T*
+(COPPER / PX-302) Tj
+T*
+(DELTA / PX-101) Tj
+T*
+(DELTA / PX-402) Tj
+T*
+() Tj
+T*
+(Document index \(read all eight PDFs; no other sources are required\):) Tj
+T*
+(01-readme-policy.pdf: this index and current policy, pages 2-3.) Tj
+T*
+(02-archived-policy.pdf: prior policy retained for audit; check applicability.) Tj
+T*
+(03-exception-bulletin.pdf: published exception approvals, with scope and limits.) Tj
+T*
+(04-invoice-revisions.pdf: invoice versions; 05-po-receipts.pdf: PO and receipts.) Tj
+T*
+(06-bank-controls.pdf: bank changes and verification; 07-hold-events.pdf: holds.) Tj
+T*
+(08-settlement-register.pdf: credits, payments and duplicate assessments.) Tj
+T*
+() Tj
+T*
+(Deliver payment-release.csv with the seven columns in the task.) Tj
+T*
+(No rules, answers or approvals are supplied by chat. This dossier is complete.) Tj
+T*
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 7 0 R >>
+endobj
+7 0 obj
+<< /Length 1859 >>
+stream
+BT /F1 10 Tf 13 TL 40 800 Td
+(CURRENT PAYMENT RELEASE POLICY / POL-TR-CURRENT) Tj
+T*
+(Status APPROVED; effective from 2026-12-06T00:00:00; no expiry.) Tj
+T*
+(This replaces POL-TR-ARCHIVE. Apply to this review's event cutoff.) Tj
+T*
+() Tj
+T*
+(1. Scope and time) Tj
+T*
+(Business key is \(vendor_id, invoice_id\), never invoice_id alone.) Tj
+T*
+(For EVERY ledger, use a record only when BOTH event_on <= event cutoff AND) Tj
+T*
+(recorded_on <= recorded cutoff \(index page 1\). Ignore other records completely.) Tj
+T*
+(Select greatest numeric revision per invoice business key AFTER time filtering.) Tj
+T*
+(Then check its status; never revert to an older POSTED revision if latest is VOID/DRAFT.) Tj
+T*
+(Equal copies of the same revision/entry count once; conflicting copies are invalid data.) Tj
+T*
+(PO versions group by \(vendor_id,po_id\); receipt versions by receipt_id; settlement) Tj
+T*
+(versions by \(vendor_id,entry_id\). Select greatest revision before status checks.) Tj
+T*
+() Tj
+T*
+(2. Evaluate ALL gates, without short-circuiting on an earlier failure) Tj
+T*
+(NOT_POSTED: the selected invoice status is anything other than POSTED.) Tj
+T*
+(DUPLICATE: a latest eligible DUPLICATE_AUDIT for that business key is CONFIRMED.) Tj
+T*
+(NO_BALANCE: gross minus POSTED CREDIT minus SETTLED PAYMENT is <= 0.) Tj
+T*
+(Only settlement entries matching BOTH vendor_id and invoice_id may be applied.) Tj
+T*
+(All amounts include tax, in SGD. Round the final net to cents, half up.) Tj
+T*
+(net_payable_sgd is this book balance, including on HOLD rows; do not zero it for HOLD.) Tj
+T*
+(PO_MISMATCH: no matching selected APPROVED PO, or invoice gross exceeds its amount.) Tj
+T*
+(RECEIPT_SHORT: total selected ACCEPTED receipt amounts for this vendor/invoice/PO) Tj
+T*
+(is less than invoice gross. Exact cents; no percentage tolerance or cross-invoice netting.) Tj
+T*
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 9 0 R >>
+endobj
+9 0 obj
+<< /Length 2614 >>
+stream
+BT /F1 10 Tf 13 TL 40 800 Td
+(CURRENT POLICY continued / POL-TR-CURRENT) Tj
+T*
+(3. Bank / hold / exception controls) Tj
+T*
+(Bank records and hold events are immutable. Their order is \(event_on, sequence\).) Tj
+T*
+(Choose latest eligible CHANGE per vendor even if its account is not verified.) Tj
+T*
+(The latest CHANGE must have status ACTIVE. BANK_UNVERIFIED unless a VERIFY) Tj
+T*
+(references that exact CHANGE ref AND account,) Tj
+T*
+(has status VERIFIED, role TREASURY_REVIEWER, different actor_id from) Tj
+T*
+(the CHANGE maker, and is strictly later in \(event_on, sequence\). Same timestamps) Tj
+T*
+(require sequence comparison. Old account verification never verifies a newer change.) Tj
+T*
+(bank_account_ref is the latest CHANGE account even on HOLD; blank only if none exists.) Tj
+T*
+(ACTIVE_HOLD: any eligible OPEN has no later CLOSE for the SAME business key AND) Tj
+T*
+(hold_id, by role AP_CONTROLLER/RISK_MANAGER. Other roles or hold IDs cannot close it.) Tj
+T*
+(A later OPEN reopens a hold; earlier closes cannot close that new OPEN.) Tj
+T*
+(Exception approvals are in BUL-TR-01. Only role CFO may waive) Tj
+T*
+(PO_MISMATCH, RECEIPT_SHORT, and only reasons explicitly named on that approval.) Tj
+T*
+(Approval must match both business-key fields AND selected invoice revision; gross) Tj
+T*
+(must be <= amount_cap_sgd and valid_until >= event cutoff. Both time cutoffs apply.) Tj
+T*
+(NOT_POSTED, DUPLICATE, NO_BALANCE, BANK_UNVERIFIED, ACTIVE_HOLD can NEVER be waived.) Tj
+T*
+() Tj
+T*
+(4. Output and auditable citations) Tj
+T*
+(RELEASE if no unwaived failures remain; otherwise HOLD with ALL remaining reasons.) Tj
+T*
+(reason_codes order: NOT_POSTED;DUPLICATE;NO_BALANCE;) Tj
+T*
+(PO_MISMATCH;RECEIPT_SHORT;BANK_UNVERIFIED;ACTIVE_HOLD.) Tj
+T*
+(Use semicolons, no skipped reasons. RELEASE reason_codes is NONE.) Tj
+T*
+(Evidence is the EXACT SET of: this current policy ref; bulletin ref; selected invoice;) Tj
+T*
+(selected matching PO; every selected matching receipt \(any status\); latest bank CHANGE;) Tj
+T*
+(every eligible VERIFY referring to that change; every eligible hold event for this key;) Tj
+T*
+(every selected settlement entry and every eligible exception for this key \(even if invalid\).) Tj
+T*
+(Do not cite superseded, time-excluded, other-key records or the old policy. Missing data) Tj
+T*
+(has no invented evidence ID. Use record ref values, not hold_id / invoice_id as citations.) Tj
+T*
+(Separate evidence refs with ; \(comma or | also accepted\). Order and duplicates don't matter.) Tj
+T*
+(A ref may also be written as its exact PDF filename#ref; both forms are equivalent.) Tj
+T*
+ET
+endstream
+endobj
+xref
+0 10
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000127 00000 n 
+0000000197 00000 n 
+0000000323 00000 n 
+0000001775 00000 n 
+0000001901 00000 n 
+0000003811 00000 n 
+0000003937 00000 n 
+trailer
+<< /Size 10 /Root 1 0 R >>
+startxref
+6602
+%%EOF

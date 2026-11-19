@@ -1,0 +1,133 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [4 0 R 6 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 5 0 R >>
+endobj
+5 0 obj
+<< /Length 1138 >>
+stream
+BT /F1 10 Tf 13 TL 40 800 Td
+(07-hold-events.pdf / payment-release-training) Tj
+T*
+(Published record refs; apply the policy in 01-readme-policy.pdf.) Tj
+T*
+() Tj
+T*
+(hold_events / HE-TR-1) Tj
+T*
+(event_on=2026-12-06T10:00:00; recorded_on=2026-12-06T11:00:00) Tj
+T*
+(vendor_id=ASTER; invoice_id=PX-101; hold_id=H-TR-CLOSED; action=OPEN; sequence=1;) Tj
+T*
+(role=AP_ANALYST; actor_id=operator-1) Tj
+T*
+() Tj
+T*
+(hold_events / HE-TR-2) Tj
+T*
+(event_on=2026-12-06T10:00:00; recorded_on=2026-12-06T11:00:00) Tj
+T*
+(vendor_id=ASTER; invoice_id=PX-101; hold_id=H-TR-CLOSED; action=CLOSE; sequence=2;) Tj
+T*
+(role=AP_CONTROLLER; actor_id=operator-2) Tj
+T*
+() Tj
+T*
+(hold_events / HE-TR-3) Tj
+T*
+(event_on=2026-12-06T10:00:00; recorded_on=2026-12-06T11:00:00) Tj
+T*
+(vendor_id=DELTA; invoice_id=PX-101; hold_id=H-TR-ACTIVE; action=OPEN; sequence=3;) Tj
+T*
+(role=AP_ANALYST; actor_id=operator-3) Tj
+T*
+() Tj
+T*
+(hold_events / HE-TR-4) Tj
+T*
+(event_on=2026-12-06T10:00:00; recorded_on=2026-12-06T11:00:00) Tj
+T*
+(vendor_id=DELTA; invoice_id=PX-101; hold_id=H-TR-ACTIVE; action=CLOSE; sequence=4;) Tj
+T*
+(role=AP_CLERK; actor_id=operator-4) Tj
+T*
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 7 0 R >>
+endobj
+7 0 obj
+<< /Length 1146 >>
+stream
+BT /F1 10 Tf 13 TL 40 800 Td
+(07-hold-events.pdf / payment-release-training) Tj
+T*
+(Published record refs; apply the policy in 01-readme-policy.pdf.) Tj
+T*
+() Tj
+T*
+(hold_events / HE-TR-5) Tj
+T*
+(event_on=2026-12-06T10:00:00; recorded_on=2026-12-06T11:00:00) Tj
+T*
+(vendor_id=DELTA; invoice_id=PX-101; hold_id=H-TR-OTHER; action=CLOSE; sequence=5;) Tj
+T*
+(role=AP_CONTROLLER; actor_id=operator-5) Tj
+T*
+() Tj
+T*
+(hold_events / HE-TR-6) Tj
+T*
+(event_on=2026-12-08T16:00:00; recorded_on=2026-12-09T10:00:00) Tj
+T*
+(vendor_id=DELTA; invoice_id=PX-101; hold_id=H-TR-ACTIVE; action=CLOSE; sequence=6;) Tj
+T*
+(role=RISK_MANAGER; actor_id=operator-6) Tj
+T*
+() Tj
+T*
+(hold_events / HE-TR-7) Tj
+T*
+(event_on=2026-12-06T10:00:00; recorded_on=2026-12-06T11:00:00) Tj
+T*
+(vendor_id=DELTA; invoice_id=PX-402; hold_id=H-TR-SETTLED; action=OPEN; sequence=7;) Tj
+T*
+(role=AP_ANALYST; actor_id=operator-7) Tj
+T*
+() Tj
+T*
+(hold_events / HE-TR-8) Tj
+T*
+(event_on=2026-12-06T10:00:00; recorded_on=2026-12-06T11:00:00) Tj
+T*
+(vendor_id=DELTA; invoice_id=PX-402; hold_id=H-TR-SETTLED; action=CLOSE; sequence=8;) Tj
+T*
+(role=RISK_MANAGER; actor_id=operator-8) Tj
+T*
+ET
+endstream
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000121 00000 n 
+0000000191 00000 n 
+0000000317 00000 n 
+0000001506 00000 n 
+0000001632 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+2829
+%%EOF

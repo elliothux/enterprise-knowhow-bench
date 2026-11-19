@@ -1,0 +1,76 @@
+{
+  "case_id": "vendor-quote",
+  "source": "Actual pinned ownCloud seed PDFs inspected using macOS PDFKit; requirements from pinned task scenarios.json. Examiner-only; never supplied to tested agents.",
+  "requirements": {
+    "cores": 28,
+    "ram_gb": 512,
+    "nvme_count": 6,
+    "nvme_tb_each": "1.92",
+    "warranty_years": 4
+  },
+  "suppliers": [
+    {
+      "filename": "cloudtech_industries_quote.pdf",
+      "name": "CloudTech Industries",
+      "price": "12799.99",
+      "cores": 30,
+      "ram_gb": 768,
+      "nvme_count": 8,
+      "nvme_tb_each": "3.84",
+      "warranty_years": 4,
+      "sha256": "01c0e22dd9d65a2d9705f43e62af71b46d983f814a51b1c2a2a1dea3d076a147",
+      "bytes": 2301
+    },
+    {
+      "filename": "datacore_enterprise_quote.pdf",
+      "name": "DataCore Enterprise",
+      "price": "11999.99",
+      "cores": 30,
+      "ram_gb": 512,
+      "nvme_count": 4,
+      "nvme_tb_each": "1.92",
+      "warranty_years": 5,
+      "sha256": "8207fba934d48e2e75a5a6afa0ae76d397d219b0136487b7292a8390116057e8",
+      "bytes": 1976
+    },
+    {
+      "filename": "netsys_corporation_quote.pdf",
+      "name": "NetSys Corporation",
+      "price": "12199.99",
+      "cores": 25,
+      "ram_gb": 768,
+      "nvme_count": 8,
+      "nvme_tb_each": "1.92",
+      "warranty_years": 3,
+      "sha256": "8bec9bf5d2c5aa9b34dffb4fa61f87eb642a63b97ee8cd194a9edd35b8765d50",
+      "bytes": 2341
+    },
+    {
+      "filename": "servermaster_systems_quote.pdf",
+      "name": "ServerMaster Systems",
+      "price": "13299.99",
+      "cores": 31,
+      "ram_gb": 384,
+      "nvme_count": 6,
+      "nvme_tb_each": "1.92",
+      "warranty_years": 3,
+      "sha256": "426757c32310c36a20ca102dfab27417d5d789c46eda916e3f785fe16f0ae197",
+      "bytes": 2291
+    },
+    {
+      "filename": "techpro_solutions_quote.pdf",
+      "name": "TechPro Solutions",
+      "price": "12499.99",
+      "cores": 32,
+      "ram_gb": 512,
+      "nvme_count": 6,
+      "nvme_tb_each": "1.92",
+      "warranty_years": 4,
+      "sha256": "e7f808b67aceeac471a0238008ca023bae71fe7f82d0aee10f1cc9caa247b87d",
+      "bytes": 2135
+    }
+  ],
+  "upstream_oracle_matches_actual_seed": false,
+  "case_version": 2,
+  "warranty_interpretation": "Task v2 explicitly treats years under warranty/service coverage/support-and-warranty/protection-plan headings as contractual warranty duration, including premium or enterprise support."
+}

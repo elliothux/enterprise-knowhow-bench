@@ -1,0 +1,124 @@
+{
+  "id": "release-package-training",
+  "family": "release-package",
+  "split": "training",
+  "rules": {
+    "as_of": "2026-10-20",
+    "release_id": "ORION-26.10",
+    "required": [
+      "GUIDE",
+      "TEST",
+      "LABEL",
+      "SAFETY"
+    ]
+  },
+  "packets": {
+    "operator-guide.pdf": [
+      {
+        "doc_key": "GUIDE",
+        "document_id": "OG-101",
+        "revision": 1,
+        "release_id": "ORION-26.10",
+        "status": "ARCHIVED",
+        "approved_on": "2026-09-01",
+        "effective_on": "2026-09-01",
+        "expires_on": "",
+        "body": "Controlled release evidence; use header metadata to select the applicable revision."
+      },
+      {
+        "doc_key": "GUIDE",
+        "document_id": "OG-102",
+        "revision": 2,
+        "release_id": "ORION-26.10",
+        "status": "APPROVED",
+        "approved_on": "2026-10-10",
+        "effective_on": "2026-10-12",
+        "expires_on": "",
+        "body": "Controlled release evidence; use header metadata to select the applicable revision."
+      },
+      {
+        "doc_key": "GUIDE",
+        "document_id": "OG-103",
+        "revision": 3,
+        "release_id": "ORION-26.10",
+        "status": "DRAFT",
+        "approved_on": "",
+        "effective_on": "2026-10-19",
+        "expires_on": "",
+        "body": "Controlled release evidence; use header metadata to select the applicable revision."
+      }
+    ],
+    "validation-record.pdf": [
+      {
+        "doc_key": "TEST",
+        "document_id": "VR-201",
+        "revision": 1,
+        "release_id": "ORION-26.10",
+        "status": "APPROVED",
+        "approved_on": "2026-10-01",
+        "effective_on": "2026-10-05",
+        "expires_on": "",
+        "body": "Controlled release evidence; use header metadata to select the applicable revision."
+      },
+      {
+        "doc_key": "TEST",
+        "document_id": "VR-202",
+        "revision": 2,
+        "release_id": "ORION-26.10",
+        "status": "APPROVED",
+        "approved_on": "2026-10-18",
+        "effective_on": "2026-10-25",
+        "expires_on": "",
+        "body": "Controlled release evidence; use header metadata to select the applicable revision."
+      }
+    ],
+    "carton-label.pdf": [
+      {
+        "doc_key": "LABEL",
+        "document_id": "CL-301",
+        "revision": 1,
+        "release_id": "ORION-26.10",
+        "status": "APPROVED",
+        "approved_on": "2026-10-12",
+        "effective_on": "2026-10-20",
+        "expires_on": "2026-10-20",
+        "body": "Controlled release evidence; use header metadata to select the applicable revision."
+      },
+      {
+        "doc_key": "LABEL",
+        "document_id": "CL-309",
+        "revision": 9,
+        "release_id": "ORION-27.01",
+        "status": "APPROVED",
+        "approved_on": "2026-10-15",
+        "effective_on": "2026-10-16",
+        "expires_on": "",
+        "body": "Controlled release evidence; use header metadata to select the applicable revision."
+      }
+    ],
+    "safety-sheet.pdf": [
+      {
+        "doc_key": "SAFETY",
+        "document_id": "SS-401",
+        "revision": 1,
+        "release_id": "ORION-26.10",
+        "status": "ARCHIVED",
+        "approved_on": "2026-09-01",
+        "effective_on": "2026-09-01",
+        "expires_on": "",
+        "body": "Controlled release evidence; use header metadata to select the applicable revision."
+      },
+      {
+        "doc_key": "SAFETY",
+        "document_id": "SS-402",
+        "revision": 2,
+        "release_id": "ORION-26.10",
+        "status": "DRAFT",
+        "approved_on": "",
+        "effective_on": "2026-10-15",
+        "expires_on": "",
+        "body": "Controlled release evidence; use header metadata to select the applicable revision."
+      }
+    ]
+  }
+}

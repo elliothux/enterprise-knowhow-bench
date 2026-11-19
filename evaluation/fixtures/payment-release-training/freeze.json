@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "case_id": "payment-release-training",
+  "sha256": {
+    "cases/suite/payment-release-training/task.md": "a8ddbe1151b91c614c32134ae01878c2288192e9c9453ec02f705e475924f16a",
+    "cases/suite/payment-release-training/01-readme-policy.pdf": "a9de99e36ec63e3467ec31ec7f6a77aa3ab5355029409e68068e46e4d4bbfb05",
+    "cases/suite/payment-release-training/02-archived-policy.pdf": "dad865d12c0fd9d1d59ad85d558f1b9255528621a2aad11996e5aff976357419",
+    "cases/suite/payment-release-training/03-exception-bulletin.pdf": "aaf1301b9a0508a1ff6c12eaedac822fa4783f3f395941c38da967fabc521697",
+    "cases/suite/payment-release-training/04-invoice-revisions.pdf": "e275ca81c1d44dac8e5cc40bc63a1aee81706561e2567f3058e274937a8257ed",
+    "cases/suite/payment-release-training/05-po-receipts.pdf": "18b9a22f5283244181dbb81d8cf2d43af3761f3cd20dfdda06b02f6732fe6a22",
+    "cases/suite/payment-release-training/06-bank-controls.pdf": "0a68c30e5ea19059aa6d04dca5f9226ec25e3159ad1d2823e48086dd25eccebc",
+    "cases/suite/payment-release-training/07-hold-events.pdf": "02475254023b31bc6b17635631e8d0ad1a540c83d5f8d96b6f5ef602388bd391",
+    "cases/suite/payment-release-training/08-settlement-register.pdf": "28fc4e66fd115726b5cfa8ee5cf0d1ad91e00d8372965e3d4604d5d636509bd5",
+    "evaluation/fixtures/payment-release-training/fixture.json": "bc1d58de65ed7915cfffa67ef1caf1acc0d002b7cdff78574087616058869ed4"
+  }
+}

@@ -1,0 +1,213 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [4 0 R 6 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 5 0 R >>
+endobj
+5 0 obj
+<< /Length 2004 >>
+stream
+BT /F1 10 Tf 13 TL 40 800 Td
+(05-po-receipts.pdf / payment-release-evaluation) Tj
+T*
+(Published record refs; apply the policy in 01-readme-policy.pdf.) Tj
+T*
+() Tj
+T*
+(purchase_orders / POREC-EV-1) Tj
+T*
+(event_on=2026-12-13T10:00:00; recorded_on=2026-12-13T11:00:00) Tj
+T*
+(vendor_id=IRIS; invoice_id=QX-701; po_id=PO-EV-1; revision=1; status=APPROVED;) Tj
+T*
+(amount_sgd=1500.60) Tj
+T*
+() Tj
+T*
+(purchase_orders / POREC-EV-2) Tj
+T*
+(event_on=2026-12-13T10:00:00; recorded_on=2026-12-13T11:00:00) Tj
+T*
+(vendor_id=IRIS; invoice_id=QX-702; po_id=PO-EV-2; revision=1; status=APPROVED;) Tj
+T*
+(amount_sgd=760.00) Tj
+T*
+() Tj
+T*
+(purchase_orders / POREC-EV-3) Tj
+T*
+(event_on=2026-12-13T10:00:00; recorded_on=2026-12-13T11:00:00) Tj
+T*
+(vendor_id=JUNIPER; invoice_id=QX-801; po_id=PO-EV-3; revision=1; status=APPROVED;) Tj
+T*
+(amount_sgd=920.00) Tj
+T*
+() Tj
+T*
+(purchase_orders / POREC-EV-4) Tj
+T*
+(event_on=2026-12-13T10:00:00; recorded_on=2026-12-13T11:00:00) Tj
+T*
+(vendor_id=JUNIPER; invoice_id=QX-802; po_id=PO-EV-4; revision=1; status=APPROVED;) Tj
+T*
+(amount_sgd=680.00) Tj
+T*
+() Tj
+T*
+(purchase_orders / POREC-EV-5) Tj
+T*
+(event_on=2026-12-13T10:00:00; recorded_on=2026-12-13T11:00:00) Tj
+T*
+(vendor_id=KITE; invoice_id=QX-901; po_id=PO-EV-5; revision=1; status=APPROVED;) Tj
+T*
+(amount_sgd=860.00) Tj
+T*
+() Tj
+T*
+(purchase_orders / POREC-EV-6) Tj
+T*
+(event_on=2026-12-13T10:00:00; recorded_on=2026-12-13T11:00:00) Tj
+T*
+(vendor_id=KITE; invoice_id=QX-902; po_id=PO-EV-6; revision=1; status=APPROVED;) Tj
+T*
+(amount_sgd=1000.00) Tj
+T*
+() Tj
+T*
+(purchase_orders / POREC-EV-7) Tj
+T*
+(event_on=2026-12-13T10:00:00; recorded_on=2026-12-13T11:00:00) Tj
+T*
+(vendor_id=LOTUS; invoice_id=QX-701; po_id=PO-EV-7; revision=1; status=APPROVED;) Tj
+T*
+(amount_sgd=540.00) Tj
+T*
+() Tj
+T*
+(purchase_orders / POREC-EV-8) Tj
+T*
+(event_on=2026-12-13T10:00:00; recorded_on=2026-12-13T11:00:00) Tj
+T*
+(vendor_id=LOTUS; invoice_id=QX-1002; po_id=PO-EV-8; revision=1; status=APPROVED;) Tj
+T*
+(amount_sgd=425.00) Tj
+T*
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 7 0 R >>
+endobj
+7 0 obj
+<< /Length 2124 >>
+stream
+BT /F1 10 Tf 13 TL 40 800 Td
+(05-po-receipts.pdf / payment-release-evaluation) Tj
+T*
+(Published record refs; apply the policy in 01-readme-policy.pdf.) Tj
+T*
+() Tj
+T*
+(receipts / GR-EV-1) Tj
+T*
+(event_on=2026-12-13T10:00:00; recorded_on=2026-12-13T11:00:00) Tj
+T*
+(vendor_id=IRIS; invoice_id=QX-701; po_id=PO-EV-1; receipt_id=RECEIPT-EV-1; revision=1;) Tj
+T*
+(status=ACCEPTED; amount_sgd=1500.60) Tj
+T*
+() Tj
+T*
+(receipts / GR-EV-2) Tj
+T*
+(event_on=2026-12-13T10:00:00; recorded_on=2026-12-13T11:00:00) Tj
+T*
+(vendor_id=IRIS; invoice_id=QX-702; po_id=PO-EV-2; receipt_id=RECEIPT-EV-2; revision=1;) Tj
+T*
+(status=ACCEPTED; amount_sgd=760.00) Tj
+T*
+() Tj
+T*
+(receipts / GR-EV-3) Tj
+T*
+(event_on=2026-12-13T10:00:00; recorded_on=2026-12-13T11:00:00) Tj
+T*
+(vendor_id=JUNIPER; invoice_id=QX-801; po_id=PO-EV-3; receipt_id=RECEIPT-EV-3; revision=1;) Tj
+T*
+(status=ACCEPTED; amount_sgd=900.00) Tj
+T*
+() Tj
+T*
+(receipts / GR-EV-4) Tj
+T*
+(event_on=2026-12-13T10:00:00; recorded_on=2026-12-13T11:00:00) Tj
+T*
+(vendor_id=JUNIPER; invoice_id=QX-802; po_id=PO-EV-4; receipt_id=RECEIPT-EV-4; revision=1;) Tj
+T*
+(status=ACCEPTED; amount_sgd=650.00) Tj
+T*
+() Tj
+T*
+(receipts / GR-EV-5) Tj
+T*
+(event_on=2026-12-13T10:00:00; recorded_on=2026-12-13T11:00:00) Tj
+T*
+(vendor_id=KITE; invoice_id=QX-901; po_id=PO-EV-5; receipt_id=RECEIPT-EV-5; revision=1;) Tj
+T*
+(status=ACCEPTED; amount_sgd=860.00) Tj
+T*
+() Tj
+T*
+(receipts / GR-EV-6) Tj
+T*
+(event_on=2026-12-13T10:00:00; recorded_on=2026-12-13T11:00:00) Tj
+T*
+(vendor_id=KITE; invoice_id=QX-902; po_id=PO-EV-6; receipt_id=RECEIPT-EV-6; revision=1;) Tj
+T*
+(status=ACCEPTED; amount_sgd=1050.00) Tj
+T*
+() Tj
+T*
+(receipts / GR-EV-7) Tj
+T*
+(event_on=2026-12-13T10:00:00; recorded_on=2026-12-13T11:00:00) Tj
+T*
+(vendor_id=LOTUS; invoice_id=QX-701; po_id=PO-EV-7; receipt_id=RECEIPT-EV-7; revision=1;) Tj
+T*
+(status=ACCEPTED; amount_sgd=540.00) Tj
+T*
+() Tj
+T*
+(receipts / GR-EV-8) Tj
+T*
+(event_on=2026-12-13T10:00:00; recorded_on=2026-12-13T11:00:00) Tj
+T*
+(vendor_id=LOTUS; invoice_id=QX-1002; po_id=PO-EV-8; receipt_id=RECEIPT-EV-8; revision=1;) Tj
+T*
+(status=ACCEPTED; amount_sgd=425.00) Tj
+T*
+ET
+endstream
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000121 00000 n 
+0000000191 00000 n 
+0000000317 00000 n 
+0000002372 00000 n 
+0000002498 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+4673
+%%EOF

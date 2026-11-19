@@ -1,0 +1,828 @@
+{
+  "id": "payment-release-evaluation",
+  "family": "payment-release",
+  "split": "evaluation",
+  "time_budget_seconds": 900,
+  "rules": {
+    "as_of": "2026-12-15",
+    "event_cutoff": "2026-12-15T17:00:00",
+    "recorded_cutoff": "2026-12-16T09:00:00",
+    "policy_id": "POL-EV-CURRENT",
+    "bulletin_id": "BUL-EV-01",
+    "policy_effective_from": "2026-12-13T00:00:00",
+    "old_policy_id": "POL-EV-ARCHIVE",
+    "reason_order": [
+      "NOT_POSTED",
+      "DUPLICATE",
+      "NO_BALANCE",
+      "PO_MISMATCH",
+      "RECEIPT_SHORT",
+      "BANK_UNVERIFIED",
+      "ACTIVE_HOLD"
+    ],
+    "waivable_reasons": [
+      "PO_MISMATCH",
+      "RECEIPT_SHORT"
+    ],
+    "waiver_role": "CFO",
+    "bank_verifier_role": "TREASURY_REVIEWER",
+    "hold_close_roles": [
+      "AP_CONTROLLER",
+      "RISK_MANAGER"
+    ]
+  },
+  "roster": [
+    {
+      "vendor_id": "IRIS",
+      "invoice_id": "QX-701"
+    },
+    {
+      "vendor_id": "IRIS",
+      "invoice_id": "QX-702"
+    },
+    {
+      "vendor_id": "JUNIPER",
+      "invoice_id": "QX-801"
+    },
+    {
+      "vendor_id": "JUNIPER",
+      "invoice_id": "QX-802"
+    },
+    {
+      "vendor_id": "KITE",
+      "invoice_id": "QX-901"
+    },
+    {
+      "vendor_id": "KITE",
+      "invoice_id": "QX-902"
+    },
+    {
+      "vendor_id": "LOTUS",
+      "invoice_id": "QX-701"
+    },
+    {
+      "vendor_id": "LOTUS",
+      "invoice_id": "QX-1002"
+    }
+  ],
+  "invoices": [
+    {
+      "ref": "INV-EV-1-R2",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "IRIS",
+      "invoice_id": "QX-701",
+      "revision": 2,
+      "status": "POSTED",
+      "gross_sgd": "1500.60",
+      "po_id": "PO-EV-1"
+    },
+    {
+      "ref": "INV-EV-1-R1",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "IRIS",
+      "invoice_id": "QX-701",
+      "revision": 1,
+      "status": "POSTED",
+      "gross_sgd": "1350.00",
+      "po_id": "PO-EV-1"
+    },
+    {
+      "ref": "INV-EV-2-R2",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "IRIS",
+      "invoice_id": "QX-702",
+      "revision": 2,
+      "status": "DRAFT",
+      "gross_sgd": "760.00",
+      "po_id": "PO-EV-2"
+    },
+    {
+      "ref": "INV-EV-2-R1",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "IRIS",
+      "invoice_id": "QX-702",
+      "revision": 1,
+      "status": "POSTED",
+      "gross_sgd": "700.00",
+      "po_id": "PO-EV-2"
+    },
+    {
+      "ref": "INV-EV-3-R1",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "JUNIPER",
+      "invoice_id": "QX-801",
+      "revision": 1,
+      "status": "POSTED",
+      "gross_sgd": "920.00",
+      "po_id": "PO-EV-3"
+    },
+    {
+      "ref": "INV-EV-4-R1",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "JUNIPER",
+      "invoice_id": "QX-802",
+      "revision": 1,
+      "status": "POSTED",
+      "gross_sgd": "680.00",
+      "po_id": "PO-EV-4"
+    },
+    {
+      "ref": "INV-EV-5-R1",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "KITE",
+      "invoice_id": "QX-901",
+      "revision": 1,
+      "status": "POSTED",
+      "gross_sgd": "860.00",
+      "po_id": "PO-EV-5"
+    },
+    {
+      "ref": "INV-EV-6-R1",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "KITE",
+      "invoice_id": "QX-902",
+      "revision": 1,
+      "status": "POSTED",
+      "gross_sgd": "1100.00",
+      "po_id": "PO-EV-6"
+    },
+    {
+      "ref": "INV-EV-7-R1",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "LOTUS",
+      "invoice_id": "QX-701",
+      "revision": 1,
+      "status": "POSTED",
+      "gross_sgd": "540.00",
+      "po_id": "PO-EV-7"
+    },
+    {
+      "ref": "INV-EV-8-R1",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "LOTUS",
+      "invoice_id": "QX-1002",
+      "revision": 1,
+      "status": "POSTED",
+      "gross_sgd": "425.00",
+      "po_id": "PO-EV-8"
+    },
+    {
+      "ref": "INV-EV-LATE-R9",
+      "event_on": "2026-12-15T18:00:00",
+      "recorded_on": "2026-12-16T08:00:00",
+      "vendor_id": "JUNIPER",
+      "invoice_id": "QX-801",
+      "revision": 9,
+      "status": "VOID",
+      "gross_sgd": "9999.00",
+      "po_id": "PO-EV-3"
+    }
+  ],
+  "purchase_orders": [
+    {
+      "ref": "POREC-EV-1",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "IRIS",
+      "invoice_id": "QX-701",
+      "po_id": "PO-EV-1",
+      "revision": 1,
+      "status": "APPROVED",
+      "amount_sgd": "1500.60"
+    },
+    {
+      "ref": "POREC-EV-2",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "IRIS",
+      "invoice_id": "QX-702",
+      "po_id": "PO-EV-2",
+      "revision": 1,
+      "status": "APPROVED",
+      "amount_sgd": "760.00"
+    },
+    {
+      "ref": "POREC-EV-3",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "JUNIPER",
+      "invoice_id": "QX-801",
+      "po_id": "PO-EV-3",
+      "revision": 1,
+      "status": "APPROVED",
+      "amount_sgd": "920.00"
+    },
+    {
+      "ref": "POREC-EV-4",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "JUNIPER",
+      "invoice_id": "QX-802",
+      "po_id": "PO-EV-4",
+      "revision": 1,
+      "status": "APPROVED",
+      "amount_sgd": "680.00"
+    },
+    {
+      "ref": "POREC-EV-5",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "KITE",
+      "invoice_id": "QX-901",
+      "po_id": "PO-EV-5",
+      "revision": 1,
+      "status": "APPROVED",
+      "amount_sgd": "860.00"
+    },
+    {
+      "ref": "POREC-EV-6",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "KITE",
+      "invoice_id": "QX-902",
+      "po_id": "PO-EV-6",
+      "revision": 1,
+      "status": "APPROVED",
+      "amount_sgd": "1000.00"
+    },
+    {
+      "ref": "POREC-EV-7",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "LOTUS",
+      "invoice_id": "QX-701",
+      "po_id": "PO-EV-7",
+      "revision": 1,
+      "status": "APPROVED",
+      "amount_sgd": "540.00"
+    },
+    {
+      "ref": "POREC-EV-8",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "LOTUS",
+      "invoice_id": "QX-1002",
+      "po_id": "PO-EV-8",
+      "revision": 1,
+      "status": "APPROVED",
+      "amount_sgd": "425.00"
+    }
+  ],
+  "receipts": [
+    {
+      "ref": "GR-EV-1",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "IRIS",
+      "invoice_id": "QX-701",
+      "po_id": "PO-EV-1",
+      "receipt_id": "RECEIPT-EV-1",
+      "revision": 1,
+      "status": "ACCEPTED",
+      "amount_sgd": "1500.60"
+    },
+    {
+      "ref": "GR-EV-2",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "IRIS",
+      "invoice_id": "QX-702",
+      "po_id": "PO-EV-2",
+      "receipt_id": "RECEIPT-EV-2",
+      "revision": 1,
+      "status": "ACCEPTED",
+      "amount_sgd": "760.00"
+    },
+    {
+      "ref": "GR-EV-3",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "JUNIPER",
+      "invoice_id": "QX-801",
+      "po_id": "PO-EV-3",
+      "receipt_id": "RECEIPT-EV-3",
+      "revision": 1,
+      "status": "ACCEPTED",
+      "amount_sgd": "900.00"
+    },
+    {
+      "ref": "GR-EV-4",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "JUNIPER",
+      "invoice_id": "QX-802",
+      "po_id": "PO-EV-4",
+      "receipt_id": "RECEIPT-EV-4",
+      "revision": 1,
+      "status": "ACCEPTED",
+      "amount_sgd": "650.00"
+    },
+    {
+      "ref": "GR-EV-5",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "KITE",
+      "invoice_id": "QX-901",
+      "po_id": "PO-EV-5",
+      "receipt_id": "RECEIPT-EV-5",
+      "revision": 1,
+      "status": "ACCEPTED",
+      "amount_sgd": "860.00"
+    },
+    {
+      "ref": "GR-EV-6",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "KITE",
+      "invoice_id": "QX-902",
+      "po_id": "PO-EV-6",
+      "receipt_id": "RECEIPT-EV-6",
+      "revision": 1,
+      "status": "ACCEPTED",
+      "amount_sgd": "1050.00"
+    },
+    {
+      "ref": "GR-EV-7",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "LOTUS",
+      "invoice_id": "QX-701",
+      "po_id": "PO-EV-7",
+      "receipt_id": "RECEIPT-EV-7",
+      "revision": 1,
+      "status": "ACCEPTED",
+      "amount_sgd": "540.00"
+    },
+    {
+      "ref": "GR-EV-8",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "LOTUS",
+      "invoice_id": "QX-1002",
+      "po_id": "PO-EV-8",
+      "receipt_id": "RECEIPT-EV-8",
+      "revision": 1,
+      "status": "ACCEPTED",
+      "amount_sgd": "425.00"
+    }
+  ],
+  "bank_events": [
+    {
+      "ref": "BC-EV-1-BASE",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "IRIS",
+      "kind": "CHANGE",
+      "sequence": 1,
+      "account_ref": "SIM-EV-IRIS-01",
+      "change_ref": "",
+      "actor_id": "maker-1",
+      "role": "AP_ANALYST",
+      "status": "ACTIVE"
+    },
+    {
+      "ref": "BV-EV-1-BASE",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "IRIS",
+      "kind": "VERIFY",
+      "sequence": 2,
+      "account_ref": "SIM-EV-IRIS-01",
+      "change_ref": "BC-EV-1-BASE",
+      "actor_id": "checker-1",
+      "role": "TREASURY_REVIEWER",
+      "status": "VERIFIED"
+    },
+    {
+      "ref": "BC-EV-2-BASE",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "JUNIPER",
+      "kind": "CHANGE",
+      "sequence": 1,
+      "account_ref": "SIM-EV-JUNIPER-01",
+      "change_ref": "",
+      "actor_id": "maker-2",
+      "role": "AP_ANALYST",
+      "status": "ACTIVE"
+    },
+    {
+      "ref": "BV-EV-2-BASE",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "JUNIPER",
+      "kind": "VERIFY",
+      "sequence": 2,
+      "account_ref": "SIM-EV-JUNIPER-01",
+      "change_ref": "BC-EV-2-BASE",
+      "actor_id": "checker-2",
+      "role": "TREASURY_REVIEWER",
+      "status": "VERIFIED"
+    },
+    {
+      "ref": "BC-EV-3-BASE",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "KITE",
+      "kind": "CHANGE",
+      "sequence": 1,
+      "account_ref": "SIM-EV-KITE-01",
+      "change_ref": "",
+      "actor_id": "maker-3",
+      "role": "AP_ANALYST",
+      "status": "ACTIVE"
+    },
+    {
+      "ref": "BV-EV-3-BASE",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "KITE",
+      "kind": "VERIFY",
+      "sequence": 2,
+      "account_ref": "SIM-EV-KITE-01",
+      "change_ref": "BC-EV-3-BASE",
+      "actor_id": "checker-3",
+      "role": "TREASURY_REVIEWER",
+      "status": "VERIFIED"
+    },
+    {
+      "ref": "BC-EV-4-BASE",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "LOTUS",
+      "kind": "CHANGE",
+      "sequence": 1,
+      "account_ref": "SIM-EV-LOTUS-01",
+      "change_ref": "",
+      "actor_id": "maker-4",
+      "role": "AP_ANALYST",
+      "status": "ACTIVE"
+    },
+    {
+      "ref": "BV-EV-4-BASE",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "LOTUS",
+      "kind": "VERIFY",
+      "sequence": 2,
+      "account_ref": "SIM-EV-LOTUS-01",
+      "change_ref": "BC-EV-4-BASE",
+      "actor_id": "checker-4",
+      "role": "TREASURY_REVIEWER",
+      "status": "VERIFIED"
+    },
+    {
+      "ref": "BC-EV-3-NEW",
+      "event_on": "2026-12-15T09:00:00",
+      "recorded_on": "2026-12-15T09:30:00",
+      "vendor_id": "KITE",
+      "kind": "CHANGE",
+      "sequence": 6,
+      "account_ref": "SIM-EV-KITE-02",
+      "change_ref": "",
+      "actor_id": "bank-maker",
+      "role": "AP_ANALYST",
+      "status": "ACTIVE"
+    },
+    {
+      "ref": "BV-EV-3-NEW",
+      "event_on": "2026-12-15T09:00:00",
+      "recorded_on": "2026-12-15T09:30:00",
+      "vendor_id": "KITE",
+      "kind": "VERIFY",
+      "sequence": 7,
+      "account_ref": "SIM-EV-KITE-02",
+      "change_ref": "BC-EV-3-NEW",
+      "actor_id": "bank-maker",
+      "role": "TREASURY_REVIEWER",
+      "status": "VERIFIED"
+    },
+    {
+      "ref": "BC-EV-1-NEW",
+      "event_on": "2026-12-15T10:00:00",
+      "recorded_on": "2026-12-15T10:30:00",
+      "vendor_id": "IRIS",
+      "kind": "CHANGE",
+      "sequence": 7,
+      "account_ref": "SIM-EV-IRIS-02",
+      "change_ref": "",
+      "actor_id": "iris-maker",
+      "role": "AP_ANALYST",
+      "status": "ACTIVE"
+    },
+    {
+      "ref": "BV-EV-1-NEW",
+      "event_on": "2026-12-15T10:00:00",
+      "recorded_on": "2026-12-15T10:30:00",
+      "vendor_id": "IRIS",
+      "kind": "VERIFY",
+      "sequence": 8,
+      "account_ref": "SIM-EV-IRIS-02",
+      "change_ref": "BC-EV-1-NEW",
+      "actor_id": "iris-checker",
+      "role": "TREASURY_REVIEWER",
+      "status": "VERIFIED"
+    }
+  ],
+  "hold_events": [
+    {
+      "ref": "HE-EV-1",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "KITE",
+      "invoice_id": "QX-901",
+      "hold_id": "H-EV-KITE",
+      "action": "OPEN",
+      "sequence": 1,
+      "role": "AP_ANALYST",
+      "actor_id": "operator-1"
+    },
+    {
+      "ref": "HE-EV-2",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "KITE",
+      "invoice_id": "QX-901",
+      "hold_id": "H-EV-WRONG",
+      "action": "CLOSE",
+      "sequence": 2,
+      "role": "AP_CONTROLLER",
+      "actor_id": "operator-2"
+    },
+    {
+      "ref": "HE-EV-3",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "LOTUS",
+      "invoice_id": "QX-701",
+      "hold_id": "H-EV-LOTUS",
+      "action": "OPEN",
+      "sequence": 3,
+      "role": "AP_ANALYST",
+      "actor_id": "operator-3"
+    },
+    {
+      "ref": "HE-EV-4",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "LOTUS",
+      "invoice_id": "QX-701",
+      "hold_id": "H-EV-LOTUS",
+      "action": "CLOSE",
+      "sequence": 4,
+      "role": "RISK_MANAGER",
+      "actor_id": "operator-4"
+    },
+    {
+      "ref": "HE-EV-5",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "LOTUS",
+      "invoice_id": "QX-1002",
+      "hold_id": "H-EV-FUTURE",
+      "action": "OPEN",
+      "sequence": 5,
+      "role": "AP_ANALYST",
+      "actor_id": "operator-5"
+    },
+    {
+      "ref": "HE-EV-6",
+      "event_on": "2026-12-15T18:00:00",
+      "recorded_on": "2026-12-15T16:30:00",
+      "vendor_id": "LOTUS",
+      "invoice_id": "QX-1002",
+      "hold_id": "H-EV-FUTURE",
+      "action": "CLOSE",
+      "sequence": 6,
+      "role": "AP_CONTROLLER",
+      "actor_id": "operator-6"
+    }
+  ],
+  "settlements": [
+    {
+      "ref": "AUD-EV-1",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "IRIS",
+      "invoice_id": "QX-701",
+      "entry_id": "AUDIT-EV-1",
+      "revision": 1,
+      "kind": "DUPLICATE_AUDIT",
+      "status": "CLEAR",
+      "amount_sgd": "0.00"
+    },
+    {
+      "ref": "AUD-EV-2",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "IRIS",
+      "invoice_id": "QX-702",
+      "entry_id": "AUDIT-EV-2",
+      "revision": 1,
+      "kind": "DUPLICATE_AUDIT",
+      "status": "CLEAR",
+      "amount_sgd": "0.00"
+    },
+    {
+      "ref": "AUD-EV-3",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "JUNIPER",
+      "invoice_id": "QX-801",
+      "entry_id": "AUDIT-EV-3",
+      "revision": 1,
+      "kind": "DUPLICATE_AUDIT",
+      "status": "CLEAR",
+      "amount_sgd": "0.00"
+    },
+    {
+      "ref": "AUD-EV-4",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "JUNIPER",
+      "invoice_id": "QX-802",
+      "entry_id": "AUDIT-EV-4",
+      "revision": 1,
+      "kind": "DUPLICATE_AUDIT",
+      "status": "CONFIRMED",
+      "amount_sgd": "0.00"
+    },
+    {
+      "ref": "AUD-EV-5",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "KITE",
+      "invoice_id": "QX-901",
+      "entry_id": "AUDIT-EV-5",
+      "revision": 1,
+      "kind": "DUPLICATE_AUDIT",
+      "status": "CLEAR",
+      "amount_sgd": "0.00"
+    },
+    {
+      "ref": "AUD-EV-6",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "KITE",
+      "invoice_id": "QX-902",
+      "entry_id": "AUDIT-EV-6",
+      "revision": 1,
+      "kind": "DUPLICATE_AUDIT",
+      "status": "CLEAR",
+      "amount_sgd": "0.00"
+    },
+    {
+      "ref": "AUD-EV-7",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "LOTUS",
+      "invoice_id": "QX-701",
+      "entry_id": "AUDIT-EV-7",
+      "revision": 1,
+      "kind": "DUPLICATE_AUDIT",
+      "status": "CLEAR",
+      "amount_sgd": "0.00"
+    },
+    {
+      "ref": "AUD-EV-8",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "LOTUS",
+      "invoice_id": "QX-1002",
+      "entry_id": "AUDIT-EV-8",
+      "revision": 1,
+      "kind": "DUPLICATE_AUDIT",
+      "status": "CLEAR",
+      "amount_sgd": "0.00"
+    },
+    {
+      "ref": "CR-EV-1",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "IRIS",
+      "invoice_id": "QX-701",
+      "entry_id": "CR-EV-1",
+      "revision": 1,
+      "kind": "CREDIT",
+      "status": "POSTED",
+      "amount_sgd": "120.15"
+    },
+    {
+      "ref": "PAY-EV-1",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "IRIS",
+      "invoice_id": "QX-701",
+      "entry_id": "PAY-EV-1",
+      "revision": 1,
+      "kind": "PAYMENT",
+      "status": "SETTLED",
+      "amount_sgd": "230.25"
+    },
+    {
+      "ref": "PAY-EV-PENDING",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "IRIS",
+      "invoice_id": "QX-701",
+      "entry_id": "PAY-EV-PENDING",
+      "revision": 1,
+      "kind": "PAYMENT",
+      "status": "PENDING",
+      "amount_sgd": "50.00"
+    },
+    {
+      "ref": "PAY-EV-8",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "LOTUS",
+      "invoice_id": "QX-1002",
+      "entry_id": "PAY-EV-8",
+      "revision": 1,
+      "kind": "PAYMENT",
+      "status": "SETTLED",
+      "amount_sgd": "500.00"
+    },
+    {
+      "ref": "PAY-EV-8",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "LOTUS",
+      "invoice_id": "QX-1002",
+      "entry_id": "PAY-EV-8",
+      "revision": 1,
+      "kind": "PAYMENT",
+      "status": "SETTLED",
+      "amount_sgd": "500.00"
+    }
+  ],
+  "exceptions": [
+    {
+      "ref": "EX-EV-1",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "JUNIPER",
+      "invoice_id": "QX-801",
+      "invoice_revision": 1,
+      "waive_reasons": [
+        "RECEIPT_SHORT"
+      ],
+      "amount_cap_sgd": "920.00",
+      "valid_until": "2026-12-15T23:59:59",
+      "role": "CFO"
+    },
+    {
+      "ref": "EX-EV-2",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "JUNIPER",
+      "invoice_id": "QX-802",
+      "invoice_revision": 1,
+      "waive_reasons": [
+        "RECEIPT_SHORT"
+      ],
+      "amount_cap_sgd": "680.00",
+      "valid_until": "2026-12-15T23:59:59",
+      "role": "CFO"
+    },
+    {
+      "ref": "EX-EV-3",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "KITE",
+      "invoice_id": "QX-902",
+      "invoice_revision": 1,
+      "waive_reasons": [
+        "PO_MISMATCH"
+      ],
+      "amount_cap_sgd": "1100.00",
+      "valid_until": "2026-12-15T23:59:59",
+      "role": "CFO"
+    },
+    {
+      "ref": "EX-EV-4",
+      "event_on": "2026-12-13T10:00:00",
+      "recorded_on": "2026-12-13T11:00:00",
+      "vendor_id": "KITE",
+      "invoice_id": "QX-901",
+      "invoice_revision": 1,
+      "waive_reasons": [
+        "BANK_UNVERIFIED",
+        "ACTIVE_HOLD"
+      ],
+      "amount_cap_sgd": "860.00",
+      "valid_until": "2026-12-15T23:59:59",
+      "role": "CFO"
+    }
+  ]
+}

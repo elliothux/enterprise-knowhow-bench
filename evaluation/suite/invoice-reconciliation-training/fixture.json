@@ -1,0 +1,257 @@
+{
+  "id": "invoice-reconciliation-training",
+  "family": "invoice-reconciliation",
+  "split": "training",
+  "rules": {
+    "as_of": "2026-10-15"
+  },
+  "registers": {
+    "invoices-current": [
+      {
+        "vendor_id": "LUMEN",
+        "invoice_id": "IN-501",
+        "revision": 2,
+        "updated_on": "2026-10-11",
+        "issued_on": "2026-10-01",
+        "due_on": "2026-10-10",
+        "status": "POSTED",
+        "gross_sgd": "1320.00",
+        "printed_badge": "PAID"
+      },
+      {
+        "vendor_id": "ORBIT",
+        "invoice_id": "IN-502",
+        "revision": 1,
+        "updated_on": "2026-10-02",
+        "issued_on": "2026-10-02",
+        "due_on": "2026-10-12",
+        "status": "POSTED",
+        "gross_sgd": "880.00",
+        "printed_badge": "OPEN"
+      },
+      {
+        "vendor_id": "LUMEN",
+        "invoice_id": "IN-503",
+        "revision": 1,
+        "updated_on": "2026-10-03",
+        "issued_on": "2026-10-03",
+        "due_on": "2026-10-15",
+        "status": "POSTED",
+        "gross_sgd": "450.00",
+        "printed_badge": "PAID"
+      },
+      {
+        "vendor_id": "VEGA",
+        "invoice_id": "IN-504",
+        "revision": 1,
+        "updated_on": "2026-10-04",
+        "issued_on": "2026-10-04",
+        "due_on": "2026-10-08",
+        "status": "POSTED",
+        "gross_sgd": "200.00",
+        "printed_badge": "OPEN"
+      },
+      {
+        "vendor_id": "ORBIT",
+        "invoice_id": "IN-505",
+        "revision": 2,
+        "updated_on": "2026-10-13",
+        "issued_on": "2026-10-05",
+        "due_on": "2026-10-12",
+        "status": "VOID",
+        "gross_sgd": "990.00",
+        "printed_badge": "OPEN"
+      }
+    ],
+    "invoices-history": [
+      {
+        "vendor_id": "LUMEN",
+        "invoice_id": "IN-501",
+        "revision": 1,
+        "updated_on": "2026-10-01",
+        "issued_on": "2026-10-01",
+        "due_on": "2026-10-10",
+        "status": "POSTED",
+        "gross_sgd": "1200.00",
+        "printed_badge": "OPEN"
+      },
+      {
+        "vendor_id": "LUMEN",
+        "invoice_id": "IN-501",
+        "revision": 2,
+        "updated_on": "2026-10-11",
+        "issued_on": "2026-10-01",
+        "due_on": "2026-10-10",
+        "status": "POSTED",
+        "gross_sgd": "1320.00",
+        "printed_badge": "PAID"
+      },
+      {
+        "vendor_id": "ORBIT",
+        "invoice_id": "IN-505",
+        "revision": 1,
+        "updated_on": "2026-10-05",
+        "issued_on": "2026-10-05",
+        "due_on": "2026-10-12",
+        "status": "POSTED",
+        "gross_sgd": "990.00",
+        "printed_badge": "OPEN"
+      },
+      {
+        "vendor_id": "VEGA",
+        "invoice_id": "IN-506",
+        "revision": 1,
+        "updated_on": "2026-10-06",
+        "issued_on": "2026-10-06",
+        "due_on": "2026-10-20",
+        "status": "DRAFT",
+        "gross_sgd": "300.00",
+        "printed_badge": "OPEN"
+      }
+    ],
+    "credit-notes": [
+      {
+        "credit_id": "CN-601",
+        "vendor_id": "LUMEN",
+        "invoice_id": "IN-501",
+        "revision": 1,
+        "updated_on": "2026-10-12",
+        "event_on": "2026-10-12",
+        "amount_sgd": "120.00",
+        "status": "POSTED"
+      },
+      {
+        "credit_id": "CN-601",
+        "vendor_id": "LUMEN",
+        "invoice_id": "IN-501",
+        "revision": 1,
+        "updated_on": "2026-10-12",
+        "event_on": "2026-10-12",
+        "amount_sgd": "120.00",
+        "status": "POSTED"
+      },
+      {
+        "credit_id": "CN-602",
+        "vendor_id": "ORBIT",
+        "invoice_id": "IN-502",
+        "revision": 1,
+        "updated_on": "2026-10-12",
+        "event_on": "2026-10-12",
+        "amount_sgd": "80.00",
+        "status": "POSTED"
+      },
+      {
+        "credit_id": "CN-603",
+        "vendor_id": "VEGA",
+        "invoice_id": "IN-504",
+        "revision": 1,
+        "updated_on": "2026-10-13",
+        "event_on": "2026-10-13",
+        "amount_sgd": "250.00",
+        "status": "POSTED"
+      },
+      {
+        "credit_id": "CN-604",
+        "vendor_id": "LUMEN",
+        "invoice_id": "IN-503",
+        "revision": 1,
+        "updated_on": "2026-10-14",
+        "event_on": "2026-10-14",
+        "amount_sgd": "40.00",
+        "status": "DRAFT"
+      },
+      {
+        "credit_id": "CN-605",
+        "vendor_id": "ORBIT",
+        "invoice_id": "IN-501",
+        "revision": 1,
+        "updated_on": "2026-10-14",
+        "event_on": "2026-10-14",
+        "amount_sgd": "500.00",
+        "status": "POSTED"
+      }
+    ],
+    "remittances": [
+      {
+        "payment_id": "PM-701",
+        "vendor_id": "LUMEN",
+        "invoice_id": "IN-501",
+        "revision": 1,
+        "updated_on": "2026-10-13",
+        "event_on": "2026-10-12",
+        "amount_sgd": "700.00",
+        "status": "SETTLED"
+      },
+      {
+        "payment_id": "PM-701",
+        "vendor_id": "LUMEN",
+        "invoice_id": "IN-501",
+        "revision": 1,
+        "updated_on": "2026-10-13",
+        "event_on": "2026-10-12",
+        "amount_sgd": "700.00",
+        "status": "SETTLED"
+      },
+      {
+        "payment_id": "PM-702",
+        "vendor_id": "ORBIT",
+        "invoice_id": "IN-502",
+        "revision": 1,
+        "updated_on": "2026-10-14",
+        "event_on": "2026-10-14",
+        "amount_sgd": "800.00",
+        "status": "SETTLED"
+      },
+      {
+        "payment_id": "PM-703",
+        "vendor_id": "LUMEN",
+        "invoice_id": "IN-503",
+        "revision": 1,
+        "updated_on": "2026-10-14",
+        "event_on": "2026-10-14",
+        "amount_sgd": "450.00",
+        "status": "PENDING"
+      },
+      {
+        "payment_id": "PM-704",
+        "vendor_id": "VEGA",
+        "invoice_id": "IN-504",
+        "revision": 1,
+        "updated_on": "2026-10-12",
+        "event_on": "2026-10-12",
+        "amount_sgd": "200.00",
+        "status": "SETTLED"
+      },
+      {
+        "payment_id": "PM-704",
+        "vendor_id": "VEGA",
+        "invoice_id": "IN-504",
+        "revision": 2,
+        "updated_on": "2026-10-14",
+        "event_on": "2026-10-14",
+        "amount_sgd": "200.00",
+        "status": "REVERSED"
+      },
+      {
+        "payment_id": "PM-705",
+        "vendor_id": "LUMEN",
+        "invoice_id": "IN-501",
+        "revision": 1,
+        "updated_on": "2026-10-14",
+        "event_on": "2026-10-14",
+        "amount_sgd": "500.00",
+        "status": "FAILED"
+      },
+      {
+        "payment_id": "PM-706",
+        "vendor_id": "LUMEN",
+        "invoice_id": "IN-501",
+        "revision": 1,
+        "updated_on": "2026-10-14",
+        "event_on": "2026-10-16",
+        "amount_sgd": "500.00",
+        "status": "SETTLED"
+      }
+    ]
+  }
+}

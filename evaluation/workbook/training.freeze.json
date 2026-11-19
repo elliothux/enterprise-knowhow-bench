@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "case_id": "workbook-training",
+  "sha256": {
+    "cases/workbook/training/task.md": "0c14901e1b44c80ad27ec5514e49553693476cb5c5b0a92a8bc8dcda2c12ae0b",
+    "cases/workbook/training/template.xlsx": "b762128ede168408ff9334ce202909f873a38fe9d8e239bb2c3c180a6405c3fd",
+    "evaluation/workbook/training.json": "72cec1ba45f7638572ccb20fb53aa3724724c1c5367c5043fbb8efa55913e226"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "case_id": "landed-cost-training",
+  "sha256": {
+    "cases/suite/landed-cost-training/rules.pdf": "a2930d406e4a9fd6079574619f34d7476fd7d25890e561ff7d5e744731c79e64",
+    "cases/suite/landed-cost-training/quotes-alder.pdf": "3f46b7a3e72a66a13e67d6e6f5077c31417388f8782eb342ccb2a6d38b815ab8",
+    "cases/suite/landed-cost-training/quotes-birch.pdf": "030a86f54b24d157f372e66b5924347f8b0aed0a9172c8cc335bd26ddaff550b",
+    "cases/suite/landed-cost-training/quotes-cedar.pdf": "00e907b637ed60d34eb27d9454b41b89d6c1aa42c8f8bb7ae856cb003f9fa973",
+    "cases/suite/landed-cost-training/quotes-dogwood.pdf": "0672eedf5c26a7fd56470ca9d6f116da7a67fb8b24f869e67f2adba25ebf94e4",
+    "cases/suite/landed-cost-training/task.md": "8d146dcfdb66006a6dfe3b0e1a057b072b7d12e309aee285b35c982a051e9af1",
+    "evaluation/suite/landed-cost-training/fixture.json": "8bf65c956226a98a374060f674e9e30fb8ecf1cb8bf4524af4d93378a91b5b73"
+  }
+}

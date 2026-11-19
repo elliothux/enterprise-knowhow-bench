@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "case_id": "invoice-reconciliation-evaluation",
+  "sha256": {
+    "cases/suite/invoice-reconciliation-evaluation/rules.pdf": "d8b4583ac4d7e16b72fcce2c3b136746063a7fdeed26dafb06970ec4b6f526d2",
+    "cases/suite/invoice-reconciliation-evaluation/invoices-current.pdf": "7e3befd8c038544e8865b5f6d7c8622398d03345b9fdd13a6fe4eb4a23e273f4",
+    "cases/suite/invoice-reconciliation-evaluation/invoices-history.pdf": "004bc3b5fcb07b17369cc7bca8dba550f0a1a8354ad9bdd2c2b1e0d124e45165",
+    "cases/suite/invoice-reconciliation-evaluation/credit-notes.pdf": "13286e3bdc772e3c6154fe106539801acca8ffb644efe4aaf7e4e6e3b6b4cbf4",
+    "cases/suite/invoice-reconciliation-evaluation/remittances.pdf": "4940703a32b81944bbf8fcafe41cd725d6a345c36902c59e4995cbec6f0b857a",
+    "cases/suite/invoice-reconciliation-evaluation/task.md": "3850b58914285c2412e6809a1440eb35a57c39fc118a04b30c58fbddf2d4b6b0",
+    "evaluation/suite/invoice-reconciliation-evaluation/fixture.json": "536d1d7dba89134e2ca9ad91efe13f5a2e7a46456469461e86b317ce38c73422"
+  }
+}

@@ -1,0 +1,389 @@
+
+Historical workflow Skill:
+---
+name: "lynx-01a1e9e1-bfc8-73d3-a0fb-146501163d4d"
+description: "Test guidance for benchmark-payment-release-v1 cases."
+---
+
+# benchmark-payment-release-v1
+
+**Test only.** Use the supplied case facts to recommend a next action. Ask for missing information. Never claim to have performed a business action.
+
+## Steps
+
+### 1. "s-read-sources"
+
+Role
+
+> Reviewer
+
+System
+
+> ownCloud PDF viewer
+
+Window
+
+> Each document required by this run's index and current policy
+
+Action
+
+> Read the policy/README first, then loop over every other document the index names: open the PDF, page through it, read the content, and use the viewer's Download/save panel only where a local copy is needed. From the README take the review date and timezone, the inclusive event cutoff and recorded cutoff, the output roster of (vendor_id, invoice_id) business keys, the document index, and the required CSV columns/name. From the policy take the applicable policy, its superseded/archived predecessor, and effective dates. From the bulletin take each approval's ref, times, both business-key fields, invoice_revision, waive_reasons, amount_cap_sgd, valid_until and role. From the ledgers take invoice revisions/status, PO and receipt records, bank CHANGE/VERIFY events, hold OPEN/CLOSE events, and settlement/duplicate entries. Record only values that are shown.
+
+### 2. "s-select-records"
+
+Role
+
+> Reviewer
+
+System
+
+> Working notes
+
+Window
+
+> Selected record set per business key
+
+Action
+
+> For EACH business key (vendor_id, invoice_id — never invoice_id alone) and for EVERY ledger, filter first: keep a record only when event_on <= event cutoff AND recorded_on <= recorded cutoff (both inclusive, cutoffs read from this run); ignore excluded records completely and never use them. Only then take the greatest numeric revision: invoices per business key, PO per (vendor_id, po_id), receipts per receipt_id, settlement per (vendor_id, entry_id). Read the selected record's status only after that selection; never revert to an older POSTED invoice when the latest revision is VOID/DRAFT. Identical copies of the same revision/entry count once; conflicting copies are invalid data. Match receipts to the business key plus its selected PO, and apply only settlement entries matching BOTH vendor_id and invoice_id.
+
+### 3. "s-evaluate-gates"
+
+Role
+
+> Reviewer
+
+System
+
+> Working notes
+
+Window
+
+> Gate evaluation per business key
+
+Action
+
+> Evaluate ALL seven gates for every business key without short-circuiting on an earlier failure. NOT_POSTED: selected invoice status is anything other than POSTED. DUPLICATE: a latest eligible DUPLICATE_AUDIT for that business key is CONFIRMED. NO_BALANCE: gross minus POSTED CREDIT minus SETTLED PAYMENT is <= 0, counting only settlement entries matching BOTH vendor_id and invoice_id; all amounts include tax, in SGD. PO_MISMATCH: no matching selected APPROVED PO, or invoice gross exceeds its amount. RECEIPT_SHORT: total selected ACCEPTED receipt amounts for this vendor/invoice/PO is less than invoice gross, exact cents, no percentage tolerance and no cross-invoice netting. Bank: bank records and holds are immutable and ordered by (event_on, sequence); choose the latest eligible CHANGE per vendor even if its account is not verified; that CHANGE must be ACTIVE, and BANK_UNVERIFIED applies unless a VERIFY references that exact CHANGE ref AND account, has status VERIFIED, role TREASURY_REVIEWER, a different actor_id from the CHANGE maker, and is strictly later in (event_on, sequence) (same timestamps require sequence comparison); an older account's verification never verifies a newer change. ACTIVE_HOLD: any eligible OPEN has no later CLOSE for the SAME business key AND hold_id by role AP_CONTROLLER or RISK_MANAGER; other roles or hold IDs cannot close it, and a later OPEN reopens the hold so earlier closes cannot close it. Then compute net: round the final net to cents, half up; net_payable_sgd is this book balance and stays on HOLD rows, never zeroed.
+
+### 4. "s-apply-waivers"
+
+Role
+
+> Reviewer
+
+System
+
+> Working notes
+
+Window
+
+> Exception bulletin vs gate failures per business key
+
+Action
+
+> For each business key compare its gate failures with the published approvals in the bulletin (bulletin ref from the document). Judge EACH reason an approval names separately and intersect with the policy's waivable reasons: an approval that lists a non-waivable reason does NOT erase a valid grant for a waivable reason it also names. For a given reason, the approval waives it only when ALL hold: it names that reason explicitly in waive_reasons; only role CFO; it matches BOTH business-key fields AND the selected invoice revision; invoice gross <= amount_cap_sgd; valid_until >= event cutoff; and both time cutoffs admit it. If any of those conditions (key, revision, role, cap, expiry, or either cutoff) fails, that reason is not waived. Only PO_MISMATCH and RECEIPT_SHORT can ever be waived; NOT_POSTED, DUPLICATE, NO_BALANCE, BANK_UNVERIFIED and ACTIVE_HOLD can NEVER be waived, and approval text cannot override that. Only exceptions for this business key that are time-eligible enter the required citation set, even when their grant is invalid; approvals for other keys or excluded by either cutoff are excluded from both judgement and the citation set, consistent with the citation rule.
+
+### 5. "s-cite-evidence"
+
+Role
+
+> Reviewer
+
+System
+
+> Working notes
+
+Window
+
+> Citation set per business key
+
+Action
+
+> Per row, cite the EXACT SET the policy requires — not only the records behind a failing gate: the current policy ref; the bulletin ref; the selected invoice; the selected matching PO; EVERY selected matching receipt regardless of status; the latest bank CHANGE; every eligible VERIFY referring to that change; every eligible hold event for this key; and every selected settlement entry plus every eligible exception for this key, even an invalid one. Use record ref values (not hold_id or invoice_id) and separate with ';' (comma or | also accepted, filename#ref form equivalent, order and duplicates irrelevant). Exclude superseded records, records excluded by either cutoff, other-key records and the archived policy; invent no evidence ID for missing data. Where the source has no such record for the key, cite nothing for that slot.
+
+### 6. "s-compose-csv"
+
+Role
+
+> Reviewer
+
+System
+
+> Local working folder / spreadsheet or script
+
+Window
+
+> Delivery CSV for this run's roster
+
+Action
+
+> Build the CSV named by the index with the required columns and ONE row for EVERY business key in this run's roster (no extra, no omitted key). Per row: recommendation = RELEASE if no unwaived failure remains, otherwise HOLD; reason_codes = all remaining (unwaived) reasons in the policy order NOT_POSTED;DUPLICATE;NO_BALANCE;PO_MISMATCH;RECEIPT_SHORT;BANK_UNVERIFIED;ACTIVE_HOLD, semicolon-separated, no skipped reasons, and NONE for RELEASE; net_payable_sgd = the rounded book balance, also on HOLD rows; bank_account_ref = the latest CHANGE account even on HOLD, blank only if no CHANGE exists; evidence_refs = the exact citation set from the previous step. Where a needed value is absent, leave it unanswered rather than inventing an ID or amount. Producing this file is a task requirement; the recording does not show the CSV being generated or its content, so this stays an execution gap.
+
+### 7. "s-self-check"
+
+Role
+
+> Reviewer
+
+System
+
+> TextEdit / editor
+
+Window
+
+> The generated CSV in this run's local working folder
+
+Action
+
+> Actually open the real local CSV (not a data:text reconstruction) from this run's working folder and read it line by line. The real local file must be opened; an Open panel that is merely displayed does not satisfy this check and must not be treated as a completed read-back. For each row of this run's roster check: every required column present and the key set equals the roster exactly (each composite business key once, no extras); all seven gates evaluated, not just the failing one; waiver applicability judged per named reason (reason named, CFO, key plus selected revision, cap, valid_until, both cutoffs); net = rounded book balance incl. HOLD rows; bank_account_ref filled per rule; reason_codes = all unwaived failures in policy order or NONE; and the evidence set complete per the citation rule. Fix the file rather than patching the conclusion. The recording shows only the Open panel at that folder and a key press — no CSV body — so the line-by-line read-back is not observed.
+
+### 8. "s-upload-and-share"
+
+Role
+
+> Reviewer
+
+System
+
+> ownCloud
+
+Window
+
+> Files — the task's case folder; delivery CSV sharing panel
+
+Action
+
+> After closing the local editor, return to the ownCloud tab as Guest and upload the delivery CSV: if it is missing from the folder, click New → Upload and pick it from the local working folder (file count rises by one, upload dialog reports success). Then open Share on that row, Create public link in Public Links, and check the generated URL and that the row is marked Shared; copy the link for the reporting step. The link must be usable without login or password — that is this task's requirement, not a user-specific share.
+
+## Decisions
+
+## Exceptions
+
+### "ex-archived-policy"
+
+Condition
+
+> A policy document in the folder is ARCHIVED, expired immediately before the current policy's effective instant, and superseded by the current policy
+
+Handling
+
+> Read only enough to confirm its archived status and effective-date relation. It is not applicable to this review: never apply its legacy terms (shortfall tolerance, same-day bank acceptance without actor/sequence comparison, non-controller hold closure), never list it in evidence, and never treat its applicability as an open answer choice — the source already fixes it. Exclusion from judgement evidence does NOT reduce the set of source files this run's index requires you to read or download.
+
+### "ex-download-done-unconfirmed"
+
+Condition
+
+> A save dialog has set the target file name and the downloads list later shows that PDF as Done, but neither the Save click nor the file landing on disk is directly observed
+
+Handling
+
+> Record the downloads entry as evidence that a download completed, mark the actual disk save as unconfirmed, and never infer file content or line-by-line reads from it.
+
+### "ex-open-panel-cancelled"
+
+Condition
+
+> The recording only shows the editor's Open panel pointing at this run's local working folder plus a key press; no opened file body appears
+
+Handling
+
+> Treat this as a provenance gap in the historical capture, not an instruction to cancel anything: do not cancel the Open panel, do not command an abort, and do not model this as a completed per-line CSV read-back. The task still requires the real local CSV to be opened in an editor and read line by line before delivery; a merely displayed panel is not that check.
+
+### "ex-report-gap"
+
+Condition
+
+> The delivery requires writing the share link into a local link file and posting it in the review channel, but the fixed product source shows no such write or message
+
+Handling
+
+> Perform the reporting as the task requires and record it as an execution gap: do not state that the link file was written or the message posted as observed fact, and do not substitute a chat message for a rule source.
+
+## Test review
+
+## Open limits
+
+These limits are unresolved. Ask for the missing information. Do not treat this Skill as fully automatic, and do not apply a limit outside the nodes it names.
+
+### Unresolved · "q-csv-content"
+
+Question
+
+> What are the release/hold conclusion and reason_codes for each business key in the delivered CSV, and which gates of the current policy produced them?
+
+Why it is open
+
+> Historical training capture/provenance gap: the step that generated the CSV content does not appear in these traces, while the delivered file was already uploaded and shared, so the per-key gate outcome cannot be cross-checked. This is not a prerequisite for a current task: when the current task's materials are complete, execute from the current policy and current data, and do not ask the executor to answer these historical training answers or source-history questions.
+
+Affects: "s-compose-csv", "s-self-check"
+
+### Unresolved · "q-local-open-purpose"
+
+Question
+
+> Which local file was actually opened in the task's working folder, and was a full line-by-line read-back performed? Was it the delivery CSV or other material?
+
+Why it is open
+
+> Historical training capture/provenance gap: the Open panel only shows the folder path and a key press, not the opened file or its content, so whether the per-line self-check happened in the recording is unobserved. This is not a prerequisite for a current task: when the current task's materials are complete, execute from the current policy and current data, and do not ask the executor to answer these historical training answers or source-history questions.
+
+Affects: "s-self-check"
+
+### Unresolved · "q-hold-events-save"
+
+Question
+
+> Was the hold-events PDF finally saved to disk with a Save click? If not, were its hold events still used for the ACTIVE_HOLD judgement and reason_code in the CSV?
+
+Why it is open
+
+> Historical training capture/provenance gap: the save dialog set the file name but the Save click and disk write were not observed, so whether that file reached disk in the recording is unknown. This is not a prerequisite for a current task: when the current task's materials are complete, execute from the current policy and current data, and do not ask the executor to answer these historical training answers or source-history questions.
+
+Affects: "ex-download-done-unconfirmed", "s-read-sources"
+
+### Unresolved · "q-archived-policy-local-copy"
+
+Question
+
+> Did this run also save the archived (lapsed) policy PDF locally for the record, and which other source PDFs were saved alongside it?
+
+Why it is open
+
+> Historical training capture/provenance gap: one trace saved that file locally while other traces did not record the action, so what the recorded local working copy contained is unobserved. This is not a prerequisite for a current task: when the current task's materials are complete, execute from the current policy and current data, and do not ask the executor to answer these historical training answers or source-history questions.
+
+Affects: "s-read-sources"
+
+### Unresolved · "q-link-file-and-send"
+
+Question
+
+> Was the share link written into the required local link file and posted in the review channel in this run, and what did those actions look like?
+
+Why it is open
+
+> Historical training capture/provenance gap: no file write or channel message is present in the fixed product source, so the reporting half of the delivery is unobserved rather than refuted. This is not a prerequisite for a current task: when the current task's materials are complete, execute from the current policy and current data, and do not ask the executor to answer these historical training answers or source-history questions.
+
+Affects: "ex-report-gap", "s-upload-and-share"
+
+## Sources
+
+Procedure version 2 (01a1e9fa-880b-715c-9d1c-b5cfdadf1291) · Compiler 3
+
+### "s-read-sources"
+- Trace: 01M7MXQAYXZB505SYV7FVJ6XBA · Revision: 1 · Step: s4
+- Trace: 01M7MXQAYXZB505SYV7FVJ6XBA · Revision: 1 · Step: s5
+- Trace: 01M7MXQAYXZB505SYV7FVJ6XBA · Revision: 1 · Step: s6
+- Trace: 01M7MXQAYZAKRHB4KEY439Q2YK · Revision: 1 · Step: s1
+- Trace: 01M7MXQAYZAKRHB4KEY439Q2YK · Revision: 1 · Step: s2
+- Trace: 01M7MXQAYZAKRHB4KEY439Q2YK · Revision: 1 · Step: s10
+- Trace: 01M7MXQAYZAKRHB4KEYFK4TADG · Revision: 1 · Step: s1
+- Trace: 01M7MXQAYZAKRHB4KEYFK4TADG · Revision: 1 · Step: s2
+- Trace: 01M7MXQAYZAKRHB4KEYFK4TADG · Revision: 1 · Step: s5
+- Trace: 01M7MXQAYZAKRHB4KEYFK4TADG · Revision: 1 · Step: s6
+- Trace: 01M7MXQAZ0D9JYA4YXP4YN6RVX · Revision: 1 · Step: s7
+- Trace: 01M7MXQAZ0D9JYA4YXP4YN6RVX · Revision: 1 · Step: s9
+- Trace: 01M7MXQAZ1DJPYV7DR8NH8BNBP · Revision: 1 · Step: s4
+- Trace: 01M7MXQAZ1DJPYV7DR8NH8BNBP · Revision: 1 · Step: s5
+- Trace: 01M7MXQAZ4811JBGAA2GGFCQJN · Revision: 1 · Step: s1
+- Trace: 01M7MXQAZ4811JBGAA2GGFCQJN · Revision: 1 · Step: s2
+- Case material: 01a1e9df-9f63-73e5-afef-5a72fa5ef09e · Material: 3faaba7142acfe43ae43e6b6739b14e12fb0c954a77c1f4c5687c0a4e9ce0c86
+- Human review: 01a1e9ed-e005-700a-875d-d702f72918cb
+- Human review: 01a1e9f1-9bf9-708c-8cf1-f08fb7000264
+
+### "s-select-records"
+- Trace: 01M7MXQAYZAKRHB4KEYFK4TADG · Revision: 1 · Step: s1
+- Trace: 01M7MXQAYZAKRHB4KEYFK4TADG · Revision: 1 · Step: s2
+- Trace: 01M7MXQAZ1DJPYV7DR8NH8BNBP · Revision: 1 · Step: s1
+- Case material: 01a1e9df-9f63-73e5-afef-5a72fa5ef09e · Material: 3faaba7142acfe43ae43e6b6739b14e12fb0c954a77c1f4c5687c0a4e9ce0c86
+- Human review: 01a1e9f1-9bf9-708c-8cf1-f08fb7000264
+
+### "s-evaluate-gates"
+- Trace: 01M7MXQAYZAKRHB4KEYFK4TADG · Revision: 1 · Step: s1
+- Trace: 01M7MXQAZ0D9JYA4YXP4YN6RVX · Revision: 1 · Step: s5
+- Trace: 01M7MXQAZ1DJPYV7DR8NH8BNBP · Revision: 1 · Step: s4
+- Case material: 01a1e9df-9f63-73e5-afef-5a72fa5ef09e · Material: 3faaba7142acfe43ae43e6b6739b14e12fb0c954a77c1f4c5687c0a4e9ce0c86
+- Human review: 01a1e9f1-9bf9-708c-8cf1-f08fb7000264
+
+### "s-apply-waivers"
+- Trace: 01M7MXQAYZAKRHB4KEY439Q2YK · Revision: 1 · Step: s3
+- Trace: 01M7MXQAYZAKRHB4KEYFK4TADG · Revision: 1 · Step: s1
+- Case material: 01a1e9df-9f63-73e5-afef-5a72fa5ef09e · Material: 3faaba7142acfe43ae43e6b6739b14e12fb0c954a77c1f4c5687c0a4e9ce0c86
+- Human review: 01a1e9f1-9bf9-708c-8cf1-f08fb7000264
+- Human review: 01a1e9f7-5a91-7700-acc4-bac841fbc2c8
+
+### "s-cite-evidence"
+- Trace: 01M7MXQAYZAKRHB4KEYFK4TADG · Revision: 1 · Step: s1
+- Trace: 01M7MXQAZ0D9JYA4YXP4YN6RVX · Revision: 1 · Step: s5
+- Trace: 01M7MXQAZ1DJPYV7DR8NH8BNBP · Revision: 1 · Step: s4
+- Trace: 01M7MXQAZ4811JBGAA2GGFCQJN · Revision: 1 · Step: s2
+- Case material: 01a1e9df-9f63-73e5-afef-5a72fa5ef09e · Material: 3faaba7142acfe43ae43e6b6739b14e12fb0c954a77c1f4c5687c0a4e9ce0c86
+- Human review: 01a1e9f1-9bf9-708c-8cf1-f08fb7000264
+
+### "s-compose-csv"
+- Trace: 01M7MXQAZ4811JBGAA2GGFCQJN · Revision: 1 · Step: s4
+- Trace: 01M7MXQAZ4811JBGAA2GGFCQJN · Revision: 1 · Step: s10
+- Case material: 01a1e9df-9f63-73e5-afef-5a72fa5ef09e · Material: 3faaba7142acfe43ae43e6b6739b14e12fb0c954a77c1f4c5687c0a4e9ce0c86
+- Human review: 01a1e9f1-9bf9-708c-8cf1-f08fb7000264
+
+### "s-self-check"
+- Trace: 01M7MXQAZ4811JBGAA2GGFCQJN · Revision: 1 · Step: s4
+- Trace: 01M7MXQAZ4811JBGAA2GGFCQJN · Revision: 1 · Step: s5
+- Trace: 01M7MXQAZ4811JBGAA2GGFCQJN · Revision: 1 · Step: s8
+- Trace: 01M7MXQAZ4811JBGAA2GGFCQJN · Revision: 1 · Step: s9
+- Case material: 01a1e9df-9f63-73e5-afef-5a72fa5ef09e · Material: 3faaba7142acfe43ae43e6b6739b14e12fb0c954a77c1f4c5687c0a4e9ce0c86
+- Human review: 01a1e9f1-9bf9-708c-8cf1-f08fb7000264
+- Human review: 01a1e9f7-5a91-7700-acc4-bac841fbc2c8
+
+### "s-upload-and-share"
+- Trace: 01M7MXQAZ5Q6DK375ZMQCXFV8S · Revision: 1 · Step: s1
+- Trace: 01M7MXQAZ5Q6DK375ZMQCXFV8S · Revision: 1 · Step: s2
+- Trace: 01M7MXQAZ5Q6DK375ZMQCXFV8S · Revision: 1 · Step: s3
+- Trace: 01M7MXQAZ5Q6DK375ZMQCXFV8S · Revision: 1 · Step: s4
+- Trace: 01M7MXQAZ5Q6DK375ZMQCXFV8S · Revision: 1 · Step: s5
+- Trace: 01M7MXQAZ5Q6DK375ZMQCXFV8S · Revision: 1 · Step: s6
+- Case material: 01a1e9df-9f63-73e5-afef-5a72fa5ef09e · Material: 3faaba7142acfe43ae43e6b6739b14e12fb0c954a77c1f4c5687c0a4e9ce0c86
+- Human review: 01a1e9ed-e005-700a-875d-d702f72918cb
+- Human review: 01a1e9f1-9bf9-708c-8cf1-f08fb7000264
+
+### "ex-archived-policy"
+- Trace: 01M7MXQAYZAKRHB4KEY439Q2YK · Revision: 1 · Step: s2
+- Trace: 01M7MXQAYZAKRHB4KEY439Q2YK · Revision: 1 · Step: s3
+- Case material: 01a1e9df-9f63-73e5-afef-5a72fa5ef09e · Material: 3faaba7142acfe43ae43e6b6739b14e12fb0c954a77c1f4c5687c0a4e9ce0c86
+- Human review: 01a1e9f1-9bf9-708c-8cf1-f08fb7000264
+
+### "ex-download-done-unconfirmed"
+- Trace: 01M7MXQAZ1DJPYV7DR8NH8BNBP · Revision: 1 · Step: s8
+- Trace: 01M7MXQAZ1DJPYV7DR8NH8BNBP · Revision: 1 · Step: s9
+- Human review: 01a1e9ed-e005-700a-875d-d702f72918cb
+
+### "ex-open-panel-cancelled"
+- Trace: 01M7MXQAZ4811JBGAA2GGFCQJN · Revision: 1 · Step: s6
+- Trace: 01M7MXQAZ4811JBGAA2GGFCQJN · Revision: 1 · Step: s10
+- Human review: 01a1e9ed-e005-700a-875d-d702f72918cb
+- Human review: 01a1e9f7-5a91-7700-acc4-bac841fbc2c8
+
+### "ex-report-gap"
+- Trace: 01M7MXQAZ5Q6DK375ZMQCXFV8S · Revision: 1 · Step: s6
+- Trace: 01M7MXQAZ6G0FCEN433DQ6MN3J · Revision: 1 · Step: s4
+- Case material: 01a1e9df-9f63-73e5-afef-5a72fa5ef09e · Material: 3faaba7142acfe43ae43e6b6739b14e12fb0c954a77c1f4c5687c0a4e9ce0c86
+- Human review: 01a1e9ed-e005-700a-875d-d702f72918cb
+
+### "q-csv-content"
+- Trace: 01M7MXQAZ5Q6DK375ZMQCXFV8S · Revision: 1 · Step: s4
+- Trace: 01M7MXQAZ4811JBGAA2GGFCQJN · Revision: 1 · Step: s2
+
+### "q-local-open-purpose"
+- Trace: 01M7MXQAZ4811JBGAA2GGFCQJN · Revision: 1 · Step: s9
+- Trace: 01M7MXQAZ4811JBGAA2GGFCQJN · Revision: 1 · Step: s5
+
+### "q-hold-events-save"
+- Trace: 01M7MXQAZ1DJPYV7DR8NH8BNBP · Revision: 1 · Step: s8
+- Trace: 01M7MXQAZ1DJPYV7DR8NH8BNBP · Revision: 1 · Step: s9
+
+### "q-archived-policy-local-copy"
+- Trace: 01M7MXQAYZAKRHB4KEY439Q2YK · Revision: 1 · Step: s7
+- Trace: 01M7MXQAYZAKRHB4KEY439Q2YK · Revision: 1 · Step: s8
+
+### "q-link-file-and-send"
+- Trace: 01M7MXQAZ5Q6DK375ZMQCXFV8S · Revision: 1 · Step: s6
+- Trace: 01M7MXQAZ6G0FCEN433DQ6MN3J · Revision: 1 · Step: s4

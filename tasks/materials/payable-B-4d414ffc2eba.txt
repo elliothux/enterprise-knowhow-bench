@@ -1,0 +1,541 @@
+
+Historical workflow Skill:
+---
+name: "lynx-01a1ee87-8359-771e-946b-83532ca4f4f8"
+description: "Test guidance for benchmark-payment-release-v1 cases."
+---
+
+# benchmark-payment-release-v1
+
+**Test only.** Use the supplied case facts to recommend a next action. Ask for missing information. Never claim to have performed a business action.
+
+## Steps
+
+### 1. "s-locate"
+
+Role
+
+> 付款放行复核员
+
+System
+
+> ownCloud（浏览器）
+
+Window
+
+> Files（文件列表）
+
+Action
+
+> 确认 ownCloud 中该案例目录包含 01-readme-policy.pdf、02-archived-policy.pdf、03-exception-bulletin.pdf、04-invoice-revisions.pdf、05-po-receipts.pdf、06-bank-controls.pdf、07-hold-events.pdf、08-settlement-register.pdf 及目录索引/任务说明文件
+
+### 2. "s-scope"
+
+Role
+
+> 付款放行复核员
+
+System
+
+> ownCloud（浏览器）
+
+Window
+
+> PDF 查看器（#pdfviewer）
+
+Action
+
+> 阅读 01-readme-policy.pdf（索引在第 1 页，政策正文在第 2–3 页）：以本次审核的审核日期/时区为基准，记录事件截止（含）与记录截止（含）、需逐一出具建议的业务键清单、八份 PDF 的档案索引，以及「不通过聊天提供规则、答案或审批，本档案完整」的声明
+
+### 3. "s-policy"
+
+Role
+
+> 付款放行复核员
+
+System
+
+> ownCloud（浏览器）
+
+Window
+
+> PDF 查看器
+
+Action
+
+> 确认适用政策为 POL-TR-CURRENT（Status APPROVED；effective from 2026-12-06T00:00:00；no expiry；replaces POL-TR-ARCHIVE；适用于本次审核的事件截止），并按其条款执行；业务键一律为 (vendor_id, invoice_id)，绝不只用 invoice_id
+
+### 4. "s-archived"
+
+Role
+
+> 付款放行复核员
+
+System
+
+> ownCloud（浏览器）
+
+Window
+
+> PDF 查看器
+
+Action
+
+> 打开 02-archived-policy.pdf，确认其状态为 ARCHIVED、已被 POL-TR-CURRENT 取代（对照 effective from 2026-12-06T00:00:00 检查适用性）；仅作审计保留，其遗留条款不得用于本次判断，也不得在证据中引用该政策
+
+### 5. "s-bulletin"
+
+Role
+
+> 付款放行复核员
+
+System
+
+> ownCloud（浏览器）
+
+Window
+
+> PDF 查看器
+
+Action
+
+> 打开 03-exception-bulletin.pdf，记录公告 BUL-TR-01 的每条豁免：ref、event_on、recorded_on、vendor_id、invoice_id、invoice_revision、waive_reasons、amount_cap_sgd、valid_until、role；注意公告声明审批文本不能覆盖政策中不可豁免的门禁
+
+### 6. "s-select"
+
+Role
+
+> 付款放行复核员
+
+System
+
+> ownCloud（浏览器）
+
+Window
+
+> PDF 查看器
+
+Action
+
+> 打开并逐页阅读 04-invoice-revisions.pdf，对每个业务键 (vendor_id, invoice_id) 在时间过滤后选取数值最大的修订，只判断该修订的状态；若最新修订为 VOID/DRAFT，绝不回退到较早的 POSTED 修订（NOT_POSTED 即按最新修订状态判定）
+
+### 7. "s-po-receipts"
+
+Role
+
+> 付款放行复核员
+
+System
+
+> ownCloud（浏览器）
+
+Window
+
+> PDF 预览
+
+Action
+
+> 打开并阅读 05-po-receipts.pdf：PO 版本按 (vendor_id, po_id)、收货版本按 receipt_id 分组，先取最大修订再做状态检查；用于判断 PO_MISMATCH（无匹配的已选 APPROVED PO，或发票 gross 超过其金额）与 RECEIPT_SHORT（该 vendor/invoice/PO 的已选 ACCEPTED 收货合计低于发票 gross，按分精确、无百分比容忍、不跨发票净额）
+
+### 8. "s-bank"
+
+Role
+
+> 付款放行复核员
+
+System
+
+> ownCloud（浏览器）
+
+Window
+
+> PDF 预览
+
+Action
+
+> 打开并阅读 06-bank-controls.pdf：银行记录不可变更，其顺序为 (event_on, sequence)；对每个 vendor 取最新 eligible CHANGE（即使其账户未验证，也要选它），且该最新 CHANGE 的状态必须为 ACTIVE；BANK_UNVERIFIED 的判定：除非存在一条 VERIFY 同时引用该确切 CHANGE ref 与账户、状态 VERIFIED、角色 TREASURY_REVIEWER、actor_id 与 CHANGE 的 maker 不同，并在 (event_on, sequence) 上严格晚于该 CHANGE（同一时间戳须比较 sequence）；旧账户的验证不能验证更新的变更。同一步确定 bank_account_ref：取最新 CHANGE 的账户，即使该键处于 HOLD；仅当没有任何 CHANGE 时才留空
+
+### 9. "s-holds"
+
+Role
+
+> 付款放行复核员
+
+System
+
+> ownCloud（浏览器）
+
+Window
+
+> PDF 预览
+
+Action
+
+> 打开并阅读 07-hold-events.pdf：持有事件不可变更，其顺序为 (event_on, sequence)；ACTIVE_HOLD 成立当且仅当存在 eligible OPEN，且同一业务键与同一 hold_id 没有更晚的 CLOSE，且该 CLOSE 的角色为 AP_CONTROLLER 或 RISK_MANAGER；其他角色或其他 hold_id 不能关闭；更晚的 OPEN 会重新开启持有，较早的 CLOSE 不能关闭该新的 OPEN
+
+### 10. "s-settlement"
+
+Role
+
+> 付款放行复核员
+
+System
+
+> ownCloud（浏览器）
+
+Window
+
+> PDF 预览
+
+Action
+
+> 打开并阅读 08-settlement-register.pdf：信用与付款版本按 (vendor_id, entry_id) 分组取最大修订后再查状态；只有同时匹配 vendor_id 与 invoice_id 的结算条目可计入；DUPLICATE 成立当且仅当该业务键最新的 eligible DUPLICATE_AUDIT 为 CONFIRMED；NO_BALANCE 按 gross 减 POSTED CREDIT 减 SETTLED PAYMENT 计算，结果 <= 0 即成立；金额含税、以 SGD 计，最终净额四舍五入（half up）到分；net_payable_sgd 即为该账面余额，即使该键为 HOLD 也不清零
+
+### 11. "s-waiver"
+
+Role
+
+> 付款放行复核员
+
+System
+
+> 本地作业环境
+
+Window
+
+> 审核工作底稿（对照 03-exception-bulletin.pdf）
+
+Action
+
+> 为每个业务键分别判断豁免是否成立：只有公告 BUL-TR-01 中角色为 CFO 的审批可豁免 PO_MISMATCH 与 RECEIPT_SHORT，且只能豁免该审批明文列出的理由；审批须同时匹配两个业务键字段与所选发票修订，gross <= amount_cap_sgd，valid_until >= 事件截止，并且两项时间截止均适用。NOT_POSTED、DUPLICATE、NO_BALANCE、BANK_UNVERIFIED、ACTIVE_HOLD 任何情况下不可豁免
+
+### 12. "s-decide"
+
+Role
+
+> 付款放行复核员
+
+System
+
+> 本地作业环境
+
+Window
+
+> 审核工作底稿
+
+Action
+
+> 为每个业务键生成放行结论：逐一评估全部七道门禁且不因前一道失败而截断；无未豁免失败则为 RELEASE（reason_codes 写 NONE），否则为 HOLD 并列出全部剩余理由；reason_codes 按 NOT_POSTED;DUPLICATE;NO_BALANCE;PO_MISMATCH;RECEIPT_SHORT;BANK_UNVERIFIED;ACTIVE_HOLD 的顺序以分号连接、不得跳过。证据列只列政策第 4 节规定的精确集合：当前政策 ref、公告 ref、所选发票、所选匹配 PO、每条所选匹配收货（任何状态）、最新银行 CHANGE、每条引用该变更的 eligible VERIFY、该键的每条 eligible 持有事件、每条所选结算条目、该键的每条 eligible 豁免（即使无效）；不得引用被取代、时间被排除、其他键的记录或旧政策；缺失数据不编造证据 ID；引用用记录 ref 值而非 hold_id/invoice_id，也可写成「确切 PDF 文件名#ref」（两种形式等价）；证据 ref 之间用分号（逗号或 | 亦可），顺序与重复不影响
+
+### 13. "s-csv"
+
+Role
+
+> 付款放行复核员
+
+System
+
+> 本地作业环境
+
+Window
+
+> CSV 编辑器
+
+Action
+
+> 按本次任务说明给出的七列（列名与顺序见 q-output-columns 的答复）编制 payment-release.csv，任务索引中指定的八个业务键各一行
+
+### 14. "s-upload"
+
+Role
+
+> 付款放行复核员
+
+System
+
+> ownCloud（浏览器）
+
+Window
+
+> Files（文件列表）/ New 菜单
+
+Action
+
+> 在 ownCloud 案例目录中点击「New」→「Upload」，上传 payment-release.csv，并确认列表中已出现该文件
+
+### 15. "s-share"
+
+Role
+
+> 付款放行复核员
+
+System
+
+> ownCloud（浏览器）
+
+Window
+
+> 文件行 Share / 共享面板（Public Links）
+
+Action
+
+> 点击 payment-release.csv 行内「Share」，在共享面板创建公开链接，并回读面板中的链接地址与列表中该文件的 Shared 标记（可见范围见 q-public-link-scope 的答复）
+
+### 16. "s-channel"
+
+Role
+
+> 付款放行复核员
+
+System
+
+> Rocket.Chat（浏览器）
+
+Window
+
+> suite-payment-release-training 频道
+
+Action
+
+> 登录 Rocket.Chat，打开 suite-payment-release-training 频道，阅读固定说明（案例目录、索引文件、共享链接、仅模拟且不得发起实际付款）
+
+## Decisions
+
+### "d-time-filter"
+
+After step "s-select"
+
+> 对发票、PO、收货、结算、银行、持有与审计各类台账，每个记录的时间过滤如何处理？
+
+#### "o-eligible"
+
+> 纳入为 eligible 记录
+
+Condition
+
+> event_on <= 事件截止 且 recorded_on <= 记录截止
+
+Next steps: "s-select"
+
+#### "o-excluded"
+
+> 完全排除：不参与修订选取、门禁判断与证据引用
+
+Condition
+
+> event_on 或 recorded_on 任一超出截止（例如事件在截止内但 recorded_on 晚于记录截止）
+
+Next steps: "s-select"
+
+## Exceptions
+
+### "e-equal-copies"
+
+Condition
+
+> 同一修订/条目出现多份完全相同的副本
+
+Handling
+
+> 按一份计算，不重复计入金额或证据。
+
+### "e-conflicting-copies"
+
+Condition
+
+> 同一修订/条目出现内容相互冲突的副本
+
+Handling
+
+> 视为无效数据，不得任选其一作为依据；如因此无法判断，记录为数据缺口，不臆造结论或证据 ID。
+
+## Test review
+
+### Unanswered · d-time-filter
+
+> 对发票、PO、收货、结算、银行、持有与审计各类台账，每个记录的时间过滤如何处理？
+
+## Open limits
+
+These limits are unresolved. Ask for the missing information. Do not treat this Skill as fully automatic, and do not apply a limit outside the nodes it names.
+
+### Unresolved · "q-doc-save-required"
+
+Question
+
+> 来源 PDF 只需在 ownCloud 中在线阅读，还是必须逐份下载到本地 active-task 文件夹才算完成取证？
+
+Why it is open
+
+> 各 Trace 中保存/下载动作的取证不完整（file_tail_unconfirmed、未确认是否点下 Save），且多份 Trace 存在 ax_text_missing 与 capture_record_invalid 缺口；固定证据无法回答。
+
+Affects: "s-select"
+
+### Unresolved · "q-csv-content"
+
+Question
+
+> 八个业务键的门禁比对结果与 payment-release.csv 各列取值（含证据引用列）应由哪一方确定？
+
+Why it is open
+
+> 所有已读 Trace 都未记录对照 POL-TR-CURRENT 逐门禁评估业务键或编写 CSV 内容的动作；01M7MXQAZ5Q6DK375ZMQCXFV8S 直接从上传已存在的 payment-release.csv 开始。该问题无法由已固定证据回答。
+
+Affects: "s-csv"
+
+### Unresolved · "q-public-link-scope"
+
+Question
+
+> 对 payment-release.csv 创建公开链接（Anyone with the link has access）是否符合任务的可见范围要求，还是需要限定共享对象？
+
+Why it is open
+
+> 01M7MXQAZ5Q6DK375ZMQCXFV8S 的结局将公开链接可见范围列为未在画面中确认的事项；政策与档案索引均未规定共享方式。
+
+Affects: "s-share"
+
+### Unresolved · "q-channel-message"
+
+Question
+
+> 交付时是否需要在 suite-payment-release-training 频道内发送消息，还是仅通过 ownCloud 共享链接交付？
+
+Why it is open
+
+> 01M7MXQAZ6G0FCEN433DQ6MN3J 在输入框按键后回退、未发送任何消息，频道内也无具体要求分享结果的文字。
+
+Affects: "s-channel"
+
+### Unresolved · "q-output-columns"
+
+Question
+
+> payment-release.csv 要求的「七列」具体是哪七列（列名与顺序）？
+
+Why it is open
+
+> 索引仅写「Deliver payment-release.csv with the seven columns in the task」，政策第 4 节只规定结论、reason_codes 顺序与证据集合；本次任务的列清单未出现在固定证据中。
+
+Affects: "s-csv"
+
+### Unresolved · "q-settlement-anomalies"
+
+Question
+
+> 08-settlement-register.pdf 的表头与完整字段未在已读证据中出现；七列中与净额、账户引用、证据引用相关的列名应如何对应？
+
+Why it is open
+
+> 现有证据只能看到部分条目与政策对该表的处理规则，未出现列定义，无法确定与输出列的对应关系。
+
+Affects: "s-settlement"
+
+## Sources
+
+Procedure version 2 (01a1ee8d-30d0-7265-8421-3a4be3284917) · Compiler 3
+
+### "s-locate"
+- Trace: 01M7MXQAYZAKRHB4KEYFK4TADG · Revision: 1 · Step: s3
+- Human review: 01a1ee8a-4367-712c-9e56-edcd93afc407
+
+### "s-scope"
+- Trace: 01M7MXQAYXZB505SYV7FVJ6XBA · Revision: 1 · Step: s4
+- Human review: 01a1ee8a-4367-712c-9e56-edcd93afc407
+
+### "s-policy"
+- Trace: 01M7MXQAYXZB505SYV7FVJ6XBA · Revision: 1 · Step: s6
+- Case material: 1b1ddec1-5738-5dbe-8cde-99d95455f36c · Material: 3faaba7142acfe43ae43e6b6739b14e12fb0c954a77c1f4c5687c0a4e9ce0c86
+- Human review: 01a1ee8a-4367-712c-9e56-edcd93afc407
+
+### "s-archived"
+- Trace: 01M7MXQAYZAKRHB4KEY439Q2YK · Revision: 1 · Step: s3
+- Human review: 01a1ee8a-4367-712c-9e56-edcd93afc407
+
+### "s-bulletin"
+- Trace: 01M7MXQAYZAKRHB4KEYFK4TADG · Revision: 1 · Step: s2
+- Human review: 01a1ee8a-4367-712c-9e56-edcd93afc407
+
+### "s-select"
+- Trace: 01M7MXQAYZAKRHB4KEYFK4TADG · Revision: 1 · Step: s6
+- Human review: 01a1ee8a-4367-712c-9e56-edcd93afc407
+
+### "s-po-receipts"
+- Trace: 01M7MXQAZ0D9JYA4YXP4YN6RVX · Revision: 1 · Step: s7
+- Human review: 01a1ee8a-4367-712c-9e56-edcd93afc407
+
+### "s-bank"
+- Trace: 01M7MXQAZ0D9JYA4YXP4YN6RVX · Revision: 1 · Step: s9
+- Case material: 1b1ddec1-5738-5dbe-8cde-99d95455f36c · Material: 3faaba7142acfe43ae43e6b6739b14e12fb0c954a77c1f4c5687c0a4e9ce0c86
+- Human review: 01a1ee8a-4367-712c-9e56-edcd93afc407
+
+### "s-holds"
+- Trace: 01M7MXQAZ1DJPYV7DR8NH8BNBP · Revision: 1 · Step: s5
+- Human review: 01a1ee8a-4367-712c-9e56-edcd93afc407
+
+### "s-settlement"
+- Trace: 01M7MXQAZ4811JBGAA2GGFCQJN · Revision: 1 · Step: s6
+- Case material: 1b1ddec1-5738-5dbe-8cde-99d95455f36c · Material: 3faaba7142acfe43ae43e6b6739b14e12fb0c954a77c1f4c5687c0a4e9ce0c86
+- Human review: 01a1ee8a-4367-712c-9e56-edcd93afc407
+
+### "s-waiver"
+- Trace: 01M7MXQAYZAKRHB4KEYFK4TADG · Revision: 1 · Step: s2
+- Human review: 01a1ee8a-4367-712c-9e56-edcd93afc407
+
+### "s-decide"
+- Trace: 01M7MXQAYXZB505SYV7FVJ6XBA · Revision: 1 · Step: s4
+- Case material: 1b1ddec1-5738-5dbe-8cde-99d95455f36c · Material: 3faaba7142acfe43ae43e6b6739b14e12fb0c954a77c1f4c5687c0a4e9ce0c86
+- Human review: 01a1ee8a-4367-712c-9e56-edcd93afc407
+
+### "s-csv"
+- Trace: 01M7MXQAYXZB505SYV7FVJ6XBA · Revision: 1 · Step: s4
+- Human review: 01a1ee8a-4367-712c-9e56-edcd93afc407
+
+### "s-upload"
+- Trace: 01M7MXQAZ5Q6DK375ZMQCXFV8S · Revision: 1 · Step: s4
+- Human review: 01a1ee8a-4367-712c-9e56-edcd93afc407
+
+### "s-share"
+- Trace: 01M7MXQAZ5Q6DK375ZMQCXFV8S · Revision: 1 · Step: s6
+- Human review: 01a1ee8a-4367-712c-9e56-edcd93afc407
+
+### "s-channel"
+- Trace: 01M7MXQAZ6G0FCEN433DQ6MN3J · Revision: 1 · Step: s3
+- Human review: 01a1ee8a-4367-712c-9e56-edcd93afc407
+
+### "d-time-filter"
+- Human review: 01a1ee8a-4367-712c-9e56-edcd93afc407
+
+### "o-eligible"
+- Trace: 01M7MXQAYZAKRHB4KEYFK4TADG · Revision: 1 · Step: s6
+- Human review: 01a1ee8a-4367-712c-9e56-edcd93afc407
+
+### "o-excluded"
+- Trace: 01M7MXQAZ4811JBGAA2GGFCQJN · Revision: 1 · Step: s6
+- Human review: 01a1ee8a-4367-712c-9e56-edcd93afc407
+
+### "e-equal-copies"
+- Trace: 01M7MXQAZ4811JBGAA2GGFCQJN · Revision: 1 · Step: s6
+- Human review: 01a1ee8a-4367-712c-9e56-edcd93afc407
+
+### "e-conflicting-copies"
+- Trace: 01M7MXQAZ0D9JYA4YXP4YN6RVX · Revision: 1 · Step: s6
+- Human review: 01a1ee8a-4367-712c-9e56-edcd93afc407
+
+### "q-doc-save-required"
+- Trace: 01M7MXQAYZAKRHB4KEYFK4TADG · Revision: 1 · Step: s6
+
+### "q-csv-content"
+- Trace: 01M7MXQAZ5Q6DK375ZMQCXFV8S · Revision: 1 · Step: s4
+
+### "q-public-link-scope"
+- Trace: 01M7MXQAZ5Q6DK375ZMQCXFV8S · Revision: 1 · Step: s6
+
+### "q-channel-message"
+- Trace: 01M7MXQAZ6G0FCEN433DQ6MN3J · Revision: 1 · Step: s4
+
+### "q-output-columns"
+- Trace: 01M7MXQAZ4811JBGAA2GGFCQJN · Revision: 1 · Step: s6
+
+### "q-settlement-anomalies"
+- Trace: 01M7MXQAZ4811JBGAA2GGFCQJN · Revision: 1 · Step: s6

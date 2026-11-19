@@ -1,0 +1,147 @@
+{
+  "I-7103": {
+    "invoice": "I-7103",
+    "target": [
+      0,
+      0,
+      435,
+      0,
+      "CLOSED"
+    ]
+  },
+  "I-7381": {
+    "invoice": "I-7381",
+    "target": [
+      0,
+      0,
+      800,
+      0,
+      "CLOSED"
+    ]
+  },
+  "I-7423": {
+    "invoice": "I-7423",
+    "target": [
+      0,
+      0,
+      0,
+      460,
+      "COLLECTIONS"
+    ]
+  },
+  "I-7547": {
+    "invoice": "I-7547",
+    "target": [
+      0,
+      0,
+      520,
+      0,
+      "CLOSED"
+    ]
+  },
+  "INV-8259-clear": {
+    "invoice": "INV-8259",
+    "target": [
+      "INV-8259",
+      "HOLD",
+      "BANK_UNVERIFIED"
+    ]
+  },
+  "INV-8259": {
+    "invoice": "INV-8259",
+    "target": [
+      "INV-8259",
+      "HOLD",
+      "BANK_UNVERIFIED"
+    ]
+  },
+  "INV-8266": {
+    "invoice": "INV-8266",
+    "target": [
+      "INV-8266",
+      "RELEASE",
+      "NONE"
+    ]
+  },
+  "INV-8273-clear": {
+    "invoice": "INV-8273",
+    "target": [
+      "INV-8273",
+      "HOLD",
+      "RECEIPT_SHORT"
+    ]
+  },
+  "INV-8273": {
+    "invoice": "INV-8273",
+    "target": [
+      "INV-8273",
+      "HOLD",
+      "RECEIPT_SHORT"
+    ]
+  },
+  "INV-8287": {
+    "invoice": "INV-8287",
+    "target": [
+      "INV-8287",
+      "RELEASE",
+      "NONE"
+    ]
+  },
+  "INV-8294": {
+    "invoice": "INV-8294",
+    "target": [
+      "INV-8294",
+      "HOLD",
+      "PO_MISMATCH;RECEIPT_SHORT"
+    ]
+  },
+  "INV-8322": {
+    "invoice": "INV-8322",
+    "target": [
+      "INV-8322",
+      "HOLD",
+      "ACTIVE_HOLD"
+    ]
+  },
+  "INV-8329": {
+    "invoice": "INV-8329",
+    "target": [
+      "INV-8329",
+      "RELEASE",
+      "NONE"
+    ]
+  },
+  "INV-8336": {
+    "invoice": "INV-8336",
+    "target": [
+      "INV-8336",
+      "HOLD",
+      "ACTIVE_HOLD"
+    ]
+  },
+  "INV-8350": {
+    "invoice": "INV-8350",
+    "target": [
+      "INV-8350",
+      "HOLD",
+      "BANK_UNVERIFIED"
+    ]
+  },
+  "INV-8385": {
+    "invoice": "INV-8385",
+    "target": [
+      "INV-8385",
+      "RELEASE",
+      "NONE",
+      "BUL-EV-01;J40-BAN-1;J40-BAN-2;J40-INV-1;J40-PUR-1;J40-REC-1;POL-EV-CURRENT"
+    ]
+  },
+  "T-320": {
+    "invoice": "T-320",
+    "target": [
+      "T-320",
+      "HOLD",
+      "DUPLICATE"
+    ]
+  }
+}

@@ -1,0 +1,71 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [4 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 5 0 R >>
+endobj
+5 0 obj
+<< /Length 1608 >>
+stream
+BT /F1 10 Tf 13 TL 40 800 Td
+(Benchmark Suite / release-package-evaluation) Tj
+T*
+(Authoritative rules - all dates inclusive; all money SGD.) Tj
+T*
+(Business cutoff: 2026-11-18. Use this date, not the computer clock.) Tj
+T*
+(Target release: LYRA-26.11. Mandatory doc_key values: GUIDE, TEST, LABEL, SAFETY.) Tj
+T*
+(The register is an index; status and effective/expiry dates on each document page govern.) Tj
+T*
+(For each mandatory key retain only target-release pages with status APPROVED, approved_on) Tj
+T*
+(and effective_on <= cutoff, and expires_on blank or >= cutoff. DRAFT/ARCHIVED excluded.) Tj
+T*
+(Choose the greatest numeric revision among eligible pages, not the newest filename.) Tj
+T*
+(A future approved revision does not displace an earlier eligible approved revision.) Tj
+T*
+(Output one row per mandatory key. Selected page: status READY, issue blank.) Tj
+T*
+(No eligible page: status MISSING; issue NO_APPROVED_EFFECTIVE_DOCUMENT;) Tj
+T*
+(document_id,revision,source_file,page,effective_on must all be empty in a missing row.) Tj
+T*
+(Use the original PDF filename and 1-based physical page number. Do not invent missing files.) Tj
+T*
+() Tj
+T*
+(Deliver release-manifest.csv as UTF-8 CSV, exact header:) Tj
+T*
+(doc_key,document_id,revision,source_file,page,effective_on,status,issue) Tj
+T*
+(Row order does not affect grading. Numbers without currency signs or thousands separators.) Tj
+T*
+(Upload the CSV to the same ownCloud case folder. Share the CSV publicly \(no password/login\).) Tj
+T*
+(Save only its public URL in local link.txt and post that URL in the suite RocketChat room.) Tj
+T*
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000185 00000 n 
+0000000311 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1970
+%%EOF

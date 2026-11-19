@@ -1,0 +1,177 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [4 0 R 6 0 R 8 0 R] /Count 3 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 5 0 R >>
+endobj
+5 0 obj
+<< /Length 1043 >>
+stream
+BT /F1 10 Tf 13 TL 40 800 Td
+(04-invoice-revisions.pdf / payment-release-evaluation) Tj
+T*
+(Published record refs; apply the policy in 01-readme-policy.pdf.) Tj
+T*
+() Tj
+T*
+(invoices / INV-EV-1-R2) Tj
+T*
+(event_on=2026-12-13T10:00:00; recorded_on=2026-12-13T11:00:00) Tj
+T*
+(vendor_id=IRIS; invoice_id=QX-701; revision=2; status=POSTED; gross_sgd=1500.60; po_id=PO-) Tj
+T*
+(EV-1) Tj
+T*
+() Tj
+T*
+(invoices / INV-EV-1-R1) Tj
+T*
+(event_on=2026-12-13T10:00:00; recorded_on=2026-12-13T11:00:00) Tj
+T*
+(vendor_id=IRIS; invoice_id=QX-701; revision=1; status=POSTED; gross_sgd=1350.00; po_id=PO-) Tj
+T*
+(EV-1) Tj
+T*
+() Tj
+T*
+(invoices / INV-EV-2-R2) Tj
+T*
+(event_on=2026-12-13T10:00:00; recorded_on=2026-12-13T11:00:00) Tj
+T*
+(vendor_id=IRIS; invoice_id=QX-702; revision=2; status=DRAFT; gross_sgd=760.00; po_id=PO-EV-2) Tj
+T*
+() Tj
+T*
+(invoices / INV-EV-2-R1) Tj
+T*
+(event_on=2026-12-13T10:00:00; recorded_on=2026-12-13T11:00:00) Tj
+T*
+(vendor_id=IRIS; invoice_id=QX-702; revision=1; status=POSTED; gross_sgd=700.00; po_id=PO-) Tj
+T*
+(EV-2) Tj
+T*
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 7 0 R >>
+endobj
+7 0 obj
+<< /Length 1058 >>
+stream
+BT /F1 10 Tf 13 TL 40 800 Td
+(04-invoice-revisions.pdf / payment-release-evaluation) Tj
+T*
+(Published record refs; apply the policy in 01-readme-policy.pdf.) Tj
+T*
+() Tj
+T*
+(invoices / INV-EV-3-R1) Tj
+T*
+(event_on=2026-12-13T10:00:00; recorded_on=2026-12-13T11:00:00) Tj
+T*
+(vendor_id=JUNIPER; invoice_id=QX-801; revision=1; status=POSTED; gross_sgd=920.00; po_id=PO-) Tj
+T*
+(EV-3) Tj
+T*
+() Tj
+T*
+(invoices / INV-EV-4-R1) Tj
+T*
+(event_on=2026-12-13T10:00:00; recorded_on=2026-12-13T11:00:00) Tj
+T*
+(vendor_id=JUNIPER; invoice_id=QX-802; revision=1; status=POSTED; gross_sgd=680.00; po_id=PO-) Tj
+T*
+(EV-4) Tj
+T*
+() Tj
+T*
+(invoices / INV-EV-5-R1) Tj
+T*
+(event_on=2026-12-13T10:00:00; recorded_on=2026-12-13T11:00:00) Tj
+T*
+(vendor_id=KITE; invoice_id=QX-901; revision=1; status=POSTED; gross_sgd=860.00; po_id=PO-) Tj
+T*
+(EV-5) Tj
+T*
+() Tj
+T*
+(invoices / INV-EV-6-R1) Tj
+T*
+(event_on=2026-12-13T10:00:00; recorded_on=2026-12-13T11:00:00) Tj
+T*
+(vendor_id=KITE; invoice_id=QX-902; revision=1; status=POSTED; gross_sgd=1100.00; po_id=PO-) Tj
+T*
+(EV-6) Tj
+T*
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 9 0 R >>
+endobj
+9 0 obj
+<< /Length 838 >>
+stream
+BT /F1 10 Tf 13 TL 40 800 Td
+(04-invoice-revisions.pdf / payment-release-evaluation) Tj
+T*
+(Published record refs; apply the policy in 01-readme-policy.pdf.) Tj
+T*
+() Tj
+T*
+(invoices / INV-EV-7-R1) Tj
+T*
+(event_on=2026-12-13T10:00:00; recorded_on=2026-12-13T11:00:00) Tj
+T*
+(vendor_id=LOTUS; invoice_id=QX-701; revision=1; status=POSTED; gross_sgd=540.00; po_id=PO-) Tj
+T*
+(EV-7) Tj
+T*
+() Tj
+T*
+(invoices / INV-EV-8-R1) Tj
+T*
+(event_on=2026-12-13T10:00:00; recorded_on=2026-12-13T11:00:00) Tj
+T*
+(vendor_id=LOTUS; invoice_id=QX-1002; revision=1; status=POSTED; gross_sgd=425.00; po_id=PO-) Tj
+T*
+(EV-8) Tj
+T*
+() Tj
+T*
+(invoices / INV-EV-LATE-R9) Tj
+T*
+(event_on=2026-12-15T18:00:00; recorded_on=2026-12-16T08:00:00) Tj
+T*
+(vendor_id=JUNIPER; invoice_id=QX-801; revision=9; status=VOID; gross_sgd=9999.00; po_id=PO-) Tj
+T*
+(EV-3) Tj
+T*
+ET
+endstream
+endobj
+xref
+0 10
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000127 00000 n 
+0000000197 00000 n 
+0000000323 00000 n 
+0000001417 00000 n 
+0000001543 00000 n 
+0000002652 00000 n 
+0000002778 00000 n 
+trailer
+<< /Size 10 /Root 1 0 R >>
+startxref
+3666
+%%EOF

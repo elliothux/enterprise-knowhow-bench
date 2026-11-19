@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "case_id": "release-package-evaluation",
+  "sha256": {
+    "cases/suite/release-package-evaluation/rules.pdf": "46d13d7786866c53cdf0ebb9c7f81b365603f1e84263f6cd80e59f9e4c019c50",
+    "cases/suite/release-package-evaluation/field-manual.pdf": "d15e7788a935e6d80eacdf60a38841995b6d791267b53b30733f39f373840d06",
+    "cases/suite/release-package-evaluation/bench-certificate.pdf": "7c2388a8a22ddbf74f50c5a867ac038a142286cd4ae438645a4b0e6eb65bc689",
+    "cases/suite/release-package-evaluation/pack-label.pdf": "fd819260ecd55676bd067661430da562e10b728ef865fb7f54d8254f0ae7da05",
+    "cases/suite/release-package-evaluation/hazard-note.pdf": "1c868a595ae7b4c3cac0cc457364b4e78280f11dd879d1530b205b0450d7f3ef",
+    "cases/suite/release-package-evaluation/document-register.pdf": "83d773bafab44fdb4de73064d4ea5c607a0dab541f9073eeb63edb82226ebbdc",
+    "cases/suite/release-package-evaluation/task.md": "db56757f6117f6fbcfa99b96dc199e3e6e6212960237ccc9d4c82345362f0bfe",
+    "evaluation/suite/release-package-evaluation/fixture.json": "cefb82041d41e5224e0e05d6f8e862e34c3bb6b77a6ae4de004623f6e5a25ce6"
+  }
+}

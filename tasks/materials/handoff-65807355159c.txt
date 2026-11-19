@@ -1,0 +1,156 @@
+
+Historical shift handoff:
+# Operational handoff: simulated payment-release review
+
+## Purpose and source of authority
+
+Produce a recommendation for every business key on the new dossier’s roster. This is a **simulation**: do not initiate, schedule or approve a payment.
+
+Start with that dossier’s index and policy. Read every document it identifies, including any archived policy to establish applicability. Use the policy effective at the dossier’s **event cutoff**, the dossier’s own cutoffs, roster, record references and output instructions. Do not carry the demonstration’s dates, business records or answers into a new dossier.
+
+The rules below reproduce the current policy observed in this training demonstration, `POL-TR-CURRENT`. It was effective from 2026-12-06 and replaced `POL-TR-ARCHIVE`. Apply these rules to another dossier only if its applicable policy says to do so; a later or different policy controls its own review.
+
+The supplied demonstration includes policy text, an exception bulletin and a completed CSV. It does **not** include the underlying invoice, PO, receipt, bank, hold and settlement records. The CSV therefore illustrates outcomes and citation format; it is not independent proof of the underlying facts or a substitute for reading a new dossier.
+
+## Preparation and record selection
+
+1. Record the review timezone, **event cutoff** and **recorded cutoff** from the index. Both cutoffs are inclusive. For every ledger, a record is eligible only if:
+
+   `event_on <= event cutoff` **and** `recorded_on <= recorded cutoff`.
+
+   Discard time-excluded records completely, including from evidence. A record exactly on either cutoff remains eligible.
+
+2. Work one roster entry at a time using the full business key **`(vendor_id, invoice_id)`**. The same invoice ID can belong to different vendors. Produce exactly one row for each roster key.
+
+3. After time filtering, select versions as follows, using the greatest **numeric** revision before examining status:
+
+   | Record | Version grouping |
+   |---|---|
+   | Invoice | `(vendor_id, invoice_id)` |
+   | PO | `(vendor_id, po_id)` |
+   | Receipt | `receipt_id` |
+   | Settlement entry | `(vendor_id, entry_id)` |
+
+   Identical copies of the same revision or entry count once. Conflicting copies are invalid data; do not silently pick one or invent a resolution. Report the issue if the dossier provides no resolution procedure.
+
+4. For the invoice, use the latest eligible revision even if it is `VOID`, `DRAFT` or another non-`POSTED` status. Never fall back to an older posted invoice. Likewise, select the latest PO, receipt and settlement versions before applying their status tests.
+
+5. Bank records and hold events are immutable events, not revisioned selections. Order them by **`(event_on, sequence)`**. When timestamps are equal, compare sequence.
+
+Keep a working list of selected records and their exact **record refs** for each key. Selection for evidence is broader than the subset that affects the calculation.
+
+## Evaluate every gate
+
+Evaluate all seven gates for every row, even after finding a failure. Use the selected invoice’s gross and the selected records throughout.
+
+### 1. `NOT_POSTED`
+
+Fail if the selected invoice status is anything other than `POSTED`.
+
+### 2. `DUPLICATE`
+
+Fail if a latest eligible `DUPLICATE_AUDIT` for the business key is `CONFIRMED`. Apply the settlement version-selection rules before checking status. A purported approval cannot waive this failure.
+
+### 3. `NO_BALANCE` and net payable
+
+Calculate the book balance using only selected settlement entries matching **both** the vendor and invoice:
+
+`net = invoice gross − POSTED credits − SETTLED payments`
+
+Exclude other statuses from the arithmetic, but retain their selected record refs in evidence. Amounts include tax and are in SGD. Round the final net to cents using **half up**. Fail `NO_BALANCE` when the book balance is `<= 0`.
+
+Output this book balance as `net_payable_sgd` even when the decision is `HOLD`; do not replace it with zero because a row is held. Do not apply another vendor’s settlement merely because the invoice ID matches.
+
+### 4. `PO_MISMATCH`
+
+Find the selected PO matching the invoice’s vendor and PO ID. Fail if there is no matching selected `APPROVED` PO, or if invoice **gross** exceeds that PO’s amount. Compare against gross, not net after credits or payments.
+
+### 5. `RECEIPT_SHORT`
+
+Sum selected `ACCEPTED` receipt amounts matching the invoice’s **vendor, invoice and PO**. Fail if that total is less than invoice gross. Use exact cents: there is no percentage tolerance and no cross-invoice netting.
+
+Selected matching receipts of other statuses do not add to the accepted total, but still belong in evidence.
+
+### 6. `BANK_UNVERIFIED`
+
+Choose the latest eligible `CHANGE` for the vendor by `(event_on, sequence)`, even if it is inactive or unverified. Set `bank_account_ref` to that change’s account on both release and hold rows. Leave it blank only if no eligible change exists.
+
+The bank gate passes only when the latest change is `ACTIVE` **and** there is an eligible `VERIFY` that:
+
+- references that exact change **ref** and the same account;
+- has status `VERIFIED` and role `TREASURY_REVIEWER`;
+- has an `actor_id` different from the change maker; and
+- is strictly later than the change by `(event_on, sequence)`.
+
+Otherwise fail `BANK_UNVERIFIED`, including when there is no eligible change. Verification of an older change cannot verify a new one, even if the account is the same. Same-day or same-timestamp verification is not enough by itself: sequence and independent actor requirements still apply.
+
+### 7. `ACTIVE_HOLD`
+
+For each eligible `OPEN` event for the business key, determine whether a strictly later `CLOSE` exists for the **same business key and `hold_id`**, ordered by `(event_on, sequence)`, with role `AP_CONTROLLER` or `RISK_MANAGER`.
+
+Fail if any open lacks such a close. A close for another hold ID or by another role does not clear it. A later open reopens the hold: an earlier close cannot close that later open. Include every eligible hold event for the key in evidence, whether or not it changes the outcome.
+
+## Apply exceptions after identifying failures
+
+Under the observed current policy, only `PO_MISMATCH` and `RECEIPT_SHORT` can be waived. Evaluate each eligible exception independently. It can remove only a failure explicitly named in that approval, and only if all of these conditions hold:
+
+- The approval is by role `CFO`.
+- Both business-key fields and the **selected invoice revision** match.
+- Invoice gross is `<= amount_cap_sgd`.
+- `valid_until >= event cutoff`.
+- Both event and recorded cutoffs are met.
+
+A single approval naming multiple reasons may waive each eligible named reason separately. A named non-waivable reason remains a failure, even when another reason on the same approval is validly waived.
+
+`NOT_POSTED`, `DUPLICATE`, `NO_BALANCE`, `BANK_UNVERIFIED` and `ACTIVE_HOLD` can **never** be waived under this policy. Cite every eligible exception for the key, including one with the wrong role, revision, cap, expiry or waiver scope.
+
+The demonstration’s archived policy permitted shortfalls up to 5%, weaker same-day bank checks and `AP_CLERK` hold closures. Those terms expired immediately before 2026-12-06 and do not apply when `POL-TR-CURRENT` governs.
+
+## Decision and output
+
+After valid waivers, output `RELEASE` if no failures remain; otherwise output `HOLD` with **all** remaining failures in this exact order:
+
+`NOT_POSTED;DUPLICATE;NO_BALANCE;PO_MISMATCH;RECEIPT_SHORT;BANK_UNVERIFIED;ACTIVE_HOLD`
+
+Use semicolons between applicable codes. For release, use `NONE`.
+
+For the demonstrated task, the CSV has exactly these seven columns, in this order:
+
+```csv
+invoice_id,vendor_id,decision,reason_codes,net_payable_sgd,bank_account_ref,evidence_refs
+```
+
+Use the new task’s schema if it specifies a different one. Format SGD amounts to two decimal places, and use proper CSV quoting if a field requires it.
+
+## Construct the exact evidence set
+
+For **each** row under the demonstrated policy, include the following, deduplicated as a set:
+
+1. The applicable current policy ref and the bulletin ref.
+2. The selected invoice ref.
+3. The selected matching PO ref, if one exists, regardless of whether its status passes the gate.
+4. **Every selected matching receipt** ref, regardless of status.
+5. The latest eligible bank `CHANGE` ref, if one exists.
+6. **Every eligible `VERIFY` referring to that change**, including verifications that fail the account, status, role, actor or ordering test.
+7. **Every eligible hold event** for the business key.
+8. **Every selected settlement entry** for the business key, including duplicate audits and entries whose status means they do not affect net.
+9. **Every eligible exception** for the business key, even if it cannot waive a failure.
+
+Use the actual record `ref` values, not an invoice ID or hold ID in their place. Do not invent a ref for missing data. Do not cite superseded revisions, time-excluded records, records for other business keys, or the archived policy. Separate refs with semicolons; order does not matter. The demonstrated policy also accepts commas or `|`, and an exact `PDF filename#ref` is equivalent to the bare ref.
+
+The evidence set is not merely the records that caused a hold. For example, an eligible pending payment is cited even though it does not reduce net, and a failed verification referring to the latest change is cited even though it does not verify the bank.
+
+## Final review
+
+Before delivery, check each row against the dossier:
+
+- The full roster is covered once, including vendors sharing an invoice ID.
+- Both cutoffs were applied before selecting revisions or ordering eligible events.
+- All seven gates were evaluated; exceptions remove only eligible named failures.
+- Gross, rather than net, drives PO, receipt and exception-cap comparisons.
+- The bank field identifies the latest eligible change account, including on holds.
+- Net is the actual rounded book balance, including on holds and when non-positive.
+- Reasons are complete and in policy order.
+- Evidence contains the exact required set, including ineffective eligible records, without excluded or superseded refs.
+
+For a task with the demonstration’s delivery instructions, generate `payment-release.csv`, then open the **actual local file** in TextEdit or another native text viewer and visibly review every row. Close that document, return to the assigned Chrome Guest, upload the CSV to the specified ownCloud folder, create the requested public share, save only its URL in `link.txt`, and post the URL to the specified RocketChat room. Use native CUA for the required document reading, downloads, review, upload, sharing and chat; local CSV generation is allowed. Follow the task’s restrictions on sources and tools, and report any incomplete step honestly.

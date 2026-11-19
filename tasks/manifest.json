@@ -1,0 +1,943 @@
+{
+  "ar-26741": {
+    "group": "finance",
+    "type": "native-ar",
+    "prompt": "tasks/ar-26741/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "C": "tasks/materials/cash-C-d461368c1657.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/finance/ar-26741"
+  },
+  "ar-22153": {
+    "group": "finance",
+    "type": "native-ar",
+    "prompt": "tasks/ar-22153/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "C": "tasks/materials/cash-C-d461368c1657.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/finance/ar-22153"
+  },
+  "ar-22279": {
+    "group": "finance",
+    "type": "native-ar",
+    "prompt": "tasks/ar-22279/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "C": "tasks/materials/cash-C-d461368c1657.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/finance/ar-22279"
+  },
+  "ar-21367": {
+    "group": "finance",
+    "type": "native-ar",
+    "prompt": "tasks/ar-21367/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "C": "tasks/materials/cash-C-d461368c1657.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/finance/ar-21367"
+  },
+  "ar-23387": {
+    "group": "finance",
+    "type": "native-ar",
+    "prompt": "tasks/ar-23387/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "C": "tasks/materials/cash-C-d461368c1657.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/finance/ar-23387"
+  },
+  "ar-23951": {
+    "group": "finance",
+    "type": "native-ar",
+    "prompt": "tasks/ar-23951/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "C": "tasks/materials/cash-C-d461368c1657.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/finance/ar-23951"
+  },
+  "ar-25407": {
+    "group": "finance",
+    "type": "native-ar",
+    "prompt": "tasks/ar-25407/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "C": "tasks/materials/cash-C-d461368c1657.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/finance/ar-25407"
+  },
+  "ar-21943": {
+    "group": "finance",
+    "type": "native-ar",
+    "prompt": "tasks/ar-21943/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "C": "tasks/materials/cash-C-d461368c1657.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/finance/ar-21943"
+  },
+  "ar-21489": {
+    "group": "finance",
+    "type": "native-ar",
+    "prompt": "tasks/ar-21489/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "C": "tasks/materials/cash-C-d461368c1657.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/finance/ar-21489"
+  },
+  "ar-25811": {
+    "group": "finance",
+    "type": "native-ar",
+    "prompt": "tasks/ar-25811/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "C": "tasks/materials/cash-C-d461368c1657.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/finance/ar-25811"
+  },
+  "ar-23641": {
+    "group": "finance",
+    "type": "native-ar",
+    "prompt": "tasks/ar-23641/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "C": "tasks/materials/cash-C-d461368c1657.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/finance/ar-23641"
+  },
+  "ar-25673": {
+    "group": "finance",
+    "type": "native-ar",
+    "prompt": "tasks/ar-25673/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "C": "tasks/materials/cash-C-d461368c1657.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/finance/ar-25673"
+  },
+  "ar-24513": {
+    "group": "finance",
+    "type": "native-ar",
+    "prompt": "tasks/ar-24513/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "C": "tasks/materials/cash-C-d461368c1657.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/finance/ar-24513"
+  },
+  "ar-24857": {
+    "group": "finance",
+    "type": "native-ar",
+    "prompt": "tasks/ar-24857/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "C": "tasks/materials/cash-C-d461368c1657.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/finance/ar-24857"
+  },
+  "ar-21731": {
+    "group": "finance",
+    "type": "native-ar",
+    "prompt": "tasks/ar-21731/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "C": "tasks/materials/cash-C-d461368c1657.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/finance/ar-21731"
+  },
+  "ar-26437": {
+    "group": "finance",
+    "type": "native-ar",
+    "prompt": "tasks/ar-26437/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "C": "tasks/materials/cash-C-d461368c1657.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/finance/ar-26437"
+  },
+  "ar-22711": {
+    "group": "finance",
+    "type": "native-ar",
+    "prompt": "tasks/ar-22711/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "C": "tasks/materials/cash-C-d461368c1657.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/finance/ar-22711"
+  },
+  "ar-25249": {
+    "group": "finance",
+    "type": "native-ar",
+    "prompt": "tasks/ar-25249/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "C": "tasks/materials/cash-C-d461368c1657.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/finance/ar-25249"
+  },
+  "ar-22803": {
+    "group": "finance",
+    "type": "native-ar",
+    "prompt": "tasks/ar-22803/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "C": "tasks/materials/cash-C-d461368c1657.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/finance/ar-22803"
+  },
+  "ar-24397": {
+    "group": "finance",
+    "type": "native-ar",
+    "prompt": "tasks/ar-24397/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "C": "tasks/materials/cash-C-d461368c1657.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/finance/ar-24397"
+  },
+  "ar-26193": {
+    "group": "finance",
+    "type": "native-ar",
+    "prompt": "tasks/ar-26193/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "C": "tasks/materials/cash-C-d461368c1657.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/finance/ar-26193"
+  },
+  "ar-26905": {
+    "group": "finance",
+    "type": "native-ar",
+    "prompt": "tasks/ar-26905/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "C": "tasks/materials/cash-C-d461368c1657.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/finance/ar-26905"
+  },
+  "ar-24139": {
+    "group": "finance",
+    "type": "native-ar",
+    "prompt": "tasks/ar-24139/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "C": "tasks/materials/cash-C-d461368c1657.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/finance/ar-24139"
+  },
+  "ar-23217": {
+    "group": "finance",
+    "type": "native-ar",
+    "prompt": "tasks/ar-23217/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "C": "tasks/materials/cash-C-d461368c1657.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/finance/ar-23217"
+  },
+  "ap-1037": {
+    "group": "finance",
+    "type": "native-ap",
+    "prompt": "tasks/ap-1037/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/payable-B-4d414ffc2eba.txt",
+      "C": "tasks/materials/payable-C-61334324fd1f.txt",
+      "D": "tasks/materials/payable-D-2b542d85719f.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/finance/ap-1037"
+  },
+  "ap-924": {
+    "group": "finance",
+    "type": "native-ap",
+    "prompt": "tasks/ap-924/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/payable-B-4d414ffc2eba.txt",
+      "C": "tasks/materials/payable-C-61334324fd1f.txt",
+      "D": "tasks/materials/payable-D-2b542d85719f.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/finance/ap-924"
+  },
+  "ap-1026": {
+    "group": "finance",
+    "type": "native-ap",
+    "prompt": "tasks/ap-1026/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/payable-B-4d414ffc2eba.txt",
+      "C": "tasks/materials/payable-C-61334324fd1f.txt",
+      "D": "tasks/materials/payable-D-2b542d85719f.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/finance/ap-1026"
+  },
+  "ap-723": {
+    "group": "finance",
+    "type": "native-ap",
+    "prompt": "tasks/ap-723/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/payable-B-4d414ffc2eba.txt",
+      "C": "tasks/materials/payable-C-61334324fd1f.txt",
+      "D": "tasks/materials/payable-D-2b542d85719f.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/finance/ap-723"
+  },
+  "ap-839": {
+    "group": "finance",
+    "type": "native-ap",
+    "prompt": "tasks/ap-839/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/payable-B-4d414ffc2eba.txt",
+      "C": "tasks/materials/payable-C-61334324fd1f.txt",
+      "D": "tasks/materials/payable-D-2b542d85719f.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/finance/ap-839"
+  },
+  "ap-815": {
+    "group": "finance",
+    "type": "native-ap",
+    "prompt": "tasks/ap-815/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/payable-B-4d414ffc2eba.txt",
+      "C": "tasks/materials/payable-C-61334324fd1f.txt",
+      "D": "tasks/materials/payable-D-2b542d85719f.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/finance/ap-815"
+  },
+  "ap-779": {
+    "group": "finance",
+    "type": "native-ap",
+    "prompt": "tasks/ap-779/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/payable-B-4d414ffc2eba.txt",
+      "C": "tasks/materials/payable-C-61334324fd1f.txt",
+      "D": "tasks/materials/payable-D-2b542d85719f.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/finance/ap-779"
+  },
+  "ap-1059": {
+    "group": "finance",
+    "type": "native-ap",
+    "prompt": "tasks/ap-1059/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/payable-B-4d414ffc2eba.txt",
+      "C": "tasks/materials/payable-C-61334324fd1f.txt",
+      "D": "tasks/materials/payable-D-2b542d85719f.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/finance/ap-1059"
+  },
+  "ap-741": {
+    "group": "finance",
+    "type": "native-ap",
+    "prompt": "tasks/ap-741/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/payable-B-4d414ffc2eba.txt",
+      "C": "tasks/materials/payable-C-61334324fd1f.txt",
+      "D": "tasks/materials/payable-D-2b542d85719f.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/finance/ap-741"
+  },
+  "ap-762": {
+    "group": "finance",
+    "type": "native-ap",
+    "prompt": "tasks/ap-762/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/payable-B-4d414ffc2eba.txt",
+      "C": "tasks/materials/payable-C-61334324fd1f.txt",
+      "D": "tasks/materials/payable-D-2b542d85719f.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/finance/ap-762"
+  },
+  "ap-806": {
+    "group": "finance",
+    "type": "native-ap",
+    "prompt": "tasks/ap-806/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/payable-B-4d414ffc2eba.txt",
+      "C": "tasks/materials/payable-C-61334324fd1f.txt",
+      "D": "tasks/materials/payable-D-2b542d85719f.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/finance/ap-806"
+  },
+  "ap-953": {
+    "group": "finance",
+    "type": "native-ap",
+    "prompt": "tasks/ap-953/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/payable-B-4d414ffc2eba.txt",
+      "C": "tasks/materials/payable-C-61334324fd1f.txt",
+      "D": "tasks/materials/payable-D-2b542d85719f.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/finance/ap-953"
+  },
+  "ap-1018": {
+    "group": "finance",
+    "type": "native-ap",
+    "prompt": "tasks/ap-1018/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/payable-B-4d414ffc2eba.txt",
+      "C": "tasks/materials/payable-C-61334324fd1f.txt",
+      "D": "tasks/materials/payable-D-2b542d85719f.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/finance/ap-1018"
+  },
+  "ap-854": {
+    "group": "finance",
+    "type": "native-ap",
+    "prompt": "tasks/ap-854/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/payable-B-4d414ffc2eba.txt",
+      "C": "tasks/materials/payable-C-61334324fd1f.txt",
+      "D": "tasks/materials/payable-D-2b542d85719f.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/finance/ap-854"
+  },
+  "ap-911": {
+    "group": "finance",
+    "type": "native-ap",
+    "prompt": "tasks/ap-911/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/payable-B-4d414ffc2eba.txt",
+      "C": "tasks/materials/payable-C-61334324fd1f.txt",
+      "D": "tasks/materials/payable-D-2b542d85719f.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/finance/ap-911"
+  },
+  "ap-907": {
+    "group": "finance",
+    "type": "native-ap",
+    "prompt": "tasks/ap-907/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/payable-B-4d414ffc2eba.txt",
+      "C": "tasks/materials/payable-C-61334324fd1f.txt",
+      "D": "tasks/materials/payable-D-2b542d85719f.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/finance/ap-907"
+  },
+  "RMT-800": {
+    "group": "remittances",
+    "type": "packet",
+    "prompt": "tasks/RMT-800/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/attachment-132e238be20d.txt"
+    },
+    "resources": {
+      "invoices-history": "tasks/materials/precedents-22cbf156b1f1.txt"
+    }
+  },
+  "RMT-744": {
+    "group": "remittances",
+    "type": "packet",
+    "prompt": "tasks/RMT-744/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/attachment-132e238be20d.txt"
+    },
+    "resources": {
+      "invoices-history": "tasks/materials/precedents-22cbf156b1f1.txt"
+    }
+  },
+  "RMT-730": {
+    "group": "remittances",
+    "type": "packet",
+    "prompt": "tasks/RMT-730/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/attachment-132e238be20d.txt"
+    },
+    "resources": {
+      "invoices-history": "tasks/materials/precedents-22cbf156b1f1.txt"
+    }
+  },
+  "RMT-772": {
+    "group": "remittances",
+    "type": "packet",
+    "prompt": "tasks/RMT-772/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/attachment-132e238be20d.txt"
+    },
+    "resources": {
+      "invoices-history": "tasks/materials/precedents-22cbf156b1f1.txt"
+    }
+  },
+  "RMT-716": {
+    "group": "remittances",
+    "type": "packet",
+    "prompt": "tasks/RMT-716/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/attachment-132e238be20d.txt"
+    },
+    "resources": {
+      "invoices-history": "tasks/materials/precedents-22cbf156b1f1.txt"
+    }
+  },
+  "RMT-807": {
+    "group": "remittances",
+    "type": "packet",
+    "prompt": "tasks/RMT-807/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/attachment-132e238be20d.txt"
+    },
+    "resources": {
+      "invoices-history": "tasks/materials/precedents-22cbf156b1f1.txt"
+    }
+  },
+  "RMT-723": {
+    "group": "remittances",
+    "type": "packet",
+    "prompt": "tasks/RMT-723/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/attachment-132e238be20d.txt"
+    },
+    "resources": {
+      "invoices-history": "tasks/materials/precedents-22cbf156b1f1.txt"
+    }
+  },
+  "RMT-751": {
+    "group": "remittances",
+    "type": "packet",
+    "prompt": "tasks/RMT-751/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/attachment-132e238be20d.txt"
+    },
+    "resources": {
+      "invoices-history": "tasks/materials/precedents-22cbf156b1f1.txt"
+    }
+  },
+  "RMT-793": {
+    "group": "remittances",
+    "type": "packet",
+    "prompt": "tasks/RMT-793/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/attachment-132e238be20d.txt"
+    },
+    "resources": {
+      "invoices-history": "tasks/materials/precedents-22cbf156b1f1.txt"
+    }
+  },
+  "RMT-779": {
+    "group": "remittances",
+    "type": "packet",
+    "prompt": "tasks/RMT-779/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/attachment-132e238be20d.txt"
+    },
+    "resources": {
+      "invoices-history": "tasks/materials/precedents-22cbf156b1f1.txt"
+    }
+  },
+  "RMT-814": {
+    "group": "remittances",
+    "type": "packet",
+    "prompt": "tasks/RMT-814/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/attachment-132e238be20d.txt"
+    },
+    "resources": {
+      "invoices-history": "tasks/materials/precedents-22cbf156b1f1.txt"
+    }
+  },
+  "RMT-821": {
+    "group": "remittances",
+    "type": "packet",
+    "prompt": "tasks/RMT-821/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/attachment-132e238be20d.txt"
+    },
+    "resources": {
+      "invoices-history": "tasks/materials/precedents-22cbf156b1f1.txt"
+    }
+  },
+  "RMT-737": {
+    "group": "remittances",
+    "type": "packet",
+    "prompt": "tasks/RMT-737/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/attachment-132e238be20d.txt"
+    },
+    "resources": {
+      "invoices-history": "tasks/materials/precedents-22cbf156b1f1.txt"
+    }
+  },
+  "RMT-758": {
+    "group": "remittances",
+    "type": "packet",
+    "prompt": "tasks/RMT-758/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/attachment-132e238be20d.txt"
+    },
+    "resources": {
+      "invoices-history": "tasks/materials/precedents-22cbf156b1f1.txt"
+    }
+  },
+  "RMT-765": {
+    "group": "remittances",
+    "type": "packet",
+    "prompt": "tasks/RMT-765/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/attachment-132e238be20d.txt"
+    },
+    "resources": {
+      "invoices-history": "tasks/materials/precedents-22cbf156b1f1.txt"
+    }
+  },
+  "RMT-786": {
+    "group": "remittances",
+    "type": "packet",
+    "prompt": "tasks/RMT-786/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/attachment-132e238be20d.txt"
+    },
+    "resources": {
+      "invoices-history": "tasks/materials/precedents-22cbf156b1f1.txt"
+    }
+  },
+  "I-7103": {
+    "group": "historical",
+    "type": "native-ar",
+    "prompt": "tasks/I-7103/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "C": "tasks/materials/cash-C-d461368c1657.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/historical/I-7103"
+  },
+  "I-7381": {
+    "group": "historical",
+    "type": "native-ar",
+    "prompt": "tasks/I-7381/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "C": "tasks/materials/cash-C-d461368c1657.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/historical/I-7381"
+  },
+  "I-7423": {
+    "group": "historical",
+    "type": "native-ar",
+    "prompt": "tasks/I-7423/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "C": "tasks/materials/cash-C-d461368c1657.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/historical/I-7423"
+  },
+  "I-7547": {
+    "group": "historical",
+    "type": "native-ar",
+    "prompt": "tasks/I-7547/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "C": "tasks/materials/cash-C-d461368c1657.txt",
+      "D": "tasks/materials/cash-D-a59224b81247.txt"
+    },
+    "resources": {},
+    "fixtures": "mock/historical/I-7547"
+  },
+  "INV-8259-clear": {
+    "group": "historical",
+    "type": "approval",
+    "prompt": "tasks/INV-8259-clear/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/attachment-c3ea4630457c.txt"
+    },
+    "resources": {
+      "invoices-history": "tasks/materials/precedents-c74b38b6b289.txt"
+    }
+  },
+  "INV-8259": {
+    "group": "historical",
+    "type": "approval",
+    "prompt": "tasks/INV-8259/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/attachment-c3ea4630457c.txt",
+      "C": "tasks/materials/attachment-04fac0c96985.txt",
+      "D": "tasks/materials/attachment-c0adff2f8e1c.txt"
+    },
+    "resources": {
+      "invoices-history": "tasks/materials/precedents-c74b38b6b289.txt"
+    }
+  },
+  "INV-8266": {
+    "group": "historical",
+    "type": "approval",
+    "prompt": "tasks/INV-8266/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/attachment-c3ea4630457c.txt",
+      "C": "tasks/materials/attachment-04fac0c96985.txt",
+      "D": "tasks/materials/attachment-c0adff2f8e1c.txt"
+    },
+    "resources": {
+      "invoices-history": "tasks/materials/precedents-c74b38b6b289.txt"
+    }
+  },
+  "INV-8273-clear": {
+    "group": "historical",
+    "type": "approval",
+    "prompt": "tasks/INV-8273-clear/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/attachment-c3ea4630457c.txt"
+    },
+    "resources": {
+      "invoices-history": "tasks/materials/precedents-c74b38b6b289.txt"
+    }
+  },
+  "INV-8273": {
+    "group": "historical",
+    "type": "approval",
+    "prompt": "tasks/INV-8273/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/attachment-c3ea4630457c.txt",
+      "C": "tasks/materials/attachment-04fac0c96985.txt",
+      "D": "tasks/materials/attachment-c0adff2f8e1c.txt"
+    },
+    "resources": {
+      "invoices-history": "tasks/materials/precedents-c74b38b6b289.txt"
+    }
+  },
+  "INV-8287": {
+    "group": "historical",
+    "type": "approval",
+    "prompt": "tasks/INV-8287/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/attachment-c3ea4630457c.txt",
+      "C": "tasks/materials/attachment-04fac0c96985.txt",
+      "D": "tasks/materials/attachment-c0adff2f8e1c.txt"
+    },
+    "resources": {
+      "invoices-history": "tasks/materials/precedents-c74b38b6b289.txt"
+    }
+  },
+  "INV-8294": {
+    "group": "historical",
+    "type": "approval",
+    "prompt": "tasks/INV-8294/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/attachment-c3ea4630457c.txt",
+      "C": "tasks/materials/attachment-04fac0c96985.txt",
+      "D": "tasks/materials/attachment-c0adff2f8e1c.txt"
+    },
+    "resources": {
+      "invoices-history": "tasks/materials/precedents-c74b38b6b289.txt"
+    }
+  },
+  "INV-8322": {
+    "group": "historical",
+    "type": "approval",
+    "prompt": "tasks/INV-8322/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/attachment-c3ea4630457c.txt",
+      "C": "tasks/materials/attachment-04fac0c96985.txt",
+      "D": "tasks/materials/attachment-c0adff2f8e1c.txt"
+    },
+    "resources": {
+      "invoices-history": "tasks/materials/precedents-c74b38b6b289.txt"
+    }
+  },
+  "INV-8329": {
+    "group": "historical",
+    "type": "approval",
+    "prompt": "tasks/INV-8329/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/attachment-c3ea4630457c.txt",
+      "C": "tasks/materials/attachment-04fac0c96985.txt",
+      "D": "tasks/materials/attachment-c0adff2f8e1c.txt"
+    },
+    "resources": {
+      "invoices-history": "tasks/materials/precedents-c74b38b6b289.txt"
+    }
+  },
+  "INV-8336": {
+    "group": "historical",
+    "type": "approval",
+    "prompt": "tasks/INV-8336/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/attachment-c3ea4630457c.txt",
+      "C": "tasks/materials/attachment-04fac0c96985.txt",
+      "D": "tasks/materials/attachment-c0adff2f8e1c.txt"
+    },
+    "resources": {
+      "invoices-history": "tasks/materials/precedents-c74b38b6b289.txt"
+    }
+  },
+  "INV-8350": {
+    "group": "historical",
+    "type": "approval",
+    "prompt": "tasks/INV-8350/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/attachment-c3ea4630457c.txt",
+      "C": "tasks/materials/attachment-04fac0c96985.txt",
+      "D": "tasks/materials/attachment-c0adff2f8e1c.txt"
+    },
+    "resources": {
+      "invoices-history": "tasks/materials/precedents-c74b38b6b289.txt"
+    }
+  },
+  "INV-8385": {
+    "group": "historical",
+    "type": "evidence",
+    "prompt": "tasks/INV-8385/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/attachment-bd1e3926be50.txt",
+      "C": "tasks/materials/attachment-4aeb913eb337.txt",
+      "D": "tasks/materials/attachment-970bf51527d6.txt"
+    },
+    "resources": {
+      "invoices-history": "tasks/materials/precedents-c74b38b6b289.txt"
+    }
+  },
+  "T-320": {
+    "group": "historical",
+    "type": "ticket",
+    "prompt": "tasks/T-320/TASK.md",
+    "arms": {
+      "A": null,
+      "B": "tasks/materials/skill-6d417491eeac.txt",
+      "C": "tasks/materials/handoff-65807355159c.txt"
+    },
+    "resources": {
+      "rules": "tasks/materials/policy-5fc40debeb27.txt"
+    }
+  }
+}

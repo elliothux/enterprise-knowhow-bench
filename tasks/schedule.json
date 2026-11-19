@@ -1,0 +1,342 @@
+{
+  "finance": [
+    {
+      "case": "ar-26741",
+      "family": "cash",
+      "order": "BA",
+      "control": "C"
+    },
+    {
+      "case": "ar-22153",
+      "family": "cash",
+      "order": "BA",
+      "control": "C"
+    },
+    {
+      "case": "ar-22279",
+      "family": "cash",
+      "order": "AB",
+      "control": "D"
+    },
+    {
+      "case": "ar-21367",
+      "family": "cash",
+      "order": "BA",
+      "control": "C"
+    },
+    {
+      "case": "ar-23387",
+      "family": "cash",
+      "order": "BA",
+      "control": ""
+    },
+    {
+      "case": "ar-23951",
+      "family": "cash",
+      "order": "AB",
+      "control": "D"
+    },
+    {
+      "case": "ar-25407",
+      "family": "cash",
+      "order": "BA",
+      "control": "C"
+    },
+    {
+      "case": "ar-21943",
+      "family": "cash",
+      "order": "BA",
+      "control": ""
+    },
+    {
+      "case": "ar-21489",
+      "family": "cash",
+      "order": "AB",
+      "control": "D"
+    },
+    {
+      "case": "ar-25811",
+      "family": "cash",
+      "order": "AB",
+      "control": "D"
+    },
+    {
+      "case": "ar-23641",
+      "family": "cash",
+      "order": "BA",
+      "control": "C"
+    },
+    {
+      "case": "ar-25673",
+      "family": "cash",
+      "order": "BA",
+      "control": ""
+    },
+    {
+      "case": "ar-24513",
+      "family": "cash",
+      "order": "BA",
+      "control": ""
+    },
+    {
+      "case": "ar-24857",
+      "family": "cash",
+      "order": "AB",
+      "control": "D"
+    },
+    {
+      "case": "ar-21731",
+      "family": "cash",
+      "order": "AB",
+      "control": "D"
+    },
+    {
+      "case": "ar-26437",
+      "family": "cash",
+      "order": "AB",
+      "control": "D"
+    },
+    {
+      "case": "ar-22711",
+      "family": "cash",
+      "order": "BA",
+      "control": ""
+    },
+    {
+      "case": "ar-25249",
+      "family": "cash",
+      "order": "AB",
+      "control": "D"
+    },
+    {
+      "case": "ar-22803",
+      "family": "cash",
+      "order": "AB",
+      "control": "D"
+    },
+    {
+      "case": "ar-24397",
+      "family": "cash",
+      "order": "AB",
+      "control": "D"
+    },
+    {
+      "case": "ar-26193",
+      "family": "cash",
+      "order": "AB",
+      "control": "D"
+    },
+    {
+      "case": "ar-26905",
+      "family": "cash",
+      "order": "BA",
+      "control": ""
+    },
+    {
+      "case": "ar-24139",
+      "family": "cash",
+      "order": "BA",
+      "control": "C"
+    },
+    {
+      "case": "ar-23217",
+      "family": "cash",
+      "order": "AB",
+      "control": "D"
+    },
+    {
+      "case": "ap-1037",
+      "family": "payable",
+      "order": "BA",
+      "control": "C"
+    },
+    {
+      "case": "ap-924",
+      "family": "payable",
+      "order": "AB",
+      "control": "D"
+    },
+    {
+      "case": "ap-1026",
+      "family": "payable",
+      "order": "AB",
+      "control": "D"
+    },
+    {
+      "case": "ap-723",
+      "family": "payable",
+      "order": "BA",
+      "control": "C"
+    },
+    {
+      "case": "ap-839",
+      "family": "payable",
+      "order": "AB",
+      "control": "D"
+    },
+    {
+      "case": "ap-815",
+      "family": "payable",
+      "order": "BA",
+      "control": "C"
+    },
+    {
+      "case": "ap-779",
+      "family": "payable",
+      "order": "BA",
+      "control": ""
+    },
+    {
+      "case": "ap-1059",
+      "family": "payable",
+      "order": "BA",
+      "control": ""
+    },
+    {
+      "case": "ap-741",
+      "family": "payable",
+      "order": "AB",
+      "control": "D"
+    },
+    {
+      "case": "ap-762",
+      "family": "payable",
+      "order": "AB",
+      "control": "D"
+    },
+    {
+      "case": "ap-806",
+      "family": "payable",
+      "order": "AB",
+      "control": "D"
+    },
+    {
+      "case": "ap-953",
+      "family": "payable",
+      "order": "AB",
+      "control": "D"
+    },
+    {
+      "case": "ap-1018",
+      "family": "payable",
+      "order": "AB",
+      "control": "D"
+    },
+    {
+      "case": "ap-854",
+      "family": "payable",
+      "order": "BA",
+      "control": ""
+    },
+    {
+      "case": "ap-911",
+      "family": "payable",
+      "order": "BA",
+      "control": ""
+    },
+    {
+      "case": "ap-907",
+      "family": "payable",
+      "order": "BA",
+      "control": "C"
+    }
+  ],
+  "remittances": [
+    {
+      "case": "RMT-800",
+      "family": "packet",
+      "order": "AB",
+      "control": ""
+    },
+    {
+      "case": "RMT-744",
+      "family": "packet",
+      "order": "AB",
+      "control": ""
+    },
+    {
+      "case": "RMT-730",
+      "family": "packet",
+      "order": "AB",
+      "control": ""
+    },
+    {
+      "case": "RMT-772",
+      "family": "packet",
+      "order": "AB",
+      "control": ""
+    },
+    {
+      "case": "RMT-716",
+      "family": "packet",
+      "order": "AB",
+      "control": ""
+    },
+    {
+      "case": "RMT-807",
+      "family": "packet",
+      "order": "BA",
+      "control": ""
+    },
+    {
+      "case": "RMT-723",
+      "family": "packet",
+      "order": "BA",
+      "control": ""
+    },
+    {
+      "case": "RMT-751",
+      "family": "packet",
+      "order": "BA",
+      "control": ""
+    },
+    {
+      "case": "RMT-793",
+      "family": "packet",
+      "order": "BA",
+      "control": ""
+    },
+    {
+      "case": "RMT-779",
+      "family": "packet",
+      "order": "BA",
+      "control": ""
+    },
+    {
+      "case": "RMT-814",
+      "family": "packet",
+      "order": "AB",
+      "control": ""
+    },
+    {
+      "case": "RMT-821",
+      "family": "packet",
+      "order": "BA",
+      "control": ""
+    },
+    {
+      "case": "RMT-737",
+      "family": "packet",
+      "order": "BA",
+      "control": ""
+    },
+    {
+      "case": "RMT-758",
+      "family": "packet",
+      "order": "AB",
+      "control": ""
+    },
+    {
+      "case": "RMT-765",
+      "family": "packet",
+      "order": "BA",
+      "control": ""
+    },
+    {
+      "case": "RMT-786",
+      "family": "packet",
+      "order": "AB",
+      "control": ""
+    }
+  ]
+}

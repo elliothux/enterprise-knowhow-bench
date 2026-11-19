@@ -1,0 +1,257 @@
+{
+  "id": "invoice-reconciliation-evaluation",
+  "family": "invoice-reconciliation",
+  "split": "evaluation",
+  "rules": {
+    "as_of": "2026-11-18"
+  },
+  "registers": {
+    "invoices-current": [
+      {
+        "vendor_id": "QUARTZ",
+        "invoice_id": "IV-8201",
+        "revision": 2,
+        "updated_on": "2026-11-15",
+        "issued_on": "2026-11-01",
+        "due_on": "2026-11-20",
+        "status": "POSTED",
+        "gross_sgd": "975.00",
+        "printed_badge": "PAID"
+      },
+      {
+        "vendor_id": "RIVER",
+        "invoice_id": "IV-8202",
+        "revision": 1,
+        "updated_on": "2026-11-02",
+        "issued_on": "2026-11-02",
+        "due_on": "2026-11-10",
+        "status": "POSTED",
+        "gross_sgd": "720.00",
+        "printed_badge": "OPEN"
+      },
+      {
+        "vendor_id": "SABLE",
+        "invoice_id": "IV-8201",
+        "revision": 1,
+        "updated_on": "2026-11-03",
+        "issued_on": "2026-11-03",
+        "due_on": "2026-11-17",
+        "status": "POSTED",
+        "gross_sgd": "640.00",
+        "printed_badge": "PAID"
+      },
+      {
+        "vendor_id": "QUARTZ",
+        "invoice_id": "IV-8204",
+        "revision": 1,
+        "updated_on": "2026-11-04",
+        "issued_on": "2026-11-04",
+        "due_on": "2026-11-18",
+        "status": "POSTED",
+        "gross_sgd": "110.00",
+        "printed_badge": "OPEN"
+      },
+      {
+        "vendor_id": "RIVER",
+        "invoice_id": "IV-8205",
+        "revision": 2,
+        "updated_on": "2026-11-16",
+        "issued_on": "2026-11-05",
+        "due_on": "2026-11-15",
+        "status": "VOID",
+        "gross_sgd": "330.00",
+        "printed_badge": "OPEN"
+      }
+    ],
+    "invoices-history": [
+      {
+        "vendor_id": "QUARTZ",
+        "invoice_id": "IV-8201",
+        "revision": 1,
+        "updated_on": "2026-11-01",
+        "issued_on": "2026-11-01",
+        "due_on": "2026-11-20",
+        "status": "POSTED",
+        "gross_sgd": "990.00",
+        "printed_badge": "OPEN"
+      },
+      {
+        "vendor_id": "QUARTZ",
+        "invoice_id": "IV-8201",
+        "revision": 2,
+        "updated_on": "2026-11-15",
+        "issued_on": "2026-11-01",
+        "due_on": "2026-11-20",
+        "status": "POSTED",
+        "gross_sgd": "975.00",
+        "printed_badge": "PAID"
+      },
+      {
+        "vendor_id": "RIVER",
+        "invoice_id": "IV-8205",
+        "revision": 1,
+        "updated_on": "2026-11-05",
+        "issued_on": "2026-11-05",
+        "due_on": "2026-11-15",
+        "status": "POSTED",
+        "gross_sgd": "330.00",
+        "printed_badge": "OPEN"
+      },
+      {
+        "vendor_id": "SABLE",
+        "invoice_id": "IV-8206",
+        "revision": 1,
+        "updated_on": "2026-11-19",
+        "issued_on": "2026-11-19",
+        "due_on": "2026-11-25",
+        "status": "POSTED",
+        "gross_sgd": "220.00",
+        "printed_badge": "OPEN"
+      }
+    ],
+    "credit-notes": [
+      {
+        "credit_id": "CR-901",
+        "vendor_id": "QUARTZ",
+        "invoice_id": "IV-8201",
+        "revision": 1,
+        "updated_on": "2026-11-16",
+        "event_on": "2026-11-16",
+        "amount_sgd": "75.00",
+        "status": "POSTED"
+      },
+      {
+        "credit_id": "CR-901",
+        "vendor_id": "QUARTZ",
+        "invoice_id": "IV-8201",
+        "revision": 1,
+        "updated_on": "2026-11-16",
+        "event_on": "2026-11-16",
+        "amount_sgd": "75.00",
+        "status": "POSTED"
+      },
+      {
+        "credit_id": "CR-902",
+        "vendor_id": "RIVER",
+        "invoice_id": "IV-8202",
+        "revision": 1,
+        "updated_on": "2026-11-16",
+        "event_on": "2026-11-16",
+        "amount_sgd": "20.00",
+        "status": "POSTED"
+      },
+      {
+        "credit_id": "CR-903",
+        "vendor_id": "QUARTZ",
+        "invoice_id": "IV-8204",
+        "revision": 1,
+        "updated_on": "2026-11-16",
+        "event_on": "2026-11-16",
+        "amount_sgd": "140.00",
+        "status": "POSTED"
+      },
+      {
+        "credit_id": "CR-904",
+        "vendor_id": "SABLE",
+        "invoice_id": "IV-8201",
+        "revision": 1,
+        "updated_on": "2026-11-15",
+        "event_on": "2026-11-15",
+        "amount_sgd": "40.00",
+        "status": "POSTED"
+      },
+      {
+        "credit_id": "CR-904",
+        "vendor_id": "SABLE",
+        "invoice_id": "IV-8201",
+        "revision": 2,
+        "updated_on": "2026-11-17",
+        "event_on": "2026-11-17",
+        "amount_sgd": "40.00",
+        "status": "VOID"
+      },
+      {
+        "credit_id": "CR-905",
+        "vendor_id": "QUARTZ",
+        "invoice_id": "IV-8201",
+        "revision": 1,
+        "updated_on": "2026-11-19",
+        "event_on": "2026-11-19",
+        "amount_sgd": "500.00",
+        "status": "POSTED"
+      }
+    ],
+    "remittances": [
+      {
+        "payment_id": "TR-951",
+        "vendor_id": "QUARTZ",
+        "invoice_id": "IV-8201",
+        "revision": 1,
+        "updated_on": "2026-11-17",
+        "event_on": "2026-11-17",
+        "amount_sgd": "400.00",
+        "status": "SETTLED"
+      },
+      {
+        "payment_id": "TR-951",
+        "vendor_id": "QUARTZ",
+        "invoice_id": "IV-8201",
+        "revision": 1,
+        "updated_on": "2026-11-17",
+        "event_on": "2026-11-17",
+        "amount_sgd": "400.00",
+        "status": "SETTLED"
+      },
+      {
+        "payment_id": "TR-952",
+        "vendor_id": "RIVER",
+        "invoice_id": "IV-8202",
+        "revision": 1,
+        "updated_on": "2026-11-17",
+        "event_on": "2026-11-17",
+        "amount_sgd": "700.00",
+        "status": "SETTLED"
+      },
+      {
+        "payment_id": "TR-953",
+        "vendor_id": "SABLE",
+        "invoice_id": "IV-8201",
+        "revision": 1,
+        "updated_on": "2026-11-17",
+        "event_on": "2026-11-17",
+        "amount_sgd": "150.00",
+        "status": "SETTLED"
+      },
+      {
+        "payment_id": "TR-954",
+        "vendor_id": "QUARTZ",
+        "invoice_id": "IV-8201",
+        "revision": 1,
+        "updated_on": "2026-11-17",
+        "event_on": "2026-11-17",
+        "amount_sgd": "500.00",
+        "status": "PENDING"
+      },
+      {
+        "payment_id": "TR-955",
+        "vendor_id": "SABLE",
+        "invoice_id": "IV-8201",
+        "revision": 1,
+        "updated_on": "2026-11-15",
+        "event_on": "2026-11-15",
+        "amount_sgd": "200.00",
+        "status": "SETTLED"
+      },
+      {
+        "payment_id": "TR-955",
+        "vendor_id": "SABLE",
+        "invoice_id": "IV-8201",
+        "revision": 2,
+        "updated_on": "2026-11-18",
+        "event_on": "2026-11-18",
+        "amount_sgd": "200.00",
+        "status": "REVERSED"
+      }
+    ]
+  }
+}

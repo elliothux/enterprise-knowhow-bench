@@ -1,0 +1,58 @@
+
+Approved current policy:
+CURRENT PAYMENT RELEASE POLICY / POL-EV-CURRENT
+Status APPROVED; effective from 2026-12-13T00:00:00; no expiry.
+This replaces POL-EV-ARCHIVE. Apply to this review's event cutoff.
+
+1. Scope and time
+Business key is (vendor_id, invoice_id), never invoice_id alone.
+For EVERY ledger, use a record only when BOTH event_on <= event cutoff AND
+recorded_on <= recorded cutoff (index page 1). Ignore other records completely.
+Select greatest numeric revision per invoice business key AFTER time filtering.
+Then check its status; never revert to an older POSTED revision if latest is VOID/DRAFT.
+Equal copies of the same revision/entry count once; conflicting copies are invalid data.
+PO versions group by (vendor_id,po_id); receipt versions by receipt_id; settlement
+versions by (vendor_id,entry_id). Select greatest revision before status checks.
+
+2. Evaluate ALL gates, without short-circuiting on an earlier failure
+NOT_POSTED: the selected invoice status is anything other than POSTED.
+DUPLICATE: a latest eligible DUPLICATE_AUDIT for that business key is CONFIRMED.
+NO_BALANCE: gross minus POSTED CREDIT minus SETTLED PAYMENT is <= 0.
+Only settlement entries matching BOTH vendor_id and invoice_id may be applied.
+All amounts include tax, in SGD. Round the final net to cents, half up.
+net_payable_sgd is this book balance, including on HOLD rows; do not zero it for HOLD.
+PO_MISMATCH: no matching selected APPROVED PO, or invoice gross exceeds its amount.
+RECEIPT_SHORT: total selected ACCEPTED receipt amounts for this vendor/invoice/PO
+is less than invoice gross. Exact cents; no percentage tolerance or cross-invoice netting.
+CURRENT POLICY continued / POL-EV-CURRENT
+3. Bank / hold / exception controls
+Bank records and hold events are immutable. Their order is (event_on, sequence).
+Choose latest eligible CHANGE per vendor even if its account is not verified.
+The latest CHANGE must have status ACTIVE. BANK_UNVERIFIED unless a VERIFY
+references that exact CHANGE ref AND account,
+has status VERIFIED, role TREASURY_REVIEWER, different actor_id from
+the CHANGE maker, and is strictly later in (event_on, sequence). Same timestamps
+require sequence comparison. Old account verification never verifies a newer change.
+bank_account_ref is the latest CHANGE account even on HOLD; blank only if none exists.
+ACTIVE_HOLD: any eligible OPEN has no later CLOSE for the SAME business key AND
+hold_id, by role AP_CONTROLLER/RISK_MANAGER. Other roles or hold IDs cannot close it.
+A later OPEN reopens a hold; earlier closes cannot close that new OPEN.
+Exception approvals are in BUL-EV-01. Only role CFO may waive
+PO_MISMATCH, RECEIPT_SHORT, and only reasons explicitly named on that approval.
+Approval must match both business-key fields AND selected invoice revision; gross
+must be <= amount_cap_sgd and valid_until >= event cutoff. Both time cutoffs apply.
+NOT_POSTED, DUPLICATE, NO_BALANCE, BANK_UNVERIFIED, ACTIVE_HOLD can NEVER be waived.
+
+4. Output and auditable citations
+RELEASE if no unwaived failures remain; otherwise HOLD with ALL remaining reasons.
+reason_codes order: NOT_POSTED;DUPLICATE;NO_BALANCE;
+PO_MISMATCH;RECEIPT_SHORT;BANK_UNVERIFIED;ACTIVE_HOLD.
+Use semicolons, no skipped reasons. RELEASE reason_codes is NONE.
+Evidence is the EXACT SET of: this current policy ref; bulletin ref; selected invoice;
+selected matching PO; every selected matching receipt (any status); latest bank CHANGE;
+every eligible VERIFY referring to that change; every eligible hold event for this key;
+every selected settlement entry and every eligible exception for this key (even if invalid).
+Do not cite superseded, time-excluded, other-key records or the old policy. Missing data
+has no invented evidence ID. Use record ref values, not hold_id / invoice_id as citations.
+Separate evidence refs with ; (comma or | also accepted). Order and duplicates don't matter.
+A ref may also be written as its exact PDF filename#ref; both forms are equivalent.

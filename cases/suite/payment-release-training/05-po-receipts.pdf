@@ -1,0 +1,213 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [4 0 R 6 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 5 0 R >>
+endobj
+5 0 obj
+<< /Length 1999 >>
+stream
+BT /F1 10 Tf 13 TL 40 800 Td
+(05-po-receipts.pdf / payment-release-training) Tj
+T*
+(Published record refs; apply the policy in 01-readme-policy.pdf.) Tj
+T*
+() Tj
+T*
+(purchase_orders / POREC-TR-1) Tj
+T*
+(event_on=2026-12-06T10:00:00; recorded_on=2026-12-06T11:00:00) Tj
+T*
+(vendor_id=ASTER; invoice_id=PX-101; po_id=PO-TR-1; revision=1; status=APPROVED;) Tj
+T*
+(amount_sgd=1100.25) Tj
+T*
+() Tj
+T*
+(purchase_orders / POREC-TR-2) Tj
+T*
+(event_on=2026-12-06T10:00:00; recorded_on=2026-12-06T11:00:00) Tj
+T*
+(vendor_id=ASTER; invoice_id=PX-102; po_id=PO-TR-2; revision=1; status=APPROVED;) Tj
+T*
+(amount_sgd=750.00) Tj
+T*
+() Tj
+T*
+(purchase_orders / POREC-TR-3) Tj
+T*
+(event_on=2026-12-06T10:00:00; recorded_on=2026-12-06T11:00:00) Tj
+T*
+(vendor_id=BAY; invoice_id=PX-201; po_id=PO-TR-3; revision=1; status=APPROVED;) Tj
+T*
+(amount_sgd=500.00) Tj
+T*
+() Tj
+T*
+(purchase_orders / POREC-TR-4) Tj
+T*
+(event_on=2026-12-06T10:00:00; recorded_on=2026-12-06T11:00:00) Tj
+T*
+(vendor_id=BAY; invoice_id=PX-202; po_id=PO-TR-4; revision=1; status=APPROVED;) Tj
+T*
+(amount_sgd=900.00) Tj
+T*
+() Tj
+T*
+(purchase_orders / POREC-TR-5) Tj
+T*
+(event_on=2026-12-06T10:00:00; recorded_on=2026-12-06T11:00:00) Tj
+T*
+(vendor_id=COPPER; invoice_id=PX-301; po_id=PO-TR-5; revision=1; status=APPROVED;) Tj
+T*
+(amount_sgd=1200.00) Tj
+T*
+() Tj
+T*
+(purchase_orders / POREC-TR-6) Tj
+T*
+(event_on=2026-12-06T10:00:00; recorded_on=2026-12-06T11:00:00) Tj
+T*
+(vendor_id=COPPER; invoice_id=PX-302; po_id=PO-TR-6; revision=1; status=APPROVED;) Tj
+T*
+(amount_sgd=600.00) Tj
+T*
+() Tj
+T*
+(purchase_orders / POREC-TR-7) Tj
+T*
+(event_on=2026-12-06T10:00:00; recorded_on=2026-12-06T11:00:00) Tj
+T*
+(vendor_id=DELTA; invoice_id=PX-101; po_id=PO-TR-7; revision=1; status=APPROVED;) Tj
+T*
+(amount_sgd=800.00) Tj
+T*
+() Tj
+T*
+(purchase_orders / POREC-TR-8) Tj
+T*
+(event_on=2026-12-06T10:00:00; recorded_on=2026-12-06T11:00:00) Tj
+T*
+(vendor_id=DELTA; invoice_id=PX-402; po_id=PO-TR-8; revision=1; status=APPROVED;) Tj
+T*
+(amount_sgd=300.00) Tj
+T*
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 7 0 R >>
+endobj
+7 0 obj
+<< /Length 2119 >>
+stream
+BT /F1 10 Tf 13 TL 40 800 Td
+(05-po-receipts.pdf / payment-release-training) Tj
+T*
+(Published record refs; apply the policy in 01-readme-policy.pdf.) Tj
+T*
+() Tj
+T*
+(receipts / GR-TR-1) Tj
+T*
+(event_on=2026-12-06T10:00:00; recorded_on=2026-12-06T11:00:00) Tj
+T*
+(vendor_id=ASTER; invoice_id=PX-101; po_id=PO-TR-1; receipt_id=RECEIPT-TR-1; revision=1;) Tj
+T*
+(status=ACCEPTED; amount_sgd=1100.25) Tj
+T*
+() Tj
+T*
+(receipts / GR-TR-2) Tj
+T*
+(event_on=2026-12-06T10:00:00; recorded_on=2026-12-06T11:00:00) Tj
+T*
+(vendor_id=ASTER; invoice_id=PX-102; po_id=PO-TR-2; receipt_id=RECEIPT-TR-2; revision=1;) Tj
+T*
+(status=ACCEPTED; amount_sgd=700.00) Tj
+T*
+() Tj
+T*
+(receipts / GR-TR-3) Tj
+T*
+(event_on=2026-12-06T10:00:00; recorded_on=2026-12-06T11:00:00) Tj
+T*
+(vendor_id=BAY; invoice_id=PX-201; po_id=PO-TR-3; receipt_id=RECEIPT-TR-3; revision=1;) Tj
+T*
+(status=ACCEPTED; amount_sgd=500.00) Tj
+T*
+() Tj
+T*
+(receipts / GR-TR-4) Tj
+T*
+(event_on=2026-12-06T10:00:00; recorded_on=2026-12-06T11:00:00) Tj
+T*
+(vendor_id=BAY; invoice_id=PX-202; po_id=PO-TR-4; receipt_id=RECEIPT-TR-4; revision=1;) Tj
+T*
+(status=ACCEPTED; amount_sgd=900.00) Tj
+T*
+() Tj
+T*
+(receipts / GR-TR-5) Tj
+T*
+(event_on=2026-12-06T10:00:00; recorded_on=2026-12-06T11:00:00) Tj
+T*
+(vendor_id=COPPER; invoice_id=PX-301; po_id=PO-TR-5; receipt_id=RECEIPT-TR-5; revision=1;) Tj
+T*
+(status=ACCEPTED; amount_sgd=1200.00) Tj
+T*
+() Tj
+T*
+(receipts / GR-TR-6) Tj
+T*
+(event_on=2026-12-06T10:00:00; recorded_on=2026-12-06T11:00:00) Tj
+T*
+(vendor_id=COPPER; invoice_id=PX-302; po_id=PO-TR-6; receipt_id=RECEIPT-TR-6; revision=1;) Tj
+T*
+(status=ACCEPTED; amount_sgd=640.00) Tj
+T*
+() Tj
+T*
+(receipts / GR-TR-7) Tj
+T*
+(event_on=2026-12-06T10:00:00; recorded_on=2026-12-06T11:00:00) Tj
+T*
+(vendor_id=DELTA; invoice_id=PX-101; po_id=PO-TR-7; receipt_id=RECEIPT-TR-7; revision=1;) Tj
+T*
+(status=ACCEPTED; amount_sgd=800.00) Tj
+T*
+() Tj
+T*
+(receipts / GR-TR-8) Tj
+T*
+(event_on=2026-12-06T10:00:00; recorded_on=2026-12-06T11:00:00) Tj
+T*
+(vendor_id=DELTA; invoice_id=PX-402; po_id=PO-TR-8; receipt_id=RECEIPT-TR-8; revision=1;) Tj
+T*
+(status=ACCEPTED; amount_sgd=300.00) Tj
+T*
+ET
+endstream
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000121 00000 n 
+0000000191 00000 n 
+0000000317 00000 n 
+0000002367 00000 n 
+0000002493 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+4663
+%%EOF

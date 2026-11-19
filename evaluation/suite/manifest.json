@@ -1,0 +1,1071 @@
+{
+  "schema_version": 1,
+  "kind": "examiner_only_suite",
+  "cases": [
+    {
+      "id": "invoice-reconciliation-evaluation",
+      "family": "invoice-reconciliation",
+      "split": "evaluation",
+      "task_path": "cases/suite/invoice-reconciliation-evaluation/task.md",
+      "task_sha256": "3850b58914285c2412e6809a1440eb35a57c39fc118a04b30c58fbddf2d4b6b0",
+      "freeze_path": "evaluation/suite/invoice-reconciliation-evaluation/freeze.json",
+      "remote_dir": "Documents/Benchmark Suite/invoice-reconciliation-evaluation",
+      "room_name": "suite-invoice-reconciliation-evaluation",
+      "sources": [
+        {
+          "path": "cases/suite/invoice-reconciliation-evaluation/rules.pdf",
+          "filename": "rules.pdf",
+          "sha256": "d8b4583ac4d7e16b72fcce2c3b136746063a7fdeed26dafb06970ec4b6f526d2",
+          "bytes": 2335,
+          "pages": 1
+        },
+        {
+          "path": "cases/suite/invoice-reconciliation-evaluation/invoices-current.pdf",
+          "filename": "invoices-current.pdf",
+          "sha256": "7e3befd8c038544e8865b5f6d7c8622398d03345b9fdd13a6fe4eb4a23e273f4",
+          "bytes": 1647,
+          "pages": 1
+        },
+        {
+          "path": "cases/suite/invoice-reconciliation-evaluation/invoices-history.pdf",
+          "filename": "invoices-history.pdf",
+          "sha256": "004bc3b5fcb07b17369cc7bca8dba550f0a1a8354ad9bdd2c2b1e0d124e45165",
+          "bytes": 1458,
+          "pages": 1
+        },
+        {
+          "path": "cases/suite/invoice-reconciliation-evaluation/credit-notes.pdf",
+          "filename": "credit-notes.pdf",
+          "sha256": "13286e3bdc772e3c6154fe106539801acca8ffb644efe4aaf7e4e6e3b6b4cbf4",
+          "bytes": 1873,
+          "pages": 1
+        },
+        {
+          "path": "cases/suite/invoice-reconciliation-evaluation/remittances.pdf",
+          "filename": "remittances.pdf",
+          "sha256": "4940703a32b81944bbf8fcafe41cd725d6a345c36902c59e4995cbec6f0b857a",
+          "bytes": 1893,
+          "pages": 1
+        }
+      ],
+      "output": {
+        "filename": "reconciliation.csv",
+        "columns": [
+          "vendor_id",
+          "invoice_id",
+          "gross_sgd",
+          "credit_sgd",
+          "paid_sgd",
+          "outstanding_sgd",
+          "due_on",
+          "status"
+        ],
+        "key_fields": [
+          "vendor_id",
+          "invoice_id"
+        ],
+        "money_fields": [
+          "gross_sgd",
+          "credit_sgd",
+          "paid_sgd",
+          "outstanding_sgd"
+        ],
+        "integer_fields": [],
+        "link_filename": "link.txt"
+      },
+      "time_budget_seconds": 600,
+      "oracle": {
+        "algorithm": "invoice-reconciliation-v1",
+        "fixture_path": "evaluation/suite/invoice-reconciliation-evaluation/fixture.json",
+        "fixture_sha256": "536d1d7dba89134e2ca9ad91efe13f5a2e7a46456469461e86b317ce38c73422"
+      },
+      "npc_policy": {
+        "mode": "static_facts_bulletin",
+        "authoritative_source": "rules.pdf",
+        "facts": [
+          "Benchmark Suite / invoice-reconciliation-evaluation",
+          "Authoritative rules - all dates inclusive; all money SGD.",
+          "Business cutoff: 2026-11-18. Use this date, not the computer clock.",
+          "Invoice business key = (vendor_id, invoice_id). Copies across registers are duplicates.",
+          "Deduplicate invoices by greatest (updated_on, revision) on/before cutoff BEFORE filtering status.",
+          "Only latest POSTED invoices issued on/before cutoff enter reconciliation; VOID/DRAFT excluded.",
+          "Credit notes deduplicate by credit_id; payments by payment_id (greatest updated_on, revision).",
+          "Apply only POSTED credits and SETTLED payments, with event_on and updated_on <= cutoff.",
+          "Match both vendor_id and invoice_id. PENDING/FAILED/REVERSED payments do not reduce balance.",
+          "Amounts are already tax-inclusive; do not recalculate tax. No cross-invoice netting.",
+          "Balance = gross - applicable credits - settled payments, rounded half up to cents.",
+          "Output ALL posted invoices, including zero balances and partially paid invoices.",
+          "Status: negative=CREDIT_BALANCE; zero=SETTLED; positive and due_on<cutoff=OVERDUE;",
+          "otherwise OPEN. A due date equal to cutoff is OPEN. Do not trust printed paid badges.",
+          "",
+          "Deliver reconciliation.csv as UTF-8 CSV, exact header:",
+          "vendor_id,invoice_id,gross_sgd,credit_sgd,paid_sgd,outstanding_sgd,due_on,status",
+          "Row order does not affect grading. Numbers without currency signs or thousands separators.",
+          "Upload the CSV to the same ownCloud case folder. Share the CSV publicly (no password/login).",
+          "Save only its public URL in local link.txt and post that URL in the suite RocketChat room."
+        ],
+        "no_dynamic_model": true,
+        "no_answer_or_qualifying_ids": true,
+        "out_of_scope_reply": "Use this case's published source PDFs; no extra facts or computed answers are available."
+      }
+    },
+    {
+      "id": "invoice-reconciliation-training",
+      "family": "invoice-reconciliation",
+      "split": "training",
+      "task_path": "cases/suite/invoice-reconciliation-training/task.md",
+      "task_sha256": "8d74ed6ce81fec159afa870340e523797a126bed8cd10c12da7097d4fb073279",
+      "freeze_path": "evaluation/suite/invoice-reconciliation-training/freeze.json",
+      "remote_dir": "Documents/Benchmark Suite/invoice-reconciliation-training",
+      "room_name": "suite-invoice-reconciliation-training",
+      "sources": [
+        {
+          "path": "cases/suite/invoice-reconciliation-training/rules.pdf",
+          "filename": "rules.pdf",
+          "sha256": "14bcafc5c2acf2df3836a7103ebf97baed94d84b56e01f28c4d5b13f86c25207",
+          "bytes": 2333,
+          "pages": 1
+        },
+        {
+          "path": "cases/suite/invoice-reconciliation-training/invoices-current.pdf",
+          "filename": "invoices-current.pdf",
+          "sha256": "52a04d91d530d60410664342bd02fdbe16e2902a3bb2262f04d63ab333a2f6b1",
+          "bytes": 1640,
+          "pages": 1
+        },
+        {
+          "path": "cases/suite/invoice-reconciliation-training/invoices-history.pdf",
+          "filename": "invoices-history.pdf",
+          "sha256": "7fc6d738bd9300c360fcb7a51288897ee7c972526dfa731e225435db617914fb",
+          "bytes": 1452,
+          "pages": 1
+        },
+        {
+          "path": "cases/suite/invoice-reconciliation-training/credit-notes.pdf",
+          "filename": "credit-notes.pdf",
+          "sha256": "9349efb8e699bffdfa6b4d391db66743bd9fa06fb4a372f6ba1819a40ca79737",
+          "bytes": 1697,
+          "pages": 1
+        },
+        {
+          "path": "cases/suite/invoice-reconciliation-training/remittances.pdf",
+          "filename": "remittances.pdf",
+          "sha256": "26bc3b0cfe501aa075c9569fcc7749f337532f88c11cb934b4b7d5bbfe070d47",
+          "bytes": 2050,
+          "pages": 1
+        }
+      ],
+      "output": {
+        "filename": "reconciliation.csv",
+        "columns": [
+          "vendor_id",
+          "invoice_id",
+          "gross_sgd",
+          "credit_sgd",
+          "paid_sgd",
+          "outstanding_sgd",
+          "due_on",
+          "status"
+        ],
+        "key_fields": [
+          "vendor_id",
+          "invoice_id"
+        ],
+        "money_fields": [
+          "gross_sgd",
+          "credit_sgd",
+          "paid_sgd",
+          "outstanding_sgd"
+        ],
+        "integer_fields": [],
+        "link_filename": "link.txt"
+      },
+      "time_budget_seconds": 600,
+      "oracle": {
+        "algorithm": "invoice-reconciliation-v1",
+        "fixture_path": "evaluation/suite/invoice-reconciliation-training/fixture.json",
+        "fixture_sha256": "257d928467e07ae2f500e52cdde966f151afe9c08a86094b3537b1a24de7ae26"
+      },
+      "npc_policy": {
+        "mode": "static_facts_bulletin",
+        "authoritative_source": "rules.pdf",
+        "facts": [
+          "Benchmark Suite / invoice-reconciliation-training",
+          "Authoritative rules - all dates inclusive; all money SGD.",
+          "Business cutoff: 2026-10-15. Use this date, not the computer clock.",
+          "Invoice business key = (vendor_id, invoice_id). Copies across registers are duplicates.",
+          "Deduplicate invoices by greatest (updated_on, revision) on/before cutoff BEFORE filtering status.",
+          "Only latest POSTED invoices issued on/before cutoff enter reconciliation; VOID/DRAFT excluded.",
+          "Credit notes deduplicate by credit_id; payments by payment_id (greatest updated_on, revision).",
+          "Apply only POSTED credits and SETTLED payments, with event_on and updated_on <= cutoff.",
+          "Match both vendor_id and invoice_id. PENDING/FAILED/REVERSED payments do not reduce balance.",
+          "Amounts are already tax-inclusive; do not recalculate tax. No cross-invoice netting.",
+          "Balance = gross - applicable credits - settled payments, rounded half up to cents.",
+          "Output ALL posted invoices, including zero balances and partially paid invoices.",
+          "Status: negative=CREDIT_BALANCE; zero=SETTLED; positive and due_on<cutoff=OVERDUE;",
+          "otherwise OPEN. A due date equal to cutoff is OPEN. Do not trust printed paid badges.",
+          "",
+          "Deliver reconciliation.csv as UTF-8 CSV, exact header:",
+          "vendor_id,invoice_id,gross_sgd,credit_sgd,paid_sgd,outstanding_sgd,due_on,status",
+          "Row order does not affect grading. Numbers without currency signs or thousands separators.",
+          "Upload the CSV to the same ownCloud case folder. Share the CSV publicly (no password/login).",
+          "Save only its public URL in local link.txt and post that URL in the suite RocketChat room."
+        ],
+        "no_dynamic_model": true,
+        "no_answer_or_qualifying_ids": true,
+        "out_of_scope_reply": "Use this case's published source PDFs; no extra facts or computed answers are available."
+      }
+    },
+    {
+      "id": "landed-cost-evaluation",
+      "family": "landed-cost",
+      "split": "evaluation",
+      "task_path": "cases/suite/landed-cost-evaluation/task.md",
+      "task_sha256": "4487e15eced625bb3f0fe44110387c1ab11c744ed1acadfbd6506655e1ada364",
+      "freeze_path": "evaluation/suite/landed-cost-evaluation/freeze.json",
+      "remote_dir": "Documents/Benchmark Suite/landed-cost-evaluation",
+      "room_name": "suite-landed-cost-evaluation",
+      "sources": [
+        {
+          "path": "cases/suite/landed-cost-evaluation/rules.pdf",
+          "filename": "rules.pdf",
+          "sha256": "88a65fa9192e909a6b2e0dabf651a53b164813cb6f64a79e6231366e9689a3cb",
+          "bytes": 2257,
+          "pages": 1
+        },
+        {
+          "path": "cases/suite/landed-cost-evaluation/quotes-elm.pdf",
+          "filename": "quotes-elm.pdf",
+          "sha256": "635c4ecf3db93ed26ef9acefabc90937608b461f7805b0df210962b59ce7505d",
+          "bytes": 1174,
+          "pages": 1
+        },
+        {
+          "path": "cases/suite/landed-cost-evaluation/quotes-fir.pdf",
+          "filename": "quotes-fir.pdf",
+          "sha256": "996128d189afc0d8cfe778bf097c3125bf08aa23436bd679b73827990b3b17bd",
+          "bytes": 1174,
+          "pages": 1
+        },
+        {
+          "path": "cases/suite/landed-cost-evaluation/quotes-ginkgo.pdf",
+          "filename": "quotes-ginkgo.pdf",
+          "sha256": "1764293b90e9ca141e984d8e1be5c17e20c05e792a441a8508159a7d7da411a4",
+          "bytes": 1180,
+          "pages": 1
+        },
+        {
+          "path": "cases/suite/landed-cost-evaluation/quotes-hazel.pdf",
+          "filename": "quotes-hazel.pdf",
+          "sha256": "31e2d5cd205ac68b25a4969f746bb425bc49d782311ed9b10d691ba7e4d21643",
+          "bytes": 1419,
+          "pages": 1
+        }
+      ],
+      "output": {
+        "filename": "landed-cost.csv",
+        "columns": [
+          "vendor_id",
+          "quote_id",
+          "cpu_cores",
+          "ram_gb",
+          "landed_total_sgd",
+          "budget_remaining_sgd"
+        ],
+        "key_fields": [
+          "vendor_id"
+        ],
+        "money_fields": [
+          "landed_total_sgd",
+          "budget_remaining_sgd"
+        ],
+        "integer_fields": [
+          "cpu_cores",
+          "ram_gb"
+        ],
+        "link_filename": "link.txt"
+      },
+      "time_budget_seconds": 600,
+      "oracle": {
+        "algorithm": "landed-cost-v1",
+        "fixture_path": "evaluation/suite/landed-cost-evaluation/fixture.json",
+        "fixture_sha256": "4e85377a65dd0bbc46991a54de24e52f308e1855de7d5c9816903e36e2389f3e"
+      },
+      "npc_policy": {
+        "mode": "static_facts_bulletin",
+        "authoritative_source": "rules.pdf",
+        "facts": [
+          "Benchmark Suite / landed-cost-evaluation",
+          "Authoritative rules - all dates inclusive; all money SGD.",
+          "Business cutoff: 2026-11-18. Use this date, not the computer clock.",
+          "Order quantity: 3. Total order budget including tax: SGD 15000.00.",
+          "Minimum CPU cores 40; RAM 384 GB; warranty 48 months.",
+          "Maximum delivery lead time: 14 days. Tax rate: 0.08.",
+          "For each vendor first retain ACTIVE quotes issued on/before cutoff and valid_until on/after it.",
+          "Choose the greatest (issued_on, revision) among those valid quotes for that vendor.",
+          "Then test hardware, warranty, lead time and budget; never fall back to an older quote.",
+          "Unit price is per server. Shipping is ONCE for the whole order, not per server.",
+          "Tax basis applies to BOTH unit price and shipping; no other charges or discounts.",
+          "EXCLUSIVE: landed = (quantity * unit price + shipping) * (1 + tax rate).",
+          "INCLUSIVE: landed = quantity * unit price + shipping; do not add tax again.",
+          "Round only the final landed total to cents, half up; compare rounded total <= budget.",
+          "Budget remaining = budget - rounded landed total. Include EVERY qualifying vendor only.",
+          "",
+          "Deliver landed-cost.csv as UTF-8 CSV, exact header:",
+          "vendor_id,quote_id,cpu_cores,ram_gb,landed_total_sgd,budget_remaining_sgd",
+          "Row order does not affect grading. Numbers without currency signs or thousands separators.",
+          "Upload the CSV to the same ownCloud case folder. Share the CSV publicly (no password/login).",
+          "Save only its public URL in local link.txt and post that URL in the suite RocketChat room."
+        ],
+        "no_dynamic_model": true,
+        "no_answer_or_qualifying_ids": true,
+        "out_of_scope_reply": "Use this case's published source PDFs; no extra facts or computed answers are available."
+      }
+    },
+    {
+      "id": "landed-cost-training",
+      "family": "landed-cost",
+      "split": "training",
+      "task_path": "cases/suite/landed-cost-training/task.md",
+      "task_sha256": "8d146dcfdb66006a6dfe3b0e1a057b072b7d12e309aee285b35c982a051e9af1",
+      "freeze_path": "evaluation/suite/landed-cost-training/freeze.json",
+      "remote_dir": "Documents/Benchmark Suite/landed-cost-training",
+      "room_name": "suite-landed-cost-training",
+      "sources": [
+        {
+          "path": "cases/suite/landed-cost-training/rules.pdf",
+          "filename": "rules.pdf",
+          "sha256": "a2930d406e4a9fd6079574619f34d7476fd7d25890e561ff7d5e744731c79e64",
+          "bytes": 2255,
+          "pages": 1
+        },
+        {
+          "path": "cases/suite/landed-cost-training/quotes-alder.pdf",
+          "filename": "quotes-alder.pdf",
+          "sha256": "3f46b7a3e72a66a13e67d6e6f5077c31417388f8782eb342ccb2a6d38b815ab8",
+          "bytes": 1176,
+          "pages": 1
+        },
+        {
+          "path": "cases/suite/landed-cost-training/quotes-birch.pdf",
+          "filename": "quotes-birch.pdf",
+          "sha256": "030a86f54b24d157f372e66b5924347f8b0aed0a9172c8cc335bd26ddaff550b",
+          "bytes": 1174,
+          "pages": 1
+        },
+        {
+          "path": "cases/suite/landed-cost-training/quotes-cedar.pdf",
+          "filename": "quotes-cedar.pdf",
+          "sha256": "00e907b637ed60d34eb27d9454b41b89d6c1aa42c8f8bb7ae856cb003f9fa973",
+          "bytes": 1176,
+          "pages": 1
+        },
+        {
+          "path": "cases/suite/landed-cost-training/quotes-dogwood.pdf",
+          "filename": "quotes-dogwood.pdf",
+          "sha256": "0672eedf5c26a7fd56470ca9d6f116da7a67fb8b24f869e67f2adba25ebf94e4",
+          "bytes": 1176,
+          "pages": 1
+        }
+      ],
+      "output": {
+        "filename": "landed-cost.csv",
+        "columns": [
+          "vendor_id",
+          "quote_id",
+          "cpu_cores",
+          "ram_gb",
+          "landed_total_sgd",
+          "budget_remaining_sgd"
+        ],
+        "key_fields": [
+          "vendor_id"
+        ],
+        "money_fields": [
+          "landed_total_sgd",
+          "budget_remaining_sgd"
+        ],
+        "integer_fields": [
+          "cpu_cores",
+          "ram_gb"
+        ],
+        "link_filename": "link.txt"
+      },
+      "time_budget_seconds": 600,
+      "oracle": {
+        "algorithm": "landed-cost-v1",
+        "fixture_path": "evaluation/suite/landed-cost-training/fixture.json",
+        "fixture_sha256": "8bf65c956226a98a374060f674e9e30fb8ecf1cb8bf4524af4d93378a91b5b73"
+      },
+      "npc_policy": {
+        "mode": "static_facts_bulletin",
+        "authoritative_source": "rules.pdf",
+        "facts": [
+          "Benchmark Suite / landed-cost-training",
+          "Authoritative rules - all dates inclusive; all money SGD.",
+          "Business cutoff: 2026-10-14. Use this date, not the computer clock.",
+          "Order quantity: 2. Total order budget including tax: SGD 11000.00.",
+          "Minimum CPU cores 32; RAM 256 GB; warranty 36 months.",
+          "Maximum delivery lead time: 21 days. Tax rate: 0.09.",
+          "For each vendor first retain ACTIVE quotes issued on/before cutoff and valid_until on/after it.",
+          "Choose the greatest (issued_on, revision) among those valid quotes for that vendor.",
+          "Then test hardware, warranty, lead time and budget; never fall back to an older quote.",
+          "Unit price is per server. Shipping is ONCE for the whole order, not per server.",
+          "Tax basis applies to BOTH unit price and shipping; no other charges or discounts.",
+          "EXCLUSIVE: landed = (quantity * unit price + shipping) * (1 + tax rate).",
+          "INCLUSIVE: landed = quantity * unit price + shipping; do not add tax again.",
+          "Round only the final landed total to cents, half up; compare rounded total <= budget.",
+          "Budget remaining = budget - rounded landed total. Include EVERY qualifying vendor only.",
+          "",
+          "Deliver landed-cost.csv as UTF-8 CSV, exact header:",
+          "vendor_id,quote_id,cpu_cores,ram_gb,landed_total_sgd,budget_remaining_sgd",
+          "Row order does not affect grading. Numbers without currency signs or thousands separators.",
+          "Upload the CSV to the same ownCloud case folder. Share the CSV publicly (no password/login).",
+          "Save only its public URL in local link.txt and post that URL in the suite RocketChat room."
+        ],
+        "no_dynamic_model": true,
+        "no_answer_or_qualifying_ids": true,
+        "out_of_scope_reply": "Use this case's published source PDFs; no extra facts or computed answers are available."
+      }
+    },
+    {
+      "id": "release-package-evaluation",
+      "family": "release-package",
+      "split": "evaluation",
+      "task_path": "cases/suite/release-package-evaluation/task.md",
+      "task_sha256": "db56757f6117f6fbcfa99b96dc199e3e6e6212960237ccc9d4c82345362f0bfe",
+      "freeze_path": "evaluation/suite/release-package-evaluation/freeze.json",
+      "remote_dir": "Documents/Benchmark Suite/release-package-evaluation",
+      "room_name": "suite-release-package-evaluation",
+      "sources": [
+        {
+          "path": "cases/suite/release-package-evaluation/rules.pdf",
+          "filename": "rules.pdf",
+          "sha256": "46d13d7786866c53cdf0ebb9c7f81b365603f1e84263f6cd80e59f9e4c019c50",
+          "bytes": 2154,
+          "pages": 1
+        },
+        {
+          "path": "cases/suite/release-package-evaluation/field-manual.pdf",
+          "filename": "field-manual.pdf",
+          "sha256": "d15e7788a935e6d80eacdf60a38841995b6d791267b53b30733f39f373840d06",
+          "bytes": 2524,
+          "pages": 3
+        },
+        {
+          "path": "cases/suite/release-package-evaluation/bench-certificate.pdf",
+          "filename": "bench-certificate.pdf",
+          "sha256": "7c2388a8a22ddbf74f50c5a867ac038a142286cd4ae438645a4b0e6eb65bc689",
+          "bytes": 2524,
+          "pages": 3
+        },
+        {
+          "path": "cases/suite/release-package-evaluation/pack-label.pdf",
+          "filename": "pack-label.pdf",
+          "sha256": "fd819260ecd55676bd067661430da562e10b728ef865fb7f54d8254f0ae7da05",
+          "bytes": 1788,
+          "pages": 2
+        },
+        {
+          "path": "cases/suite/release-package-evaluation/hazard-note.pdf",
+          "filename": "hazard-note.pdf",
+          "sha256": "1c868a595ae7b4c3cac0cc457364b4e78280f11dd879d1530b205b0450d7f3ef",
+          "bytes": 1793,
+          "pages": 2
+        },
+        {
+          "path": "cases/suite/release-package-evaluation/document-register.pdf",
+          "filename": "document-register.pdf",
+          "sha256": "83d773bafab44fdb4de73064d4ea5c607a0dab541f9073eeb63edb82226ebbdc",
+          "bytes": 1372,
+          "pages": 1
+        }
+      ],
+      "output": {
+        "filename": "release-manifest.csv",
+        "columns": [
+          "doc_key",
+          "document_id",
+          "revision",
+          "source_file",
+          "page",
+          "effective_on",
+          "status",
+          "issue"
+        ],
+        "key_fields": [
+          "doc_key"
+        ],
+        "money_fields": [],
+        "integer_fields": [
+          "revision",
+          "page"
+        ],
+        "link_filename": "link.txt"
+      },
+      "time_budget_seconds": 600,
+      "oracle": {
+        "algorithm": "release-package-v1",
+        "fixture_path": "evaluation/suite/release-package-evaluation/fixture.json",
+        "fixture_sha256": "cefb82041d41e5224e0e05d6f8e862e34c3bb6b77a6ae4de004623f6e5a25ce6"
+      },
+      "npc_policy": {
+        "mode": "static_facts_bulletin",
+        "authoritative_source": "rules.pdf",
+        "facts": [
+          "Benchmark Suite / release-package-evaluation",
+          "Authoritative rules - all dates inclusive; all money SGD.",
+          "Business cutoff: 2026-11-18. Use this date, not the computer clock.",
+          "Target release: LYRA-26.11. Mandatory doc_key values: GUIDE, TEST, LABEL, SAFETY.",
+          "The register is an index; status and effective/expiry dates on each document page govern.",
+          "For each mandatory key retain only target-release pages with status APPROVED, approved_on",
+          "and effective_on <= cutoff, and expires_on blank or >= cutoff. DRAFT/ARCHIVED excluded.",
+          "Choose the greatest numeric revision among eligible pages, not the newest filename.",
+          "A future approved revision does not displace an earlier eligible approved revision.",
+          "Output one row per mandatory key. Selected page: status READY, issue blank.",
+          "No eligible page: status MISSING; issue NO_APPROVED_EFFECTIVE_DOCUMENT;",
+          "document_id,revision,source_file,page,effective_on must all be empty in a missing row.",
+          "Use the original PDF filename and 1-based physical page number. Do not invent missing files.",
+          "",
+          "Deliver release-manifest.csv as UTF-8 CSV, exact header:",
+          "doc_key,document_id,revision,source_file,page,effective_on,status,issue",
+          "Row order does not affect grading. Numbers without currency signs or thousands separators.",
+          "Upload the CSV to the same ownCloud case folder. Share the CSV publicly (no password/login).",
+          "Save only its public URL in local link.txt and post that URL in the suite RocketChat room."
+        ],
+        "no_dynamic_model": true,
+        "no_answer_or_qualifying_ids": true,
+        "out_of_scope_reply": "Use this case's published source PDFs; no extra facts or computed answers are available."
+      }
+    },
+    {
+      "id": "release-package-training",
+      "family": "release-package",
+      "split": "training",
+      "task_path": "cases/suite/release-package-training/task.md",
+      "task_sha256": "aac6b9fd5385799e55c5a0910b56c15f0e89bd98e7b0c0c090cfd0ae4b47b4f3",
+      "freeze_path": "evaluation/suite/release-package-training/freeze.json",
+      "remote_dir": "Documents/Benchmark Suite/release-package-training",
+      "room_name": "suite-release-package-training",
+      "sources": [
+        {
+          "path": "cases/suite/release-package-training/rules.pdf",
+          "filename": "rules.pdf",
+          "sha256": "59b1d87d59013af95854d64fa2adf4efc8212e487cd5e0fb59a00366fda0342e",
+          "bytes": 2153,
+          "pages": 1
+        },
+        {
+          "path": "cases/suite/release-package-training/operator-guide.pdf",
+          "filename": "operator-guide.pdf",
+          "sha256": "a3979bfa2957cda6cba9ddb5bae091c8e77411204dd3ef21b9f195f1e4c6369c",
+          "bytes": 2516,
+          "pages": 3
+        },
+        {
+          "path": "cases/suite/release-package-training/validation-record.pdf",
+          "filename": "validation-record.pdf",
+          "sha256": "9c4dbb46ac54c72c269774dd6b0dfb10bb357d1c9185dec7c215d81aa0d1367c",
+          "bytes": 1791,
+          "pages": 2
+        },
+        {
+          "path": "cases/suite/release-package-training/carton-label.pdf",
+          "filename": "carton-label.pdf",
+          "sha256": "265769c25dab94c71097ef3a658796daf1983ea6474b5b7d70e027072f8858ca",
+          "bytes": 1804,
+          "pages": 2
+        },
+        {
+          "path": "cases/suite/release-package-training/safety-sheet.pdf",
+          "filename": "safety-sheet.pdf",
+          "sha256": "64467ceb140b0f59b696e8588a171ee65aaec79e161b2bbb4f6f4a00f7ff3da9",
+          "bytes": 1781,
+          "pages": 2
+        },
+        {
+          "path": "cases/suite/release-package-training/document-register.pdf",
+          "filename": "document-register.pdf",
+          "sha256": "88d20a69c1f3384fc410fb80ab71d1fd48fe90ed9a3ae471583e528f932c9397",
+          "bytes": 1318,
+          "pages": 1
+        }
+      ],
+      "output": {
+        "filename": "release-manifest.csv",
+        "columns": [
+          "doc_key",
+          "document_id",
+          "revision",
+          "source_file",
+          "page",
+          "effective_on",
+          "status",
+          "issue"
+        ],
+        "key_fields": [
+          "doc_key"
+        ],
+        "money_fields": [],
+        "integer_fields": [
+          "revision",
+          "page"
+        ],
+        "link_filename": "link.txt"
+      },
+      "time_budget_seconds": 600,
+      "oracle": {
+        "algorithm": "release-package-v1",
+        "fixture_path": "evaluation/suite/release-package-training/fixture.json",
+        "fixture_sha256": "e25419ba0cb7d356b140ad1fd0444a4797df5ca5ba57872ece46a3da4c16a64f"
+      },
+      "npc_policy": {
+        "mode": "static_facts_bulletin",
+        "authoritative_source": "rules.pdf",
+        "facts": [
+          "Benchmark Suite / release-package-training",
+          "Authoritative rules - all dates inclusive; all money SGD.",
+          "Business cutoff: 2026-10-20. Use this date, not the computer clock.",
+          "Target release: ORION-26.10. Mandatory doc_key values: GUIDE, TEST, LABEL, SAFETY.",
+          "The register is an index; status and effective/expiry dates on each document page govern.",
+          "For each mandatory key retain only target-release pages with status APPROVED, approved_on",
+          "and effective_on <= cutoff, and expires_on blank or >= cutoff. DRAFT/ARCHIVED excluded.",
+          "Choose the greatest numeric revision among eligible pages, not the newest filename.",
+          "A future approved revision does not displace an earlier eligible approved revision.",
+          "Output one row per mandatory key. Selected page: status READY, issue blank.",
+          "No eligible page: status MISSING; issue NO_APPROVED_EFFECTIVE_DOCUMENT;",
+          "document_id,revision,source_file,page,effective_on must all be empty in a missing row.",
+          "Use the original PDF filename and 1-based physical page number. Do not invent missing files.",
+          "",
+          "Deliver release-manifest.csv as UTF-8 CSV, exact header:",
+          "doc_key,document_id,revision,source_file,page,effective_on,status,issue",
+          "Row order does not affect grading. Numbers without currency signs or thousands separators.",
+          "Upload the CSV to the same ownCloud case folder. Share the CSV publicly (no password/login).",
+          "Save only its public URL in local link.txt and post that URL in the suite RocketChat room."
+        ],
+        "no_dynamic_model": true,
+        "no_answer_or_qualifying_ids": true,
+        "out_of_scope_reply": "Use this case's published source PDFs; no extra facts or computed answers are available."
+      }
+    },
+    {
+      "id": "payment-release-evaluation",
+      "family": "payment-release",
+      "split": "evaluation",
+      "task_path": "cases/suite/payment-release-evaluation/task.md",
+      "task_sha256": "dff6261ccea30efd70ac1e0ed913b4e2df22030ea4baf2e9ea4fd0cab21fa6c8",
+      "freeze_path": "evaluation/fixtures/payment-release-evaluation/freeze.json",
+      "remote_dir": "Documents/Benchmark Suite/payment-release-evaluation",
+      "room_name": "suite-payment-release-evaluation",
+      "sources": [
+        {
+          "path": "cases/suite/payment-release-evaluation/01-readme-policy.pdf",
+          "filename": "01-readme-policy.pdf",
+          "sha256": "1ec25b364cdc3fa1f67ce19f96781d4323060359d04ffff8901ce37ba5d23c05",
+          "bytes": 6873,
+          "pages": 3
+        },
+        {
+          "path": "cases/suite/payment-release-evaluation/02-archived-policy.pdf",
+          "filename": "02-archived-policy.pdf",
+          "sha256": "ed6065c0bc0f6b557cd61d513e683178bb04310d1c200982f8f9156a090039e3",
+          "bytes": 1018,
+          "pages": 1
+        },
+        {
+          "path": "cases/suite/payment-release-evaluation/03-exception-bulletin.pdf",
+          "filename": "03-exception-bulletin.pdf",
+          "sha256": "3888de14692640c604e5c64cf868f6aadbaa82ce749f100aa172a3a6de34df0f",
+          "bytes": 1936,
+          "pages": 1
+        },
+        {
+          "path": "cases/suite/payment-release-evaluation/04-invoice-revisions.pdf",
+          "filename": "04-invoice-revisions.pdf",
+          "sha256": "71371a7d0d49ed91ba4993027c418032bd7ca381cd4944bdbf0d25b470ab5ed2",
+          "bytes": 3932,
+          "pages": 3
+        },
+        {
+          "path": "cases/suite/payment-release-evaluation/05-po-receipts.pdf",
+          "filename": "05-po-receipts.pdf",
+          "sha256": "0f88e9a0d3eb573a3ce50015c648439051ce1aeb921a0b8cddf6c814fdde1f40",
+          "bytes": 4897,
+          "pages": 2
+        },
+        {
+          "path": "cases/suite/payment-release-evaluation/06-bank-controls.pdf",
+          "filename": "06-bank-controls.pdf",
+          "sha256": "494bb9c2dab8765bf4e9779ee56f9a8123c9404b12df5cc37634d69d6255a45a",
+          "bytes": 4389,
+          "pages": 2
+        },
+        {
+          "path": "cases/suite/payment-release-evaluation/07-hold-events.pdf",
+          "filename": "07-hold-events.pdf",
+          "sha256": "5b9033f7ec113cfeebce82ec96fcae65a2f7d5fb3be62250ad6ebfe9b7f8bc15",
+          "bytes": 2560,
+          "pages": 2
+        },
+        {
+          "path": "cases/suite/payment-release-evaluation/08-settlement-register.pdf",
+          "filename": "08-settlement-register.pdf",
+          "sha256": "3b5b16ea558d74073257777de82635b6a9a544ce58d175ae74bcec2868bf1d93",
+          "bytes": 4299,
+          "pages": 2
+        }
+      ],
+      "output": {
+        "family": "payment-release",
+        "filename": "payment-release.csv",
+        "columns": [
+          "invoice_id",
+          "vendor_id",
+          "decision",
+          "reason_codes",
+          "net_payable_sgd",
+          "bank_account_ref",
+          "evidence_refs"
+        ],
+        "key_fields": [
+          "vendor_id",
+          "invoice_id"
+        ],
+        "money_fields": [
+          "net_payable_sgd"
+        ],
+        "integer_fields": [],
+        "link_filename": "link.txt",
+        "evidence_aliases": {
+          "04-invoice-revisions.pdf#INV-EV-1-R2": "INV-EV-1-R2",
+          "04-invoice-revisions.pdf#INV-EV-1-R1": "INV-EV-1-R1",
+          "04-invoice-revisions.pdf#INV-EV-2-R2": "INV-EV-2-R2",
+          "04-invoice-revisions.pdf#INV-EV-2-R1": "INV-EV-2-R1",
+          "04-invoice-revisions.pdf#INV-EV-3-R1": "INV-EV-3-R1",
+          "04-invoice-revisions.pdf#INV-EV-4-R1": "INV-EV-4-R1",
+          "04-invoice-revisions.pdf#INV-EV-5-R1": "INV-EV-5-R1",
+          "04-invoice-revisions.pdf#INV-EV-6-R1": "INV-EV-6-R1",
+          "04-invoice-revisions.pdf#INV-EV-7-R1": "INV-EV-7-R1",
+          "04-invoice-revisions.pdf#INV-EV-8-R1": "INV-EV-8-R1",
+          "04-invoice-revisions.pdf#INV-EV-LATE-R9": "INV-EV-LATE-R9",
+          "05-po-receipts.pdf#POREC-EV-1": "POREC-EV-1",
+          "05-po-receipts.pdf#POREC-EV-2": "POREC-EV-2",
+          "05-po-receipts.pdf#POREC-EV-3": "POREC-EV-3",
+          "05-po-receipts.pdf#POREC-EV-4": "POREC-EV-4",
+          "05-po-receipts.pdf#POREC-EV-5": "POREC-EV-5",
+          "05-po-receipts.pdf#POREC-EV-6": "POREC-EV-6",
+          "05-po-receipts.pdf#POREC-EV-7": "POREC-EV-7",
+          "05-po-receipts.pdf#POREC-EV-8": "POREC-EV-8",
+          "05-po-receipts.pdf#GR-EV-1": "GR-EV-1",
+          "05-po-receipts.pdf#GR-EV-2": "GR-EV-2",
+          "05-po-receipts.pdf#GR-EV-3": "GR-EV-3",
+          "05-po-receipts.pdf#GR-EV-4": "GR-EV-4",
+          "05-po-receipts.pdf#GR-EV-5": "GR-EV-5",
+          "05-po-receipts.pdf#GR-EV-6": "GR-EV-6",
+          "05-po-receipts.pdf#GR-EV-7": "GR-EV-7",
+          "05-po-receipts.pdf#GR-EV-8": "GR-EV-8",
+          "06-bank-controls.pdf#BC-EV-1-BASE": "BC-EV-1-BASE",
+          "06-bank-controls.pdf#BV-EV-1-BASE": "BV-EV-1-BASE",
+          "06-bank-controls.pdf#BC-EV-2-BASE": "BC-EV-2-BASE",
+          "06-bank-controls.pdf#BV-EV-2-BASE": "BV-EV-2-BASE",
+          "06-bank-controls.pdf#BC-EV-3-BASE": "BC-EV-3-BASE",
+          "06-bank-controls.pdf#BV-EV-3-BASE": "BV-EV-3-BASE",
+          "06-bank-controls.pdf#BC-EV-4-BASE": "BC-EV-4-BASE",
+          "06-bank-controls.pdf#BV-EV-4-BASE": "BV-EV-4-BASE",
+          "06-bank-controls.pdf#BC-EV-3-NEW": "BC-EV-3-NEW",
+          "06-bank-controls.pdf#BV-EV-3-NEW": "BV-EV-3-NEW",
+          "06-bank-controls.pdf#BC-EV-1-NEW": "BC-EV-1-NEW",
+          "06-bank-controls.pdf#BV-EV-1-NEW": "BV-EV-1-NEW",
+          "07-hold-events.pdf#HE-EV-1": "HE-EV-1",
+          "07-hold-events.pdf#HE-EV-2": "HE-EV-2",
+          "07-hold-events.pdf#HE-EV-3": "HE-EV-3",
+          "07-hold-events.pdf#HE-EV-4": "HE-EV-4",
+          "07-hold-events.pdf#HE-EV-5": "HE-EV-5",
+          "07-hold-events.pdf#HE-EV-6": "HE-EV-6",
+          "08-settlement-register.pdf#AUD-EV-1": "AUD-EV-1",
+          "08-settlement-register.pdf#AUD-EV-2": "AUD-EV-2",
+          "08-settlement-register.pdf#AUD-EV-3": "AUD-EV-3",
+          "08-settlement-register.pdf#AUD-EV-4": "AUD-EV-4",
+          "08-settlement-register.pdf#AUD-EV-5": "AUD-EV-5",
+          "08-settlement-register.pdf#AUD-EV-6": "AUD-EV-6",
+          "08-settlement-register.pdf#AUD-EV-7": "AUD-EV-7",
+          "08-settlement-register.pdf#AUD-EV-8": "AUD-EV-8",
+          "08-settlement-register.pdf#CR-EV-1": "CR-EV-1",
+          "08-settlement-register.pdf#PAY-EV-1": "PAY-EV-1",
+          "08-settlement-register.pdf#PAY-EV-PENDING": "PAY-EV-PENDING",
+          "08-settlement-register.pdf#PAY-EV-8": "PAY-EV-8",
+          "03-exception-bulletin.pdf#EX-EV-1": "EX-EV-1",
+          "03-exception-bulletin.pdf#EX-EV-2": "EX-EV-2",
+          "03-exception-bulletin.pdf#EX-EV-3": "EX-EV-3",
+          "03-exception-bulletin.pdf#EX-EV-4": "EX-EV-4",
+          "01-readme-policy.pdf#POL-EV-CURRENT": "POL-EV-CURRENT",
+          "02-archived-policy.pdf#POL-EV-ARCHIVE": "POL-EV-ARCHIVE",
+          "03-exception-bulletin.pdf#BUL-EV-01": "BUL-EV-01"
+        }
+      },
+      "time_budget_seconds": 900,
+      "oracle": {
+        "algorithm": "payment-release-v1",
+        "fixture_path": "evaluation/fixtures/payment-release-evaluation/fixture.json",
+        "fixture_sha256": "3acce6b4cafd8784815a08b5f5dfa92aff83d486810ca5a40290316227e190d3"
+      },
+      "npc_policy": {
+        "mode": "location_only",
+        "authoritative_source": "01-readme-policy.pdf",
+        "facts": [
+          "Source location/index: 01-readme-policy.pdf in the assigned ownCloud case folder.",
+          "Simulation only; submit recommendations, never initiate actual payments.",
+          "No business rules or computed answers are supplied in chat."
+        ],
+        "no_dynamic_model": true,
+        "no_answer_or_qualifying_ids": true,
+        "out_of_scope_reply": "Use this case's published source PDFs; no extra facts or computed answers are available."
+      },
+      "capture_requirements": "Native CUA opens the actual generated CSV in TextEdit/text viewer; review every row; return to foreground Chrome Guest before upload/share. No reconstructed data:text preview. Trace audit required separately."
+    },
+    {
+      "id": "payment-release-training",
+      "family": "payment-release",
+      "split": "training",
+      "task_path": "cases/suite/payment-release-training/task.md",
+      "task_sha256": "a8ddbe1151b91c614c32134ae01878c2288192e9c9453ec02f705e475924f16a",
+      "freeze_path": "evaluation/fixtures/payment-release-training/freeze.json",
+      "remote_dir": "Documents/Benchmark Suite/payment-release-training",
+      "room_name": "suite-payment-release-training",
+      "sources": [
+        {
+          "path": "cases/suite/payment-release-training/01-readme-policy.pdf",
+          "filename": "01-readme-policy.pdf",
+          "sha256": "a9de99e36ec63e3467ec31ec7f6a77aa3ab5355029409e68068e46e4d4bbfb05",
+          "bytes": 6868,
+          "pages": 3
+        },
+        {
+          "path": "cases/suite/payment-release-training/02-archived-policy.pdf",
+          "filename": "02-archived-policy.pdf",
+          "sha256": "dad865d12c0fd9d1d59ad85d558f1b9255528621a2aad11996e5aff976357419",
+          "bytes": 1018,
+          "pages": 1
+        },
+        {
+          "path": "cases/suite/payment-release-training/03-exception-bulletin.pdf",
+          "filename": "03-exception-bulletin.pdf",
+          "sha256": "aaf1301b9a0508a1ff6c12eaedac822fa4783f3f395941c38da967fabc521697",
+          "bytes": 1654,
+          "pages": 1
+        },
+        {
+          "path": "cases/suite/payment-release-training/04-invoice-revisions.pdf",
+          "filename": "04-invoice-revisions.pdf",
+          "sha256": "e275ca81c1d44dac8e5cc40bc63a1aee81706561e2567f3058e274937a8257ed",
+          "bytes": 3902,
+          "pages": 3
+        },
+        {
+          "path": "cases/suite/payment-release-training/05-po-receipts.pdf",
+          "filename": "05-po-receipts.pdf",
+          "sha256": "18b9a22f5283244181dbb81d8cf2d43af3761f3cd20dfdda06b02f6732fe6a22",
+          "bytes": 4887,
+          "pages": 2
+        },
+        {
+          "path": "cases/suite/payment-release-training/06-bank-controls.pdf",
+          "filename": "06-bank-controls.pdf",
+          "sha256": "0a68c30e5ea19059aa6d04dca5f9226ec25e3159ad1d2823e48086dd25eccebc",
+          "bytes": 3850,
+          "pages": 2
+        },
+        {
+          "path": "cases/suite/payment-release-training/07-hold-events.pdf",
+          "filename": "07-hold-events.pdf",
+          "sha256": "02475254023b31bc6b17635631e8d0ad1a540c83d5f8d96b6f5ef602388bd391",
+          "bytes": 3053,
+          "pages": 2
+        },
+        {
+          "path": "cases/suite/payment-release-training/08-settlement-register.pdf",
+          "filename": "08-settlement-register.pdf",
+          "sha256": "28fc4e66fd115726b5cfa8ee5cf0d1ad91e00d8372965e3d4604d5d636509bd5",
+          "bytes": 4293,
+          "pages": 2
+        }
+      ],
+      "output": {
+        "family": "payment-release",
+        "filename": "payment-release.csv",
+        "columns": [
+          "invoice_id",
+          "vendor_id",
+          "decision",
+          "reason_codes",
+          "net_payable_sgd",
+          "bank_account_ref",
+          "evidence_refs"
+        ],
+        "key_fields": [
+          "vendor_id",
+          "invoice_id"
+        ],
+        "money_fields": [
+          "net_payable_sgd"
+        ],
+        "integer_fields": [],
+        "link_filename": "link.txt",
+        "evidence_aliases": {
+          "04-invoice-revisions.pdf#INV-TR-1-R2": "INV-TR-1-R2",
+          "04-invoice-revisions.pdf#INV-TR-1-R1": "INV-TR-1-R1",
+          "04-invoice-revisions.pdf#INV-TR-2-R1": "INV-TR-2-R1",
+          "04-invoice-revisions.pdf#INV-TR-3-R2": "INV-TR-3-R2",
+          "04-invoice-revisions.pdf#INV-TR-3-R1": "INV-TR-3-R1",
+          "04-invoice-revisions.pdf#INV-TR-4-R1": "INV-TR-4-R1",
+          "04-invoice-revisions.pdf#INV-TR-5-R1": "INV-TR-5-R1",
+          "04-invoice-revisions.pdf#INV-TR-6-R1": "INV-TR-6-R1",
+          "04-invoice-revisions.pdf#INV-TR-7-R1": "INV-TR-7-R1",
+          "04-invoice-revisions.pdf#INV-TR-8-R1": "INV-TR-8-R1",
+          "04-invoice-revisions.pdf#INV-TR-LATE-R9": "INV-TR-LATE-R9",
+          "05-po-receipts.pdf#POREC-TR-1": "POREC-TR-1",
+          "05-po-receipts.pdf#POREC-TR-2": "POREC-TR-2",
+          "05-po-receipts.pdf#POREC-TR-3": "POREC-TR-3",
+          "05-po-receipts.pdf#POREC-TR-4": "POREC-TR-4",
+          "05-po-receipts.pdf#POREC-TR-5": "POREC-TR-5",
+          "05-po-receipts.pdf#POREC-TR-6": "POREC-TR-6",
+          "05-po-receipts.pdf#POREC-TR-7": "POREC-TR-7",
+          "05-po-receipts.pdf#POREC-TR-8": "POREC-TR-8",
+          "05-po-receipts.pdf#GR-TR-1": "GR-TR-1",
+          "05-po-receipts.pdf#GR-TR-2": "GR-TR-2",
+          "05-po-receipts.pdf#GR-TR-3": "GR-TR-3",
+          "05-po-receipts.pdf#GR-TR-4": "GR-TR-4",
+          "05-po-receipts.pdf#GR-TR-5": "GR-TR-5",
+          "05-po-receipts.pdf#GR-TR-6": "GR-TR-6",
+          "05-po-receipts.pdf#GR-TR-7": "GR-TR-7",
+          "05-po-receipts.pdf#GR-TR-8": "GR-TR-8",
+          "06-bank-controls.pdf#BC-TR-1-BASE": "BC-TR-1-BASE",
+          "06-bank-controls.pdf#BV-TR-1-BASE": "BV-TR-1-BASE",
+          "06-bank-controls.pdf#BC-TR-2-BASE": "BC-TR-2-BASE",
+          "06-bank-controls.pdf#BV-TR-2-BASE": "BV-TR-2-BASE",
+          "06-bank-controls.pdf#BC-TR-3-BASE": "BC-TR-3-BASE",
+          "06-bank-controls.pdf#BV-TR-3-BASE": "BV-TR-3-BASE",
+          "06-bank-controls.pdf#BC-TR-4-BASE": "BC-TR-4-BASE",
+          "06-bank-controls.pdf#BV-TR-4-BASE": "BV-TR-4-BASE",
+          "06-bank-controls.pdf#BC-TR-3-NEW": "BC-TR-3-NEW",
+          "06-bank-controls.pdf#BV-TR-3-NEW": "BV-TR-3-NEW",
+          "07-hold-events.pdf#HE-TR-1": "HE-TR-1",
+          "07-hold-events.pdf#HE-TR-2": "HE-TR-2",
+          "07-hold-events.pdf#HE-TR-3": "HE-TR-3",
+          "07-hold-events.pdf#HE-TR-4": "HE-TR-4",
+          "07-hold-events.pdf#HE-TR-5": "HE-TR-5",
+          "07-hold-events.pdf#HE-TR-6": "HE-TR-6",
+          "07-hold-events.pdf#HE-TR-7": "HE-TR-7",
+          "07-hold-events.pdf#HE-TR-8": "HE-TR-8",
+          "08-settlement-register.pdf#AUD-TR-1": "AUD-TR-1",
+          "08-settlement-register.pdf#AUD-TR-2": "AUD-TR-2",
+          "08-settlement-register.pdf#AUD-TR-3": "AUD-TR-3",
+          "08-settlement-register.pdf#AUD-TR-4": "AUD-TR-4",
+          "08-settlement-register.pdf#AUD-TR-5": "AUD-TR-5",
+          "08-settlement-register.pdf#AUD-TR-6": "AUD-TR-6",
+          "08-settlement-register.pdf#AUD-TR-7": "AUD-TR-7",
+          "08-settlement-register.pdf#AUD-TR-8": "AUD-TR-8",
+          "08-settlement-register.pdf#CR-TR-1": "CR-TR-1",
+          "08-settlement-register.pdf#PAY-TR-1": "PAY-TR-1",
+          "08-settlement-register.pdf#PAY-TR-PENDING": "PAY-TR-PENDING",
+          "08-settlement-register.pdf#PAY-TR-8": "PAY-TR-8",
+          "03-exception-bulletin.pdf#EX-TR-1": "EX-TR-1",
+          "03-exception-bulletin.pdf#EX-TR-2": "EX-TR-2",
+          "03-exception-bulletin.pdf#EX-TR-3": "EX-TR-3",
+          "01-readme-policy.pdf#POL-TR-CURRENT": "POL-TR-CURRENT",
+          "02-archived-policy.pdf#POL-TR-ARCHIVE": "POL-TR-ARCHIVE",
+          "03-exception-bulletin.pdf#BUL-TR-01": "BUL-TR-01"
+        }
+      },
+      "time_budget_seconds": 1200,
+      "oracle": {
+        "algorithm": "payment-release-v1",
+        "fixture_path": "evaluation/fixtures/payment-release-training/fixture.json",
+        "fixture_sha256": "bc1d58de65ed7915cfffa67ef1caf1acc0d002b7cdff78574087616058869ed4"
+      },
+      "npc_policy": {
+        "mode": "location_only",
+        "authoritative_source": "01-readme-policy.pdf",
+        "facts": [
+          "Source location/index: 01-readme-policy.pdf in the assigned ownCloud case folder.",
+          "Simulation only; submit recommendations, never initiate actual payments.",
+          "No business rules or computed answers are supplied in chat."
+        ],
+        "no_dynamic_model": true,
+        "no_answer_or_qualifying_ids": true,
+        "out_of_scope_reply": "Use this case's published source PDFs; no extra facts or computed answers are available."
+      },
+      "capture_requirements": "Native CUA opens the actual generated CSV in TextEdit/text viewer; review every row; return to foreground Chrome Guest before upload/share. No reconstructed data:text preview. Trace audit required separately."
+    },
+    {
+      "id": "workbook-training",
+      "family": "workbook",
+      "split": "training",
+      "task_path": "cases/workbook/training/task.md",
+      "task_sha256": "0c14901e1b44c80ad27ec5514e49553693476cb5c5b0a92a8bc8dcda2c12ae0b",
+      "freeze_path": "evaluation/workbook/training.freeze.json",
+      "remote_dir": "Documents/Benchmark Suite/workbook-training",
+      "room_name": "workbook-training",
+      "sources": [
+        {
+          "path": "cases/workbook/training/template.xlsx",
+          "filename": "template.xlsx",
+          "sha256": "b762128ede168408ff9334ce202909f873a38fe9d8e239bb2c3c180a6405c3fd",
+          "bytes": 3301
+        }
+      ],
+      "output": {
+        "kind": "workbook",
+        "filename": "replenishment.xlsx",
+        "link_filename": "link.txt"
+      },
+      "time_budget_seconds": 1200,
+      "oracle": {
+        "algorithm": "workbook-v1",
+        "fixture_path": "evaluation/workbook/training.json",
+        "fixture_sha256": "72cec1ba45f7638572ccb20fb53aa3724724c1c5367c5043fbb8efa55913e226"
+      },
+      "npc_policy": {
+        "mode": "location_only",
+        "facts": [
+          "Use the assigned task.md and template.xlsx. No extra facts or computed answers are supplied."
+        ]
+      }
+    },
+    {
+      "id": "workbook-evaluation",
+      "family": "workbook",
+      "split": "evaluation",
+      "task_path": "cases/workbook/evaluation/task.md",
+      "task_sha256": "88e39f6467398f54346836268bb5df10789774fc4ade02f29efa95159e361322",
+      "freeze_path": "evaluation/workbook/evaluation.freeze.json",
+      "remote_dir": "Documents/Benchmark Suite/workbook-evaluation",
+      "room_name": "workbook-evaluation",
+      "sources": [
+        {
+          "path": "cases/workbook/evaluation/template.xlsx",
+          "filename": "template.xlsx",
+          "sha256": "49ab887383f3b226f0d496d5f20d5895878508afa187ef36d5381bc199274f84",
+          "bytes": 3580
+        }
+      ],
+      "output": {
+        "kind": "workbook",
+        "filename": "replenishment.xlsx",
+        "link_filename": "link.txt"
+      },
+      "time_budget_seconds": 900,
+      "oracle": {
+        "algorithm": "workbook-v1",
+        "fixture_path": "evaluation/workbook/evaluation.json",
+        "fixture_sha256": "278f834b6b02101742bb436e513dce15b75e92128212e0b702b7869e981169a4"
+      },
+      "npc_policy": {
+        "mode": "location_only",
+        "facts": [
+          "Use the assigned task.md and template.xlsx. No extra facts or computed answers are supplied."
+        ]
+      }
+    }
+  ]
+}

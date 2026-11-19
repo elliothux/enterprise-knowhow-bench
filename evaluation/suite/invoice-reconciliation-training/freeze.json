@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "case_id": "invoice-reconciliation-training",
+  "sha256": {
+    "cases/suite/invoice-reconciliation-training/rules.pdf": "14bcafc5c2acf2df3836a7103ebf97baed94d84b56e01f28c4d5b13f86c25207",
+    "cases/suite/invoice-reconciliation-training/invoices-current.pdf": "52a04d91d530d60410664342bd02fdbe16e2902a3bb2262f04d63ab333a2f6b1",
+    "cases/suite/invoice-reconciliation-training/invoices-history.pdf": "7fc6d738bd9300c360fcb7a51288897ee7c972526dfa731e225435db617914fb",
+    "cases/suite/invoice-reconciliation-training/credit-notes.pdf": "9349efb8e699bffdfa6b4d391db66743bd9fa06fb4a372f6ba1819a40ca79737",
+    "cases/suite/invoice-reconciliation-training/remittances.pdf": "26bc3b0cfe501aa075c9569fcc7749f337532f88c11cb934b4b7d5bbfe070d47",
+    "cases/suite/invoice-reconciliation-training/task.md": "8d74ed6ce81fec159afa870340e523797a126bed8cd10c12da7097d4fb073279",
+    "evaluation/suite/invoice-reconciliation-training/fixture.json": "257d928467e07ae2f500e52cdde966f151afe9c08a86094b3537b1a24de7ae26"
+  }
+}

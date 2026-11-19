@@ -1,0 +1,453 @@
+
+Historical workflow Skill:
+---
+name: "lynx-01a1eeed-11cc-72af-b3c8-8231c7301c60"
+description: "Test guidance for shortpay-cash-application cases."
+---
+
+# shortpay-cash-application
+
+**Test only.** Use the supplied case facts to recommend a next action. Ask for missing information. Never claim to have performed a business action.
+
+## Steps
+
+### 1. "arrive-channel"
+
+Role
+
+> 现金入账台专员
+
+System
+
+> Rocket.Chat
+
+Window
+
+> 本台派发频道（如 shortpay-desk-*）
+
+Action
+
+> 进入派发给本现金入账台的频道，读取派发消息中的发票号、汇款标签（TERMS 或 DAMAGE）、客户扣款/索赔金额，以及台账摘录所在现金台文件夹
+
+### 2. "open-settlement-folder"
+
+Role
+
+> 现金入账台专员
+
+System
+
+> ownCloud
+
+Window
+
+> Documents/Settlement <desk>
+
+Action
+
+> 登录 ownCloud，进入 Documents 下派发消息指定的 Settlement <desk> 文件夹，确认其中有 Bank and invoice.pdf 与 Desk procedure.pdf
+
+### 3. "read-desk-procedure"
+
+Role
+
+> 现金入账台专员
+
+System
+
+> ownCloud
+
+Window
+
+> Desk procedure.pdf
+
+Action
+
+> 下载并阅读 Desk procedure.pdf 以核对现金入账规则；若正文不可读，按培训证据中的规则执行并保留为证据缺口，不猜测正文
+
+### 4. "read-bank-and-invoice"
+
+Role
+
+> 现金入账台专员
+
+System
+
+> ownCloud
+
+Window
+
+> Bank and invoice.pdf
+
+Action
+
+> 读取收据与发票明细：商品、运费、税（发票毛额 = 商品 + 运费 + 税）、同一发票上已过账贷项、银行收款额、付款指令日、银行起息日、ERP 导入日、承运方案件及其登记准备金与责任状态、签收证明是否有异常
+
+### 5. "book-receipt"
+
+Role
+
+> 现金入账台专员
+
+System
+
+> 现金入账/ERP 入账界面
+
+Window
+
+> 收据过账
+
+Action
+
+> 先把银行收款按发票毛额记到该发票上：毛额含商品、运费和税，仅减去同一发票上的已过账贷项；待定索赔与草稿贷项尚未冲减账户，不能用于减少应收
+
+### 6. "classify-other-residual"
+
+Role
+
+> 现金入账台专员
+
+System
+
+> 台账/计算页
+
+Window
+
+> 入账计算
+
+Action
+
+> 按汇款标签与授权规则算出四类金额并保持分离：折扣（仅 TERMS，按 x-terms-discount）、索赔转出（仅 DAMAGE，按 x-damage-claims）、小额核销（仅非 DAMAGE 且同时满足两个限额）、可回收余额（其余部分）；不得静默免除任何余额
+
+### 7. "choose-followup"
+
+Role
+
+> 现金入账台专员
+
+System
+
+> 台账/计算页
+
+Window
+
+> 入账计算
+
+Action
+
+> 确定跟进标签：凡有金额转入 Claims 即为 CLAIMS；否则若仍有可回收余额则为 COLLECTIONS；否则为 CLOSED；即使 Claims owns the follow-up 也要在同一结果行中报告剩余可回收金额
+
+### 8. "compose-result-row"
+
+Role
+
+> 现金入账台专员
+
+System
+
+> Rocket.Chat
+
+Window
+
+> 派发频道消息输入框
+
+Action
+
+> 在派发频道消息输入框写入逗号分隔的结果行，按固定列序填：折扣、索赔转出额、小额核销额、可回收余额、跟进标签（如 larch 的 I-3475,0.00,60.00,0.00,3.00,CLAIMS）
+
+### 9. "post-result-row"
+
+Role
+
+> 现金入账台专员
+
+System
+
+> Rocket.Chat
+
+Window
+
+> 派发频道
+
+Action
+
+> 按 Enter 将结果行发送到派发频道，核对频道中已出现本人发布的结果行，作为该发票现金入账的落地记录
+
+## Decisions
+
+### "d-remittance-label"
+
+After step "read-bank-and-invoice"
+
+> 这笔汇款是哪种标签？
+
+#### "o-terms"
+
+> TERMS（正常条款汇款）
+
+Condition
+
+> 汇款标签为 TERMS：按 x-terms-discount 与 x-terms-grace 判折扣资格
+
+Next steps: "classify-other-residual"
+
+#### "o-damage"
+
+> DAMAGE（损毁索赔汇款）
+
+Condition
+
+> 汇款标签为 DAMAGE：按 x-damage-claims / x-damage-conditions-fail / x-damage-no-writeoff 处理
+
+Next steps: "classify-other-residual"
+
+## Exceptions
+
+### "x-terms-discount"
+
+Condition
+
+> TERMS 汇款申请早付折扣
+
+Handling
+
+> 按商品金额减已过账商品贷项计算 2% 折扣，不含运费与税；四舍五入（half up）到分；可享折扣不得超过实际剩余短款；用银行起息日而非 ERP 导入日判断是否在折扣截止日前
+
+### "x-terms-grace"
+
+Condition
+
+> 银行起息日晚于折扣截止日
+
+Handling
+
+> 最多允许两个周一至周五工作日宽限，且须同时满足：客户付款指令在截止日前已发出，且银行运营部门已为该笔转账 CONFIRMED 收款行中断；付款方自身原因或未经确认的通知不符合条件
+
+### "x-damage-claims"
+
+Condition
+
+> DAMAGE 汇款且满足转索赔前提：承运方案件与已开发票运单关联，且其签收证明上有异常
+
+Handling
+
+> 取短款、客户扣款、承运商登记准备金三者较小值转入 Claims，即使责任仍在调查中也照此处理；剩余部分保持可回收（larch：短款 3.00、客户扣款 63.00、准备金 60.00，取 60.00，剩 3.00 可回收）
+
+### "x-damage-conditions-fail"
+
+Condition
+
+> DAMAGE 汇款但承运方案件未与已开发票运单关联，或签收证明无异常
+
+Handling
+
+> 不转索赔，金额保持可回收；此外也不得核销（DAMAGE 汇款上的任何残余都不得转为坏账）
+
+### "x-customer-debit-note"
+
+Condition
+
+> 存在客户借记单（customer debit note），或贷项仍为草稿/待定状态
+
+Handling
+
+> 不视为已过账贷项：不得用于减少发票毛额、不得计入折扣基数、也不得用于小额核销的 0.50% 基数
+
+### "x-damage-no-writeoff"
+
+Condition
+
+> 汇款标签为 DAMAGE 且存在残余短款
+
+Handling
+
+> 任何残余都不得核销、不得转为坏账，即使调整确实合理；残余保持可回收并单独列示（larch 小额核销列为 0.00）
+
+### "x-no-partial-writeoff"
+
+Condition
+
+> 其他残余短款在授权处理后的金额未同时满足：≤ SGD 8.00 且 ≤ 毛额发票（减实际已过账贷项，记账前金额）的 0.50%
+
+Handling
+
+> 只要任一限额被超过（如残余 9.00 超过 8.00，或超过毛额的 0.50%）就不核销，不得部分核销；整笔残余保持可回收并单独列示，不得静默免除余额。等于限额时合格
+
+### "x-procedure-body-missing"
+
+Condition
+
+> Desk procedure.pdf 已下载但其正文无法读取
+
+Handling
+
+> 不推测其规则；按培训证据中的规则执行，并把文件正文列为证据缺口
+
+## Test review
+
+### Unanswered · d-remittance-label
+
+> 这笔汇款是哪种标签？
+
+## Open limits
+
+These limits are unresolved. Ask for the missing information. Do not treat this Skill as fully automatic, and do not apply a limit outside the nodes it names.
+
+### Unresolved · "q-erp-posting"
+
+Question
+
+> 收据是否必须在 ERP 中另行执行过账动作（在哪个界面、以哪个日期），还是发出结果行即完成入账？
+
+Why it is open
+
+> 培训证据要求先按毛额把银行收款记到发票上，但未描述具体系统或过账动作与时点；larch 案例只发出了结果行，无法据此写出可操作过账步骤。
+
+Affects: "book-receipt"
+
+### Unresolved · "q-collectible-followup"
+
+Question
+
+> 跟进标签为 CLAIMS 仍报告剩余可回收金额后，该金额由谁、以何种方式承接（保留在客户账户、转入 COLLECTIONS，还是等索赔结案后再处理）？
+
+Why it is open
+
+> 培训证据只要求即使 Claims 掌握跟进也要报告剩余可回收金额，未规定该金额的后续动作。
+
+Affects: "post-result-row"
+
+### Unresolved · "q-grace-confirmation-source"
+
+Question
+
+> “银行运营部门已为该笔转账 CONFIRMED 收款行中断”由谁记录、以何种凭证（银行通知、系统标记、台账备注）体现并在哪里核验？
+
+Why it is open
+
+> 宽限规则依赖该确认，但证据只给出判定条件，未说明在流程中如何核验与留存。
+
+Affects: "x-terms-grace"
+
+### Unresolved · "q-ember-columns"
+
+Question
+
+> ember 案例发布的数据行“I-3091,22.00,0.00,0.00,7.50,COLLECTIONS”中各列含义是否与 larch 相同列序（折扣、索赔转出、小额核销、可回收、跟进）？22.00 与 7.50 分别对应该发票的哪些项目？
+
+Why it is open
+
+> 该案例只观察到结果行，未读到发票与汇款明细，无法据证据核对列定义与该行是否合规。
+
+Affects: "compose-result-row"
+
+## Sources
+
+Procedure version 4 (01a1ef0f-ea5a-7391-bed5-a9bf00fa0a03) · Compiler 3
+
+### "arrive-channel"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s1
+- Trace: 01M7QEPA4E9KSQQAJYWHG3BXKD · Revision: 1 · Step: s4
+- Human review: 01a1ef05-9ff0-711f-bf36-28bac0668748
+
+### "open-settlement-folder"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s2
+- Trace: 01M7QEPA4DCV1PG317C8T51Q3D · Revision: 1 · Step: s3
+- Human review: 01a1ef05-9ff0-711f-bf36-28bac0668748
+
+### "read-desk-procedure"
+- Trace: 01M7QEPA4DCV1PG317C8T51Q3D · Revision: 1 · Step: s4
+- Trace: 01M7QEPA4DCV1PG317C8T51Q3D · Revision: 1 · Step: s5
+- Human review: 01a1ef05-9ff0-711f-bf36-28bac0668748
+
+### "read-bank-and-invoice"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s3
+- Human review: 01a1ef05-9ff0-711f-bf36-28bac0668748
+
+### "book-receipt"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s3
+- Human review: 01a1ef05-9ff0-711f-bf36-28bac0668748
+
+### "classify-other-residual"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s3
+- Trace: 01M7QEPA4E9KSQQAJYWHG3BXKD · Revision: 1 · Step: s6
+- Human review: 01a1ef05-9ff0-711f-bf36-28bac0668748
+
+### "choose-followup"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s6
+- Trace: 01M7QEPA4E9KSQQAJYWHG3BXKD · Revision: 1 · Step: s7
+- Human review: 01a1ef05-9ff0-711f-bf36-28bac0668748
+
+### "compose-result-row"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s5
+- Trace: 01M7QEPA4E9KSQQAJYWHG3BXKD · Revision: 1 · Step: s6
+- Human review: 01a1ef05-9ff0-711f-bf36-28bac0668748
+
+### "post-result-row"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s6
+- Trace: 01M7QEPA4E9KSQQAJYWHG3BXKD · Revision: 1 · Step: s7
+- Human review: 01a1ef05-9ff0-711f-bf36-28bac0668748
+
+### "d-remittance-label"
+- Human review: 01a1ef05-9ff0-711f-bf36-28bac0668748
+
+### "o-terms"
+- Trace: 01M7QEPA4E9KSQQAJYWHG3BXKD · Revision: 1 · Step: s4
+- Human review: 01a1ef05-9ff0-711f-bf36-28bac0668748
+
+### "o-damage"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s1
+- Human review: 01a1ef05-9ff0-711f-bf36-28bac0668748
+
+### "x-terms-discount"
+- Trace: 01M7QEPA4E9KSQQAJYWHG3BXKD · Revision: 1 · Step: s4
+- Case material: 01a1eeed-0d00-70c4-b16e-a5bfa380887d · Material: 7e1854fe629eb231fd45d11e35b60c7fbe33fa8cc6b668cf209c4b84827e92bc
+- Human review: 01a1ef05-9ff0-711f-bf36-28bac0668748
+
+### "x-terms-grace"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s3
+- Case material: 01a1eeed-0d00-70c4-b16e-a5bfa380887d · Material: 7e1854fe629eb231fd45d11e35b60c7fbe33fa8cc6b668cf209c4b84827e92bc
+- Human review: 01a1ef05-9ff0-711f-bf36-28bac0668748
+
+### "x-damage-claims"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s3
+- Case material: 01a1eeed-0d00-70c4-b16e-a5bfa380887d · Material: 7e1854fe629eb231fd45d11e35b60c7fbe33fa8cc6b668cf209c4b84827e92bc
+- Human review: 01a1ef05-9ff0-711f-bf36-28bac0668748
+
+### "x-damage-conditions-fail"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s3
+- Case material: 01a1eeed-0d00-70c4-b16e-a5bfa380887d · Material: 7e1854fe629eb231fd45d11e35b60c7fbe33fa8cc6b668cf209c4b84827e92bc
+- Human review: 01a1ef05-9ff0-711f-bf36-28bac0668748
+
+### "x-customer-debit-note"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s3
+- Case material: 01a1eeed-0d00-70c4-b16e-a5bfa380887d · Material: 7e1854fe629eb231fd45d11e35b60c7fbe33fa8cc6b668cf209c4b84827e92bc
+- Human review: 01a1ef05-9ff0-711f-bf36-28bac0668748
+
+### "x-damage-no-writeoff"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s5
+- Case material: 01a1eeed-0d00-70c4-b16e-a5bfa380887d · Material: 7e1854fe629eb231fd45d11e35b60c7fbe33fa8cc6b668cf209c4b84827e92bc
+- Human review: 01a1ef05-9ff0-711f-bf36-28bac0668748
+
+### "x-no-partial-writeoff"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s5
+- Case material: 01a1eeed-0d00-70c4-b16e-a5bfa380887d · Material: 7e1854fe629eb231fd45d11e35b60c7fbe33fa8cc6b668cf209c4b84827e92bc
+- Human review: 01a1ef05-9ff0-711f-bf36-28bac0668748
+
+### "x-procedure-body-missing"
+- Trace: 01M7QEPA4DCV1PG317C8T51Q3D · Revision: 1 · Step: s4
+- Trace: 01M7QEPA4DCV1PG317C8T51Q3D · Revision: 1 · Step: s5
+- Human review: 01a1ef05-9ff0-711f-bf36-28bac0668748
+
+### "q-erp-posting"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s3
+
+### "q-collectible-followup"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s6
+
+### "q-grace-confirmation-source"
+- Trace: 01M7QEE9Q3RVD9M1GGQ5VKEX2Q · Revision: 1 · Step: s3
+- Case material: 01a1eeed-0d00-70c4-b16e-a5bfa380887d · Material: 7e1854fe629eb231fd45d11e35b60c7fbe33fa8cc6b668cf209c4b84827e92bc
+
+### "q-ember-columns"
+- Trace: 01M7QEPA4E9KSQQAJYWHG3BXKD · Revision: 1 · Step: s6

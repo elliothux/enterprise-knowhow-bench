@@ -23,24 +23,31 @@ def request(url, method='GET', data=None, headers=None, allowed=()):
         raise RuntimeError(f'{method} {url} returned HTTP {exc.code}') from exc
 
 
-def seed(args):
+def chat(server, endpoint, payload=None, headers=None, allowed=()):
+    status, body = request(server+'/api/v1/'+endpoint, 'GET' if payload is None else 'POST',
+                           None if payload is None else json.dumps(payload).encode(),
+                           {'Content-Type':'application/json', **(headers or {})}, allowed)
+    return status, json.loads(body)
+
+
+def login(server):
+    user = os.getenv('BENCH_USER', 'theagentcompany')
+    password = os.getenv('BENCH_PASSWORD', 'theagentcompany')
+    _, result = chat(server, 'login', {'user':user, 'password':password})
+    return {'X-User-Id':result['data']['userId'], 'X-Auth-Token':result['data']['authToken']}
+
+
+def seed(args, fixtures=None):
     user = os.getenv('BENCH_USER', 'theagentcompany')
     password = os.getenv('BENCH_PASSWORD', 'theagentcompany')
     auth = {'Authorization':'Basic '+base64.b64encode(f'{user}:{password}'.encode()).decode()}
-
-    def chat(endpoint, payload=None, headers=None, allowed=()):
-        status, body = request(args.chat+'/api/v1/'+endpoint, 'GET' if payload is None else 'POST',
-                               None if payload is None else json.dumps(payload).encode(),
-                               {'Content-Type':'application/json', **(headers or {})}, allowed)
-        return status, json.loads(body)
-
-    _, login = chat('login', {'user':user, 'password':password})
-    token = {'X-User-Id':login['data']['userId'], 'X-Auth-Token':login['data']['authToken']}
+    token = login(args.chat)
+    records = []
     folder_prefix = 'Enterprise review ' if not args.namespace else args.namespace+' '
     room_prefix = args.namespace or 'finance-review'
     base = args.cloud+'/remote.php/dav/files/'+quote(user, safe='')+'/Documents'
     request(base, 'MKCOL', headers=auth, allowed=(405,))
-    for fixture in sorted(FIXTURES.iterdir()):
+    for fixture in (sorted(FIXTURES.iterdir()) if fixtures is None else fixtures):
         if args.case and fixture.name!=args.case:continue
         folder=base+'/'+quote(folder_prefix+fixture.name)
         request(folder, 'MKCOL', headers=auth, allowed=(405,))
@@ -52,19 +59,23 @@ def seed(args):
                 request(url,'PUT',content,{**auth,'If-None-Match':'*','Content-Type':'application/pdf'},(412,))
                 _,old=request(url, headers=auth)
             if old!=content:raise ValueError(f'Document differs from frozen fixture: {pdf.name}')
-        room=room_prefix+'-'+fixture.name
-        status, info=chat('groups.info?'+urlencode({'roomName':room}), headers=token, allowed=(400,404))
+        room=room_prefix+'-'+fixture.name.lower()
+        status, info=chat(args.chat, 'groups.info?'+urlencode({'roomName':room}), headers=token, allowed=(400,404))
         if status!=200:
-            _,info=chat('groups.create',{'name':room},token)
+            _,info=chat(args.chat, 'groups.create',{'name':room},token)
         rid=info['group']['_id']
         message=(fixture/'incoming.txt').read_text()
         mid=hashlib.sha256((room+'\n'+message).encode()).hexdigest()[:24]
-        status, prior=chat('chat.getMessage?'+urlencode({'msgId':mid}),headers=token,allowed=(400,404))
+        status, prior=chat(args.chat, 'chat.getMessage?'+urlencode({'msgId':mid}),headers=token,allowed=(400,404))
         if status!=200:
-            _,prior=chat('chat.sendMessage',{'message':{'_id':mid,'rid':rid,'msg':message}},token)
+            _,prior=chat(args.chat, 'chat.sendMessage',{'message':{'_id':mid,'rid':rid,'msg':message}},token)
         if prior['message']['msg']!=message or prior['message']['rid']!=rid:
             raise ValueError(f'Request differs from frozen fixture: {room}')
+        records.append(dict(room_id=rid, room=room, seed_id=mid, operator_id=token['X-User-Id'],
+                            folder='Documents/'+folder_prefix+fixture.name))
         print(f'{fixture.name}  Documents/{folder_prefix}{fixture.name}  {room}')
+
+    return records
 
 
 if __name__=='__main__':

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "case_id": "landed-cost-evaluation",
+  "sha256": {
+    "cases/suite/landed-cost-evaluation/rules.pdf": "88a65fa9192e909a6b2e0dabf651a53b164813cb6f64a79e6231366e9689a3cb",
+    "cases/suite/landed-cost-evaluation/quotes-elm.pdf": "635c4ecf3db93ed26ef9acefabc90937608b461f7805b0df210962b59ce7505d",
+    "cases/suite/landed-cost-evaluation/quotes-fir.pdf": "996128d189afc0d8cfe778bf097c3125bf08aa23436bd679b73827990b3b17bd",
+    "cases/suite/landed-cost-evaluation/quotes-ginkgo.pdf": "1764293b90e9ca141e984d8e1be5c17e20c05e792a441a8508159a7d7da411a4",
+    "cases/suite/landed-cost-evaluation/quotes-hazel.pdf": "31e2d5cd205ac68b25a4969f746bb425bc49d782311ed9b10d691ba7e4d21643",
+    "cases/suite/landed-cost-evaluation/task.md": "4487e15eced625bb3f0fe44110387c1ab11c744ed1acadfbd6506655e1ada364",
+    "evaluation/suite/landed-cost-evaluation/fixture.json": "4e85377a65dd0bbc46991a54de24e52f308e1855de7d5c9816903e36e2389f3e"
+  }
+}

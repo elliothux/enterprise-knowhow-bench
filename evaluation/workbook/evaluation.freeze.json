@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "case_id": "workbook-evaluation",
+  "sha256": {
+    "cases/workbook/evaluation/task.md": "88e39f6467398f54346836268bb5df10789774fc4ade02f29efa95159e361322",
+    "cases/workbook/evaluation/template.xlsx": "49ab887383f3b226f0d496d5f20d5895878508afa187ef36d5381bc199274f84",
+    "evaluation/workbook/evaluation.json": "278f834b6b02101742bb436e513dce15b75e92128212e0b702b7869e981169a4"
+  }
+}

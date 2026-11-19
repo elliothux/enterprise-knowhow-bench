@@ -1,0 +1,73 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [4 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 5 0 R >>
+endobj
+5 0 obj
+<< /Length 1108 >>
+stream
+BT /F1 10 Tf 13 TL 40 800 Td
+(03-exception-bulletin.pdf / payment-release-training) Tj
+T*
+(Published record refs; apply the policy in 01-readme-policy.pdf.) Tj
+T*
+(Bulletin ref: BUL-TR-01) Tj
+T*
+(Approval text cannot override the policy's non-waivable gates.) Tj
+T*
+() Tj
+T*
+(exceptions / EX-TR-1) Tj
+T*
+(event_on=2026-12-06T10:00:00; recorded_on=2026-12-06T11:00:00) Tj
+T*
+(vendor_id=ASTER; invoice_id=PX-102; invoice_revision=1; waive_reasons=RECEIPT_SHORT;) Tj
+T*
+(amount_cap_sgd=750.00; valid_until=2026-12-08T23:59:59; role=CFO) Tj
+T*
+() Tj
+T*
+(exceptions / EX-TR-2) Tj
+T*
+(event_on=2026-12-06T10:00:00; recorded_on=2026-12-06T11:00:00) Tj
+T*
+(vendor_id=BAY; invoice_id=PX-202; invoice_revision=1; waive_reasons=DUPLICATE;) Tj
+T*
+(amount_cap_sgd=900.00; valid_until=2026-12-08T23:59:59; role=CFO) Tj
+T*
+() Tj
+T*
+(exceptions / EX-TR-3) Tj
+T*
+(event_on=2026-12-06T10:00:00; recorded_on=2026-12-06T11:00:00) Tj
+T*
+(vendor_id=COPPER; invoice_id=PX-302; invoice_revision=1;) Tj
+T*
+(waive_reasons=PO_MISMATCH,BANK_UNVERIFIED; amount_cap_sgd=640.00;) Tj
+T*
+(valid_until=2026-12-08T23:59:59; role=CFO) Tj
+T*
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000185 00000 n 
+0000000311 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1470
+%%EOF

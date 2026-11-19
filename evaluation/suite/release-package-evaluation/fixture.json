@@ -1,0 +1,135 @@
+{
+  "id": "release-package-evaluation",
+  "family": "release-package",
+  "split": "evaluation",
+  "rules": {
+    "as_of": "2026-11-18",
+    "release_id": "LYRA-26.11",
+    "required": [
+      "GUIDE",
+      "TEST",
+      "LABEL",
+      "SAFETY"
+    ]
+  },
+  "packets": {
+    "field-manual.pdf": [
+      {
+        "doc_key": "GUIDE",
+        "document_id": "FM-511",
+        "revision": 1,
+        "release_id": "LYRA-26.11",
+        "status": "APPROVED",
+        "approved_on": "2026-11-01",
+        "effective_on": "2026-11-02",
+        "expires_on": "2026-11-17",
+        "body": "Controlled release evidence; use header metadata to select the applicable revision."
+      },
+      {
+        "doc_key": "GUIDE",
+        "document_id": "FM-512",
+        "revision": 2,
+        "release_id": "LYRA-26.11",
+        "status": "APPROVED",
+        "approved_on": "2026-11-10",
+        "effective_on": "2026-11-12",
+        "expires_on": "",
+        "body": "Controlled release evidence; use header metadata to select the applicable revision."
+      },
+      {
+        "doc_key": "GUIDE",
+        "document_id": "FM-514",
+        "revision": 4,
+        "release_id": "LYRA-26.11",
+        "status": "DRAFT",
+        "approved_on": "",
+        "effective_on": "2026-11-17",
+        "expires_on": "",
+        "body": "Controlled release evidence; use header metadata to select the applicable revision."
+      }
+    ],
+    "bench-certificate.pdf": [
+      {
+        "doc_key": "TEST",
+        "document_id": "BC-621",
+        "revision": 1,
+        "release_id": "LYRA-26.11",
+        "status": "ARCHIVED",
+        "approved_on": "2026-10-10",
+        "effective_on": "2026-10-15",
+        "expires_on": "",
+        "body": "Controlled release evidence; use header metadata to select the applicable revision."
+      },
+      {
+        "doc_key": "TEST",
+        "document_id": "BC-623",
+        "revision": 3,
+        "release_id": "LYRA-26.11",
+        "status": "APPROVED",
+        "approved_on": "2026-11-16",
+        "effective_on": "2026-11-18",
+        "expires_on": "",
+        "body": "Controlled release evidence; use header metadata to select the applicable revision."
+      },
+      {
+        "doc_key": "TEST",
+        "document_id": "BC-624",
+        "revision": 4,
+        "release_id": "LYRA-26.11",
+        "status": "APPROVED",
+        "approved_on": "2026-11-17",
+        "effective_on": "2026-11-20",
+        "expires_on": "",
+        "body": "Controlled release evidence; use header metadata to select the applicable revision."
+      }
+    ],
+    "pack-label.pdf": [
+      {
+        "doc_key": "LABEL",
+        "document_id": "PL-731",
+        "revision": 1,
+        "release_id": "LYRA-26.11",
+        "status": "APPROVED",
+        "approved_on": "2026-11-01",
+        "effective_on": "2026-11-01",
+        "expires_on": "2026-11-17",
+        "body": "Controlled release evidence; use header metadata to select the applicable revision."
+      },
+      {
+        "doc_key": "LABEL",
+        "document_id": "PL-732",
+        "revision": 2,
+        "release_id": "LYRA-26.11",
+        "status": "DRAFT",
+        "approved_on": "",
+        "effective_on": "2026-11-17",
+        "expires_on": "",
+        "body": "Controlled release evidence; use header metadata to select the applicable revision."
+      }
+    ],
+    "hazard-note.pdf": [
+      {
+        "doc_key": "SAFETY",
+        "document_id": "HN-843",
+        "revision": 3,
+        "release_id": "LYRA-26.11",
+        "status": "APPROVED",
+        "approved_on": "2026-11-14",
+        "effective_on": "2026-11-15",
+        "expires_on": "",
+        "body": "Controlled release evidence; use header metadata to select the applicable revision."
+      },
+      {
+        "doc_key": "SAFETY",
+        "document_id": "HN-844",
+        "revision": 4,
+        "release_id": "LYRA-26.11",
+        "status": "ARCHIVED",
+        "approved_on": "2026-11-16",
+        "effective_on": "2026-11-17",
+        "expires_on": "",
+        "body": "Controlled release evidence; use header metadata to select the applicable revision."
+      }
+    ]
+  }
+}

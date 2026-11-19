@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "case_id": "release-package-training",
+  "sha256": {
+    "cases/suite/release-package-training/rules.pdf": "59b1d87d59013af95854d64fa2adf4efc8212e487cd5e0fb59a00366fda0342e",
+    "cases/suite/release-package-training/operator-guide.pdf": "a3979bfa2957cda6cba9ddb5bae091c8e77411204dd3ef21b9f195f1e4c6369c",
+    "cases/suite/release-package-training/validation-record.pdf": "9c4dbb46ac54c72c269774dd6b0dfb10bb357d1c9185dec7c215d81aa0d1367c",
+    "cases/suite/release-package-training/carton-label.pdf": "265769c25dab94c71097ef3a658796daf1983ea6474b5b7d70e027072f8858ca",
+    "cases/suite/release-package-training/safety-sheet.pdf": "64467ceb140b0f59b696e8588a171ee65aaec79e161b2bbb4f6f4a00f7ff3da9",
+    "cases/suite/release-package-training/document-register.pdf": "88d20a69c1f3384fc410fb80ab71d1fd48fe90ed9a3ae471583e528f932c9397",
+    "cases/suite/release-package-training/task.md": "aac6b9fd5385799e55c5a0910b56c15f0e89bd98e7b0c0c090cfd0ae4b47b4f3",
+    "evaluation/suite/release-package-training/fixture.json": "e25419ba0cb7d356b140ad1fd0444a4797df5ca5ba57872ece46a3da4c16a64f"
+  }
+}

@@ -1,0 +1,812 @@
+{
+  "id": "payment-release-training",
+  "family": "payment-release",
+  "split": "training",
+  "time_budget_seconds": 1200,
+  "rules": {
+    "as_of": "2026-12-08",
+    "event_cutoff": "2026-12-08T17:00:00",
+    "recorded_cutoff": "2026-12-09T09:00:00",
+    "policy_id": "POL-TR-CURRENT",
+    "bulletin_id": "BUL-TR-01",
+    "policy_effective_from": "2026-12-06T00:00:00",
+    "old_policy_id": "POL-TR-ARCHIVE",
+    "reason_order": [
+      "NOT_POSTED",
+      "DUPLICATE",
+      "NO_BALANCE",
+      "PO_MISMATCH",
+      "RECEIPT_SHORT",
+      "BANK_UNVERIFIED",
+      "ACTIVE_HOLD"
+    ],
+    "waivable_reasons": [
+      "PO_MISMATCH",
+      "RECEIPT_SHORT"
+    ],
+    "waiver_role": "CFO",
+    "bank_verifier_role": "TREASURY_REVIEWER",
+    "hold_close_roles": [
+      "AP_CONTROLLER",
+      "RISK_MANAGER"
+    ]
+  },
+  "roster": [
+    {
+      "vendor_id": "ASTER",
+      "invoice_id": "PX-101"
+    },
+    {
+      "vendor_id": "ASTER",
+      "invoice_id": "PX-102"
+    },
+    {
+      "vendor_id": "BAY",
+      "invoice_id": "PX-201"
+    },
+    {
+      "vendor_id": "BAY",
+      "invoice_id": "PX-202"
+    },
+    {
+      "vendor_id": "COPPER",
+      "invoice_id": "PX-301"
+    },
+    {
+      "vendor_id": "COPPER",
+      "invoice_id": "PX-302"
+    },
+    {
+      "vendor_id": "DELTA",
+      "invoice_id": "PX-101"
+    },
+    {
+      "vendor_id": "DELTA",
+      "invoice_id": "PX-402"
+    }
+  ],
+  "invoices": [
+    {
+      "ref": "INV-TR-1-R2",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "ASTER",
+      "invoice_id": "PX-101",
+      "revision": 2,
+      "status": "POSTED",
+      "gross_sgd": "1100.25",
+      "po_id": "PO-TR-1"
+    },
+    {
+      "ref": "INV-TR-1-R1",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "ASTER",
+      "invoice_id": "PX-101",
+      "revision": 1,
+      "status": "POSTED",
+      "gross_sgd": "1000.00",
+      "po_id": "PO-TR-1"
+    },
+    {
+      "ref": "INV-TR-2-R1",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "ASTER",
+      "invoice_id": "PX-102",
+      "revision": 1,
+      "status": "POSTED",
+      "gross_sgd": "750.00",
+      "po_id": "PO-TR-2"
+    },
+    {
+      "ref": "INV-TR-3-R2",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "BAY",
+      "invoice_id": "PX-201",
+      "revision": 2,
+      "status": "VOID",
+      "gross_sgd": "500.00",
+      "po_id": "PO-TR-3"
+    },
+    {
+      "ref": "INV-TR-3-R1",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "BAY",
+      "invoice_id": "PX-201",
+      "revision": 1,
+      "status": "POSTED",
+      "gross_sgd": "500.00",
+      "po_id": "PO-TR-3"
+    },
+    {
+      "ref": "INV-TR-4-R1",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "BAY",
+      "invoice_id": "PX-202",
+      "revision": 1,
+      "status": "POSTED",
+      "gross_sgd": "900.00",
+      "po_id": "PO-TR-4"
+    },
+    {
+      "ref": "INV-TR-5-R1",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "COPPER",
+      "invoice_id": "PX-301",
+      "revision": 1,
+      "status": "POSTED",
+      "gross_sgd": "1200.00",
+      "po_id": "PO-TR-5"
+    },
+    {
+      "ref": "INV-TR-6-R1",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "COPPER",
+      "invoice_id": "PX-302",
+      "revision": 1,
+      "status": "POSTED",
+      "gross_sgd": "640.00",
+      "po_id": "PO-TR-6"
+    },
+    {
+      "ref": "INV-TR-7-R1",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "DELTA",
+      "invoice_id": "PX-101",
+      "revision": 1,
+      "status": "POSTED",
+      "gross_sgd": "800.00",
+      "po_id": "PO-TR-7"
+    },
+    {
+      "ref": "INV-TR-8-R1",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "DELTA",
+      "invoice_id": "PX-402",
+      "revision": 1,
+      "status": "POSTED",
+      "gross_sgd": "300.00",
+      "po_id": "PO-TR-8"
+    },
+    {
+      "ref": "INV-TR-LATE-R9",
+      "event_on": "2026-12-08T16:00:00",
+      "recorded_on": "2026-12-09T10:00:00",
+      "vendor_id": "ASTER",
+      "invoice_id": "PX-102",
+      "revision": 9,
+      "status": "VOID",
+      "gross_sgd": "9999.00",
+      "po_id": "PO-TR-2"
+    }
+  ],
+  "purchase_orders": [
+    {
+      "ref": "POREC-TR-1",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "ASTER",
+      "invoice_id": "PX-101",
+      "po_id": "PO-TR-1",
+      "revision": 1,
+      "status": "APPROVED",
+      "amount_sgd": "1100.25"
+    },
+    {
+      "ref": "POREC-TR-2",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "ASTER",
+      "invoice_id": "PX-102",
+      "po_id": "PO-TR-2",
+      "revision": 1,
+      "status": "APPROVED",
+      "amount_sgd": "750.00"
+    },
+    {
+      "ref": "POREC-TR-3",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "BAY",
+      "invoice_id": "PX-201",
+      "po_id": "PO-TR-3",
+      "revision": 1,
+      "status": "APPROVED",
+      "amount_sgd": "500.00"
+    },
+    {
+      "ref": "POREC-TR-4",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "BAY",
+      "invoice_id": "PX-202",
+      "po_id": "PO-TR-4",
+      "revision": 1,
+      "status": "APPROVED",
+      "amount_sgd": "900.00"
+    },
+    {
+      "ref": "POREC-TR-5",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "COPPER",
+      "invoice_id": "PX-301",
+      "po_id": "PO-TR-5",
+      "revision": 1,
+      "status": "APPROVED",
+      "amount_sgd": "1200.00"
+    },
+    {
+      "ref": "POREC-TR-6",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "COPPER",
+      "invoice_id": "PX-302",
+      "po_id": "PO-TR-6",
+      "revision": 1,
+      "status": "APPROVED",
+      "amount_sgd": "600.00"
+    },
+    {
+      "ref": "POREC-TR-7",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "DELTA",
+      "invoice_id": "PX-101",
+      "po_id": "PO-TR-7",
+      "revision": 1,
+      "status": "APPROVED",
+      "amount_sgd": "800.00"
+    },
+    {
+      "ref": "POREC-TR-8",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "DELTA",
+      "invoice_id": "PX-402",
+      "po_id": "PO-TR-8",
+      "revision": 1,
+      "status": "APPROVED",
+      "amount_sgd": "300.00"
+    }
+  ],
+  "receipts": [
+    {
+      "ref": "GR-TR-1",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "ASTER",
+      "invoice_id": "PX-101",
+      "po_id": "PO-TR-1",
+      "receipt_id": "RECEIPT-TR-1",
+      "revision": 1,
+      "status": "ACCEPTED",
+      "amount_sgd": "1100.25"
+    },
+    {
+      "ref": "GR-TR-2",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "ASTER",
+      "invoice_id": "PX-102",
+      "po_id": "PO-TR-2",
+      "receipt_id": "RECEIPT-TR-2",
+      "revision": 1,
+      "status": "ACCEPTED",
+      "amount_sgd": "700.00"
+    },
+    {
+      "ref": "GR-TR-3",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "BAY",
+      "invoice_id": "PX-201",
+      "po_id": "PO-TR-3",
+      "receipt_id": "RECEIPT-TR-3",
+      "revision": 1,
+      "status": "ACCEPTED",
+      "amount_sgd": "500.00"
+    },
+    {
+      "ref": "GR-TR-4",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "BAY",
+      "invoice_id": "PX-202",
+      "po_id": "PO-TR-4",
+      "receipt_id": "RECEIPT-TR-4",
+      "revision": 1,
+      "status": "ACCEPTED",
+      "amount_sgd": "900.00"
+    },
+    {
+      "ref": "GR-TR-5",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "COPPER",
+      "invoice_id": "PX-301",
+      "po_id": "PO-TR-5",
+      "receipt_id": "RECEIPT-TR-5",
+      "revision": 1,
+      "status": "ACCEPTED",
+      "amount_sgd": "1200.00"
+    },
+    {
+      "ref": "GR-TR-6",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "COPPER",
+      "invoice_id": "PX-302",
+      "po_id": "PO-TR-6",
+      "receipt_id": "RECEIPT-TR-6",
+      "revision": 1,
+      "status": "ACCEPTED",
+      "amount_sgd": "640.00"
+    },
+    {
+      "ref": "GR-TR-7",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "DELTA",
+      "invoice_id": "PX-101",
+      "po_id": "PO-TR-7",
+      "receipt_id": "RECEIPT-TR-7",
+      "revision": 1,
+      "status": "ACCEPTED",
+      "amount_sgd": "800.00"
+    },
+    {
+      "ref": "GR-TR-8",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "DELTA",
+      "invoice_id": "PX-402",
+      "po_id": "PO-TR-8",
+      "receipt_id": "RECEIPT-TR-8",
+      "revision": 1,
+      "status": "ACCEPTED",
+      "amount_sgd": "300.00"
+    }
+  ],
+  "bank_events": [
+    {
+      "ref": "BC-TR-1-BASE",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "ASTER",
+      "kind": "CHANGE",
+      "sequence": 1,
+      "account_ref": "SIM-TR-ASTER-01",
+      "change_ref": "",
+      "actor_id": "maker-1",
+      "role": "AP_ANALYST",
+      "status": "ACTIVE"
+    },
+    {
+      "ref": "BV-TR-1-BASE",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "ASTER",
+      "kind": "VERIFY",
+      "sequence": 2,
+      "account_ref": "SIM-TR-ASTER-01",
+      "change_ref": "BC-TR-1-BASE",
+      "actor_id": "checker-1",
+      "role": "TREASURY_REVIEWER",
+      "status": "VERIFIED"
+    },
+    {
+      "ref": "BC-TR-2-BASE",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "BAY",
+      "kind": "CHANGE",
+      "sequence": 1,
+      "account_ref": "SIM-TR-BAY-01",
+      "change_ref": "",
+      "actor_id": "maker-2",
+      "role": "AP_ANALYST",
+      "status": "ACTIVE"
+    },
+    {
+      "ref": "BV-TR-2-BASE",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "BAY",
+      "kind": "VERIFY",
+      "sequence": 2,
+      "account_ref": "SIM-TR-BAY-01",
+      "change_ref": "BC-TR-2-BASE",
+      "actor_id": "checker-2",
+      "role": "TREASURY_REVIEWER",
+      "status": "VERIFIED"
+    },
+    {
+      "ref": "BC-TR-3-BASE",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "COPPER",
+      "kind": "CHANGE",
+      "sequence": 1,
+      "account_ref": "SIM-TR-COPPER-01",
+      "change_ref": "",
+      "actor_id": "maker-3",
+      "role": "AP_ANALYST",
+      "status": "ACTIVE"
+    },
+    {
+      "ref": "BV-TR-3-BASE",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "COPPER",
+      "kind": "VERIFY",
+      "sequence": 2,
+      "account_ref": "SIM-TR-COPPER-01",
+      "change_ref": "BC-TR-3-BASE",
+      "actor_id": "checker-3",
+      "role": "TREASURY_REVIEWER",
+      "status": "VERIFIED"
+    },
+    {
+      "ref": "BC-TR-4-BASE",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "DELTA",
+      "kind": "CHANGE",
+      "sequence": 1,
+      "account_ref": "SIM-TR-DELTA-01",
+      "change_ref": "",
+      "actor_id": "maker-4",
+      "role": "AP_ANALYST",
+      "status": "ACTIVE"
+    },
+    {
+      "ref": "BV-TR-4-BASE",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "DELTA",
+      "kind": "VERIFY",
+      "sequence": 2,
+      "account_ref": "SIM-TR-DELTA-01",
+      "change_ref": "BC-TR-4-BASE",
+      "actor_id": "checker-4",
+      "role": "TREASURY_REVIEWER",
+      "status": "VERIFIED"
+    },
+    {
+      "ref": "BC-TR-3-NEW",
+      "event_on": "2026-12-08T09:00:00",
+      "recorded_on": "2026-12-08T09:30:00",
+      "vendor_id": "COPPER",
+      "kind": "CHANGE",
+      "sequence": 6,
+      "account_ref": "SIM-TR-COPPER-02",
+      "change_ref": "",
+      "actor_id": "bank-maker",
+      "role": "AP_ANALYST",
+      "status": "ACTIVE"
+    },
+    {
+      "ref": "BV-TR-3-NEW",
+      "event_on": "2026-12-08T09:00:00",
+      "recorded_on": "2026-12-08T09:30:00",
+      "vendor_id": "COPPER",
+      "kind": "VERIFY",
+      "sequence": 5,
+      "account_ref": "SIM-TR-COPPER-02",
+      "change_ref": "BC-TR-3-NEW",
+      "actor_id": "independent-checker",
+      "role": "TREASURY_REVIEWER",
+      "status": "VERIFIED"
+    }
+  ],
+  "hold_events": [
+    {
+      "ref": "HE-TR-1",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "ASTER",
+      "invoice_id": "PX-101",
+      "hold_id": "H-TR-CLOSED",
+      "action": "OPEN",
+      "sequence": 1,
+      "role": "AP_ANALYST",
+      "actor_id": "operator-1"
+    },
+    {
+      "ref": "HE-TR-2",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "ASTER",
+      "invoice_id": "PX-101",
+      "hold_id": "H-TR-CLOSED",
+      "action": "CLOSE",
+      "sequence": 2,
+      "role": "AP_CONTROLLER",
+      "actor_id": "operator-2"
+    },
+    {
+      "ref": "HE-TR-3",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "DELTA",
+      "invoice_id": "PX-101",
+      "hold_id": "H-TR-ACTIVE",
+      "action": "OPEN",
+      "sequence": 3,
+      "role": "AP_ANALYST",
+      "actor_id": "operator-3"
+    },
+    {
+      "ref": "HE-TR-4",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "DELTA",
+      "invoice_id": "PX-101",
+      "hold_id": "H-TR-ACTIVE",
+      "action": "CLOSE",
+      "sequence": 4,
+      "role": "AP_CLERK",
+      "actor_id": "operator-4"
+    },
+    {
+      "ref": "HE-TR-5",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "DELTA",
+      "invoice_id": "PX-101",
+      "hold_id": "H-TR-OTHER",
+      "action": "CLOSE",
+      "sequence": 5,
+      "role": "AP_CONTROLLER",
+      "actor_id": "operator-5"
+    },
+    {
+      "ref": "HE-TR-6",
+      "event_on": "2026-12-08T16:00:00",
+      "recorded_on": "2026-12-09T10:00:00",
+      "vendor_id": "DELTA",
+      "invoice_id": "PX-101",
+      "hold_id": "H-TR-ACTIVE",
+      "action": "CLOSE",
+      "sequence": 6,
+      "role": "RISK_MANAGER",
+      "actor_id": "operator-6"
+    },
+    {
+      "ref": "HE-TR-7",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "DELTA",
+      "invoice_id": "PX-402",
+      "hold_id": "H-TR-SETTLED",
+      "action": "OPEN",
+      "sequence": 7,
+      "role": "AP_ANALYST",
+      "actor_id": "operator-7"
+    },
+    {
+      "ref": "HE-TR-8",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "DELTA",
+      "invoice_id": "PX-402",
+      "hold_id": "H-TR-SETTLED",
+      "action": "CLOSE",
+      "sequence": 8,
+      "role": "RISK_MANAGER",
+      "actor_id": "operator-8"
+    }
+  ],
+  "settlements": [
+    {
+      "ref": "AUD-TR-1",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "ASTER",
+      "invoice_id": "PX-101",
+      "entry_id": "AUDIT-TR-1",
+      "revision": 1,
+      "kind": "DUPLICATE_AUDIT",
+      "status": "CLEAR",
+      "amount_sgd": "0.00"
+    },
+    {
+      "ref": "AUD-TR-2",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "ASTER",
+      "invoice_id": "PX-102",
+      "entry_id": "AUDIT-TR-2",
+      "revision": 1,
+      "kind": "DUPLICATE_AUDIT",
+      "status": "CLEAR",
+      "amount_sgd": "0.00"
+    },
+    {
+      "ref": "AUD-TR-3",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "BAY",
+      "invoice_id": "PX-201",
+      "entry_id": "AUDIT-TR-3",
+      "revision": 1,
+      "kind": "DUPLICATE_AUDIT",
+      "status": "CLEAR",
+      "amount_sgd": "0.00"
+    },
+    {
+      "ref": "AUD-TR-4",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "BAY",
+      "invoice_id": "PX-202",
+      "entry_id": "AUDIT-TR-4",
+      "revision": 1,
+      "kind": "DUPLICATE_AUDIT",
+      "status": "CONFIRMED",
+      "amount_sgd": "0.00"
+    },
+    {
+      "ref": "AUD-TR-5",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "COPPER",
+      "invoice_id": "PX-301",
+      "entry_id": "AUDIT-TR-5",
+      "revision": 1,
+      "kind": "DUPLICATE_AUDIT",
+      "status": "CLEAR",
+      "amount_sgd": "0.00"
+    },
+    {
+      "ref": "AUD-TR-6",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "COPPER",
+      "invoice_id": "PX-302",
+      "entry_id": "AUDIT-TR-6",
+      "revision": 1,
+      "kind": "DUPLICATE_AUDIT",
+      "status": "CLEAR",
+      "amount_sgd": "0.00"
+    },
+    {
+      "ref": "AUD-TR-7",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "DELTA",
+      "invoice_id": "PX-101",
+      "entry_id": "AUDIT-TR-7",
+      "revision": 1,
+      "kind": "DUPLICATE_AUDIT",
+      "status": "CLEAR",
+      "amount_sgd": "0.00"
+    },
+    {
+      "ref": "AUD-TR-8",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "DELTA",
+      "invoice_id": "PX-402",
+      "entry_id": "AUDIT-TR-8",
+      "revision": 1,
+      "kind": "DUPLICATE_AUDIT",
+      "status": "CLEAR",
+      "amount_sgd": "0.00"
+    },
+    {
+      "ref": "CR-TR-1",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "ASTER",
+      "invoice_id": "PX-101",
+      "entry_id": "CR-TR-1",
+      "revision": 1,
+      "kind": "CREDIT",
+      "status": "POSTED",
+      "amount_sgd": "100.10"
+    },
+    {
+      "ref": "PAY-TR-1",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "ASTER",
+      "invoice_id": "PX-101",
+      "entry_id": "PAY-TR-1",
+      "revision": 1,
+      "kind": "PAYMENT",
+      "status": "SETTLED",
+      "amount_sgd": "200.05"
+    },
+    {
+      "ref": "PAY-TR-PENDING",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "ASTER",
+      "invoice_id": "PX-101",
+      "entry_id": "PAY-TR-PENDING",
+      "revision": 1,
+      "kind": "PAYMENT",
+      "status": "PENDING",
+      "amount_sgd": "50.00"
+    },
+    {
+      "ref": "PAY-TR-8",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "DELTA",
+      "invoice_id": "PX-402",
+      "entry_id": "PAY-TR-8",
+      "revision": 1,
+      "kind": "PAYMENT",
+      "status": "SETTLED",
+      "amount_sgd": "300.00"
+    },
+    {
+      "ref": "PAY-TR-8",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "DELTA",
+      "invoice_id": "PX-402",
+      "entry_id": "PAY-TR-8",
+      "revision": 1,
+      "kind": "PAYMENT",
+      "status": "SETTLED",
+      "amount_sgd": "300.00"
+    }
+  ],
+  "exceptions": [
+    {
+      "ref": "EX-TR-1",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "ASTER",
+      "invoice_id": "PX-102",
+      "invoice_revision": 1,
+      "waive_reasons": [
+        "RECEIPT_SHORT"
+      ],
+      "amount_cap_sgd": "750.00",
+      "valid_until": "2026-12-08T23:59:59",
+      "role": "CFO"
+    },
+    {
+      "ref": "EX-TR-2",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "BAY",
+      "invoice_id": "PX-202",
+      "invoice_revision": 1,
+      "waive_reasons": [
+        "DUPLICATE"
+      ],
+      "amount_cap_sgd": "900.00",
+      "valid_until": "2026-12-08T23:59:59",
+      "role": "CFO"
+    },
+    {
+      "ref": "EX-TR-3",
+      "event_on": "2026-12-06T10:00:00",
+      "recorded_on": "2026-12-06T11:00:00",
+      "vendor_id": "COPPER",
+      "invoice_id": "PX-302",
+      "invoice_revision": 1,
+      "waive_reasons": [
+        "PO_MISMATCH",
+        "BANK_UNVERIFIED"
+      ],
+      "amount_cap_sgd": "640.00",
+      "valid_until": "2026-12-08T23:59:59",
+      "role": "CFO"
+    }
+  ]
+}

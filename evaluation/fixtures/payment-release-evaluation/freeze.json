@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "case_id": "payment-release-evaluation",
+  "sha256": {
+    "cases/suite/payment-release-evaluation/task.md": "dff6261ccea30efd70ac1e0ed913b4e2df22030ea4baf2e9ea4fd0cab21fa6c8",
+    "cases/suite/payment-release-evaluation/01-readme-policy.pdf": "1ec25b364cdc3fa1f67ce19f96781d4323060359d04ffff8901ce37ba5d23c05",
+    "cases/suite/payment-release-evaluation/02-archived-policy.pdf": "ed6065c0bc0f6b557cd61d513e683178bb04310d1c200982f8f9156a090039e3",
+    "cases/suite/payment-release-evaluation/03-exception-bulletin.pdf": "3888de14692640c604e5c64cf868f6aadbaa82ce749f100aa172a3a6de34df0f",
+    "cases/suite/payment-release-evaluation/04-invoice-revisions.pdf": "71371a7d0d49ed91ba4993027c418032bd7ca381cd4944bdbf0d25b470ab5ed2",
+    "cases/suite/payment-release-evaluation/05-po-receipts.pdf": "0f88e9a0d3eb573a3ce50015c648439051ce1aeb921a0b8cddf6c814fdde1f40",
+    "cases/suite/payment-release-evaluation/06-bank-controls.pdf": "494bb9c2dab8765bf4e9779ee56f9a8123c9404b12df5cc37634d69d6255a45a",
+    "cases/suite/payment-release-evaluation/07-hold-events.pdf": "5b9033f7ec113cfeebce82ec96fcae65a2f7d5fb3be62250ad6ebfe9b7f8bc15",
+    "cases/suite/payment-release-evaluation/08-settlement-register.pdf": "3b5b16ea558d74073257777de82635b6a9a544ce58d175ae74bcec2868bf1d93",
+    "evaluation/fixtures/payment-release-evaluation/fixture.json": "3acce6b4cafd8784815a08b5f5dfa92aff83d486810ca5a40290316227e190d3"
+  }
+}

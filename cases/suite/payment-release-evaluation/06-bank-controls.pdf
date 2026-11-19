@@ -1,0 +1,173 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [4 0 R 6 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 5 0 R >>
+endobj
+5 0 obj
+<< /Length 2076 >>
+stream
+BT /F1 10 Tf 13 TL 40 800 Td
+(06-bank-controls.pdf / payment-release-evaluation) Tj
+T*
+(Published record refs; apply the policy in 01-readme-policy.pdf.) Tj
+T*
+() Tj
+T*
+(bank_events / BC-EV-1-BASE) Tj
+T*
+(event_on=2026-12-13T10:00:00; recorded_on=2026-12-13T11:00:00) Tj
+T*
+(vendor_id=IRIS; kind=CHANGE; sequence=1; account_ref=SIM-EV-IRIS-01; change_ref=;) Tj
+T*
+(actor_id=maker-1; role=AP_ANALYST; status=ACTIVE) Tj
+T*
+() Tj
+T*
+(bank_events / BV-EV-1-BASE) Tj
+T*
+(event_on=2026-12-13T10:00:00; recorded_on=2026-12-13T11:00:00) Tj
+T*
+(vendor_id=IRIS; kind=VERIFY; sequence=2; account_ref=SIM-EV-IRIS-01; change_ref=BC-) Tj
+T*
+(EV-1-BASE; actor_id=checker-1; role=TREASURY_REVIEWER; status=VERIFIED) Tj
+T*
+() Tj
+T*
+(bank_events / BC-EV-2-BASE) Tj
+T*
+(event_on=2026-12-13T10:00:00; recorded_on=2026-12-13T11:00:00) Tj
+T*
+(vendor_id=JUNIPER; kind=CHANGE; sequence=1; account_ref=SIM-EV-JUNIPER-01; change_ref=;) Tj
+T*
+(actor_id=maker-2; role=AP_ANALYST; status=ACTIVE) Tj
+T*
+() Tj
+T*
+(bank_events / BV-EV-2-BASE) Tj
+T*
+(event_on=2026-12-13T10:00:00; recorded_on=2026-12-13T11:00:00) Tj
+T*
+(vendor_id=JUNIPER; kind=VERIFY; sequence=2; account_ref=SIM-EV-JUNIPER-01; change_ref=BC-) Tj
+T*
+(EV-2-BASE; actor_id=checker-2; role=TREASURY_REVIEWER; status=VERIFIED) Tj
+T*
+() Tj
+T*
+(bank_events / BC-EV-3-BASE) Tj
+T*
+(event_on=2026-12-13T10:00:00; recorded_on=2026-12-13T11:00:00) Tj
+T*
+(vendor_id=KITE; kind=CHANGE; sequence=1; account_ref=SIM-EV-KITE-01; change_ref=;) Tj
+T*
+(actor_id=maker-3; role=AP_ANALYST; status=ACTIVE) Tj
+T*
+() Tj
+T*
+(bank_events / BV-EV-3-BASE) Tj
+T*
+(event_on=2026-12-13T10:00:00; recorded_on=2026-12-13T11:00:00) Tj
+T*
+(vendor_id=KITE; kind=VERIFY; sequence=2; account_ref=SIM-EV-KITE-01; change_ref=BC-) Tj
+T*
+(EV-3-BASE; actor_id=checker-3; role=TREASURY_REVIEWER; status=VERIFIED) Tj
+T*
+() Tj
+T*
+(bank_events / BC-EV-4-BASE) Tj
+T*
+(event_on=2026-12-13T10:00:00; recorded_on=2026-12-13T11:00:00) Tj
+T*
+(vendor_id=LOTUS; kind=CHANGE; sequence=1; account_ref=SIM-EV-LOTUS-01; change_ref=;) Tj
+T*
+(actor_id=maker-4; role=AP_ANALYST; status=ACTIVE) Tj
+T*
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 7 0 R >>
+endobj
+7 0 obj
+<< /Length 1544 >>
+stream
+BT /F1 10 Tf 13 TL 40 800 Td
+(06-bank-controls.pdf / payment-release-evaluation) Tj
+T*
+(Published record refs; apply the policy in 01-readme-policy.pdf.) Tj
+T*
+() Tj
+T*
+(bank_events / BV-EV-4-BASE) Tj
+T*
+(event_on=2026-12-13T10:00:00; recorded_on=2026-12-13T11:00:00) Tj
+T*
+(vendor_id=LOTUS; kind=VERIFY; sequence=2; account_ref=SIM-EV-LOTUS-01; change_ref=BC-) Tj
+T*
+(EV-4-BASE; actor_id=checker-4; role=TREASURY_REVIEWER; status=VERIFIED) Tj
+T*
+() Tj
+T*
+(bank_events / BC-EV-3-NEW) Tj
+T*
+(event_on=2026-12-15T09:00:00; recorded_on=2026-12-15T09:30:00) Tj
+T*
+(vendor_id=KITE; kind=CHANGE; sequence=6; account_ref=SIM-EV-KITE-02; change_ref=;) Tj
+T*
+(actor_id=bank-maker; role=AP_ANALYST; status=ACTIVE) Tj
+T*
+() Tj
+T*
+(bank_events / BV-EV-3-NEW) Tj
+T*
+(event_on=2026-12-15T09:00:00; recorded_on=2026-12-15T09:30:00) Tj
+T*
+(vendor_id=KITE; kind=VERIFY; sequence=7; account_ref=SIM-EV-KITE-02; change_ref=BC-EV-3-NEW;) Tj
+T*
+(actor_id=bank-maker; role=TREASURY_REVIEWER; status=VERIFIED) Tj
+T*
+() Tj
+T*
+(bank_events / BC-EV-1-NEW) Tj
+T*
+(event_on=2026-12-15T10:00:00; recorded_on=2026-12-15T10:30:00) Tj
+T*
+(vendor_id=IRIS; kind=CHANGE; sequence=7; account_ref=SIM-EV-IRIS-02; change_ref=;) Tj
+T*
+(actor_id=iris-maker; role=AP_ANALYST; status=ACTIVE) Tj
+T*
+() Tj
+T*
+(bank_events / BV-EV-1-NEW) Tj
+T*
+(event_on=2026-12-15T10:00:00; recorded_on=2026-12-15T10:30:00) Tj
+T*
+(vendor_id=IRIS; kind=VERIFY; sequence=8; account_ref=SIM-EV-IRIS-02; change_ref=BC-EV-1-NEW;) Tj
+T*
+(actor_id=iris-checker; role=TREASURY_REVIEWER; status=VERIFIED) Tj
+T*
+ET
+endstream
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000121 00000 n 
+0000000191 00000 n 
+0000000317 00000 n 
+0000002444 00000 n 
+0000002570 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+4165
+%%EOF

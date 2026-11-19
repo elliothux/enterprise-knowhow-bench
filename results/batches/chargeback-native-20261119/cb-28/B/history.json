@@ -1,0 +1,2200 @@
+{
+  "case": "cb-28",
+  "arm": "B",
+  "seconds": 534.0960392080015,
+  "exit": 0,
+  "first": {
+    "message": "cb-28-07105653b7e2-close.xlsx",
+    "receipt": {
+      "message_id": "Sexkc5ACDahqhQNyG",
+      "timestamp": "2026-11-19T08:05:36.643Z",
+      "posts": 1
+    },
+    "unedited_single": true,
+    "http_status": 200
+  },
+  "valid_delivery": true,
+  "receipt": "3396f7ffc64e574160d90547be9471d5ee4e5b5bf434f722ebea6e168ea5a849",
+  "score": 36.458333333333336,
+  "exact": false,
+  "checked": 384,
+  "correct": 140,
+  "states": {
+    "original": {
+      "correct": 17,
+      "errors": [
+        {
+          "sheet": "Close",
+          "cell": "B2",
+          "id": "N-103",
+          "expected": 47365,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C2",
+          "id": "N-103",
+          "expected": 14947,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D2",
+          "id": "N-103",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B3",
+          "id": "S-224",
+          "expected": 20903,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C3",
+          "id": "S-224",
+          "expected": 1052,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D3",
+          "id": "S-224",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B4",
+          "id": "N-135",
+          "expected": 46962,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C4",
+          "id": "N-135",
+          "expected": 23481,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D4",
+          "id": "N-135",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B5",
+          "id": "S-282",
+          "expected": 13620,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C5",
+          "id": "S-282",
+          "expected": 13620,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D5",
+          "id": "S-282",
+          "expected": 24763,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B6",
+          "id": "N-102",
+          "expected": 20914,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C6",
+          "id": "N-102",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D6",
+          "id": "N-102",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B7",
+          "id": "S-217",
+          "expected": 19632,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C7",
+          "id": "S-217",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D7",
+          "id": "S-217",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B8",
+          "id": "N-194",
+          "expected": 4879,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C8",
+          "id": "N-194",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D8",
+          "id": "N-194",
+          "expected": 11503,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B9",
+          "id": "S-254",
+          "expected": 36319,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C9",
+          "id": "S-254",
+          "expected": 18439,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D9",
+          "id": "S-254",
+          "expected": 559,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B2",
+          "id": "BN-011",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B3",
+          "id": "BS-021",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B4",
+          "id": "BN-012",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B5",
+          "id": "BS-022",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B7",
+          "id": "BN-013",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B10",
+          "id": "BS-023",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B11",
+          "id": "BN-014",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        }
+      ]
+    },
+    "early_cutoffs": {
+      "correct": 21,
+      "errors": [
+        {
+          "sheet": "Close",
+          "cell": "B2",
+          "id": "N-103",
+          "expected": 32418,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C2",
+          "id": "N-103",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D2",
+          "id": "N-103",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B3",
+          "id": "S-224",
+          "expected": 2687,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C3",
+          "id": "S-224",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D3",
+          "id": "S-224",
+          "expected": 17164,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B4",
+          "id": "N-135",
+          "expected": 23481,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C4",
+          "id": "N-135",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D4",
+          "id": "N-135",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B5",
+          "id": "S-282",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C5",
+          "id": "S-282",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D5",
+          "id": "S-282",
+          "expected": 24763,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B6",
+          "id": "N-102",
+          "expected": 13215,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C6",
+          "id": "N-102",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D6",
+          "id": "N-102",
+          "expected": 7699,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B7",
+          "id": "S-217",
+          "expected": 19632,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C7",
+          "id": "S-217",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D7",
+          "id": "S-217",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B8",
+          "id": "N-194",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C8",
+          "id": "N-194",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D8",
+          "id": "N-194",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B9",
+          "id": "S-254",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C9",
+          "id": "S-254",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D9",
+          "id": "S-254",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B2",
+          "id": "BN-011",
+          "expected": 7243,
+          "actual": null,
+          "formula": true
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B3",
+          "id": "BS-021",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B4",
+          "id": "BN-012",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        }
+      ]
+    },
+    "late_chargebacks": {
+      "correct": 17,
+      "errors": [
+        {
+          "sheet": "Close",
+          "cell": "B2",
+          "id": "N-103",
+          "expected": 47365,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C2",
+          "id": "N-103",
+          "expected": 14947,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D2",
+          "id": "N-103",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B3",
+          "id": "S-224",
+          "expected": 20903,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C3",
+          "id": "S-224",
+          "expected": 12873,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D3",
+          "id": "S-224",
+          "expected": 11821,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B4",
+          "id": "N-135",
+          "expected": 46962,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C4",
+          "id": "N-135",
+          "expected": 23481,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D4",
+          "id": "N-135",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B5",
+          "id": "S-282",
+          "expected": 13620,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C5",
+          "id": "S-282",
+          "expected": 13620,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D5",
+          "id": "S-282",
+          "expected": 24763,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B6",
+          "id": "N-102",
+          "expected": 20914,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C6",
+          "id": "N-102",
+          "expected": 13215,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D6",
+          "id": "N-102",
+          "expected": 13215,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B7",
+          "id": "S-217",
+          "expected": 19632,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C7",
+          "id": "S-217",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D7",
+          "id": "S-217",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B8",
+          "id": "N-194",
+          "expected": 4879,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C8",
+          "id": "N-194",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D8",
+          "id": "N-194",
+          "expected": 11503,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B9",
+          "id": "S-254",
+          "expected": 36319,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C9",
+          "id": "S-254",
+          "expected": 18439,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D9",
+          "id": "S-254",
+          "expected": 559,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B2",
+          "id": "BN-011",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B3",
+          "id": "BS-021",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B4",
+          "id": "BN-012",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B5",
+          "id": "BS-022",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B7",
+          "id": "BN-013",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B10",
+          "id": "BS-023",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B11",
+          "id": "BN-014",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        }
+      ]
+    },
+    "receipt_amendment": {
+      "correct": 17,
+      "errors": [
+        {
+          "sheet": "Close",
+          "cell": "B2",
+          "id": "N-103",
+          "expected": 53465,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C2",
+          "id": "N-103",
+          "expected": 21047,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D2",
+          "id": "N-103",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B3",
+          "id": "S-224",
+          "expected": 19851,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C3",
+          "id": "S-224",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D3",
+          "id": "S-224",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B4",
+          "id": "N-135",
+          "expected": 10889,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C4",
+          "id": "N-135",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D4",
+          "id": "N-135",
+          "expected": 12592,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B5",
+          "id": "S-282",
+          "expected": 41205,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C5",
+          "id": "S-282",
+          "expected": 24763,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D5",
+          "id": "S-282",
+          "expected": 8321,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B6",
+          "id": "N-102",
+          "expected": 20914,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C6",
+          "id": "N-102",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D6",
+          "id": "N-102",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B7",
+          "id": "S-217",
+          "expected": 19632,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C7",
+          "id": "S-217",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D7",
+          "id": "S-217",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B8",
+          "id": "N-194",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C8",
+          "id": "N-194",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D8",
+          "id": "N-194",
+          "expected": 16382,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B9",
+          "id": "S-254",
+          "expected": 20929,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C9",
+          "id": "S-254",
+          "expected": 2490,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D9",
+          "id": "S-254",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B2",
+          "id": "BN-011",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B3",
+          "id": "BS-021",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B4",
+          "id": "BN-012",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B5",
+          "id": "BS-022",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B7",
+          "id": "BN-013",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B10",
+          "id": "BS-023",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B11",
+          "id": "BN-014",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        }
+      ]
+    },
+    "invoice_priority": {
+      "correct": 17,
+      "errors": [
+        {
+          "sheet": "Close",
+          "cell": "B2",
+          "id": "N-103",
+          "expected": 53333,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C2",
+          "id": "N-103",
+          "expected": 32418,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D2",
+          "id": "N-103",
+          "expected": 11503,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B3",
+          "id": "S-224",
+          "expected": 20903,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C3",
+          "id": "S-224",
+          "expected": 1052,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D3",
+          "id": "S-224",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B4",
+          "id": "N-135",
+          "expected": 29491,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C4",
+          "id": "N-135",
+          "expected": 6010,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D4",
+          "id": "N-135",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B5",
+          "id": "S-282",
+          "expected": 42643,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C5",
+          "id": "S-282",
+          "expected": 24763,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D5",
+          "id": "S-282",
+          "expected": 6883,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B6",
+          "id": "N-102",
+          "expected": 20914,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C6",
+          "id": "N-102",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D6",
+          "id": "N-102",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B7",
+          "id": "S-217",
+          "expected": 19632,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C7",
+          "id": "S-217",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D7",
+          "id": "S-217",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B8",
+          "id": "N-194",
+          "expected": 16382,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C8",
+          "id": "N-194",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D8",
+          "id": "N-194",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B9",
+          "id": "S-254",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C9",
+          "id": "S-254",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D9",
+          "id": "S-254",
+          "expected": 18439,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B2",
+          "id": "BN-011",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B3",
+          "id": "BS-021",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B4",
+          "id": "BN-012",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B5",
+          "id": "BS-022",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B7",
+          "id": "BN-013",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B10",
+          "id": "BS-023",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B11",
+          "id": "BN-014",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        }
+      ]
+    },
+    "reordered_registers": {
+      "correct": 17,
+      "errors": [
+        {
+          "sheet": "Close",
+          "cell": "B2",
+          "id": "N-103",
+          "expected": 47365,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C2",
+          "id": "N-103",
+          "expected": 14947,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D2",
+          "id": "N-103",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B3",
+          "id": "S-224",
+          "expected": 20903,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C3",
+          "id": "S-224",
+          "expected": 1052,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D3",
+          "id": "S-224",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B4",
+          "id": "N-135",
+          "expected": 46962,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C4",
+          "id": "N-135",
+          "expected": 23481,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D4",
+          "id": "N-135",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B5",
+          "id": "S-282",
+          "expected": 13620,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C5",
+          "id": "S-282",
+          "expected": 13620,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D5",
+          "id": "S-282",
+          "expected": 24763,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B6",
+          "id": "N-102",
+          "expected": 20914,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C6",
+          "id": "N-102",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D6",
+          "id": "N-102",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B7",
+          "id": "S-217",
+          "expected": 19632,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C7",
+          "id": "S-217",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D7",
+          "id": "S-217",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B8",
+          "id": "N-194",
+          "expected": 4879,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C8",
+          "id": "N-194",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D8",
+          "id": "N-194",
+          "expected": 11503,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B9",
+          "id": "S-254",
+          "expected": 36319,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C9",
+          "id": "S-254",
+          "expected": 18439,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D9",
+          "id": "S-254",
+          "expected": 559,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B2",
+          "id": "BN-011",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B3",
+          "id": "BS-021",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B4",
+          "id": "BN-012",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B5",
+          "id": "BS-022",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B7",
+          "id": "BN-013",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B10",
+          "id": "BS-023",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B11",
+          "id": "BN-014",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        }
+      ]
+    },
+    "early_overpayment": {
+      "correct": 17,
+      "errors": [
+        {
+          "sheet": "Close",
+          "cell": "B2",
+          "id": "N-103",
+          "expected": 32418,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C2",
+          "id": "N-103",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D2",
+          "id": "N-103",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B3",
+          "id": "S-224",
+          "expected": 20903,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C3",
+          "id": "S-224",
+          "expected": 12873,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D3",
+          "id": "S-224",
+          "expected": 11821,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B4",
+          "id": "N-135",
+          "expected": 23481,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C4",
+          "id": "N-135",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D4",
+          "id": "N-135",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B5",
+          "id": "S-282",
+          "expected": 13620,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C5",
+          "id": "S-282",
+          "expected": 13620,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D5",
+          "id": "S-282",
+          "expected": 24763,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B6",
+          "id": "N-102",
+          "expected": 20914,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C6",
+          "id": "N-102",
+          "expected": 13215,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D6",
+          "id": "N-102",
+          "expected": 13215,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B7",
+          "id": "S-217",
+          "expected": 19632,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C7",
+          "id": "S-217",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D7",
+          "id": "S-217",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B8",
+          "id": "N-194",
+          "expected": 16382,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C8",
+          "id": "N-194",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D8",
+          "id": "N-194",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B9",
+          "id": "S-254",
+          "expected": 36319,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C9",
+          "id": "S-254",
+          "expected": 18439,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D9",
+          "id": "S-254",
+          "expected": 559,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B2",
+          "id": "BN-011",
+          "expected": 23530,
+          "actual": null,
+          "formula": true
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B3",
+          "id": "BS-021",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B4",
+          "id": "BN-012",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B5",
+          "id": "BS-022",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B7",
+          "id": "BN-013",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B10",
+          "id": "BS-023",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B11",
+          "id": "BN-014",
+          "expected": 26925,
+          "actual": null,
+          "formula": true
+        }
+      ]
+    },
+    "two_reversals": {
+      "correct": 17,
+      "errors": [
+        {
+          "sheet": "Close",
+          "cell": "B2",
+          "id": "N-103",
+          "expected": 64836,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C2",
+          "id": "N-103",
+          "expected": 32418,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D2",
+          "id": "N-103",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B3",
+          "id": "S-224",
+          "expected": 20903,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C3",
+          "id": "S-224",
+          "expected": 12873,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D3",
+          "id": "S-224",
+          "expected": 11821,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B4",
+          "id": "N-135",
+          "expected": 19474,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C4",
+          "id": "N-135",
+          "expected": 8585,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D4",
+          "id": "N-135",
+          "expected": 12592,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B5",
+          "id": "S-282",
+          "expected": 13620,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C5",
+          "id": "S-282",
+          "expected": 13620,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D5",
+          "id": "S-282",
+          "expected": 24763,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B6",
+          "id": "N-102",
+          "expected": 20914,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C6",
+          "id": "N-102",
+          "expected": 13215,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D6",
+          "id": "N-102",
+          "expected": 13215,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B7",
+          "id": "S-217",
+          "expected": 19632,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C7",
+          "id": "S-217",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D7",
+          "id": "S-217",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B8",
+          "id": "N-194",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C8",
+          "id": "N-194",
+          "expected": 0,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D8",
+          "id": "N-194",
+          "expected": 16382,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "B9",
+          "id": "S-254",
+          "expected": 36319,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "C9",
+          "id": "S-254",
+          "expected": 18439,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Close",
+          "cell": "D9",
+          "id": "S-254",
+          "expected": 559,
+          "actual": null,
+          "formula": false
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B2",
+          "id": "BN-011",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B3",
+          "id": "BS-021",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B4",
+          "id": "BN-012",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B5",
+          "id": "BS-022",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B7",
+          "id": "BN-013",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B10",
+          "id": "BS-023",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        },
+        {
+          "sheet": "Receipt control",
+          "cell": "B11",
+          "id": "BN-014",
+          "expected": 0,
+          "actual": null,
+          "formula": true
+        }
+      ]
+    }
+  },
+  "receiver_recheck": {
+    "room_message_id": "Sexkc5ACDahqhQNyG",
+    "single_unedited_message": true,
+    "current_file_http": 200,
+    "current_file_sha256": "3396f7ffc64e574160d90547be9471d5ee4e5b5bf434f722ebea6e168ea5a849",
+    "matches_accepted_file": true
+  },
+  "app_incidents": [
+    {
+      "report": "soffice-2026-11-19-160106.ips",
+      "sha256": "9f903844d98402fe25977aafdd4ac8e7f0854392dc559717c826799f8f7b5291",
+      "timestamp": "2026-11-19 16:01:06.00 +0800",
+      "app_version": "26.8.3.1",
+      "exception": "EXC_BREAKPOINT",
+      "termination": "Abort trap: 6"
+    },
+    {
+      "report": "soffice-2026-11-19-160221.ips",
+      "sha256": "931755566181df341ac3695db37e4b09529d365459e37f108babd5ec73a29a18",
+      "timestamp": "2026-11-19 16:02:21.00 +0800",
+      "app_version": "26.8.3.1",
+      "exception": "EXC_BREAKPOINT",
+      "termination": "Abort trap: 6"
+    }
+  ],
+  "draft": {
+    "local_xlsx": true,
+    "sha256": "3396f7ffc64e574160d90547be9471d5ee4e5b5bf434f722ebea6e168ea5a849",
+    "ordinary_output_formulas": {
+      "Close": 0,
+      "Receipt control": 24
+    }
+  },
+  "calc_observations": 71,
+  "room": "cb-07105653b7e2-cb-28",
+  "filename": "cb-28-07105653b7e2-close.xlsx",
+  "native_calls": 107,
+  "actions": [
+    "Inspecting open windows",
+    "Checking Chrome windows",
+    "Opening Guest profile",
+    "Inspecting Chrome controls",
+    "Inspecting Chrome controls",
+    "Viewing Chrome window",
+    "Selecting regular window",
+    "Opening Guest profile",
+    "Creating and marking Guest window",
+    "Reading closing request",
+    "Inspecting sign-in",
+    "Signing in to closing room",
+    "Reading room instructions",
+    "Opening the template in Calc",
+    "Opening the template in Calc",
+    "Selecting the template file",
+    "Navigating to the workbook",
+    "Selecting the workbook path",
+    "Entering the full template path",
+    "Inspecting path dialog",
+    "Entering the full template path",
+    "Opening selected template",
+    "Opening selected template",
+    "Saving the working copy",
+    "Setting the destination path",
+    "Selecting the working folder",
+    "Creating the XLSX copy",
+    "Inspecting invoice inputs",
+    "Inspecting workbook structure",
+    "Inspecting invoice register",
+    "Viewing workbook tabs",
+    "Reading invoice inputs",
+    "Reading invoice inputs",
+    "Inspecting receipt controls",
+    "Inspecting receipt controls",
+    "Opening invoice register",
+    "Opening invoice register",
+    "Opening invoice register",
+    "Inspecting invoice register",
+    "Navigating to invoice data",
+    "Returning to Calc",
+    "Recovering the working copy",
+    "Checking recovery",
+    "Checking recovery",
+    "Checking recovery status",
+    "Opening the delivery folder",
+    "Inspecting ownCloud",
+    "Signing in to ownCloud",
+    "Opening Documents",
+    "Finding the assigned folder",
+    "Opening Documents",
+    "Inspecting Documents",
+    "Opening Documents",
+    "Finding the assigned folder",
+    "Checking Calc recovery",
+    "Restoring Calc availability",
+    "Inspecting invoice inputs",
+    "Returning to recovered workbook",
+    "Reopening the saved copy",
+    "Clearing the failed recovery",
+    "Checking Calc",
+    "Checking Calc availability",
+    "Continuing from the saved copy",
+    "Discarding recovery data",
+    "Reopening the saved workbook",
+    "Opening saved working copy",
+    "Inspecting invoice register",
+    "Navigating workbook sheets",
+    "Opening invoice register",
+    "Reading invoice register",
+    "Selecting invoice sheet",
+    "Checking workbook controls",
+    "Navigating to invoices",
+    "Navigating workbook sheets",
+    "Selecting invoice sheet",
+    "Selecting invoice sheet",
+    "Selecting invoice sheet",
+    "Selecting invoice sheet",
+    "Opening invoice sheet",
+    "Inspecting bank events",
+    "Reading bank events",
+    "Inspecting cutoff inputs",
+    "Reading cutoff values",
+    "Completing receipt controls",
+    "Opening receipt controls",
+    "Reading receipt controls",
+    "Entering receipt control formulas",
+    "Selecting output range",
+    "Adding formula-backed reversal controls",
+    "Calculating receipt controls",
+    "Leaving unresolved receipts blank",
+    "Saving the partial workbook",
+    "Keeping Excel format",
+    "Opening the assigned ownCloud folder",
+    "Inspecting delivery folder",
+    "Uploading the XLSX",
+    "Selecting the saved XLSX",
+    "Selecting the saved XLSX",
+    "Uploading the partial XLSX",
+    "Verifying the uploaded file",
+    "Releasing the uploaded version",
+    "Returning to the private room",
+    "Checking the private room",
+    "Posting the release filename",
+    "Closing the trial workbook",
+    "Closing the assigned Guest window",
+    "Native desktop interaction"
+  ],
+  "guest_trace": {
+    "started": true,
+    "raised": true,
+    "raise_required": true,
+    "closed": false,
+    "evidence": {
+      "start_event": 21,
+      "raise_event": 23,
+      "close_event": null
+    },
+    "violations": [
+      "Own Guest window closure not confirmed by native close action and post-close state"
+    ],
+    "limits": "Observable native trace; cannot prove continuous foreground or absence of hidden Guest windows."
+  },
+  "trace_violations": [
+    {
+      "event": 49,
+      "tool": "js",
+      "reasons": [
+        "scope violation: active window URL outside assigned workspace: file://<trial-workspace>/cb-28-07105653b7e2-template.xlsx"
+      ]
+    },
+    {
+      "event": null,
+      "tool": "native Chrome Guest session",
+      "reasons": [
+        "Own Guest window closure not confirmed by native close action and post-close state"
+      ]
+    }
+  ],
+  "session": "01a1f2cf-26a1-7271-ac83-c896062f378a",
+  "source_hashes": {
+    "agent.log": "2293de0b735899c1b4008c9efe2975f7f28405ab09ca0680d6f35dfb13bd6eb5",
+    "stderr.log": "b9fc76875713b0cf33a5a592d661487aeb25805e9c2407f2e6c2ad1e18d6563c",
+    "score.json": "ced299099f5e1238934da6d40e5c5c2a24e6579d48f67efbfbbc768b69a64868",
+    "work/TASK.md": "b3ad1fe36a86601c4eb8c47a81179768807be714202ac375484fb0cfc6444132"
+  }
+}

@@ -6,6 +6,8 @@ Lynx Benchmark measures the effect of a workflow Skill distilled from earlier de
 
 **Two fully solvable month-end bank closes remained incomplete in all three arms.** Each shift had 108 invoices. In one, all three operators correctly placed 54/108 invoices (50.00%). In the other, all three placed 57/108 (52.78%). Every first submission was received on time. An independent verifier confirms exactly one complete allocation for each ledger. [Compare the six receipts and reproduce the result](results/batches/monthly-lockbox-20261119/README.md) · [Results across the new workflows](results/close-workflows.md)
 
+On the native Calc workbook cb-28, the three arms scored 0/384 (0.00%), 140/384 (36.46%), 162/384 (42.19%) respectively (no Skill, GLM, DeepSeek). Calc recovery briefly opened a prior template in the baseline session. On cb-17, the baseline and DeepSeek Skill produced fully correct files. The GLM Skill delivered a workbook with no scoreable formulas. [Received files and all six native grades](results/batches/chargeback-native-20261119/README.md)
+
 On the original 40 native finance tickets, Chrome was used to read ownCloud documents and deliver a first decision to Rocket.Chat. The baseline fully completed **24/40**, and the GLM Skill completed **40/40**. These short single-invoice tasks and the multi-receipt closes have different acceptance criteria. The following table gives the original business scores.
 
 | Task | Cases | Mean without Skill | Mean with GLM Skill | Fully correct first submissions, without → with |

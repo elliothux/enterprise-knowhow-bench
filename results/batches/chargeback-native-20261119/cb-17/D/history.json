@@ -1,0 +1,262 @@
+{
+  "case": "cb-17",
+  "arm": "D",
+  "seconds": 741.6316684999911,
+  "exit": 0,
+  "first": {
+    "message": "cb-17-f21cb71ca405-close.xlsx",
+    "receipt": {
+      "message_id": "PLXKXLaSo2Np667za",
+      "timestamp": "2026-11-19T07:43:44.429Z",
+      "posts": 1
+    },
+    "unedited_single": true,
+    "http_status": 200
+  },
+  "valid_delivery": true,
+  "receipt": "8808e880277f75e3214a4ee6cf0e25670472cb4359249454634eeb2bf8d71ccf",
+  "score": 100.0,
+  "exact": true,
+  "checked": 384,
+  "correct": 384,
+  "states": {
+    "original": {
+      "correct": 48,
+      "errors": []
+    },
+    "early_cutoffs": {
+      "correct": 48,
+      "errors": []
+    },
+    "late_chargebacks": {
+      "correct": 48,
+      "errors": []
+    },
+    "receipt_amendment": {
+      "correct": 48,
+      "errors": []
+    },
+    "invoice_priority": {
+      "correct": 48,
+      "errors": []
+    },
+    "reordered_registers": {
+      "correct": 48,
+      "errors": []
+    },
+    "early_overpayment": {
+      "correct": 48,
+      "errors": []
+    },
+    "two_reversals": {
+      "correct": 48,
+      "errors": []
+    }
+  },
+  "receiver_recheck": {
+    "room_message_id": "PLXKXLaSo2Np667za",
+    "single_unedited_message": true,
+    "current_file_http": 200,
+    "current_file_sha256": "8808e880277f75e3214a4ee6cf0e25670472cb4359249454634eeb2bf8d71ccf",
+    "matches_accepted_file": true
+  },
+  "app_incidents": [
+    {
+      "report": "soffice-2026-11-19-153547.ips",
+      "sha256": "533c40289d48d2ebe791d7719fafbe88369d9c3cf6069164dc4f55b27dacc2dc",
+      "timestamp": "2026-11-19 15:35:47.00 +0800",
+      "app_version": "26.8.3.1",
+      "exception": "EXC_BREAKPOINT",
+      "termination": "Abort trap: 6"
+    },
+    {
+      "report": "soffice-2026-11-19-154102.ips",
+      "sha256": "c50ef83a9ebb90cc8e84b25af1c35afa0cd91019f8f73765b2536d4f17434864",
+      "timestamp": "2026-11-19 15:41:02.00 +0800",
+      "app_version": "26.8.3.1",
+      "exception": "EXC_BREAKPOINT",
+      "termination": "Abort trap: 6"
+    }
+  ],
+  "draft": {
+    "local_xlsx": true,
+    "sha256": "8808e880277f75e3214a4ee6cf0e25670472cb4359249454634eeb2bf8d71ccf",
+    "ordinary_output_formulas": {
+      "Close": 24,
+      "Receipt control": 24
+    }
+  },
+  "calc_observations": 88,
+  "room": "cb-f21cb71ca405-cb-17",
+  "filename": "cb-17-f21cb71ca405-close.xlsx",
+  "native_calls": 129,
+  "actions": [
+    "Inspecting open windows",
+    "Checking Chrome windows",
+    "Opening a Guest window",
+    "Inspecting Chrome controls",
+    "Inspecting Chrome profile",
+    "Inspecting Chrome profile",
+    "Opening a Guest window",
+    "Confirming the Guest marker",
+    "Verifying the marker",
+    "Reading the closing request",
+    "Reading the closing request",
+    "Signing in to the assigned room",
+    "Reading the assigned room",
+    "Reading the assigned room",
+    "Opening the local workbook",
+    "Opening the local workbook",
+    "Selecting the template",
+    "Navigating to the template path",
+    "Selecting the template path",
+    "Navigating to the template",
+    "Entering the template path",
+    "Opening the selected template",
+    "Opening the selected template",
+    "Creating the working copy",
+    "Saving the XLSX copy",
+    "Inspecting invoice inputs",
+    "Inspecting the working copy",
+    "Inspecting invoice inputs",
+    "Inspecting workbook layout",
+    "Inspecting invoice inputs",
+    "Inspecting sheet tabs",
+    "Inspecting invoice inputs",
+    "Inspecting invoice inputs",
+    "Inspecting workbook sheets",
+    "Inspecting workbook sheets",
+    "Navigating to source sheets",
+    "Inspecting invoice inputs",
+    "Navigating to invoice inputs",
+    "Recovering the working copy",
+    "Recovering the working copy",
+    "Checking recovery",
+    "Checking recovery",
+    "Checking recovery progress",
+    "Opening the delivery folder",
+    "Signing in to ownCloud",
+    "Signing in to ownCloud",
+    "Opening the delivery folder",
+    "Opening the assigned folder",
+    "Opening Documents",
+    "Opening Documents",
+    "Opening Documents",
+    "Opening Documents",
+    "Opening the assigned folder",
+    "Checking workbook recovery",
+    "Restarting Calc recovery",
+    "Reopening Calc",
+    "Reopening the saved copy",
+    "Reopening the saved copy",
+    "Reopening the saved copy",
+    "Checking the delivery folder",
+    "Reopening Calc",
+    "Discarding the empty recovery session",
+    "Inspecting the recovery dialog",
+    "Restarting the stalled Calc process",
+    "Discarding the empty recovery session",
+    "Discarding the empty recovery session",
+    "Opening the saved copy",
+    "Inspecting receipt controls",
+    "Inspecting Calc navigation",
+    "Navigating workbook sheets",
+    "Navigating to invoices",
+    "Inspecting invoice inputs",
+    "Navigating to invoices",
+    "Navigating to invoices",
+    "Navigating to invoices",
+    "Navigating to invoices",
+    "Navigating to invoices",
+    "Inspecting Calc",
+    "Navigating to invoices",
+    "Navigating to invoices",
+    "Navigating to invoices",
+    "Navigating to invoices",
+    "Selecting invoices",
+    "Selecting invoices",
+    "Opening invoices",
+    "Inspecting bank events",
+    "Navigating to bank events",
+    "Inspecting bank events",
+    "Inspecting cutoff inputs",
+    "Inspecting cutoff inputs",
+    "Inspecting cutoff inputs",
+    "Inspecting control outputs",
+    "Inspecting control outputs",
+    "Inspecting control outputs",
+    "Building the calculation area",
+    "Preparing replay formulas",
+    "Installing replay formulas",
+    "Checking Calc",
+    "Restoring the saved copy",
+    "Restoring the saved copy",
+    "Reopening the working copy",
+    "Installing replay formulas",
+    "Opening the calculation sheet",
+    "Opening the calculation sheet",
+    "Installing replay formulas",
+    "Calculating the replay",
+    "Connecting receipt controls",
+    "Checking receipt controls",
+    "Connecting invoice outputs",
+    "Opening close outputs",
+    "Opening close outputs",
+    "Calculating invoice close",
+    "Saving the completed XLSX",
+    "Keeping the Excel format",
+    "Uploading the workbook",
+    "Uploading the workbook",
+    "Selecting the saved XLSX",
+    "Selecting the saved XLSX",
+    "Selecting the saved XLSX",
+    "Uploading the saved XLSX",
+    "Verifying the upload",
+    "Releasing the workbook to Finance",
+    "Returning to the assigned room",
+    "Returning to the assigned room",
+    "Returning to the assigned room",
+    "Releasing the workbook to Finance",
+    "Closing the trial workbook",
+    "Closing the trial Guest window",
+    "Native desktop interaction"
+  ],
+  "guest_trace": {
+    "started": true,
+    "raised": true,
+    "raise_required": true,
+    "closed": false,
+    "evidence": {
+      "start_event": 21,
+      "raise_event": 23,
+      "close_event": null
+    },
+    "violations": [
+      "Own Guest window closure not confirmed by native close action and post-close state"
+    ],
+    "limits": "Observable native trace; cannot prove continuous foreground or absence of hidden Guest windows."
+  },
+  "trace_violations": [
+    {
+      "event": 49,
+      "tool": "js",
+      "reasons": [
+        "scope violation: active window URL outside assigned workspace: file://<trial-workspace>/cb-17-f21cb71ca405-template.xlsx"
+      ]
+    },
+    {
+      "event": null,
+      "tool": "native Chrome Guest session",
+      "reasons": [
+        "Own Guest window closure not confirmed by native close action and post-close state"
+      ]
+    }
+  ],
+  "session": "01a1f2b8-0421-7e01-aa72-48eb07cf745f",
+  "source_hashes": {
+    "agent.log": "f722d1659d02762dcfe54667dc236e3cc06d5c7b01b97b176c58887cd382970d",
+    "stderr.log": "2e92feb5d56eb7325981ef48445fd299f2dfbd6cb7d9550507278e17846c29ee",
+    "score.json": "50f6748b6ae40fd872b0b11c908833a0d94eb2e96b10b5a1f4420b288a1d3a9f",
+    "work/TASK.md": "10261ce0e71ba9778fb645ac4e783bc382bb4fa058bfc24f8b07dabbec2d8f88"
+  }
+}

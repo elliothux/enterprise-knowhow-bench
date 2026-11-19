@@ -6,6 +6,8 @@ Lynx Benchmark 测量同一个操作模型使用 Lynx Cognition 从历史示范�
 
 **新增两张资料齐全、三组都没做完的月结核销单。** 每张包含 108 笔发票。第一张，无 Skill、GLM-5.3 Skill、DeepSeek Flash Skill 都只匹配了 **54/108（50.00%）**；第二张都是 **57/108（52.78%）**。六次都在时限内交付。独立验证器从原始金额枚举，确认每题恰有一个完整解。[六份首交与复现方法](results/batches/monthly-lockbox-20261119/README.md) · [新增工作流完整结果](results/close-workflows.md)
 
+在原生 Calc 拒付工作簿 cb-28 上，无 Skill、GLM 和 DeepSeek 的成绩依次为0/384 (0.00%)、140/384 (36.46%)、162/384 (42.19%)。无 Skill 组的 Calc 在崩溃恢复时也曾打开前一场的模板。在 cb-17 上，无 Skill 和 DeepSeek 提交的文件均通过 384 项检查，GLM 提交的文件没有可评分的输出公式，得 0 分。[六次原生试验与收件文件](results/batches/chargeback-native-20261119/README.md)
+
 原有 40 张单票财务题使用原生 Chrome 读取 ownCloud 凭据并向 Rocket.Chat 提交处理结果。无 Skill 首交全对 **24/40**，GLM Skill 全对 **40/40**。下表保留这批单票题和原双发票核销题的业务分。
 
 | 实验 | 工单数 | 无 Skill 均分 | GLM Skill 均分 | 两组首交全对 |

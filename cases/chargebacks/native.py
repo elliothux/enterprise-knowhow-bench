@@ -128,6 +128,8 @@ if __name__=='__main__':
     elif json.loads((root/'freeze.json').read_text())!=json.loads(json.dumps(plan)):
         raise ValueError('Frozen plan differs')
     for c,a in jobs:
+        if (root/c/a/'score.json').is_file():
+            continue
         trial(args,root,c,a)
         # An examiner can pause between sessions to clear a trial-owned window after timeout.
         if (root/'pause-after-trial').exists():break

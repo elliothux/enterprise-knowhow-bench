@@ -10,7 +10,10 @@ On two complete monthly bank ledgers, the unaided operator and both Skills corre
 | [Month-end cash application, native Chrome](batches/month-end-20261119/README.md) | 2 × 8 invoices | Mean business points / 100 | 100 | 95.63 | 100 |
 | [Joint AR/AP close, ERP desk](batches/joint-close-20261119/README.md) | 2 × 24 invoices | Mean business points / 100 | 50.31 | 100 | 100 |
 | [Scanned proof of delivery, ERP desk](batches/pod-inspection-20261119/README.md) | 2 × 8 invoices | Mean business points / 100 | 100 | 100 | 100 |
-| [Chargeback workbook, local authoring tools](batches/chargeback-office-20261119/README.md) | 2 workbooks | Accepted first files | 2/2 | 2/2 | 2/2 |
+| [Chargeback workbook, local authoring tools](batches/chargeback-office-20261119/README.md) | 2 workbooks | Fully correct first files | 2/2 | 2/2 | 2/2 |
+| [Chargeback workbook, native Calc → ownCloud → Rocket.Chat](batches/chargeback-native-20261119/README.md) | 2 workbooks | Fully correct first files | 1/2 | 0/2 | 1/2 |
+
+On cb-28 the first-delivery scores were 0/384 (0.00%), 140/384 (36.46%), 162/384 (42.19%) for no Skill, GLM and DeepSeek respectively. All three fell short of a complete workbook. In the original input state, the GLM file passed 17/48 checks and the DeepSeek file passed 19/48. For example, neither supplied the correct closing amounts for invoice N-103. On the baseline trial, Calc recovery also displayed a prior trial’s template, which the operator closed. The native report documents the isolation exception and crashes alongside the received files. [Received workbooks and cell-level histories](batches/chargeback-native-20261119/README.md)
 
 **An unresolved dependency has a different business outcome from a missed match.** At cutoff, five invoices genuinely needed a response from a bank or controller. Both Skills correctly posted all 11 actionable invoices and sent all five waits to the right owner. Their handling score was 100, while only 68.75% of the total queue could close. In the monthly lockboxes all 216 invoices could close with the evidence available.
 

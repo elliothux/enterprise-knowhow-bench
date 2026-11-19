@@ -3,12 +3,12 @@
     "case": "cutoff-19",
     "family": "cutoff",
     "order": "AB",
-    "control": "D"
+    "control": "C"
   },
   {
     "case": "cutoff-27",
     "family": "cutoff",
     "order": "BA",
-    "control": "D"
+    "control": "C"
   }
 ]

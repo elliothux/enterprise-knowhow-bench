@@ -3,96 +3,96 @@
     "case": "RMT-800",
     "family": "packet",
     "order": "AB",
-    "control": "D"
+    "control": "C"
   },
   {
     "case": "RMT-744",
     "family": "packet",
     "order": "AB",
-    "control": "D"
+    "control": "C"
   },
   {
     "case": "RMT-730",
     "family": "packet",
     "order": "AB",
-    "control": "D"
+    "control": "C"
   },
   {
     "case": "RMT-772",
     "family": "packet",
     "order": "AB",
-    "control": "D"
+    "control": "C"
   },
   {
     "case": "RMT-716",
     "family": "packet",
     "order": "AB",
-    "control": "D"
+    "control": "C"
   },
   {
     "case": "RMT-807",
     "family": "packet",
     "order": "BA",
-    "control": "D"
+    "control": "C"
   },
   {
     "case": "RMT-723",
     "family": "packet",
     "order": "BA",
-    "control": "D"
+    "control": "C"
   },
   {
     "case": "RMT-751",
     "family": "packet",
     "order": "BA",
-    "control": "D"
+    "control": "C"
   },
   {
     "case": "RMT-793",
     "family": "packet",
     "order": "BA",
-    "control": "D"
+    "control": "C"
   },
   {
     "case": "RMT-779",
     "family": "packet",
     "order": "BA",
-    "control": "D"
+    "control": "C"
   },
   {
     "case": "RMT-814",
     "family": "packet",
     "order": "AB",
-    "control": "D"
+    "control": "C"
   },
   {
     "case": "RMT-821",
     "family": "packet",
     "order": "BA",
-    "control": "D"
+    "control": "C"
   },
   {
     "case": "RMT-737",
     "family": "packet",
     "order": "BA",
-    "control": "D"
+    "control": "C"
   },
   {
     "case": "RMT-758",
     "family": "packet",
     "order": "AB",
-    "control": "D"
+    "control": "C"
   },
   {
     "case": "RMT-765",
     "family": "packet",
     "order": "BA",
-    "control": "D"
+    "control": "C"
   },
   {
     "case": "RMT-786",
     "family": "packet",
     "order": "AB",
-    "control": "D"
+    "control": "C"
   }
 ]

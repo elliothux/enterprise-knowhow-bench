@@ -30,16 +30,16 @@ class PublicBenchmarkTests(unittest.TestCase):
         index = bench.read(batch / 'index.json')
         schedule = bench.read(bench.ROOT / 'tasks/schedules/remittance-distillers.json')
         original = bench.read(bench.ROOT / 'tasks/schedule.json')['remittances']
-        self.assertEqual(schedule, [dict(row, control='D') for row in original])
+        self.assertEqual(schedule, [dict(row, control='C') for row in original])
         self.assertEqual([row['case'] for row in schedule], [r['case'] for r in index['cases']])
         sessions = set()
         for case in index['cases']:
             name = case['case']
-            attachment = (bench.ROOT / bench.TASKS[name]['arms']['D']).read_bytes()
+            attachment = (bench.ROOT / bench.TASKS[name]['arms']['C']).read_bytes()
             skill = attachment.split(b'Historical workflow Skill:\n', 1)[1]
             self.assertEqual(hashlib.sha256(skill).hexdigest(), index['plan']['skill'])
             history = bench.read(batch / case['history'])
-            self.assertEqual(set(history['arms']), set('ABD'))
+            self.assertEqual(set(history['arms']), set('ABC'))
             for arm, run in history['arms'].items():
                 submission = run['first_submission']
                 self.assertEqual(hashlib.sha256(submission.encode()).hexdigest(), run['files']['delivery-001.csv'])

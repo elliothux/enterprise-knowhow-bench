@@ -680,7 +680,7 @@
     },
     {
       "run": "shortpay-residual/20261118/fennel/C",
-      "arm": "C",
+      "arm": "D",
       "condition": "full desk procedure",
       "score": 100,
       "seconds": 149.30134105682373,
@@ -1023,7 +1023,7 @@
     },
     {
       "run": "shortpay-residual/20261118/fennel/DS",
-      "arm": "DS",
+      "arm": "C",
       "condition": "DeepSeek Skill",
       "score": 100,
       "seconds": 173.23810386657715,

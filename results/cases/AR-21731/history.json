@@ -777,7 +777,7 @@
     },
     {
       "run": "enterprise-confirmation/20261118/cash/ar-21731/D",
-      "arm": "D",
+      "arm": "C",
       "condition": "DeepSeek Skill",
       "score": 100,
       "seconds": 159.75694584846497,

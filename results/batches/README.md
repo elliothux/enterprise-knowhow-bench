@@ -1,6 +1,8 @@
 # Additional benchmark batches
 
-Each batch has its own frozen schedule, denominator and checksums. Its index records every assigned case and control. Eligible improvements have a case directory with first submissions, scores, environment and ordered actions. Raw agent and process logs remain in the private evidence store.
+[Technical Report](../REPORT.md) · [Benchmark Overview](../../README.md) · [简体中文报告](../REPORT.zh-CN.md)
+
+Each batch has its own frozen schedule and denominator. Its index records every assigned case and control. Eligible improvements have a case directory with first submissions, scores, environment and ordered actions. Raw agent and process logs remain in the private evidence store.
 
 [Browse batch directories](./) · [2026-11-19 targeted remittance regression](layout-regression-20261119/README.md)
 

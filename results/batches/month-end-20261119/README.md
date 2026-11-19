@@ -2,7 +2,7 @@
 
 Each operator opened a fresh Guest window, read the request in Rocket.Chat, used five ownCloud documents and posted eight invoice instructions in one message. The business grader reread the first unedited message in the designated room. The same eight-row rubric applied to all arms. The schedule, answer keys, instructions, original cash Skills and PDF packets were frozen before the first session. [Index and environment](index.json) · [Task catalog](../../../tasks/README.md)
 
-| Case | No Skill | GLM-5.3 | DeepSeek Flash | Fully correct invoices, A / B / D |
+| Case | No Skill | GLM-5.3 | DeepSeek Flash | Fully correct invoices, A / B / C |
 |---|---:|---:|---:|---|
 | [close-118](close-118/history.json) | 100 | 91.25 | 100 | 8 / 7 / 8 |
 | [close-204](close-204/history.json) | 100 | 100 | 100 | 8 / 8 / 8 |

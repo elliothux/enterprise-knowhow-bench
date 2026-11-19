@@ -720,7 +720,7 @@
     },
     {
       "run": "shortpay-residual/20261118/spruce/C",
-      "arm": "C",
+      "arm": "D",
       "condition": "full desk procedure",
       "score": 100,
       "seconds": 142.36371612548828,
@@ -1033,7 +1033,7 @@
     },
     {
       "run": "shortpay-residual/20261118/spruce/DS",
-      "arm": "DS",
+      "arm": "C",
       "condition": "DeepSeek Skill",
       "score": 100,
       "seconds": 137.9803900718689,

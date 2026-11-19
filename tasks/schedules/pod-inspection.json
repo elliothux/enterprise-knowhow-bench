@@ -3,12 +3,12 @@
     "case": "pod-47",
     "family": "pod-inspection",
     "order": "AB",
-    "control": "D"
+    "control": "C"
   },
   {
     "case": "pod-83",
     "family": "pod-inspection",
     "order": "BA",
-    "control": "D"
+    "control": "C"
   }
 ]

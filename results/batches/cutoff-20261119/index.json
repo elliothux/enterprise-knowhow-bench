@@ -5,8 +5,8 @@
       "evaluated_sha256": "132e238be20d2881bc0a87c988991df145234acedc4f9626169c643b322fec3a",
       "public_sha256": "132e238be20d2881bc0a87c988991df145234acedc4f9626169c643b322fec3a"
     },
-    "D": {
-      "source_file": "tasks/materials/cash-D-a59224b81247.txt",
+    "C": {
+      "source_file": "tasks/materials/cash-C-a59224b81247.txt",
       "evaluated_sha256": "a59224b81247410480eedd01915b02931526f5b7a21298d1036baa21fcb30c07",
       "public_sha256": "a59224b81247410480eedd01915b02931526f5b7a21298d1036baa21fcb30c07"
     }
@@ -33,7 +33,7 @@
         "unsafe_postings": 0,
         "blocked_at_cutoff": 2
       },
-      "D": {
+      "C": {
         "score": 75.0,
         "fully_correct_invoices": 6,
         "exact": false,
@@ -65,7 +65,7 @@
         "unsafe_postings": 0,
         "blocked_at_cutoff": 3
       },
-      "D": {
+      "C": {
         "score": 62.5,
         "fully_correct_invoices": 5,
         "exact": false,
@@ -82,13 +82,13 @@
       "case": "cutoff-19",
       "family": "cutoff",
       "order": "AB",
-      "control": "D"
+      "control": "C"
     },
     {
       "case": "cutoff-27",
       "family": "cutoff",
       "order": "BA",
-      "control": "D"
+      "control": "C"
     }
   ],
   "assigned_sessions": 6,

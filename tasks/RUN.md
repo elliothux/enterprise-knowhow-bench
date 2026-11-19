@@ -1,4 +1,6 @@
-# Running and scoring the benchmark
+# Running and scoring Enterprise Know-How Benchmark
+
+[Benchmark Overview](../README.md) · [Technical Report](../results/REPORT.md) · [Task Catalog](README.md)
 
 Python 3.10 or later can list tasks, run the simulated ERP, read receipts and score submissions. The default agent adapter uses a signed-in Codex CLI. Give each arm a fresh directory and model session. Give the participant only the prepared `work/TASK.md` and the business tools specified for that trial. Keep answer keys, published histories and materials for other arms with the evaluator.
 
@@ -25,7 +27,7 @@ python3 bench.py run ar-22153 --arm B --out "$runs/native"
 python3 bench.py batch finance --controls --out "$runs/finance"
 ```
 
-The native batch runs 40 A/B pairs. Adding `--controls` runs the 20 scheduled D trials and ten C trials after the main pairs, for 110 independent sessions. The simulated ERP batch runs 16 A/B pairs. Batch results go to `summary.json`. Repeating the command with the same output directory skips scored sessions. If a run stops after submission but before the result reaches disk, inspect the trial log and the original submission before resuming. [Case selection, controls and run order](schedule.json)
+The native batch runs 40 A/B pairs. Adding `--controls` runs the 20 scheduled C trials and ten D trials after the main pairs, for 110 independent sessions. The simulated ERP batch runs 16 A/B pairs. Batch results go to `summary.json`. Repeating the command with the same output directory skips scored sessions. If a run stops after submission but before the result reaches disk, inspect the trial log and the original submission before resuming. [Case selection, controls and run order](schedule.json)
 
 ## Run a case manually
 
@@ -44,13 +46,13 @@ Use `prepare` for a native case as well. Open the private room and ownCloud fold
 | Arm | Materials supplied in the 40 native finance cases |
 |---|---|
 | A | Current case documents and closed transactions |
-| B | Arm A materials plus the archived GLM-distilled Skill |
-| C | Arm A materials plus the original policy |
-| D | Arm A materials plus the archived DeepSeek-distilled Skill |
+| B | Arm A materials plus the archived GLM-distilled Skill ([Lynx Cognition](https://enterprise.lynxai.work)) |
+| C | Arm A materials plus the archived DeepSeek-distilled Skill ([Lynx Cognition](https://enterprise.lynxai.work)) |
+| D | Arm A materials plus the original written policy |
 
-The original two-invoice batch schedules A and B. Its follow-up adds the archived DeepSeek Skill as arm D on all 16 cases. To run one DeepSeek trial, use `python3 bench.py run RMT-765 --arm D --out "$runs/deepseek"`. To run the three-way comparison from scratch, use `python3 bench.py batch custom --schedule tasks/schedules/remittance-distillers.json --controls --out "$runs/three-way"`. [Matched scores and receipts](../results/distillers.md)
+The original two-invoice batch schedules A and B. Its follow-up adds the archived DeepSeek Skill as arm C on all 16 cases. To run one DeepSeek trial, use `python3 bench.py run RMT-765 --arm C --out "$runs/deepseek"`. To run the three-way comparison from scratch, use `python3 bench.py batch custom --schedule tasks/schedules/remittance-distillers.json --controls --out "$runs/three-way"`. [Matched scores and receipts](../results/distillers.md)
 
-Historical approval tasks keep their original arm definitions, where D includes the policy and a Skill. For T-320, C provides an ordinary handoff. The workspace contains only the materials for its assigned arm. Archived Skills retain the language used in the experiments. Exported attachments represent absolute paths from the original machine as `<trial-workspace>`.
+Historical approval tasks keep their original arm definitions, where C provides the written policy and D includes both the policy and a Skill. For T-320, C provides an ordinary handoff. The workspace contains only the materials for its assigned arm. Archived Skills retain the language used in the experiments. Exported attachments represent absolute paths from the original machine as `<trial-workspace>`.
 
 ## How scores are calculated
 
@@ -73,7 +75,7 @@ For a custom batch, pass `bench.py batch custom --schedule SCHEDULE.json --out D
 
 ### Month-end cash application
 
-Start ownCloud and Rocket.Chat, give the signed-in operator native Chrome Computer Use access, and run the following from the repository root on an idle desktop. Six sessions run sequentially, one Guest window per trial. A is the baseline, B receives the archived GLM-5.3 cash Skill and D the archived DeepSeek Flash cash Skill. Every arm receives the current controller instruction.
+Start ownCloud and Rocket.Chat, give the signed-in operator native Chrome Computer Use access, and run the following from the repository root on an idle desktop. Six sessions run sequentially, one Guest window per trial. A is the baseline, B receives the archived GLM-5.3 cash Skill and C the archived DeepSeek Flash cash Skill. Every arm receives the current controller instruction.
 
 ```sh
 python3 bench.py batch custom --schedule tasks/schedules/month-end.json --controls --out "$runs/month-end"
@@ -83,7 +85,7 @@ Finance grades each invoice in the first unedited message. Correct discount and 
 
 ### Joint receivables and payables close
 
-Each shift has one simulated ERP receipt covering eight counterparties. The desk provides the current records with `./work read rules`, previous postings with `./work read invoices-history` and a write-once submission command. A receives those records. B and D also receive their respective distiller's archived cash application Skill and raw payment approval candidate.
+Each shift has one simulated ERP receipt covering eight counterparties. The desk provides the current records with `./work read rules`, previous postings with `./work read invoices-history` and a write-once submission command. A receives those records. B and C also receive their respective distiller's archived cash application Skill and raw payment approval candidate.
 
 ```sh
 python3 bench.py batch custom --schedule tasks/schedules/joint-close.json --controls --out "$runs/joint-close"
@@ -97,7 +99,7 @@ Run `python3 bench.py batch custom --schedule tasks/schedules/pod-inspection.jso
 
 ### Bank lockbox matching
 
-Run `python3 bench.py batch custom --schedule tasks/schedules/lockbox.json --controls --out "$runs/lockbox"`. A receives the bank registers and the ERP's candidate suggestions. B and D also receive the archived invoice reconciliation Skill from the respective distiller. Each first submission receives one point per invoice posted to its verified bank receipt. An invoice used twice earns no credit. The score is the percentage of 36 placements correct. Use `python3 evaluation/verify_lockbox.py` to independently enumerate every locally balanced triple, verify the ERP suggestions and prove the full allocation is unique for each shift. The participant desk uses the same read-and-submit interface as the other simulated ERP tasks. The verifier runs outside the participant session.
+Run `python3 bench.py batch custom --schedule tasks/schedules/lockbox.json --controls --out "$runs/lockbox"`. A receives the bank registers and the ERP's candidate suggestions. B and C also receive the archived invoice reconciliation Skill from the respective distiller. Each first submission receives one point per invoice posted to its verified bank receipt. An invoice used twice earns no credit. The score is the percentage of 36 placements correct. Use `python3 evaluation/verify_lockbox.py` to independently enumerate every locally balanced triple, verify the ERP suggestions and prove the full allocation is unique for each shift. The participant desk uses the same read-and-submit interface as the other simulated ERP tasks. The verifier runs outside the participant session.
 
 ### Invoices still open at cutoff
 

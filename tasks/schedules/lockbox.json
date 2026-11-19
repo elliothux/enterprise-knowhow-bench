@@ -3,12 +3,12 @@
     "case": "lockbox-41",
     "family": "lockbox",
     "order": "AB",
-    "control": "D"
+    "control": "C"
   },
   {
     "case": "lockbox-76",
     "family": "lockbox",
     "order": "BA",
-    "control": "D"
+    "control": "C"
   }
 ]

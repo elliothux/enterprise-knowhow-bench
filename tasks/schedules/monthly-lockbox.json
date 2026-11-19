@@ -3,12 +3,12 @@
     "case": "lockbox-month-11",
     "family": "monthly-lockbox",
     "order": "AB",
-    "control": "D"
+    "control": "C"
   },
   {
     "case": "lockbox-month-23",
     "family": "monthly-lockbox",
     "order": "BA",
-    "control": "D"
+    "control": "C"
   }
 ]

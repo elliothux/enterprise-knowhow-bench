@@ -5,8 +5,8 @@
       "evaluated_sha256": "132e238be20d2881bc0a87c988991df145234acedc4f9626169c643b322fec3a",
       "public_sha256": "132e238be20d2881bc0a87c988991df145234acedc4f9626169c643b322fec3a"
     },
-    "D": {
-      "source_file": "tasks/materials/cash-D-a59224b81247.txt",
+    "C": {
+      "source_file": "tasks/materials/cash-C-a59224b81247.txt",
       "evaluated_sha256": "a59224b81247410480eedd01915b02931526f5b7a21298d1036baa21fcb30c07",
       "public_sha256": "a59224b81247410480eedd01915b02931526f5b7a21298d1036baa21fcb30c07"
     }
@@ -25,7 +25,7 @@
         "exact": true,
         "valid_delivery": true
       },
-      "D": {
+      "C": {
         "score": 100.0,
         "fully_correct_invoices": 8,
         "exact": true,
@@ -45,7 +45,7 @@
         "exact": true,
         "valid_delivery": true
       },
-      "D": {
+      "C": {
         "score": 100.0,
         "fully_correct_invoices": 8,
         "exact": true,
@@ -58,13 +58,13 @@
       "case": "pod-47",
       "family": "pod-inspection",
       "order": "AB",
-      "control": "D"
+      "control": "C"
     },
     {
       "case": "pod-83",
       "family": "pod-inspection",
       "order": "BA",
-      "control": "D"
+      "control": "C"
     }
   ],
   "assigned_sessions": 6,

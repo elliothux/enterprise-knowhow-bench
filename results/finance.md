@@ -1,6 +1,8 @@
 # Cross-application finance handoffs
 
-The scheduled evaluation covered 40 new finance cases and 110 independent model sessions on a macOS VM. In each case the operator used native Chrome to pick up a request in a private Rocket.Chat queue, read current and historical records in ownCloud, and submit cash application instructions or a payment release decision to finance. The two workflows used Skills distilled before the evaluation. All 40 cases were held out of training.
+[Technical Report](REPORT.md) · [Benchmark Overview](../README.md) · [简体中文报告](REPORT.zh-CN.md)
+
+The scheduled evaluation covered 40 new finance cases and 110 independent model sessions on a macOS VM. In each case the operator used native Chrome across containerized `Rocket.Chat` and `ownCloud` services derived from [TheAgentCompany](https://github.com/TheAgentCompany/TheAgentCompany) to pick up a private queue request, read current and historical records, and submit cash application instructions or a payment release decision to finance. The two workflows used Skills captured and distilled from earlier demonstrations with [Lynx Cognition](https://enterprise.lynxai.work) before the evaluation. All 40 cases were held out of training.
 
 ## Results for all scheduled cases
 

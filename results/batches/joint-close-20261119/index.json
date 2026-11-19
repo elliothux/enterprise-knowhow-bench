@@ -5,7 +5,7 @@
       "evaluated_sha256": "b6239c69a2fc00ff5546504d7627419cf5e589f0cba8f0c4610c60b71cca3b2c",
       "public_sha256": "cdfb998a6e24d36e5fc920bb1e2fa988be127a3c79dbe33331fdba6706e41fc6"
     },
-    "D": {
+    "C": {
       "source_file": "tasks/materials/joint-close-deepseek.txt",
       "evaluated_sha256": "08c34d05c7fdf252bb10355515bbeb928454c4565b6ee21cadbb69e64b72db7e",
       "public_sha256": "40abfa5f30e742cbe5e1fa0ee3396bd31b1ca5501b95b663e05fef445d05645b"
@@ -25,7 +25,7 @@
         "exact": true,
         "valid_delivery": true
       },
-      "D": {
+      "C": {
         "score": 100.0,
         "fully_correct_invoices": 24,
         "exact": true,
@@ -45,7 +45,7 @@
         "exact": false,
         "valid_delivery": true
       },
-      "D": {
+      "C": {
         "score": 100.0,
         "fully_correct_invoices": 24,
         "exact": true,
@@ -58,13 +58,13 @@
       "case": "net-31",
       "order": "AB",
       "family": "joint-close",
-      "control": "D"
+      "control": "C"
     },
     {
       "case": "net-42",
       "order": "BA",
       "family": "joint-close",
-      "control": "D"
+      "control": "C"
     }
   ],
   "assigned_sessions": 6,

@@ -2,7 +2,7 @@
 
 The original finance and remittance schedules contain 56 cases. Further close, inspection, cutoff and lockbox schedules are listed below. The archive adds 15 historical cases, two of which have an additional ledger variant listed separately. Select a case ID to read the participant prompt. For a manual trial, run `python3 bench.py prepare CASE --arm A --out TRIAL` and give the participant the generated `TRIAL/work/TASK.md` and its assigned tools. Use a new trial directory for each arm. In native tasks the runner fills the double-brace placeholders with the trial's room, folder and Chrome Guest marker.
 
-[Running and scoring](RUN.md) · [Training and extension tasks](../cases/README.md) · [Machine-readable task manifest](manifest.json) · [Frozen run order and controls](schedule.json)
+[Benchmark Overview](../README.md) · [Technical Report](../results/REPORT.md) · [Running and scoring](RUN.md) · [Training and extension tasks](../cases/README.md) · [Machine-readable task manifest](manifest.json) · [Frozen run order and controls](schedule.json)
 
 ## Native Chrome finance cases
 
@@ -53,22 +53,22 @@ The original finance and remittance schedules contain 56 cases. Further close, i
 
 | Case | Inputs | Available arms |
 |---|---|---|
-| [RMT-716](RMT-716/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / D |
-| [RMT-723](RMT-723/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / D |
-| [RMT-730](RMT-730/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / D |
-| [RMT-737](RMT-737/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / D |
-| [RMT-744](RMT-744/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / D |
-| [RMT-751](RMT-751/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / D |
-| [RMT-758](RMT-758/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / D |
-| [RMT-765](RMT-765/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / D |
-| [RMT-772](RMT-772/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / D |
-| [RMT-779](RMT-779/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / D |
-| [RMT-786](RMT-786/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / D |
-| [RMT-793](RMT-793/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / D |
-| [RMT-800](RMT-800/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / D |
-| [RMT-807](RMT-807/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / D |
-| [RMT-814](RMT-814/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / D |
-| [RMT-821](RMT-821/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / D |
+| [RMT-716](RMT-716/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / C |
+| [RMT-723](RMT-723/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / C |
+| [RMT-730](RMT-730/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / C |
+| [RMT-737](RMT-737/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / C |
+| [RMT-744](RMT-744/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / C |
+| [RMT-751](RMT-751/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / C |
+| [RMT-758](RMT-758/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / C |
+| [RMT-765](RMT-765/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / C |
+| [RMT-772](RMT-772/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / C |
+| [RMT-779](RMT-779/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / C |
+| [RMT-786](RMT-786/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / C |
+| [RMT-793](RMT-793/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / C |
+| [RMT-800](RMT-800/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / C |
+| [RMT-807](RMT-807/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / C |
+| [RMT-814](RMT-814/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / C |
+| [RMT-821](RMT-821/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B / C |
 
 ## Historical cases and ledger variants
 
@@ -98,8 +98,8 @@ Each task requires the operator to reconcile eight invoices across five document
 
 | Task | Participant packet | Available arms |
 |---|---|---|
-| [close-118](close-118/TASK.md) | [Journal, advice, approvals, register and closing instruction](../mock/month-end/close-118) | A / B / D |
-| [close-204](close-204/TASK.md) | [Journal, advice, approvals, register and closing instruction](../mock/month-end/close-204) | A / B / D |
+| [close-118](close-118/TASK.md) | [Journal, advice, approvals, register and closing instruction](../mock/month-end/close-118) | A / B / C |
+| [close-204](close-204/TASK.md) | [Journal, advice, approvals, register and closing instruction](../mock/month-end/close-204) | A / B / C |
 
 ## Joint receivables and payables close in the simulated ERP
 
@@ -107,8 +107,8 @@ For each of eight counterparties, post two short payments, carry the collectible
 
 | Shift | Current ledgers | Available arms |
 |---|---|---|
-| [net-31](net-31/TASK.md) | [Current records and mandates](../mock/joint-close/net-31/current-registers.txt) | A / B / D |
-| [net-42](net-42/TASK.md) | [Current records and mandates](../mock/joint-close/net-42/current-registers.txt) | A / B / D |
+| [net-31](net-31/TASK.md) | [Current records and mandates](../mock/joint-close/net-31/current-registers.txt) | A / B / C |
+| [net-42](net-42/TASK.md) | [Current records and mandates](../mock/joint-close/net-42/current-registers.txt) | A / B / C |
 
 The [bank chargeback workbook cases](../cases/chargebacks/README.md) have a separate entry point for XLSX delivery and multi-state recalculation.
 
@@ -118,8 +118,8 @@ Each case provides two signed receiving diagrams. Read the bay quantities and ma
 
 | Case | North dock | South dock | Available arms |
 |---|---|---|---|
-| [pod-47](pod-47/TASK.md) | [Inspection sheet](../mock/pod-inspection/pod-47/North.png) | [Inspection sheet](../mock/pod-inspection/pod-47/South.png) | A / B / D |
-| [pod-83](pod-83/TASK.md) | [Inspection sheet](../mock/pod-inspection/pod-83/North.png) | [Inspection sheet](../mock/pod-inspection/pod-83/South.png) | A / B / D |
+| [pod-47](pod-47/TASK.md) | [Inspection sheet](../mock/pod-inspection/pod-47/North.png) | [Inspection sheet](../mock/pod-inspection/pod-47/South.png) | A / B / C |
+| [pod-83](pod-83/TASK.md) | [Inspection sheet](../mock/pod-inspection/pod-83/North.png) | [Inspection sheet](../mock/pod-inspection/pod-83/South.png) | A / B / C |
 
 ## Bank lockbox matching
 
@@ -127,8 +127,8 @@ All 36 invoices and all twelve receipts are present. Each bank deposit covers th
 
 | Shift | Register and candidate suggestions | Available arms |
 |---|---|---|
-| [lockbox-41](lockbox-41/TASK.md) | [Ledger and ERP suggestions](../mock/lockbox/lockbox-41) | A / B / D |
-| [lockbox-76](lockbox-76/TASK.md) | [Ledger and ERP suggestions](../mock/lockbox/lockbox-76) | A / B / D |
+| [lockbox-41](lockbox-41/TASK.md) | [Ledger and ERP suggestions](../mock/lockbox/lockbox-41) | A / B / C |
+| [lockbox-76](lockbox-76/TASK.md) | [Ledger and ERP suggestions](../mock/lockbox/lockbox-76) | A / B / C |
 
 ## Invoices still open at cutoff
 
@@ -136,8 +136,8 @@ Each eight-invoice shift includes a signed status register identifying external 
 
 | Shift | Status register and invoices | Available arms |
 |---|---|---|
-| [cutoff-19](cutoff-19/TASK.md) | [Evidence at 17:00](../mock/cutoff/cutoff-19/status-and-ledgers.txt) | A / B / D |
-| [cutoff-27](cutoff-27/TASK.md) | [Evidence at 17:00](../mock/cutoff/cutoff-27/status-and-ledgers.txt) | A / B / D |
+| [cutoff-19](cutoff-19/TASK.md) | [Evidence at 17:00](../mock/cutoff/cutoff-19/status-and-ledgers.txt) | A / B / C |
+| [cutoff-27](cutoff-27/TASK.md) | [Evidence at 17:00](../mock/cutoff/cutoff-27/status-and-ledgers.txt) | A / B / C |
 
 ### Month-end lockbox shifts
 
@@ -145,5 +145,5 @@ For each larger shift the ERP contains 108 open invoices, 18 electronic remittan
 
 | Shift | Source registers and exact candidate triples | Available arms |
 |---|---|---|
-| [lockbox-month-11](lockbox-month-11/TASK.md) | [Inputs](../mock/lockbox/lockbox-month-11) | A / B / D |
-| [lockbox-month-23](lockbox-month-23/TASK.md) | [Inputs](../mock/lockbox/lockbox-month-23) | A / B / D |
+| [lockbox-month-11](lockbox-month-11/TASK.md) | [Inputs](../mock/lockbox/lockbox-month-11) | A / B / C |
+| [lockbox-month-23](lockbox-month-23/TASK.md) | [Inputs](../mock/lockbox/lockbox-month-23) | A / B / C |

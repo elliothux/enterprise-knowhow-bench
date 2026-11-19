@@ -1,6 +1,8 @@
 # Run histories for cases with a score improvement
 
-Each record covers one business case and includes first submissions, scores by arm, source-file checksums and actions in chronological order. Historical trials and variants for the same invoice share a record. For results across all scheduled cases, including ties, see the [native finance report](finance.md) and the [two-invoice remittance report](remittances.md). Later batches have separate denominators and case histories. [Additional batches](batches/README.md)
+[Technical Report](REPORT.md) · [Benchmark Overview](../README.md) · [简体中文报告](REPORT.zh-CN.md)
+
+Each record covers one business case and includes first submissions, scores by arm, and actions in chronological order. Historical trials and variants for the same invoice share a record. For results across all scheduled cases, including ties and regressions, see the [Technical Report](REPORT.md), the [native finance report](finance.md), and the [two-invoice remittance report](remittances.md). Later batches have separate denominators and case histories. [Additional batches](batches/README.md)
 
 | Case | Interface | Archived sessions |
 |---|---|---:|

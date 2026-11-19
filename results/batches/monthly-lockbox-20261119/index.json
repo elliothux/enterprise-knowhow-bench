@@ -5,7 +5,7 @@
       "evaluated_sha256": "b272e8ea934362508efe0b7688fae3f415ad2ba18db71f63574f094f55c37b17",
       "public_sha256": "b272e8ea934362508efe0b7688fae3f415ad2ba18db71f63574f094f55c37b17"
     },
-    "D": {
+    "C": {
       "source_file": "tasks/materials/lockbox-deepseek.txt",
       "evaluated_sha256": "88a2e34f8a778e8549c62fdec7f91fde1dcfdda6fff3f7c69f0c2baf261de1e6",
       "public_sha256": "88a2e34f8a778e8549c62fdec7f91fde1dcfdda6fff3f7c69f0c2baf261de1e6"
@@ -25,7 +25,7 @@
         "exact": false,
         "valid_delivery": true
       },
-      "D": {
+      "C": {
         "score": 50.0,
         "fully_correct_invoices": 18,
         "exact": false,
@@ -45,7 +45,7 @@
         "exact": false,
         "valid_delivery": true
       },
-      "D": {
+      "C": {
         "score": 52.77777777777778,
         "fully_correct_invoices": 19,
         "exact": false,
@@ -58,13 +58,13 @@
       "case": "lockbox-month-11",
       "family": "monthly-lockbox",
       "order": "AB",
-      "control": "D"
+      "control": "C"
     },
     {
       "case": "lockbox-month-23",
       "family": "monthly-lockbox",
       "order": "BA",
-      "control": "D"
+      "control": "C"
     }
   ],
   "assigned_sessions": 6,

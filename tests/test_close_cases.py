@@ -43,7 +43,7 @@ class CloseCaseTests(unittest.TestCase):
             for row in plan:
                 case=row['case']
                 arms=bench.read(base/case/'history.json')['arms']
-                self.assertEqual(set(arms),set('ABD'))
+                self.assertEqual(set(arms),set('ABC'))
                 for label,trial in arms.items():
                     result=bench.business(case,trial['first_submission'])
                     self.assertEqual(result['score'],index['cases'][case][label]['score'])

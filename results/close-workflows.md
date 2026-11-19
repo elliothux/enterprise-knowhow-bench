@@ -1,5 +1,7 @@
 # Where the operator finished the close, and where it stopped
 
+[Technical Report](REPORT.md) · [Benchmark Overview](../README.md) · [简体中文报告](REPORT.zh-CN.md)
+
 On two complete monthly bank ledgers, the unaided operator and both Skills correctly placed **54/108** and **57/108** invoices. Every arm submitted on time and every receipt was graded. Both ledgers admit one complete solution. The missing placements came from bank receipts with several individually valid invoice matches that had to be reconciled across the entire ledger. [All six first submissions and the uniqueness check](batches/monthly-lockbox-20261119/README.md)
 
 | Workflow and interface | Cases | Metric | No Skill | GLM-5.3 | DeepSeek Flash |

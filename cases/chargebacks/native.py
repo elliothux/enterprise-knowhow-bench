@@ -114,7 +114,7 @@ if __name__=='__main__':
         parser.error('Native LibreOffice Calc must be installed in /Applications')
     root=args.out.resolve()
     root.mkdir(exist_ok=True,parents=True)
-    jobs=[(c,a) for c,arms in zip(CASES,('ABD','DBA')) for a in arms if (not args.case or args.case==c) and (not args.arm or args.arm==a)]
+    jobs=[(c,a) for c,arms in zip(CASES,('ABC','CBA')) for a in arms if (not args.case or args.case==c) and (not args.arm or args.arm==a)]
     files=[HERE/f for f in ('run.py','grade.py','native.py','native_task.md','task.md')]
     files += [ROOT/'bench.py',ROOT/'mock/seed.py',*(HERE/c/'template.xlsx' for c,a in jobs),*(ROOT/SKILLS[a] for c,a in jobs if SKILLS[a])]
     plan=dict(jobs=jobs,model=args.model,budget_seconds=900,app_info_sha256=sha(app),cli_sha256=sha(Path(shutil.which(args.codex))),

@@ -13,11 +13,11 @@
     ],
     [
       "cb-17",
-      "D"
+      "C"
     ],
     [
       "cb-28",
-      "D"
+      "C"
     ],
     [
       "cb-28",
@@ -46,7 +46,7 @@
         "checked": 384,
         "exit": 0
       },
-      "D": {
+      "C": {
         "score": 100.0,
         "exact": true,
         "receipt": "10e2b193974c07907d1d007472858f6f15b26fd4c4a81383a930441b2c77ce66",
@@ -56,7 +56,7 @@
       }
     },
     "cb-28": {
-      "D": {
+      "C": {
         "score": 100.0,
         "exact": true,
         "receipt": "c053036c8016a5271cacddffa913e6f5ec2de7eb84ff8329a4d569d12a96d981",

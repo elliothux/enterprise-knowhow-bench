@@ -3,12 +3,12 @@
     "case": "net-31",
     "order": "AB",
     "family": "joint-close",
-    "control": "D"
+    "control": "C"
   },
   {
     "case": "net-42",
     "order": "BA",
     "family": "joint-close",
-    "control": "D"
+    "control": "C"
   }
 ]

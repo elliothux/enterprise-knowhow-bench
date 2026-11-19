@@ -15,7 +15,7 @@ from grade import assess
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
-SKILLS = {'A':None,'B':'tasks/materials/attachment-132e238be20d.txt','D':'tasks/materials/cash-D-a59224b81247.txt'}
+SKILLS = {'A':None,'B':'tasks/materials/attachment-132e238be20d.txt','C':'tasks/materials/cash-C-a59224b81247.txt'}
 CASES = ('cb-17','cb-28')
 
 
@@ -104,7 +104,7 @@ if __name__=='__main__':
     args=parser.parse_args()
     root=args.out.resolve()
     root.mkdir(exist_ok=True,parents=True)
-    jobs=[(c,a) for c,arms in zip(CASES,('ABD','DBA')) for a in arms if (not args.case or args.case==c) and (not args.arm or args.arm==a)]
+    jobs=[(c,a) for c,arms in zip(CASES,('ABC','CBA')) for a in arms if (not args.case or args.case==c) and (not args.arm or args.arm==a)]
     frozen=freeze(args,root,jobs)
     with ThreadPoolExecutor(max_workers=args.workers) as pool:
         list(pool.map(lambda job:run(job,args,root,frozen),jobs))

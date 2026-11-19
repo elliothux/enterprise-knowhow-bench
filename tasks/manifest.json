@@ -6,8 +6,8 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "C": "tasks/materials/cash-C-d461368c1657.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt",
+      "D": "tasks/materials/cash-D-d461368c1657.txt"
     },
     "resources": {},
     "fixtures": "mock/finance/ar-26741"
@@ -19,8 +19,8 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "C": "tasks/materials/cash-C-d461368c1657.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt",
+      "D": "tasks/materials/cash-D-d461368c1657.txt"
     },
     "resources": {},
     "fixtures": "mock/finance/ar-22153"
@@ -32,8 +32,8 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "C": "tasks/materials/cash-C-d461368c1657.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt",
+      "D": "tasks/materials/cash-D-d461368c1657.txt"
     },
     "resources": {},
     "fixtures": "mock/finance/ar-22279"
@@ -45,8 +45,8 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "C": "tasks/materials/cash-C-d461368c1657.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt",
+      "D": "tasks/materials/cash-D-d461368c1657.txt"
     },
     "resources": {},
     "fixtures": "mock/finance/ar-21367"
@@ -58,8 +58,8 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "C": "tasks/materials/cash-C-d461368c1657.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt",
+      "D": "tasks/materials/cash-D-d461368c1657.txt"
     },
     "resources": {},
     "fixtures": "mock/finance/ar-23387"
@@ -71,8 +71,8 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "C": "tasks/materials/cash-C-d461368c1657.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt",
+      "D": "tasks/materials/cash-D-d461368c1657.txt"
     },
     "resources": {},
     "fixtures": "mock/finance/ar-23951"
@@ -84,8 +84,8 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "C": "tasks/materials/cash-C-d461368c1657.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt",
+      "D": "tasks/materials/cash-D-d461368c1657.txt"
     },
     "resources": {},
     "fixtures": "mock/finance/ar-25407"
@@ -97,8 +97,8 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "C": "tasks/materials/cash-C-d461368c1657.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt",
+      "D": "tasks/materials/cash-D-d461368c1657.txt"
     },
     "resources": {},
     "fixtures": "mock/finance/ar-21943"
@@ -110,8 +110,8 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "C": "tasks/materials/cash-C-d461368c1657.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt",
+      "D": "tasks/materials/cash-D-d461368c1657.txt"
     },
     "resources": {},
     "fixtures": "mock/finance/ar-21489"
@@ -123,8 +123,8 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "C": "tasks/materials/cash-C-d461368c1657.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt",
+      "D": "tasks/materials/cash-D-d461368c1657.txt"
     },
     "resources": {},
     "fixtures": "mock/finance/ar-25811"
@@ -136,8 +136,8 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "C": "tasks/materials/cash-C-d461368c1657.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt",
+      "D": "tasks/materials/cash-D-d461368c1657.txt"
     },
     "resources": {},
     "fixtures": "mock/finance/ar-23641"
@@ -149,8 +149,8 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "C": "tasks/materials/cash-C-d461368c1657.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt",
+      "D": "tasks/materials/cash-D-d461368c1657.txt"
     },
     "resources": {},
     "fixtures": "mock/finance/ar-25673"
@@ -162,8 +162,8 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "C": "tasks/materials/cash-C-d461368c1657.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt",
+      "D": "tasks/materials/cash-D-d461368c1657.txt"
     },
     "resources": {},
     "fixtures": "mock/finance/ar-24513"
@@ -175,8 +175,8 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "C": "tasks/materials/cash-C-d461368c1657.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt",
+      "D": "tasks/materials/cash-D-d461368c1657.txt"
     },
     "resources": {},
     "fixtures": "mock/finance/ar-24857"
@@ -188,8 +188,8 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "C": "tasks/materials/cash-C-d461368c1657.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt",
+      "D": "tasks/materials/cash-D-d461368c1657.txt"
     },
     "resources": {},
     "fixtures": "mock/finance/ar-21731"
@@ -201,8 +201,8 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "C": "tasks/materials/cash-C-d461368c1657.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt",
+      "D": "tasks/materials/cash-D-d461368c1657.txt"
     },
     "resources": {},
     "fixtures": "mock/finance/ar-26437"
@@ -214,8 +214,8 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "C": "tasks/materials/cash-C-d461368c1657.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt",
+      "D": "tasks/materials/cash-D-d461368c1657.txt"
     },
     "resources": {},
     "fixtures": "mock/finance/ar-22711"
@@ -227,8 +227,8 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "C": "tasks/materials/cash-C-d461368c1657.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt",
+      "D": "tasks/materials/cash-D-d461368c1657.txt"
     },
     "resources": {},
     "fixtures": "mock/finance/ar-25249"
@@ -240,8 +240,8 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "C": "tasks/materials/cash-C-d461368c1657.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt",
+      "D": "tasks/materials/cash-D-d461368c1657.txt"
     },
     "resources": {},
     "fixtures": "mock/finance/ar-22803"
@@ -253,8 +253,8 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "C": "tasks/materials/cash-C-d461368c1657.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt",
+      "D": "tasks/materials/cash-D-d461368c1657.txt"
     },
     "resources": {},
     "fixtures": "mock/finance/ar-24397"
@@ -266,8 +266,8 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "C": "tasks/materials/cash-C-d461368c1657.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt",
+      "D": "tasks/materials/cash-D-d461368c1657.txt"
     },
     "resources": {},
     "fixtures": "mock/finance/ar-26193"
@@ -279,8 +279,8 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "C": "tasks/materials/cash-C-d461368c1657.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt",
+      "D": "tasks/materials/cash-D-d461368c1657.txt"
     },
     "resources": {},
     "fixtures": "mock/finance/ar-26905"
@@ -292,8 +292,8 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "C": "tasks/materials/cash-C-d461368c1657.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt",
+      "D": "tasks/materials/cash-D-d461368c1657.txt"
     },
     "resources": {},
     "fixtures": "mock/finance/ar-24139"
@@ -305,8 +305,8 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "C": "tasks/materials/cash-C-d461368c1657.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt",
+      "D": "tasks/materials/cash-D-d461368c1657.txt"
     },
     "resources": {},
     "fixtures": "mock/finance/ar-23217"
@@ -318,8 +318,8 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/payable-B-4d414ffc2eba.txt",
-      "C": "tasks/materials/payable-C-61334324fd1f.txt",
-      "D": "tasks/materials/payable-D-2b542d85719f.txt"
+      "C": "tasks/materials/payable-C-2b542d85719f.txt",
+      "D": "tasks/materials/payable-D-61334324fd1f.txt"
     },
     "resources": {},
     "fixtures": "mock/finance/ap-1037"
@@ -331,8 +331,8 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/payable-B-4d414ffc2eba.txt",
-      "C": "tasks/materials/payable-C-61334324fd1f.txt",
-      "D": "tasks/materials/payable-D-2b542d85719f.txt"
+      "C": "tasks/materials/payable-C-2b542d85719f.txt",
+      "D": "tasks/materials/payable-D-61334324fd1f.txt"
     },
     "resources": {},
     "fixtures": "mock/finance/ap-924"
@@ -344,8 +344,8 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/payable-B-4d414ffc2eba.txt",
-      "C": "tasks/materials/payable-C-61334324fd1f.txt",
-      "D": "tasks/materials/payable-D-2b542d85719f.txt"
+      "C": "tasks/materials/payable-C-2b542d85719f.txt",
+      "D": "tasks/materials/payable-D-61334324fd1f.txt"
     },
     "resources": {},
     "fixtures": "mock/finance/ap-1026"
@@ -357,8 +357,8 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/payable-B-4d414ffc2eba.txt",
-      "C": "tasks/materials/payable-C-61334324fd1f.txt",
-      "D": "tasks/materials/payable-D-2b542d85719f.txt"
+      "C": "tasks/materials/payable-C-2b542d85719f.txt",
+      "D": "tasks/materials/payable-D-61334324fd1f.txt"
     },
     "resources": {},
     "fixtures": "mock/finance/ap-723"
@@ -370,8 +370,8 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/payable-B-4d414ffc2eba.txt",
-      "C": "tasks/materials/payable-C-61334324fd1f.txt",
-      "D": "tasks/materials/payable-D-2b542d85719f.txt"
+      "C": "tasks/materials/payable-C-2b542d85719f.txt",
+      "D": "tasks/materials/payable-D-61334324fd1f.txt"
     },
     "resources": {},
     "fixtures": "mock/finance/ap-839"
@@ -383,8 +383,8 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/payable-B-4d414ffc2eba.txt",
-      "C": "tasks/materials/payable-C-61334324fd1f.txt",
-      "D": "tasks/materials/payable-D-2b542d85719f.txt"
+      "C": "tasks/materials/payable-C-2b542d85719f.txt",
+      "D": "tasks/materials/payable-D-61334324fd1f.txt"
     },
     "resources": {},
     "fixtures": "mock/finance/ap-815"
@@ -396,8 +396,8 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/payable-B-4d414ffc2eba.txt",
-      "C": "tasks/materials/payable-C-61334324fd1f.txt",
-      "D": "tasks/materials/payable-D-2b542d85719f.txt"
+      "C": "tasks/materials/payable-C-2b542d85719f.txt",
+      "D": "tasks/materials/payable-D-61334324fd1f.txt"
     },
     "resources": {},
     "fixtures": "mock/finance/ap-779"
@@ -409,8 +409,8 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/payable-B-4d414ffc2eba.txt",
-      "C": "tasks/materials/payable-C-61334324fd1f.txt",
-      "D": "tasks/materials/payable-D-2b542d85719f.txt"
+      "C": "tasks/materials/payable-C-2b542d85719f.txt",
+      "D": "tasks/materials/payable-D-61334324fd1f.txt"
     },
     "resources": {},
     "fixtures": "mock/finance/ap-1059"
@@ -422,8 +422,8 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/payable-B-4d414ffc2eba.txt",
-      "C": "tasks/materials/payable-C-61334324fd1f.txt",
-      "D": "tasks/materials/payable-D-2b542d85719f.txt"
+      "C": "tasks/materials/payable-C-2b542d85719f.txt",
+      "D": "tasks/materials/payable-D-61334324fd1f.txt"
     },
     "resources": {},
     "fixtures": "mock/finance/ap-741"
@@ -435,8 +435,8 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/payable-B-4d414ffc2eba.txt",
-      "C": "tasks/materials/payable-C-61334324fd1f.txt",
-      "D": "tasks/materials/payable-D-2b542d85719f.txt"
+      "C": "tasks/materials/payable-C-2b542d85719f.txt",
+      "D": "tasks/materials/payable-D-61334324fd1f.txt"
     },
     "resources": {},
     "fixtures": "mock/finance/ap-762"
@@ -448,8 +448,8 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/payable-B-4d414ffc2eba.txt",
-      "C": "tasks/materials/payable-C-61334324fd1f.txt",
-      "D": "tasks/materials/payable-D-2b542d85719f.txt"
+      "C": "tasks/materials/payable-C-2b542d85719f.txt",
+      "D": "tasks/materials/payable-D-61334324fd1f.txt"
     },
     "resources": {},
     "fixtures": "mock/finance/ap-806"
@@ -461,8 +461,8 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/payable-B-4d414ffc2eba.txt",
-      "C": "tasks/materials/payable-C-61334324fd1f.txt",
-      "D": "tasks/materials/payable-D-2b542d85719f.txt"
+      "C": "tasks/materials/payable-C-2b542d85719f.txt",
+      "D": "tasks/materials/payable-D-61334324fd1f.txt"
     },
     "resources": {},
     "fixtures": "mock/finance/ap-953"
@@ -474,8 +474,8 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/payable-B-4d414ffc2eba.txt",
-      "C": "tasks/materials/payable-C-61334324fd1f.txt",
-      "D": "tasks/materials/payable-D-2b542d85719f.txt"
+      "C": "tasks/materials/payable-C-2b542d85719f.txt",
+      "D": "tasks/materials/payable-D-61334324fd1f.txt"
     },
     "resources": {},
     "fixtures": "mock/finance/ap-1018"
@@ -487,8 +487,8 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/payable-B-4d414ffc2eba.txt",
-      "C": "tasks/materials/payable-C-61334324fd1f.txt",
-      "D": "tasks/materials/payable-D-2b542d85719f.txt"
+      "C": "tasks/materials/payable-C-2b542d85719f.txt",
+      "D": "tasks/materials/payable-D-61334324fd1f.txt"
     },
     "resources": {},
     "fixtures": "mock/finance/ap-854"
@@ -500,8 +500,8 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/payable-B-4d414ffc2eba.txt",
-      "C": "tasks/materials/payable-C-61334324fd1f.txt",
-      "D": "tasks/materials/payable-D-2b542d85719f.txt"
+      "C": "tasks/materials/payable-C-2b542d85719f.txt",
+      "D": "tasks/materials/payable-D-61334324fd1f.txt"
     },
     "resources": {},
     "fixtures": "mock/finance/ap-911"
@@ -513,8 +513,8 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/payable-B-4d414ffc2eba.txt",
-      "C": "tasks/materials/payable-C-61334324fd1f.txt",
-      "D": "tasks/materials/payable-D-2b542d85719f.txt"
+      "C": "tasks/materials/payable-C-2b542d85719f.txt",
+      "D": "tasks/materials/payable-D-61334324fd1f.txt"
     },
     "resources": {},
     "fixtures": "mock/finance/ap-907"
@@ -526,7 +526,7 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt"
     },
     "resources": {
       "invoices-history": "mock/remittances/prior-postings.txt"
@@ -540,7 +540,7 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt"
     },
     "resources": {
       "invoices-history": "mock/remittances/prior-postings.txt"
@@ -554,7 +554,7 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt"
     },
     "resources": {
       "invoices-history": "mock/remittances/prior-postings.txt"
@@ -568,7 +568,7 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt"
     },
     "resources": {
       "invoices-history": "mock/remittances/prior-postings.txt"
@@ -582,7 +582,7 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt"
     },
     "resources": {
       "invoices-history": "mock/remittances/prior-postings.txt"
@@ -596,7 +596,7 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt"
     },
     "resources": {
       "invoices-history": "mock/remittances/prior-postings.txt"
@@ -610,7 +610,7 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt"
     },
     "resources": {
       "invoices-history": "mock/remittances/prior-postings.txt"
@@ -624,7 +624,7 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt"
     },
     "resources": {
       "invoices-history": "mock/remittances/prior-postings.txt"
@@ -638,7 +638,7 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt"
     },
     "resources": {
       "invoices-history": "mock/remittances/prior-postings.txt"
@@ -652,7 +652,7 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt"
     },
     "resources": {
       "invoices-history": "mock/remittances/prior-postings.txt"
@@ -666,7 +666,7 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt"
     },
     "resources": {
       "invoices-history": "mock/remittances/prior-postings.txt"
@@ -680,7 +680,7 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt"
     },
     "resources": {
       "invoices-history": "mock/remittances/prior-postings.txt"
@@ -694,7 +694,7 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt"
     },
     "resources": {
       "invoices-history": "mock/remittances/prior-postings.txt"
@@ -708,7 +708,7 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt"
     },
     "resources": {
       "invoices-history": "mock/remittances/prior-postings.txt"
@@ -722,7 +722,7 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt"
     },
     "resources": {
       "invoices-history": "mock/remittances/prior-postings.txt"
@@ -736,7 +736,7 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt"
     },
     "resources": {
       "invoices-history": "mock/remittances/prior-postings.txt"
@@ -750,8 +750,8 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "C": "tasks/materials/cash-C-d461368c1657.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt",
+      "D": "tasks/materials/cash-D-d461368c1657.txt"
     },
     "resources": {},
     "fixtures": "mock/historical/I-7103"
@@ -763,8 +763,8 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "C": "tasks/materials/cash-C-d461368c1657.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt",
+      "D": "tasks/materials/cash-D-d461368c1657.txt"
     },
     "resources": {},
     "fixtures": "mock/historical/I-7381"
@@ -776,8 +776,8 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "C": "tasks/materials/cash-C-d461368c1657.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt",
+      "D": "tasks/materials/cash-D-d461368c1657.txt"
     },
     "resources": {},
     "fixtures": "mock/historical/I-7423"
@@ -789,8 +789,8 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "C": "tasks/materials/cash-C-d461368c1657.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt",
+      "D": "tasks/materials/cash-D-d461368c1657.txt"
     },
     "resources": {},
     "fixtures": "mock/historical/I-7547"
@@ -979,7 +979,7 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt"
     },
     "resources": {},
     "fixtures": "mock/month-end/close-118"
@@ -991,7 +991,7 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt"
     },
     "resources": {},
     "fixtures": "mock/month-end/close-204"
@@ -1003,7 +1003,7 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/joint-close-glm.txt",
-      "D": "tasks/materials/joint-close-deepseek.txt"
+      "C": "tasks/materials/joint-close-deepseek.txt"
     },
     "resources": {
       "rules": "mock/joint-close/net-31/current-registers.txt",
@@ -1017,7 +1017,7 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/joint-close-glm.txt",
-      "D": "tasks/materials/joint-close-deepseek.txt"
+      "C": "tasks/materials/joint-close-deepseek.txt"
     },
     "resources": {
       "rules": "mock/joint-close/net-42/current-registers.txt",
@@ -1031,7 +1031,7 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt"
     },
     "resources": {
       "rules": "mock/cutoff/cutoff-19/status-and-ledgers.txt",
@@ -1045,7 +1045,7 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt"
     },
     "resources": {
       "rules": "mock/cutoff/cutoff-27/status-and-ledgers.txt",
@@ -1059,7 +1059,7 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt"
     },
     "resources": {},
     "images": [
@@ -1074,7 +1074,7 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/attachment-132e238be20d.txt",
-      "D": "tasks/materials/cash-D-a59224b81247.txt"
+      "C": "tasks/materials/cash-C-a59224b81247.txt"
     },
     "resources": {},
     "images": [
@@ -1089,7 +1089,7 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/lockbox-glm.txt",
-      "D": "tasks/materials/lockbox-deepseek.txt"
+      "C": "tasks/materials/lockbox-deepseek.txt"
     },
     "resources": {
       "rules": "mock/lockbox/lockbox-41/ledger.txt",
@@ -1103,7 +1103,7 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/lockbox-glm.txt",
-      "D": "tasks/materials/lockbox-deepseek.txt"
+      "C": "tasks/materials/lockbox-deepseek.txt"
     },
     "resources": {
       "rules": "mock/lockbox/lockbox-76/ledger.txt",
@@ -1117,7 +1117,7 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/lockbox-glm.txt",
-      "D": "tasks/materials/lockbox-deepseek.txt"
+      "C": "tasks/materials/lockbox-deepseek.txt"
     },
     "resources": {
       "rules": "mock/lockbox/lockbox-month-11/ledger.txt",
@@ -1131,7 +1131,7 @@
     "arms": {
       "A": null,
       "B": "tasks/materials/lockbox-glm.txt",
-      "D": "tasks/materials/lockbox-deepseek.txt"
+      "C": "tasks/materials/lockbox-deepseek.txt"
     },
     "resources": {
       "rules": "mock/lockbox/lockbox-month-23/ledger.txt",

@@ -1,6 +1,6 @@
 {
   "case": "cb-17",
-  "arm": "D",
+  "arm": "C",
   "exit": 0,
   "receipt": "10e2b193974c07907d1d007472858f6f15b26fd4c4a81383a930441b2c77ce66",
   "prompt_sha256": "de56a0c52ed38d47d78c5c989edc17c8e4d07bce3d7181a14d14d34c2bdb7733",

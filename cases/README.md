@@ -1,6 +1,8 @@
 # Training and extension tasks
 
-These 11 task packets include frozen inputs for independent practice and evaluation. The reported batches cover a separate set of 40 native finance cases and 16 two-invoice remittances. [Reported task catalog](../tasks/README.md)
+[Benchmark Overview](../README.md) · [Technical Report](../results/REPORT.md) · [Reported task catalog](../tasks/README.md)
+
+These 11 task packets include frozen inputs for independent practice and evaluation on the [TheAgentCompany](https://github.com/TheAgentCompany/TheAgentCompany) service stack. The reported batches cover a separate held-out set of 40 native finance cases, 16 two-invoice remittances, and subsequent close stress tests.
 
 | Task | Training | Evaluation |
 |---|---|---|

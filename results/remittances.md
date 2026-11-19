@@ -1,8 +1,10 @@
 # First submissions on two-invoice remittances
 
+[Technical Report](REPORT.md) · [Benchmark Overview](../README.md) · [简体中文报告](REPORT.zh-CN.md)
+
 The batch contained 16 independent remittances, each with two invoices to apply separately. Both arms ran each case in a fresh model session, yielding 32 source logs. The mean business score rose from 28.13 without a Skill to 94.84 with the GLM Skill. The number of remittances with two fully correct rows rose from 0/16 to 13/16.
 
-Scores improved on 15 remittances and tied on one. All 16 had a compliant first submission in both arms, and each counted once. The native demonstrations and distilled Skill came from earlier short-payment training. The evaluation used a local simulated ERP CLI to measure cash application decisions. The [native finance report](finance.md) covers cross-application execution.
+Scores improved on 15 remittances and tied on one. All 16 had a compliant first submission in both arms, and each counted once. The workflow Skill was distilled from earlier single-invoice native Chrome demonstrations with [Lynx Cognition](https://enterprise.lynxai.work) and evaluated without modification in the local simulated ERP CLI. The [native finance report](finance.md) covers cross-application execution.
 
 | Remittance | Invoices | No Skill | GLM Skill | Difference |
 |---|---|---:|---:|---:|

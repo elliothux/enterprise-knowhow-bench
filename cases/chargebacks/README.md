@@ -2,7 +2,7 @@
 
 Two held-out ledgers require Finance to close eight invoices after twelve bank events. A single receipt may pay several invoices. A chargeback must identify the specific receipt and undo its surviving applications in reverse order, even when later receipts have paid the same invoices. The two ledgers have the same shape and different amounts. This is an office workbook task with a local submission queue. [Participant instructions](task.md) · [cb-17 template](cb-17/template.xlsx) · [cb-28 template](cb-28/template.xlsx)
 
-Use Python 3 with openpyxl, LibreOffice Calc and a signed-in Codex CLI. Set `SOFFICE` if your LibreOffice executable is outside PATH and the standard macOS application directory. The adapter puts its Python interpreter on the operator's PATH. The operator may use local spreadsheet tools and code. Arm A receives the business rules and template. Arms B and D additionally receive the same archived GLM and DeepSeek cash Skills used for the native cash tasks. The budget is 900 seconds per independent session. The first submitted workbook is bound to its SHA-256 receipt.
+Use Python 3 with openpyxl, LibreOffice Calc and a signed-in Codex CLI. Set `SOFFICE` if your LibreOffice executable is outside PATH and the standard macOS application directory. The adapter puts its Python interpreter on the operator's PATH. The operator may use local spreadsheet tools and code. Arm A receives the business rules and template. Arms B and C additionally receive the same archived GLM and DeepSeek cash Skills used for the native cash tasks. The budget is 900 seconds per independent session. The first submitted workbook is bound to its SHA-256 receipt.
 
 ```sh
 python3 cases/chargebacks/run.py --case cb-17 --arm B --out /tmp/my-chargeback-trial

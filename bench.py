@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run a public Lynx Benchmark task with a person, Codex, or a stdin-based agent."""
+"""Run a public Enterprise Know-How Benchmark task with a person, Codex, or a stdin-based agent."""
 import argparse
 import hashlib
 import json

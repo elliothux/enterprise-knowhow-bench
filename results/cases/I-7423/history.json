@@ -787,7 +787,7 @@
     },
     {
       "run": "shortpay-residual/20261118/raven/DS",
-      "arm": "DS",
+      "arm": "C",
       "condition": "DeepSeek Skill",
       "score": 100,
       "seconds": 160.31883811950684,

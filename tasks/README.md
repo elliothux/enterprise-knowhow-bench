@@ -1,6 +1,6 @@
 # Task catalog
 
-The two scheduled batches contain 56 cases. The archive adds 15 historical cases, two of which have an additional ledger variant listed separately. Select a case ID to read the participant prompt. In native tasks the runner fills the double-brace placeholders with the trial's room, folder and Chrome Guest marker.
+The two scheduled batches contain 56 cases. The archive adds 15 historical cases, two of which have an additional ledger variant listed separately. Select a case ID to read the participant prompt. For a manual trial, run `python3 bench.py prepare CASE --arm A --out TRIAL` and give the participant the generated `TRIAL/work/TASK.md` and its assigned tools. Use a new trial directory for each arm. In native tasks the runner fills the double-brace placeholders with the trial's room, folder and Chrome Guest marker.
 
 [Running and scoring](RUN.md) · [Training and extension tasks](../cases/README.md) · [Machine-readable task manifest](manifest.json) · [Frozen run order and controls](schedule.json)
 
@@ -53,22 +53,22 @@ The two scheduled batches contain 56 cases. The archive adds 15 historical cases
 
 | Case | Inputs | Available arms |
 |---|---|---|
-| [RMT-716](RMT-716/TASK.md) | [Case inputs](../mock/remittances/RMT-716.json) | A / B |
-| [RMT-723](RMT-723/TASK.md) | [Case inputs](../mock/remittances/RMT-723.json) | A / B |
-| [RMT-730](RMT-730/TASK.md) | [Case inputs](../mock/remittances/RMT-730.json) | A / B |
-| [RMT-737](RMT-737/TASK.md) | [Case inputs](../mock/remittances/RMT-737.json) | A / B |
-| [RMT-744](RMT-744/TASK.md) | [Case inputs](../mock/remittances/RMT-744.json) | A / B |
-| [RMT-751](RMT-751/TASK.md) | [Case inputs](../mock/remittances/RMT-751.json) | A / B |
-| [RMT-758](RMT-758/TASK.md) | [Case inputs](../mock/remittances/RMT-758.json) | A / B |
-| [RMT-765](RMT-765/TASK.md) | [Case inputs](../mock/remittances/RMT-765.json) | A / B |
-| [RMT-772](RMT-772/TASK.md) | [Case inputs](../mock/remittances/RMT-772.json) | A / B |
-| [RMT-779](RMT-779/TASK.md) | [Case inputs](../mock/remittances/RMT-779.json) | A / B |
-| [RMT-786](RMT-786/TASK.md) | [Case inputs](../mock/remittances/RMT-786.json) | A / B |
-| [RMT-793](RMT-793/TASK.md) | [Case inputs](../mock/remittances/RMT-793.json) | A / B |
-| [RMT-800](RMT-800/TASK.md) | [Case inputs](../mock/remittances/RMT-800.json) | A / B |
-| [RMT-807](RMT-807/TASK.md) | [Case inputs](../mock/remittances/RMT-807.json) | A / B |
-| [RMT-814](RMT-814/TASK.md) | [Case inputs](../mock/remittances/RMT-814.json) | A / B |
-| [RMT-821](RMT-821/TASK.md) | [Case inputs](../mock/remittances/RMT-821.json) | A / B |
+| [RMT-716](RMT-716/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B |
+| [RMT-723](RMT-723/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B |
+| [RMT-730](RMT-730/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B |
+| [RMT-737](RMT-737/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B |
+| [RMT-744](RMT-744/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B |
+| [RMT-751](RMT-751/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B |
+| [RMT-758](RMT-758/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B |
+| [RMT-765](RMT-765/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B |
+| [RMT-772](RMT-772/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B |
+| [RMT-779](RMT-779/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B |
+| [RMT-786](RMT-786/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B |
+| [RMT-793](RMT-793/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B |
+| [RMT-800](RMT-800/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B |
+| [RMT-807](RMT-807/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B |
+| [RMT-814](RMT-814/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B |
+| [RMT-821](RMT-821/TASK.md) | [invoices-history](../mock/remittances/prior-postings.txt) | A / B |
 
 ## Historical cases and ledger variants
 
@@ -78,16 +78,16 @@ The two scheduled batches contain 56 cases. The archive adds 15 historical cases
 | [I-7381](I-7381/TASK.md) | [Case inputs](../mock/historical/I-7381) | A / B / C / D |
 | [I-7423](I-7423/TASK.md) | [Case inputs](../mock/historical/I-7423) | A / B / C / D |
 | [I-7547](I-7547/TASK.md) | [Case inputs](../mock/historical/I-7547) | A / B / C / D |
-| [INV-8259](INV-8259/TASK.md) | [Case inputs](../mock/historical/INV-8259) | A / B / C / D |
-| [INV-8259-clear](INV-8259-clear/TASK.md) | [Case inputs](../mock/historical/INV-8259) | A / B |
-| [INV-8266](INV-8266/TASK.md) | [Case inputs](../mock/historical/INV-8266) | A / B / C / D |
-| [INV-8273](INV-8273/TASK.md) | [Case inputs](../mock/historical/INV-8273) | A / B / C / D |
-| [INV-8273-clear](INV-8273-clear/TASK.md) | [Case inputs](../mock/historical/INV-8273) | A / B |
-| [INV-8287](INV-8287/TASK.md) | [Case inputs](../mock/historical/INV-8287) | A / B / C / D |
-| [INV-8294](INV-8294/TASK.md) | [Case inputs](../mock/historical/INV-8294) | A / B / C / D |
-| [INV-8322](INV-8322/TASK.md) | [Case inputs](../mock/historical/INV-8322) | A / B / C / D |
-| [INV-8329](INV-8329/TASK.md) | [Case inputs](../mock/historical/INV-8329) | A / B / C / D |
-| [INV-8336](INV-8336/TASK.md) | [Case inputs](../mock/historical/INV-8336) | A / B / C / D |
-| [INV-8350](INV-8350/TASK.md) | [Case inputs](../mock/historical/INV-8350) | A / B / C / D |
-| [INV-8385](INV-8385/TASK.md) | [Case inputs](../mock/historical/INV-8385) | A / B / C / D |
-| [T-320](T-320/TASK.md) | [Case inputs](../mock/historical/T-320) | A / B / C |
+| [INV-8259](INV-8259/TASK.md) | [invoices-history](../tasks/materials/precedents-c74b38b6b289.txt) | A / B / C / D |
+| [INV-8259-clear](INV-8259-clear/TASK.md) | [invoices-history](../tasks/materials/precedents-c74b38b6b289.txt) | A / B |
+| [INV-8266](INV-8266/TASK.md) | [invoices-history](../tasks/materials/precedents-c74b38b6b289.txt) | A / B / C / D |
+| [INV-8273](INV-8273/TASK.md) | [invoices-history](../tasks/materials/precedents-c74b38b6b289.txt) | A / B / C / D |
+| [INV-8273-clear](INV-8273-clear/TASK.md) | [invoices-history](../tasks/materials/precedents-c74b38b6b289.txt) | A / B |
+| [INV-8287](INV-8287/TASK.md) | [invoices-history](../tasks/materials/precedents-c74b38b6b289.txt) | A / B / C / D |
+| [INV-8294](INV-8294/TASK.md) | [invoices-history](../tasks/materials/precedents-c74b38b6b289.txt) | A / B / C / D |
+| [INV-8322](INV-8322/TASK.md) | [invoices-history](../tasks/materials/precedents-c74b38b6b289.txt) | A / B / C / D |
+| [INV-8329](INV-8329/TASK.md) | [invoices-history](../tasks/materials/precedents-c74b38b6b289.txt) | A / B / C / D |
+| [INV-8336](INV-8336/TASK.md) | [invoices-history](../tasks/materials/precedents-c74b38b6b289.txt) | A / B / C / D |
+| [INV-8350](INV-8350/TASK.md) | [invoices-history](../tasks/materials/precedents-c74b38b6b289.txt) | A / B / C / D |
+| [INV-8385](INV-8385/TASK.md) | [invoices-history](../tasks/materials/precedents-c74b38b6b289.txt) | A / B / C / D |
+| [T-320](T-320/TASK.md) | [Use the trial lookup tool](RUN.md#run-a-case-manually) | A / B / C |

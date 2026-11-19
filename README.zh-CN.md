@@ -34,6 +34,8 @@ python3 bench.py compare "$runs/A" "$runs/B"
 
 [有效工单目录](results/README.md)收录 46 张至少一次正式业务首交提分的独立工单，含本轮 31 张和历史 15 张。其中 20 张走原生 Chrome，26 张走模拟 ERP CLI。每张记录保留正式对照的条件、得分、首次交付、操作顺序及原始日志哈希。目录按提分筛选；报告使用预定整批作为分母。[原生 40 张全部得分](results/finance-scores.csv) · [双发票 16 张全部得分](results/remittance-scores.json) · [实测环境](results/environment.json)
 
+追加试次按冻结批次单独统计。11 月 19 日定向复跑 RMT-716，无 Skill 得 0 分，GLM Skill 得 100 分。[追加批次与回执](results/batches/README.md)
+
 ## 启动本地业务环境
 
 需要 Docker Compose v2.24 以上、Python 3 和可运行 `linux/amd64` 镜像的 Docker 引擎。从普通克隆的项目根目录运行以下命令。首次启动会下载固定摘要的上游镜像并导入 Rocket.Chat 初始数据。

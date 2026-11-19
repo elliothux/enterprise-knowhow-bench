@@ -5,7 +5,7 @@
     "prompt": "tasks/ar-26741/TASK.md",
     "arms": {
       "A": null,
-      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "B": "tasks/materials/attachment-132e238be20d.txt",
       "C": "tasks/materials/cash-C-d461368c1657.txt",
       "D": "tasks/materials/cash-D-a59224b81247.txt"
     },
@@ -18,7 +18,7 @@
     "prompt": "tasks/ar-22153/TASK.md",
     "arms": {
       "A": null,
-      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "B": "tasks/materials/attachment-132e238be20d.txt",
       "C": "tasks/materials/cash-C-d461368c1657.txt",
       "D": "tasks/materials/cash-D-a59224b81247.txt"
     },
@@ -31,7 +31,7 @@
     "prompt": "tasks/ar-22279/TASK.md",
     "arms": {
       "A": null,
-      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "B": "tasks/materials/attachment-132e238be20d.txt",
       "C": "tasks/materials/cash-C-d461368c1657.txt",
       "D": "tasks/materials/cash-D-a59224b81247.txt"
     },
@@ -44,7 +44,7 @@
     "prompt": "tasks/ar-21367/TASK.md",
     "arms": {
       "A": null,
-      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "B": "tasks/materials/attachment-132e238be20d.txt",
       "C": "tasks/materials/cash-C-d461368c1657.txt",
       "D": "tasks/materials/cash-D-a59224b81247.txt"
     },
@@ -57,7 +57,7 @@
     "prompt": "tasks/ar-23387/TASK.md",
     "arms": {
       "A": null,
-      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "B": "tasks/materials/attachment-132e238be20d.txt",
       "C": "tasks/materials/cash-C-d461368c1657.txt",
       "D": "tasks/materials/cash-D-a59224b81247.txt"
     },
@@ -70,7 +70,7 @@
     "prompt": "tasks/ar-23951/TASK.md",
     "arms": {
       "A": null,
-      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "B": "tasks/materials/attachment-132e238be20d.txt",
       "C": "tasks/materials/cash-C-d461368c1657.txt",
       "D": "tasks/materials/cash-D-a59224b81247.txt"
     },
@@ -83,7 +83,7 @@
     "prompt": "tasks/ar-25407/TASK.md",
     "arms": {
       "A": null,
-      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "B": "tasks/materials/attachment-132e238be20d.txt",
       "C": "tasks/materials/cash-C-d461368c1657.txt",
       "D": "tasks/materials/cash-D-a59224b81247.txt"
     },
@@ -96,7 +96,7 @@
     "prompt": "tasks/ar-21943/TASK.md",
     "arms": {
       "A": null,
-      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "B": "tasks/materials/attachment-132e238be20d.txt",
       "C": "tasks/materials/cash-C-d461368c1657.txt",
       "D": "tasks/materials/cash-D-a59224b81247.txt"
     },
@@ -109,7 +109,7 @@
     "prompt": "tasks/ar-21489/TASK.md",
     "arms": {
       "A": null,
-      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "B": "tasks/materials/attachment-132e238be20d.txt",
       "C": "tasks/materials/cash-C-d461368c1657.txt",
       "D": "tasks/materials/cash-D-a59224b81247.txt"
     },
@@ -122,7 +122,7 @@
     "prompt": "tasks/ar-25811/TASK.md",
     "arms": {
       "A": null,
-      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "B": "tasks/materials/attachment-132e238be20d.txt",
       "C": "tasks/materials/cash-C-d461368c1657.txt",
       "D": "tasks/materials/cash-D-a59224b81247.txt"
     },
@@ -135,7 +135,7 @@
     "prompt": "tasks/ar-23641/TASK.md",
     "arms": {
       "A": null,
-      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "B": "tasks/materials/attachment-132e238be20d.txt",
       "C": "tasks/materials/cash-C-d461368c1657.txt",
       "D": "tasks/materials/cash-D-a59224b81247.txt"
     },
@@ -148,7 +148,7 @@
     "prompt": "tasks/ar-25673/TASK.md",
     "arms": {
       "A": null,
-      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "B": "tasks/materials/attachment-132e238be20d.txt",
       "C": "tasks/materials/cash-C-d461368c1657.txt",
       "D": "tasks/materials/cash-D-a59224b81247.txt"
     },
@@ -161,7 +161,7 @@
     "prompt": "tasks/ar-24513/TASK.md",
     "arms": {
       "A": null,
-      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "B": "tasks/materials/attachment-132e238be20d.txt",
       "C": "tasks/materials/cash-C-d461368c1657.txt",
       "D": "tasks/materials/cash-D-a59224b81247.txt"
     },
@@ -174,7 +174,7 @@
     "prompt": "tasks/ar-24857/TASK.md",
     "arms": {
       "A": null,
-      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "B": "tasks/materials/attachment-132e238be20d.txt",
       "C": "tasks/materials/cash-C-d461368c1657.txt",
       "D": "tasks/materials/cash-D-a59224b81247.txt"
     },
@@ -187,7 +187,7 @@
     "prompt": "tasks/ar-21731/TASK.md",
     "arms": {
       "A": null,
-      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "B": "tasks/materials/attachment-132e238be20d.txt",
       "C": "tasks/materials/cash-C-d461368c1657.txt",
       "D": "tasks/materials/cash-D-a59224b81247.txt"
     },
@@ -200,7 +200,7 @@
     "prompt": "tasks/ar-26437/TASK.md",
     "arms": {
       "A": null,
-      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "B": "tasks/materials/attachment-132e238be20d.txt",
       "C": "tasks/materials/cash-C-d461368c1657.txt",
       "D": "tasks/materials/cash-D-a59224b81247.txt"
     },
@@ -213,7 +213,7 @@
     "prompt": "tasks/ar-22711/TASK.md",
     "arms": {
       "A": null,
-      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "B": "tasks/materials/attachment-132e238be20d.txt",
       "C": "tasks/materials/cash-C-d461368c1657.txt",
       "D": "tasks/materials/cash-D-a59224b81247.txt"
     },
@@ -226,7 +226,7 @@
     "prompt": "tasks/ar-25249/TASK.md",
     "arms": {
       "A": null,
-      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "B": "tasks/materials/attachment-132e238be20d.txt",
       "C": "tasks/materials/cash-C-d461368c1657.txt",
       "D": "tasks/materials/cash-D-a59224b81247.txt"
     },
@@ -239,7 +239,7 @@
     "prompt": "tasks/ar-22803/TASK.md",
     "arms": {
       "A": null,
-      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "B": "tasks/materials/attachment-132e238be20d.txt",
       "C": "tasks/materials/cash-C-d461368c1657.txt",
       "D": "tasks/materials/cash-D-a59224b81247.txt"
     },
@@ -252,7 +252,7 @@
     "prompt": "tasks/ar-24397/TASK.md",
     "arms": {
       "A": null,
-      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "B": "tasks/materials/attachment-132e238be20d.txt",
       "C": "tasks/materials/cash-C-d461368c1657.txt",
       "D": "tasks/materials/cash-D-a59224b81247.txt"
     },
@@ -265,7 +265,7 @@
     "prompt": "tasks/ar-26193/TASK.md",
     "arms": {
       "A": null,
-      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "B": "tasks/materials/attachment-132e238be20d.txt",
       "C": "tasks/materials/cash-C-d461368c1657.txt",
       "D": "tasks/materials/cash-D-a59224b81247.txt"
     },
@@ -278,7 +278,7 @@
     "prompt": "tasks/ar-26905/TASK.md",
     "arms": {
       "A": null,
-      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "B": "tasks/materials/attachment-132e238be20d.txt",
       "C": "tasks/materials/cash-C-d461368c1657.txt",
       "D": "tasks/materials/cash-D-a59224b81247.txt"
     },
@@ -291,7 +291,7 @@
     "prompt": "tasks/ar-24139/TASK.md",
     "arms": {
       "A": null,
-      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "B": "tasks/materials/attachment-132e238be20d.txt",
       "C": "tasks/materials/cash-C-d461368c1657.txt",
       "D": "tasks/materials/cash-D-a59224b81247.txt"
     },
@@ -304,7 +304,7 @@
     "prompt": "tasks/ar-23217/TASK.md",
     "arms": {
       "A": null,
-      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "B": "tasks/materials/attachment-132e238be20d.txt",
       "C": "tasks/materials/cash-C-d461368c1657.txt",
       "D": "tasks/materials/cash-D-a59224b81247.txt"
     },
@@ -528,8 +528,9 @@
       "B": "tasks/materials/attachment-132e238be20d.txt"
     },
     "resources": {
-      "invoices-history": "tasks/materials/precedents-22cbf156b1f1.txt"
-    }
+      "invoices-history": "mock/remittances/prior-postings.txt"
+    },
+    "ledger": "mock/remittances/RMT-800.json"
   },
   "RMT-744": {
     "group": "remittances",
@@ -540,8 +541,9 @@
       "B": "tasks/materials/attachment-132e238be20d.txt"
     },
     "resources": {
-      "invoices-history": "tasks/materials/precedents-22cbf156b1f1.txt"
-    }
+      "invoices-history": "mock/remittances/prior-postings.txt"
+    },
+    "ledger": "mock/remittances/RMT-744.json"
   },
   "RMT-730": {
     "group": "remittances",
@@ -552,8 +554,9 @@
       "B": "tasks/materials/attachment-132e238be20d.txt"
     },
     "resources": {
-      "invoices-history": "tasks/materials/precedents-22cbf156b1f1.txt"
-    }
+      "invoices-history": "mock/remittances/prior-postings.txt"
+    },
+    "ledger": "mock/remittances/RMT-730.json"
   },
   "RMT-772": {
     "group": "remittances",
@@ -564,8 +567,9 @@
       "B": "tasks/materials/attachment-132e238be20d.txt"
     },
     "resources": {
-      "invoices-history": "tasks/materials/precedents-22cbf156b1f1.txt"
-    }
+      "invoices-history": "mock/remittances/prior-postings.txt"
+    },
+    "ledger": "mock/remittances/RMT-772.json"
   },
   "RMT-716": {
     "group": "remittances",
@@ -576,8 +580,9 @@
       "B": "tasks/materials/attachment-132e238be20d.txt"
     },
     "resources": {
-      "invoices-history": "tasks/materials/precedents-22cbf156b1f1.txt"
-    }
+      "invoices-history": "mock/remittances/prior-postings.txt"
+    },
+    "ledger": "mock/remittances/RMT-716.json"
   },
   "RMT-807": {
     "group": "remittances",
@@ -588,8 +593,9 @@
       "B": "tasks/materials/attachment-132e238be20d.txt"
     },
     "resources": {
-      "invoices-history": "tasks/materials/precedents-22cbf156b1f1.txt"
-    }
+      "invoices-history": "mock/remittances/prior-postings.txt"
+    },
+    "ledger": "mock/remittances/RMT-807.json"
   },
   "RMT-723": {
     "group": "remittances",
@@ -600,8 +606,9 @@
       "B": "tasks/materials/attachment-132e238be20d.txt"
     },
     "resources": {
-      "invoices-history": "tasks/materials/precedents-22cbf156b1f1.txt"
-    }
+      "invoices-history": "mock/remittances/prior-postings.txt"
+    },
+    "ledger": "mock/remittances/RMT-723.json"
   },
   "RMT-751": {
     "group": "remittances",
@@ -612,8 +619,9 @@
       "B": "tasks/materials/attachment-132e238be20d.txt"
     },
     "resources": {
-      "invoices-history": "tasks/materials/precedents-22cbf156b1f1.txt"
-    }
+      "invoices-history": "mock/remittances/prior-postings.txt"
+    },
+    "ledger": "mock/remittances/RMT-751.json"
   },
   "RMT-793": {
     "group": "remittances",
@@ -624,8 +632,9 @@
       "B": "tasks/materials/attachment-132e238be20d.txt"
     },
     "resources": {
-      "invoices-history": "tasks/materials/precedents-22cbf156b1f1.txt"
-    }
+      "invoices-history": "mock/remittances/prior-postings.txt"
+    },
+    "ledger": "mock/remittances/RMT-793.json"
   },
   "RMT-779": {
     "group": "remittances",
@@ -636,8 +645,9 @@
       "B": "tasks/materials/attachment-132e238be20d.txt"
     },
     "resources": {
-      "invoices-history": "tasks/materials/precedents-22cbf156b1f1.txt"
-    }
+      "invoices-history": "mock/remittances/prior-postings.txt"
+    },
+    "ledger": "mock/remittances/RMT-779.json"
   },
   "RMT-814": {
     "group": "remittances",
@@ -648,8 +658,9 @@
       "B": "tasks/materials/attachment-132e238be20d.txt"
     },
     "resources": {
-      "invoices-history": "tasks/materials/precedents-22cbf156b1f1.txt"
-    }
+      "invoices-history": "mock/remittances/prior-postings.txt"
+    },
+    "ledger": "mock/remittances/RMT-814.json"
   },
   "RMT-821": {
     "group": "remittances",
@@ -660,8 +671,9 @@
       "B": "tasks/materials/attachment-132e238be20d.txt"
     },
     "resources": {
-      "invoices-history": "tasks/materials/precedents-22cbf156b1f1.txt"
-    }
+      "invoices-history": "mock/remittances/prior-postings.txt"
+    },
+    "ledger": "mock/remittances/RMT-821.json"
   },
   "RMT-737": {
     "group": "remittances",
@@ -672,8 +684,9 @@
       "B": "tasks/materials/attachment-132e238be20d.txt"
     },
     "resources": {
-      "invoices-history": "tasks/materials/precedents-22cbf156b1f1.txt"
-    }
+      "invoices-history": "mock/remittances/prior-postings.txt"
+    },
+    "ledger": "mock/remittances/RMT-737.json"
   },
   "RMT-758": {
     "group": "remittances",
@@ -684,8 +697,9 @@
       "B": "tasks/materials/attachment-132e238be20d.txt"
     },
     "resources": {
-      "invoices-history": "tasks/materials/precedents-22cbf156b1f1.txt"
-    }
+      "invoices-history": "mock/remittances/prior-postings.txt"
+    },
+    "ledger": "mock/remittances/RMT-758.json"
   },
   "RMT-765": {
     "group": "remittances",
@@ -696,8 +710,9 @@
       "B": "tasks/materials/attachment-132e238be20d.txt"
     },
     "resources": {
-      "invoices-history": "tasks/materials/precedents-22cbf156b1f1.txt"
-    }
+      "invoices-history": "mock/remittances/prior-postings.txt"
+    },
+    "ledger": "mock/remittances/RMT-765.json"
   },
   "RMT-786": {
     "group": "remittances",
@@ -708,8 +723,9 @@
       "B": "tasks/materials/attachment-132e238be20d.txt"
     },
     "resources": {
-      "invoices-history": "tasks/materials/precedents-22cbf156b1f1.txt"
-    }
+      "invoices-history": "mock/remittances/prior-postings.txt"
+    },
+    "ledger": "mock/remittances/RMT-786.json"
   },
   "I-7103": {
     "group": "historical",
@@ -717,7 +733,7 @@
     "prompt": "tasks/I-7103/TASK.md",
     "arms": {
       "A": null,
-      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "B": "tasks/materials/attachment-132e238be20d.txt",
       "C": "tasks/materials/cash-C-d461368c1657.txt",
       "D": "tasks/materials/cash-D-a59224b81247.txt"
     },
@@ -730,7 +746,7 @@
     "prompt": "tasks/I-7381/TASK.md",
     "arms": {
       "A": null,
-      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "B": "tasks/materials/attachment-132e238be20d.txt",
       "C": "tasks/materials/cash-C-d461368c1657.txt",
       "D": "tasks/materials/cash-D-a59224b81247.txt"
     },
@@ -743,7 +759,7 @@
     "prompt": "tasks/I-7423/TASK.md",
     "arms": {
       "A": null,
-      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "B": "tasks/materials/attachment-132e238be20d.txt",
       "C": "tasks/materials/cash-C-d461368c1657.txt",
       "D": "tasks/materials/cash-D-a59224b81247.txt"
     },
@@ -756,7 +772,7 @@
     "prompt": "tasks/I-7547/TASK.md",
     "arms": {
       "A": null,
-      "B": "tasks/materials/cash-B-132e238be20d.txt",
+      "B": "tasks/materials/attachment-132e238be20d.txt",
       "C": "tasks/materials/cash-C-d461368c1657.txt",
       "D": "tasks/materials/cash-D-a59224b81247.txt"
     },

@@ -1,0 +1,95 @@
+{
+  "case": "RMT-716",
+  "batch": "layout-regression-20261119",
+  "type": "packet",
+  "metric": "First-submission business score",
+  "environment": {
+    "os": "macOS-26.4-arm64-arm-64bit",
+    "architecture": "arm64",
+    "python": "3.12.16"
+  },
+  "prompt": "tasks/RMT-716/TASK.md",
+  "attachments": {
+    "A": null,
+    "B": "tasks/materials/attachment-132e238be20d.txt"
+  },
+  "resources": {
+    "invoices-history": "mock/remittances/prior-postings.txt"
+  },
+  "sessions": {
+    "A": {
+      "arm": "A",
+      "eligible": true,
+      "score": 0.0,
+      "exact": false,
+      "execution": {
+        "exit": 0,
+        "seconds": 19.923,
+        "time_limit": 300,
+        "adapter": "codex",
+        "model": "gpt-6.1-terra",
+        "prompt_sha256": "3e82d1d0b9ccfb4ed9cafe5a9db00856c573645874295644536d68aa2a797d8d"
+      },
+      "receipt": {
+        "sha256": "df319838f05fddc0ec27497d20665daf9d650822664cd2f5eac5d38fb8b9ed20"
+      },
+      "first_delivery": "I-47740,REFER\nI-43890,REFER",
+      "actions": [
+        {
+          "line": 5,
+          "operation": "read",
+          "exit": 0
+        },
+        {
+          "line": 7,
+          "operation": "submit",
+          "exit": 0
+        }
+      ],
+      "sha256": {
+        "agent.log": "b56e2d0fd3bf9f1d3f274e735642440c9c81c4b8bca92d390e25b997e7057b6c",
+        "stderr.log": "d213870fa0edb51204df82792a107f1803d0f0cfa3f21be59551bb6d29388696",
+        "execution.json": "41a16316601d520cd2bd9cae92cf2567fc374d2da033d91e804226d55ad8c063",
+        "score.json": "37cab7c3548bc21325c7e4d5f100ccdaab9627f9619d68feddabe2a31d2ce841",
+        "work/TASK.md": "3e82d1d0b9ccfb4ed9cafe5a9db00856c573645874295644536d68aa2a797d8d"
+      }
+    },
+    "B": {
+      "arm": "B",
+      "eligible": true,
+      "score": 100.0,
+      "exact": true,
+      "execution": {
+        "exit": 0,
+        "seconds": 18.334,
+        "time_limit": 300,
+        "adapter": "codex",
+        "model": "gpt-6.1-terra",
+        "prompt_sha256": "ccc102d819eddc2169dc0e4009fa5a6ccb3398049235a70e4869e79d1e1d2163"
+      },
+      "receipt": {
+        "sha256": "188ee72d5040305df6d3fbc8293cff7456840cf1c0bfcd572a3f10c8ebed707e"
+      },
+      "first_delivery": "I-47740,0.00,0.00,0.00,5.10,COLLECTIONS\nI-43890,0.00,0.00,5.00,0.00,CLOSED",
+      "actions": [
+        {
+          "line": 5,
+          "operation": "read",
+          "exit": 0
+        },
+        {
+          "line": 7,
+          "operation": "submit",
+          "exit": 0
+        }
+      ],
+      "sha256": {
+        "agent.log": "34913c482a2d887a7aed727322816c785542fd993670d9a7f8489a6d5a62bf58",
+        "stderr.log": "cc4d81fce195a88f3544d5b37b9259d3de0f38137c7434f7c68b7dbe4326da3f",
+        "execution.json": "e12c14ad5a34831bcf4877df3f2352880a0641a975f192546532cfffa7a0e86e",
+        "score.json": "729d9bc12bba4c4427f680e7c7d595b83a823a4e11bbae631eb2b31bb5f135f8",
+        "work/TASK.md": "ccc102d819eddc2169dc0e4009fa5a6ccb3398049235a70e4869e79d1e1d2163"
+      }
+    }
+  }
+}

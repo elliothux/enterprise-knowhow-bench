@@ -34,6 +34,8 @@ For a native cross-application case, start the local services described below an
 
 The archive contains 46 distinct cases with a documented improvement on at least one scored first submission. Of these, 31 come from the current batches and 15 from earlier experiments. Twenty used native Chrome and 26 used the simulated ERP CLI. Each record includes conditions, scores, first submissions, actions in order and checksums for the source logs. The reports use every case in the scheduled batch to calculate their results. [Archive of improved cases](results/README.md) · [All 40 native scores](results/finance-scores.csv) · [All 16 remittance scores](results/remittance-scores.json) · [Recorded environment](results/environment.json)
 
+Later runs are grouped by frozen batch. The November 19 targeted RMT-716 rerun scored 0 without a Skill and 100 with the GLM Skill. [Additional batches and receipts](results/batches/README.md)
+
 ## Start the local services
 
 Use Docker Compose v2.24 or later, Python 3 and a Docker engine that can run `linux/amd64` images. Run these commands at the repository root. The first start downloads upstream images pinned by digest and imports the initial Rocket.Chat data.

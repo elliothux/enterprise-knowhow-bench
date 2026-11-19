@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Load frozen task data, seed ownCloud/Rocket.Chat and verify business deliverables."""
+"""Examiner-only suite data builder, ownCloud/RocketChat preseed and verifier."""
 import argparse
 from collections import Counter
 import csv
@@ -16,8 +16,11 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
-import services as bench
-import workbook_case
+if __package__:
+    from . import services as bench, workbook_case
+else:
+    import services as bench
+    import workbook_case
 
 ROOT = Path(__file__).resolve().parents[1]
 FIXTURES = ROOT / "evaluation/suite"
@@ -37,6 +40,133 @@ PAYMENT_SOURCES = {
 }
 
 
+def payment_documents(case):
+    p = case["rules"]
+    index = ["README / payment recommendation dossier", case["id"], "SIMULATION ONLY. No money is moved; do not initiate any payment.",
+             "Review date / timezone: " + p["as_of"] + " / Singapore (UTC+08).",
+             "Event cutoff (inclusive): " + p["event_cutoff"],
+             "Recorded cutoff (inclusive): " + p["recorded_cutoff"],
+             "", "Output roster: one recommendation for EACH of these eight business keys:"]
+    index += [r["vendor_id"] + " / " + r["invoice_id"] for r in case["roster"]]
+    index += ["", "Document index (read all eight PDFs; no other sources are required):",
+              "01-readme-policy.pdf: this index and current policy, pages 2-3.",
+              "02-archived-policy.pdf: prior policy retained for audit; check applicability.",
+              "03-exception-bulletin.pdf: published exception approvals, with scope and limits.",
+              "04-invoice-revisions.pdf: invoice versions; 05-po-receipts.pdf: PO and receipts.",
+              "06-bank-controls.pdf: bank changes and verification; 07-hold-events.pdf: holds.",
+              "08-settlement-register.pdf: credits, payments and duplicate assessments.",
+              "", "Deliver payment-release.csv with the seven columns in the task.",
+              "No rules, answers or approvals are supplied by chat. This dossier is complete."]
+    policy = ["CURRENT PAYMENT RELEASE POLICY / " + p["policy_id"],
+              "Status APPROVED; effective from " + p["policy_effective_from"] + "; no expiry.",
+              "This replaces " + p["old_policy_id"] + ". Apply to this review's event cutoff.",
+              "", "1. Scope and time", "Business key is (vendor_id, invoice_id), never invoice_id alone.",
+              "For EVERY ledger, use a record only when BOTH event_on <= event cutoff AND",
+              "recorded_on <= recorded cutoff (index page 1). Ignore other records completely.",
+              "Select greatest numeric revision per invoice business key AFTER time filtering.",
+              "Then check its status; never revert to an older POSTED revision if latest is VOID/DRAFT.",
+              "Equal copies of the same revision/entry count once; conflicting copies are invalid data.",
+              "PO versions group by (vendor_id,po_id); receipt versions by receipt_id; settlement",
+              "versions by (vendor_id,entry_id). Select greatest revision before status checks.",
+              "", "2. Evaluate ALL gates, without short-circuiting on an earlier failure",
+              "NOT_POSTED: the selected invoice status is anything other than POSTED.",
+              "DUPLICATE: a latest eligible DUPLICATE_AUDIT for that business key is CONFIRMED.",
+              "NO_BALANCE: gross minus POSTED CREDIT minus SETTLED PAYMENT is <= 0.",
+              "Only settlement entries matching BOTH vendor_id and invoice_id may be applied.",
+              "All amounts include tax, in SGD. Round the final net to cents, half up.",
+              "net_payable_sgd is this book balance, including on HOLD rows; do not zero it for HOLD.",
+              "PO_MISMATCH: no matching selected APPROVED PO, or invoice gross exceeds its amount.",
+              "RECEIPT_SHORT: total selected ACCEPTED receipt amounts for this vendor/invoice/PO",
+              "is less than invoice gross. Exact cents; no percentage tolerance or cross-invoice netting."]
+    controls = ["CURRENT POLICY continued / " + p["policy_id"],
+                "3. Bank / hold / exception controls",
+                "Bank records and hold events are immutable. Their order is (event_on, sequence).",
+                "Choose latest eligible CHANGE per vendor even if its account is not verified.",
+                "The latest CHANGE must have status ACTIVE. BANK_UNVERIFIED unless a VERIFY",
+                "references that exact CHANGE ref AND account,",
+                "has status VERIFIED, role " + p["bank_verifier_role"] + ", different actor_id from",
+                "the CHANGE maker, and is strictly later in (event_on, sequence). Same timestamps",
+                "require sequence comparison. Old account verification never verifies a newer change.",
+                "bank_account_ref is the latest CHANGE account even on HOLD; blank only if none exists.",
+                "ACTIVE_HOLD: any eligible OPEN has no later CLOSE for the SAME business key AND",
+                "hold_id, by role " + "/".join(p["hold_close_roles"]) + ". Other roles or hold IDs cannot close it.",
+                "A later OPEN reopens a hold; earlier closes cannot close that new OPEN.",
+                "Exception approvals are in " + p["bulletin_id"] + ". Only role " + p["waiver_role"] + " may waive",
+                ", ".join(p["waivable_reasons"]) + ", and only reasons explicitly named on that approval.",
+                "Approval must match both business-key fields AND selected invoice revision; gross",
+                "must be <= amount_cap_sgd and valid_until >= event cutoff. Both time cutoffs apply.",
+                "NOT_POSTED, DUPLICATE, NO_BALANCE, BANK_UNVERIFIED, ACTIVE_HOLD can NEVER be waived.",
+                "", "4. Output and auditable citations", "RELEASE if no unwaived failures remain; otherwise HOLD with ALL remaining reasons.",
+                "reason_codes order: " + ";".join(p["reason_order"][:3]) + ";",
+                ";".join(p["reason_order"][3:]) + ".",
+                "Use semicolons, no skipped reasons. RELEASE reason_codes is NONE.",
+                "Evidence is the EXACT SET of: this current policy ref; bulletin ref; selected invoice;",
+                "selected matching PO; every selected matching receipt (any status); latest bank CHANGE;",
+                "every eligible VERIFY referring to that change; every eligible hold event for this key;",
+                "every selected settlement entry and every eligible exception for this key (even if invalid).",
+                "Do not cite superseded, time-excluded, other-key records or the old policy. Missing data",
+                "has no invented evidence ID. Use record ref values, not hold_id / invoice_id as citations.",
+                "Separate evidence refs with ; (comma or | also accepted). Order and duplicates don't matter.",
+                "A ref may also be written as its exact PDF filename#ref; both forms are equivalent."]
+    archived = ["ARCHIVED POLICY / " + p["old_policy_id"], "Status ARCHIVED; expired immediately before " + p["policy_effective_from"],
+                "Superseded by " + p["policy_id"] + ". Retained for audit, not applicable to this review.",
+                "Legacy controls: receipt/PO shortfalls up to 5% permitted; same-day bank checks",
+                "accepted without actor or sequence comparison; AP_CLERK could close a hold.",
+                "These legacy terms must not be used after the expiry above."]
+    docs = {"01-readme-policy.pdf": [index, policy, controls], "02-archived-policy.pdf": [archived]}
+    # Fixed small packets keep download count at eight; records retain explicit source refs.
+    groups = [("03-exception-bulletin.pdf", ["exceptions"], 5),
+              ("04-invoice-revisions.pdf", ["invoices"], 4),
+              ("05-po-receipts.pdf", ["purchase_orders", "receipts"], 8),
+              ("06-bank-controls.pdf", ["bank_events"], 7),
+              ("07-hold-events.pdf", ["hold_events"], 4),
+              ("08-settlement-register.pdf", ["settlements"], 7)]
+    for filename, collections, chunk in groups:
+        records = [(name, row) for name in collections for row in case[name]]
+        pages = []
+        for start in range(0, len(records), chunk):
+            lines = [filename + " / " + case["id"], "Published record refs; apply the policy in 01-readme-policy.pdf."]
+            if filename == "03-exception-bulletin.pdf":
+                lines += ["Bulletin ref: " + p["bulletin_id"], "Approval text cannot override the policy's non-waivable gates."]
+            for collection, row in records[start:start + chunk]:
+                lines += ["", collection + " / " + row["ref"],
+                          "event_on=" + row["event_on"] + "; recorded_on=" + row["recorded_on"]]
+                values = [f"{key}={','.join(value) if isinstance(value, list) else value}" for key, value in row.items() if key not in ("ref", "event_on", "recorded_on")]
+                lines += ["; ".join(values)]
+            pages.append(lines)
+        docs[filename] = pages
+    return docs
+
+
+def payment_task(case):
+    return f"""# payment-release / {case['id']}
+
+Prepare a simulated payment-release recommendation for every business key on the dossier roster.
+This task produces advice only. Do not initiate, schedule or approve any actual payment.
+
+ownCloud: http://localhost:8092, folder `Documents/Benchmark Suite/{case['id']}`.
+Start with `01-readme-policy.pdf` (README/index); the source dossier is complete.
+RocketChat: http://localhost:13000, room `suite-{case['id']}` (location only, no extra business facts).
+Login for both services: `theagentcompany` / `theagentcompany`.
+
+Create `payment-release.csv` with exactly these columns:
+`invoice_id,vendor_id,decision,reason_codes,net_payable_sgd,bank_account_ref,evidence_refs`.
+After generating the CSV, use TextEdit or another native text viewer through native CUA to open
+the actual local CSV file and review EVERY row visibly. Do not rebuild its contents in a data:text
+URL as a substitute for reading the file. Close the reviewed document, then return to this run's
+Chrome Guest, bring it to the
+foreground, and upload/share. This actual-file review must appear in the native recording/trace.
+Upload the CSV to the same ownCloud folder, share that CSV publicly without password/login,
+save only the URL in local `link.txt`, and post the URL in the assigned RocketChat room.
+
+Download all eight original PDFs and read them through native CUA. Business reading, download,
+review, upload, sharing and chat must use native CUA; local final-file generation is allowed.
+Do not use HTTP/APIs, DOM, PDF parsers, shell downloads, hidden fixtures/oracle, or other runs.
+Use only the assigned workspace and browser. A/B have identical task, sources and permissions.
+Time budget: {case['time_budget_seconds']} seconds. Report incomplete work honestly.
+"""
+
+
 def sha(value):
     return hashlib.sha256(value).hexdigest()
 
@@ -44,6 +174,153 @@ def sha(value):
 def money(value):
     amount = Decimal(value).quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
     return "0.00" if amount == 0 else format(amount, ".2f")
+
+
+def pdf(pages):
+    """Small text-only PDF with standard Helvetica, deterministic xref offsets."""
+    objects = [b"<< /Type /Catalog /Pages 2 0 R >>", b"", b"<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>"]
+    kids = []
+    for lines in pages:
+        wrapped = [part for line in lines for part in (textwrap.wrap(line, width=92, break_long_words=False) or [""])]
+        if len(wrapped) > 48:
+            raise ValueError("PDF page exceeds 48 lines")
+        commands = ["BT /F1 10 Tf 13 TL 40 800 Td"]
+        for line in wrapped:
+            escaped = line.replace("\\", "\\\\").replace("(", "\\(").replace(")", "\\)")
+            commands.extend([f"({escaped}) Tj", "T*"])
+        stream = ("\n".join(commands) + "\nET\n").encode("ascii")
+        page_id, stream_id = len(objects) + 1, len(objects) + 2
+        kids.append(f"{page_id} 0 R")
+        objects.append(f"<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents {stream_id} 0 R >>".encode())
+        objects.append(f"<< /Length {len(stream)} >>\nstream\n".encode() + stream + b"endstream")
+    objects[1] = f"<< /Type /Pages /Kids [{' '.join(kids)}] /Count {len(kids)} >>".encode()
+    value = bytearray(b"%PDF-1.4\n")
+    offsets = [0]
+    for number, obj in enumerate(objects, 1):
+        offsets.append(len(value))
+        value.extend(f"{number} 0 obj\n".encode() + obj + b"\nendobj\n")
+    xref = len(value)
+    value.extend(f"xref\n0 {len(objects)+1}\n0000000000 65535 f \n".encode())
+    for offset in offsets[1:]:
+        value.extend(f"{offset:010d} 00000 n \n".encode())
+    value.extend(f"trailer\n<< /Size {len(objects)+1} /Root 1 0 R >>\nstartxref\n{xref}\n%%EOF\n".encode())
+    return bytes(value)
+
+
+def rules(case):
+    if case["family"] == "payment-release":
+        return ["Source location/index: 01-readme-policy.pdf in the assigned ownCloud case folder.",
+                "Simulation only; submit recommendations, never initiate actual payments.",
+                "No business rules or computed answers are supplied in chat."]
+    p = case["rules"]
+    lines = [f"Benchmark Suite / {case['id']}", "Authoritative rules - all dates inclusive; all money SGD.", f"Business cutoff: {p['as_of']}. Use this date, not the computer clock."]
+    if case["family"] == "landed-cost":
+        lines += [f"Order quantity: {p['quantity']}. Total order budget including tax: SGD {p['budget']}.", f"Minimum CPU cores {p['cpu_cores']}; RAM {p['ram_gb']} GB; warranty {p['warranty_months']} months.", f"Maximum delivery lead time: {p['lead_days']} days. Tax rate: {p['tax_rate']}.", "For each vendor first retain ACTIVE quotes issued on/before cutoff and valid_until on/after it.", "Choose the greatest (issued_on, revision) among those valid quotes for that vendor.", "Then test hardware, warranty, lead time and budget; never fall back to an older quote.", "Unit price is per server. Shipping is ONCE for the whole order, not per server.", "Tax basis applies to BOTH unit price and shipping; no other charges or discounts.", "EXCLUSIVE: landed = (quantity * unit price + shipping) * (1 + tax rate).", "INCLUSIVE: landed = quantity * unit price + shipping; do not add tax again.", "Round only the final landed total to cents, half up; compare rounded total <= budget.", "Budget remaining = budget - rounded landed total. Include EVERY qualifying vendor only."]
+    elif case["family"] == "invoice-reconciliation":
+        lines += ["Invoice business key = (vendor_id, invoice_id). Copies across registers are duplicates.", "Deduplicate invoices by greatest (updated_on, revision) on/before cutoff BEFORE filtering status.", "Only latest POSTED invoices issued on/before cutoff enter reconciliation; VOID/DRAFT excluded.", "Credit notes deduplicate by credit_id; payments by payment_id (greatest updated_on, revision).", "Apply only POSTED credits and SETTLED payments, with event_on and updated_on <= cutoff.", "Match both vendor_id and invoice_id. PENDING/FAILED/REVERSED payments do not reduce balance.", "Amounts are already tax-inclusive; do not recalculate tax. No cross-invoice netting.", "Balance = gross - applicable credits - settled payments, rounded half up to cents.", "Output ALL posted invoices, including zero balances and partially paid invoices.", "Status: negative=CREDIT_BALANCE; zero=SETTLED; positive and due_on<cutoff=OVERDUE;", "otherwise OPEN. A due date equal to cutoff is OPEN. Do not trust printed paid badges."]
+    else:
+        lines += [f"Target release: {p['release_id']}. Mandatory doc_key values: {', '.join(p['required'])}.", "The register is an index; status and effective/expiry dates on each document page govern.", "For each mandatory key retain only target-release pages with status APPROVED, approved_on", "and effective_on <= cutoff, and expires_on blank or >= cutoff. DRAFT/ARCHIVED excluded.", "Choose the greatest numeric revision among eligible pages, not the newest filename.", "A future approved revision does not displace an earlier eligible approved revision.", "Output one row per mandatory key. Selected page: status READY, issue blank.", "No eligible page: status MISSING; issue NO_APPROVED_EFFECTIVE_DOCUMENT;", "document_id,revision,source_file,page,effective_on must all be empty in a missing row.", "Use the original PDF filename and 1-based physical page number. Do not invent missing files."]
+    output = OUTPUTS[case["family"]]
+    lines += ["", f"Deliver {output['filename']} as UTF-8 CSV, exact header:", ",".join(output["columns"]), "Row order does not affect grading. Numbers without currency signs or thousands separators.", "Upload the CSV to the same ownCloud case folder. Share the CSV publicly (no password/login).", "Save only its public URL in local link.txt and post that URL in the suite RocketChat room."]
+    return lines
+
+
+def documents(case):
+    if case["family"] == "payment-release":
+        return payment_documents(case)
+    docs = {"rules.pdf": [rules(case)]}
+    family = case["family"]
+    if family == "landed-cost":
+        for vendor in sorted({q["vendor_id"] for q in case["quotes"]}):
+            lines = [f"Supplier quotation file / {vendor}", "Amounts SGD; separate shipping charged once per order.", ""]
+            for q in case["quotes"]:
+                if q["vendor_id"] == vendor:
+                    lines += [f"Quote {q['quote_id']} / revision {q['revision']} / {q['state']}", f"Issued {q['issued_on']}; valid through {q['valid_until']}", f"CPU cores {q['cpu_cores']}; RAM GB {q['ram_gb']}; warranty months {q['warranty_months']}", f"Lead days {q['lead_days']}; unit price {q['unit_price']}; shipping {q['shipping']}", f"Tax basis: {q['tax_basis']}", ""]
+            docs[f"quotes-{vendor.lower()}.pdf"] = [lines]
+    elif family == "invoice-reconciliation":
+        for name, records in case["registers"].items():
+            lines = [name.replace("-", " ").title(), "Latest record rules are in rules.pdf; repeated IDs are not new transactions.", ""]
+            for row in records:
+                lines += ["; ".join(f"{key}={value}" for key, value in row.items()), ""]
+            docs[name + ".pdf"] = [lines]
+    else:
+        index = ["Release document register / index", f"Release requested: {case['rules']['release_id']}", "Open the listed pages; this index does not confer approval.", ""]
+        for filename, records in case["packets"].items():
+            docs[filename] = []
+            for page, row in enumerate(records, 1):
+                docs[filename].append([f"Controlled document / {row['document_id']}", ""] + [f"{key}: {value}" for key, value in row.items()] + ["", "Document body: " + row["body"]])
+                index.append(f"{row['doc_key']} / {row['document_id']} / revision {row['revision']} -> {filename} page {page}")
+        docs["document-register.pdf"] = [index]
+    return docs
+
+
+def task(case):
+    if case["family"] == "payment-release":
+        return payment_task(case)
+    output = OUTPUTS[case["family"]]
+    goal = {"landed-cost": "Compare procurement quotes and deliver every supplier meeting all specifications and the tax-inclusive order budget.", "invoice-reconciliation": "Reconcile the invoice registers, credit notes and remittances into current per-invoice balances.", "release-package": "Prepare a release manifest containing the latest approved effective document for each mandatory item and explicit missing items."}[case["family"]]
+    return f"""# {case['family']} / {case['id']}
+
+{goal}
+
+Use ownCloud http://localhost:8092, folder `Documents/Benchmark Suite/{case['id']}`.
+Read `rules.pdf` first and all other source PDFs. The complete business rules are public there.
+RocketChat http://localhost:13000 private room `suite-{case['id']}` contains the same fixed-facts bulletin.
+Login for both services: `theagentcompany` / `theagentcompany`.
+Existing unrelated Emma/Sarah procurement conversations are not sources for this task.
+
+Create `{output['filename']}` with exact columns `{','.join(output['columns'])}`.
+Upload it into the source folder. Create a public share of that CSV accessible without login,
+save only its URL in local `link.txt`, and post it to the suite RocketChat room.
+
+Business download, reading and upload must use native CUA. Local CSV/file generation is allowed.
+Do not read repository fixture, manifest, evaluator, tests or other runs. Do not use APIs, HTTP,
+shell downloads, PDF parsers, browser DOM or scripts to inspect business files.
+Use only this trial's workspace and browser context. Both A and B receive these same instructions,
+sources and complete rules. Target time budget: 600 seconds; report failure honestly if incomplete.
+"""
+
+
+def build():
+    entries = []
+    fixtures = sorted(FIXTURES.glob("*/fixture.json")) + sorted((ROOT / "evaluation/fixtures").glob("payment-release-*/fixture.json"))
+    for fixture in fixtures:
+        case = json.loads(fixture.read_text())
+        folder = ROOT / "cases/suite" / case["id"]
+        folder.mkdir(parents=True, exist_ok=True)
+        payloads = {folder / "task.md": task(case).encode("utf-8")}
+        sources = []
+        for filename, pages in documents(case).items():
+            path = folder / filename
+            payload = pdf(pages)
+            payloads[path] = payload
+            sources.append({"path": str(path.relative_to(ROOT)), "filename": filename, "sha256": sha(payload), "bytes": len(payload), "pages": len(pages)})
+        hashes = {str(path.relative_to(ROOT)): sha(value) for path, value in payloads.items()}
+        hashes[str(fixture.relative_to(ROOT))] = sha(fixture.read_bytes())
+        freeze = fixture.with_name("freeze.json")
+        if freeze.exists() and json.loads(freeze.read_text())["sha256"] != hashes:
+            raise ValueError("Frozen case changed; create a new case ID instead: " + case["id"])
+        for path, value in payloads.items():
+            if not path.exists():
+                path.write_bytes(value)
+            elif path.read_bytes() != value:
+                raise ValueError("Existing material differs; refusing overwrite: " + str(path))
+        if not freeze.exists():
+            freeze.write_text(json.dumps({"schema_version": 1, "case_id": case["id"], "sha256": hashes}, indent=2) + "\n")
+        entries.append({"id": case["id"], "family": case["family"], "split": case["split"], "task_path": str((folder / "task.md").relative_to(ROOT)), "task_sha256": hashes[str((folder / "task.md").relative_to(ROOT))], "freeze_path": str(freeze.relative_to(ROOT)), "remote_dir": "Documents/Benchmark Suite/" + case["id"], "room_name": "suite-" + case["id"], "sources": sources, "output": {**OUTPUTS[case["family"]], "link_filename": "link.txt"}, "time_budget_seconds": case.get("time_budget_seconds", 600), "oracle": {"algorithm": case["family"] + "-v1", "fixture_path": str(fixture.relative_to(ROOT)), "fixture_sha256": sha(fixture.read_bytes())}, "npc_policy": {"mode": "static_facts_bulletin", "authoritative_source": "rules.pdf", "facts": rules(case), "no_dynamic_model": True, "no_answer_or_qualifying_ids": True, "out_of_scope_reply": "Use this case's published source PDFs; no extra facts or computed answers are available."}})
+        if case["family"] == "payment-release":
+            entry = entries[-1]
+            entry["npc_policy"].update(mode="location_only", authoritative_source="01-readme-policy.pdf")
+            aliases = {filename + "#" + row["ref"]: row["ref"] for collection, filename in PAYMENT_SOURCES.items() for row in case[collection]}
+            aliases.update({"01-readme-policy.pdf#" + case["rules"]["policy_id"]: case["rules"]["policy_id"], "02-archived-policy.pdf#" + case["rules"]["old_policy_id"]: case["rules"]["old_policy_id"], "03-exception-bulletin.pdf#" + case["rules"]["bulletin_id"]: case["rules"]["bulletin_id"]})
+            entry["output"]["evidence_aliases"] = aliases
+            entry["capture_requirements"] = "Native CUA opens the actual generated CSV in TextEdit/text viewer; review every row; return to foreground Chrome Guest before upload/share. No reconstructed data:text preview. Trace audit required separately."
+    entries.extend(workbook_case.suite_entries())
+    manifest = {"schema_version": 1, "kind": "examiner_only_suite", "cases": entries}
+    temporary = MANIFEST.with_suffix(".tmp")
+    temporary.write_text(json.dumps(manifest, indent=2) + "\n")
+    temporary.replace(MANIFEST)
+    return manifest
 
 
 def load(case_id):
@@ -434,13 +711,15 @@ def seed(entry):
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("command", choices=("list", "seed", "verify"))
+    parser.add_argument("command", choices=("list", "build", "seed", "verify"))
     parser.add_argument("case_id", nargs="?")
     parser.add_argument("--workspace", type=Path)
     parser.add_argument("--elapsed-seconds", type=float)
     parser.add_argument("--output", type=Path)
     args = parser.parse_args(argv)
-    if args.command == "list":
+    if args.command == "build":
+        result = build()
+    elif args.command == "list":
         result = [{"id": c["id"], "family": c["family"], "split": c["split"], "task_path": c["task_path"]} for c in json.loads(MANIFEST.read_text())["cases"]]
     else:
         if not args.case_id:

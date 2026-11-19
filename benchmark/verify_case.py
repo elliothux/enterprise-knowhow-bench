@@ -11,7 +11,10 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
-import services as bench
+if __package__:
+    from . import services as bench
+else:
+    import services as bench
 
 
 def expected_quotes(oracle):
@@ -105,11 +108,12 @@ def verify(workspace, oracle_path=None):
             "protocol_audit": "required separately: inspect native CUA calls, allowed local writes and NPC requirement replies"}
 
 
-def main():
+def main(work_root=None):
+    work_root = work_root or bench.ROOT
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--workspace", type=Path, default=bench.ROOT / "workspace")
+    parser.add_argument("--workspace", type=Path, default=work_root / "workspace")
     parser.add_argument("--oracle", type=Path, default=bench.ROOT / "evaluation/vendor-quote.json")
-    parser.add_argument("--output", type=Path, default=bench.ROOT / "artifacts/business-verification.json")
+    parser.add_argument("--output", type=Path, default=work_root / "artifacts/business-verification.json")
     args = parser.parse_args()
     try:
         result = verify(args.workspace, args.oracle)

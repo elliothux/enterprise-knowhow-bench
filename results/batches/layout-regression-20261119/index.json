@@ -1,0 +1,55 @@
+{
+  "batch": "layout-regression-20261119",
+  "summary": {
+    "assigned": 1,
+    "sessions": 2,
+    "wins": 1,
+    "ties": 0,
+    "losses": 0,
+    "A_exact": 0,
+    "B_exact": 1
+  },
+  "environment": {
+    "os": "macOS-26.4-arm64-arm-64bit",
+    "architecture": "arm64",
+    "python": "3.12.16"
+  },
+  "schedule_sha256": "d0bcf445330c575b3bfb4da7aa76a4803ea17f410c41ba3ae1c5c050c7f0afc3",
+  "frozen_files": {
+    "bench.py": "2e50271ed5e0ba6a1e0eb4fd06d0d591d2100afcefe7c9ccebf0fc78a4a7a7e6",
+    "benchmark/__init__.py": "12ce9225dd89a9b51b1d162c867f3718ed5dc8b24fbf384677d3dca0cc5c7a97",
+    "benchmark/batch_inputs.py": "155c9115aed33fe8833d58c408e347839c096f42239e73063688d95977894d65",
+    "benchmark/grading.py": "8f6dd0bb4713cd38bd50420e6587a1fb3f65c014c6db891013e2d8b9f679bd71",
+    "benchmark/remittances.py": "b79e3218114fe71efdc971917d004d7d95495b99df04eca999c17100a7c3f9a0",
+    "benchmark/services.py": "608e7ab22a979ecd771755db9e2a3fecdf2983d960a68a230198cde998e5345f",
+    "benchmark/suite_data.py": "b76eb1ec3dbabf0d3bb913ddd185bdf325a2c2fdad1588c4cb255a8b0f2093f1",
+    "benchmark/verify_case.py": "c9466c9afafb75061d882ca653f22692db0f09de58b663172fa6968f49ea16d2",
+    "benchmark/work.py": "ba9cd02cdf0733e9088ea6ecd1f704d0e8fa8c0f9f0f30f7aaf315dcce1cf228",
+    "benchmark/workbook_case.py": "097369ec5d24399d0029f270d910b8b57f2fdfa3d93d629410e99288bd2ffd3e",
+    "compose.yaml": "86d43850f6042f66b5b74e6b446e3189002aab068d67f0a09b0066904eb8ae33",
+    "evaluation/answer-key.json": "e815e524a37ba740e2172b3c96bcda1dd2fe164818f05941e87e884e064b24f6",
+    "mock/remittances/RMT-716.json": "c3d5dc476210f1915a792f36b4776404af1439a40ef19ed63790bdd5633d0284",
+    "mock/remittances/prior-postings.txt": "22cbf156b1f1831d5085455576e766c67ad442251e5ca25ac2287a2bdb99d2c2",
+    "mock/seed.py": "8d5953d3b985175bebb2d62ee51ca241b7380ba4553e1568f22689a533b688c7",
+    "tasks/RMT-716/TASK.md": "3e82d1d0b9ccfb4ed9cafe5a9db00856c573645874295644536d68aa2a797d8d",
+    "tasks/manifest.json": "1a3f3537f02d2b3ee45ec27eae7142ab5b989188b6746f10f1b59c96165ca452",
+    "tasks/materials/attachment-132e238be20d.txt": "132e238be20d2881bc0a87c988991df145234acedc4f9626169c643b322fec3a"
+  },
+  "cases": [
+    {
+      "case": "RMT-716",
+      "family": "two-invoice-remittance",
+      "A": 0.0,
+      "B": 100.0,
+      "delta": 100.0,
+      "A_exact": false,
+      "B_exact": true,
+      "order": "AB",
+      "scores": {
+        "A": 0.0,
+        "B": 100.0
+      },
+      "history": "RMT-716/history.json"
+    }
+  ]
+}

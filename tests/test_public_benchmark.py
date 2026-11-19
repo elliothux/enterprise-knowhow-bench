@@ -25,7 +25,7 @@ class PublicBenchmarkTests(unittest.TestCase):
         self.assertEqual(len(seen),224)
 
     def test_packets_reject_duplicate_or_unassigned_ids(self):
-        target = bench.read(bench.ROOT/'results/answer-key.json')['RMT-716']
+        target = bench.read(bench.ROOT/'evaluation/answer-key.json')['RMT-716']
         first = target[0]
         row = ','.join([first['invoice'],*[f'{v/100:.2f}' for v in first['target'][:4]],first['target'][4]])
         self.assertEqual(bench.business('RMT-716',row)['score'],50)
@@ -45,6 +45,24 @@ class PublicBenchmarkTests(unittest.TestCase):
             subprocess.run([sys.executable,str(bench.ROOT/'bench.py'),'score',str(run)],check=True,capture_output=True)
             result=json.loads((run/'score.json').read_text())
             self.assertEqual((result['score'],result['unassisted_score'],result['submission']),(100,0,value))
+
+    def test_all_frozen_remittance_prompts_match_their_ledgers(self):
+        for case, task in bench.TASKS.items():
+            if task["type"] == "packet":
+                with self.subTest(case=case):
+                    rendered = bench.remittance_prompt(bench.ROOT / task["ledger"])
+                    self.assertEqual(rendered, (bench.ROOT / task["prompt"]).read_text())
+
+    def test_historical_rules_are_evaluator_only(self):
+        fixtures = list((bench.ROOT / "evaluation/historical").glob("*/*.json"))
+        self.assertTrue(fixtures)
+        catalogue = (bench.ROOT / "tasks/README.md").read_text()
+        for task in bench.TASKS.values():
+            for source in task["resources"].values():
+                self.assertFalse(source.startswith("evaluation/"))
+        for path in fixtures:
+            self.assertNotIn(str(path.relative_to(bench.ROOT)), catalogue)
+            self.assertFalse((bench.ROOT / "mock/historical" / path.parent.name / path.name).exists())
 
     def test_all_scheduled_inputs_are_public(self):
         schedule=bench.read(bench.ROOT/'tasks/schedule.json')

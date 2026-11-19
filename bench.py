@@ -13,6 +13,8 @@ import uuid
 from pathlib import Path
 from urllib.parse import urlencode
 
+from benchmark import batch_inputs
+from benchmark.remittances import render as remittance_prompt
 from benchmark.grading import grade
 from mock.seed import chat, login, seed
 
@@ -46,7 +48,7 @@ def prepare(args):
     run.mkdir(parents=True, exist_ok=False)
     work = run/'work'
     work.mkdir()
-    prompt = (ROOT/task['prompt']).read_text()
+    prompt = remittance_prompt(ROOT/task['ledger']) if task['type']=='packet' else (ROOT/task['prompt']).read_text()
     record = dict(case=args.case, arm=args.arm, type=task['type'])
     if task['type'].startswith('native-'):
         namespace='trial-'+uuid.uuid4().hex[:16]
@@ -97,7 +99,7 @@ def native_delivery(record):
 
 def business(case, text, reads=0):
     filename = 'historical-answers.json' if TASKS[case]['group']=='historical' else 'answer-key.json'
-    return grade(TASKS[case]['type'], read(ROOT/'results'/filename)[case], text, reads)
+    return grade(TASKS[case]['type'], read(ROOT/'evaluation'/filename)[case], text, reads)
 
 
 def score(run):
@@ -149,7 +151,10 @@ def execute(args):
 
 
 def batch(args):
-    rows=read(ROOT/'tasks/schedule.json')[args.suite]
+    if args.suite == 'custom' and not args.schedule:
+        raise ValueError('A custom batch requires --schedule PATH.')
+    rows=read(args.schedule) if args.schedule else read(ROOT/'tasks/schedule.json')[args.suite]
+    batch_inputs.validate(rows, TASKS)
     root=args.out.resolve()
     root.mkdir(parents=True,exist_ok=True)
     config=dict(suite=args.suite,controls=args.controls,agent=args.agent,codex=args.codex,
@@ -161,6 +166,7 @@ def batch(args):
         raise ValueError('Use an empty directory for a new batch.')
     else:
         save(config_file,config)
+    batch_inputs.freeze(root, ROOT, TASKS, rows)
     cells=[(row['case'],arm) for row in rows for arm in row['order']]
     if args.controls:
         cells.extend((row['case'],row['control']) for row in rows if row['control'])
@@ -193,7 +199,8 @@ def main():
     for name in ('prepare','run','batch'):
         p=commands.add_parser(name)
         if name=='batch':
-            p.add_argument('suite',choices=['finance','remittances'])
+            p.add_argument('suite',choices=['finance','remittances','custom'])
+            p.add_argument('--schedule', type=Path, help='JSON array of case, family, order and optional control')
             p.add_argument('--controls',action='store_true',help='include prescheduled C/D controls')
         else:
             p.add_argument('case',type=task_id)
